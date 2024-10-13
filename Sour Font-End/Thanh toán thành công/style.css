@@ -1,0 +1,202 @@
+.thanh-ton-thnh-cng {
+  background-color: #f9f5f6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.thanh-ton-thnh-cng .overlap-wrapper {
+  background-color: #f9f5f6;
+  width: 1440px;
+  height: 1024px;
+}
+
+.thanh-ton-thnh-cng .overlap {
+  position: relative;
+  width: 828px;
+  height: 610px;
+  top: 174px;
+  left: 306px;
+  background-color: #f7ddde;
+  border-radius: 15px;
+}
+
+.thanh-ton-thnh-cng .text-wrapper {
+  position: absolute;
+  height: 29px;
+  top: 376px;
+  left: 300px;
+  font-family: var(--deskstop-heading-4-font-family);
+  font-weight: var(--deskstop-heading-4-font-weight);
+  color: #0a214a;
+  font-size: var(--deskstop-heading-4-font-size);
+  letter-spacing: var(--deskstop-heading-4-letter-spacing);
+  line-height: var(--deskstop-heading-4-line-height);
+  font-style: var(--deskstop-heading-4-font-style);
+}
+
+.thanh-ton-thnh-cng .div {
+  position: absolute;
+  height: 29px;
+  top: 290px;
+  left: 143px;
+  font-family: var(--deskstop-heading-4-font-family);
+  font-weight: var(--deskstop-heading-4-font-weight);
+  color: #0a214a;
+  font-size: var(--deskstop-heading-4-font-size);
+  letter-spacing: var(--deskstop-heading-4-letter-spacing);
+  line-height: var(--deskstop-heading-4-line-height);
+  font-style: var(--deskstop-heading-4-font-style);
+}
+
+.thanh-ton-thnh-cng .text-wrapper-2 {
+  position: absolute;
+  height: 29px;
+  top: 337px;
+  left: 316px;
+  font-family: var(--deskstop-heading-4-font-family);
+  font-weight: var(--deskstop-heading-4-font-weight);
+  color: #0a214a;
+  font-size: var(--deskstop-heading-4-font-size);
+  letter-spacing: var(--deskstop-heading-4-letter-spacing);
+  line-height: var(--deskstop-heading-4-line-height);
+  font-style: var(--deskstop-heading-4-font-style);
+}
+
+.thanh-ton-thnh-cng .text-wrapper-3 {
+  position: absolute;
+  height: 29px;
+  top: 337px;
+  left: 424px;
+  font-family: var(--deskstop-heading-4-font-family);
+  font-weight: var(--deskstop-heading-4-font-weight);
+  color: #f31559;
+  font-size: var(--deskstop-heading-4-font-size);
+  letter-spacing: var(--deskstop-heading-4-letter-spacing);
+  line-height: var(--deskstop-heading-4-line-height);
+  font-style: var(--deskstop-heading-4-font-style);
+}
+
+.thanh-ton-thnh-cng .text-wrapper-4 {
+  position: absolute;
+  height: 29px;
+  top: 376px;
+  left: 424px;
+  font-family: var(--deskstop-heading-4-font-family);
+  font-weight: var(--deskstop-heading-4-font-weight);
+  color: #3dd9aa;
+  font-size: var(--deskstop-heading-4-font-size);
+  letter-spacing: var(--deskstop-heading-4-letter-spacing);
+  line-height: var(--deskstop-heading-4-line-height);
+  font-style: var(--deskstop-heading-4-font-style);
+}
+
+.thanh-ton-thnh-cng .text-wrapper-5 {
+  position: absolute;
+  height: 29px;
+  top: 290px;
+  left: 424px;
+  font-family: var(--deskstop-heading-4-font-family);
+  font-weight: var(--deskstop-heading-4-font-weight);
+  color: #3dd9aa;
+  font-size: var(--deskstop-heading-4-font-size);
+  letter-spacing: var(--deskstop-heading-4-letter-spacing);
+  line-height: var(--deskstop-heading-4-line-height);
+  font-style: var(--deskstop-heading-4-font-style);
+}
+
+.thanh-ton-thnh-cng .text-wrapper-6 {
+  position: absolute;
+  height: 58px;
+  top: 198px;
+  left: 186px;
+  font-family: var(--deskstop-heading-1-font-family);
+  font-weight: var(--deskstop-heading-1-font-weight);
+  color: #fe346e;
+  font-size: var(--deskstop-heading-1-font-size);
+  letter-spacing: var(--deskstop-heading-1-letter-spacing);
+  line-height: var(--deskstop-heading-1-line-height);
+  font-style: var(--deskstop-heading-1-font-style);
+}
+
+.thanh-ton-thnh-cng .group {
+  width: 601px;
+  top: 494px;
+  left: 114px;
+  position: absolute;
+  height: 36px;
+}
+
+.thanh-ton-thnh-cng .overlap-group-wrapper {
+  width: 130px;
+  top: 0;
+  left: 471px;
+  position: absolute;
+  height: 36px;
+}
+
+.thanh-ton-thnh-cng .overlap-group {
+  position: relative;
+  width: 187px;
+  height: 38px;
+  top: -2px;
+  left: -28px;
+}
+
+.thanh-ton-thnh-cng .ng-nhp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.thanh-ton-thnh-cng .ng-nh-p {
+  position: relative;
+  width: fit-content;
+  margin-top: -1px;
+  font-family: var(--common-subtitle-font-family);
+  font-weight: var(--common-subtitle-font-weight);
+  color: #0a214a;
+  font-size: var(--common-subtitle-font-size);
+  text-align: center;
+  letter-spacing: var(--common-subtitle-letter-spacing);
+  line-height: var(--common-subtitle-line-height);
+  white-space: nowrap;
+  font-style: var(--common-subtitle-font-style);
+}
+
+.thanh-ton-thnh-cng .east {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 22px;
+  left: 80px;
+}
+
+.thanh-ton-thnh-cng .div-wrapper {
+  width: 130px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 36px;
+}
+
+.thanh-ton-thnh-cng .overlap-2 {
+  position: relative;
+  width: 158px;
+  height: 38px;
+  top: -2px;
+  left: -14px;
+}
+
+.thanh-ton-thnh-cng .img {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 22px;
+  left: 66px;
+}
