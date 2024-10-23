@@ -275,6 +275,7 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\XuLyDonHang\Views\web.config" />
     <Content Include="Areas\QuanLy\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -312,7 +313,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\QuanLy\Controllers\" />
     <Folder Include="Areas\QuanLy\Data\" />
     <Folder Include="Areas\QuanLy\Views\Shared\" />
