@@ -120,6 +120,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\QuanLy\QuanLyAreaRegistration.cs" />
+    <Compile Include="Areas\XuLyDonHang\XuLyDonHangAreaRegistration.cs" />
     <Compile Include="Controllers\BoSuuTapController.cs" />
     <Compile Include="Controllers\ChiTietHoaDonController.cs" />
     <Compile Include="Controllers\ChiTietSanPhamController.cs" />
@@ -269,6 +272,9 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\XuLyDonHang\Views\web.config" />
+    <Content Include="Areas\QuanLy\Views\web.config" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -304,6 +310,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\QuanLy\Controllers\" />
+    <Folder Include="Areas\QuanLy\Data\" />
+    <Folder Include="Areas\QuanLy\Views\Shared\" />
+    <Folder Include="Areas\XuLyDonHang\Controllers\" />
+    <Folder Include="Areas\XuLyDonHang\Data\" />
+    <Folder Include="Areas\XuLyDonHang\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
