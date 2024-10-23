@@ -1,10 +1,17 @@
-﻿.overlap-group {
+﻿.danh-mc-sn-phm {
+    padding-top: 50px;
+}
+
+
+
+
+    .danh-mc-sn-phm .overlap-group {
         position: relative;
         width: 1441px;
         height: 290px;
     }
 
-    .rectangle {
+    .danh-mc-sn-phm .rectangle {
         position: absolute;
         width: 1440px;
         height: 290px;
@@ -13,7 +20,7 @@
         background-color: #fbe8e7;
     }
 
-    .text-wrapper {
+    .danh-mc-sn-phm .text-wrapper {
         position: absolute;
         top: 0;
         left: 134px;
@@ -26,7 +33,7 @@
         white-space: nowrap;
     }
 
-    .text-wrapper-2 {
+    .danh-mc-sn-phm .text-wrapper-2 {
         position: absolute;
         top: 127px;
         left: 163px;
@@ -39,7 +46,7 @@
         white-space: nowrap;
     }
 
-    .text-wrapper-3 {
+    .danh-mc-sn-phm .text-wrapper-3 {
         top: 47px;
         left: 443px;
         color: #fe346e;
@@ -52,7 +59,7 @@
         font-style: var(--deskstop-heading-3-font-style);
     }
 
-     .p {
+    .danh-mc-sn-phm .p {
         position: absolute;
         top: 47px;
         left: 957px;
@@ -65,7 +72,7 @@
         font-style: var(--deskstop-heading-3-font-style);
     }
 
-    .text-wrapper-4 {
+    .danh-mc-sn-phm .text-wrapper-4 {
         position: absolute;
         top: 113px;
         left: 443px;
@@ -79,7 +86,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-     .text-wrapper-5 {
+    .danh-mc-sn-phm .text-wrapper-5 {
         position: absolute;
         top: 113px;
         left: 685px;
@@ -93,7 +100,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-    .text-wrapper-6 {
+    .danh-mc-sn-phm .text-wrapper-6 {
         position: absolute;
         top: 169px;
         left: 685px;
@@ -107,7 +114,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-    .text-wrapper-7 {
+    .danh-mc-sn-phm .text-wrapper-7 {
         position: absolute;
         top: 220px;
         left: 685px;
@@ -121,7 +128,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-    .text-wrapper-8 {
+    .danh-mc-sn-phm .text-wrapper-8 {
         position: absolute;
         top: 169px;
         left: 443px;
@@ -135,7 +142,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-  .i-u-kho-n-i-u-ki-n {
+    .danh-mc-sn-phm .i-u-kho-n-i-u-ki-n {
         position: absolute;
         top: 220px;
         left: 443px;
@@ -149,7 +156,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-     .rectangle-2 {
+    .danh-mc-sn-phm .rectangle-2 {
         position: absolute;
         width: 305px;
         height: 50px;
@@ -159,7 +166,7 @@
         border-radius: 10px;
     }
 
-    .text-wrapper-9 {
+    .danh-mc-sn-phm .text-wrapper-9 {
         position: absolute;
         top: 142px;
         left: 974px;
@@ -172,7 +179,7 @@
         font-style: var(--deskstop-heading-4-font-style);
     }
 
-   .rectangle-3 {
+    .danh-mc-sn-phm .rectangle-3 {
         position: absolute;
         width: 86px;
         height: 50px;
@@ -182,7 +189,7 @@
         border-radius: 10px;
     }
 
- .text-wrapper-10 {
+    .danh-mc-sn-phm .text-wrapper-10 {
         position: absolute;
         top: 143px;
         left: 1316px;
@@ -196,7 +203,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-     .line {
+    .danh-mc-sn-phm .line {
         position: absolute;
         width: 1436px;
         height: 1px;
@@ -204,7 +211,7 @@
         left: 5px;
     }
 
-     .group {
+    .danh-mc-sn-phm .group {
         position: absolute;
         width: 47px;
         height: 12px;
@@ -212,7 +219,7 @@
         left: 705px;
     }
 
-     .copyright {
+    .danh-mc-sn-phm .copyright {
         position: absolute;
         width: 10px;
         height: 10px;
@@ -220,7 +227,7 @@
         left: 0;
     }
 
-    .element-joyas {
+    .danh-mc-sn-phm .element-joyas {
         position: absolute;
         top: 0;
         left: 10px;
@@ -232,25 +239,25 @@
         line-height: normal;
     }
 
-    .span {
+    .danh-mc-sn-phm .span {
         color: #603f26;
     }
 
-     .text-wrapper-11 {
+    .danh-mc-sn-phm .text-wrapper-11 {
         font-family: "Dancing Script", Helvetica;
         font-weight: 700;
         color: #000000;
         font-size: 10px;
     }
 
-     .text-wrapper-12 {
+    .danh-mc-sn-phm .text-wrapper-12 {
         font-family: "Dancing Script", Helvetica;
         font-weight: 700;
         color: #ff9eaa;
         font-size: 10px;
     }
 
-     .body {
+    .danh-mc-sn-phm .body {
         position: absolute;
         width: 1276px;
         height: 2059px;
@@ -258,7 +265,7 @@
         left: 82px;
     }
 
-     .group-2 {
+    .danh-mc-sn-phm .group-2 {
         position: absolute;
         width: 257px;
         height: 24px;
@@ -266,7 +273,7 @@
         left: 161px;
     }
 
-    .text-wrapper-13 {
+    .danh-mc-sn-phm .text-wrapper-13 {
         position: absolute;
         top: 2px;
         left: 0;
@@ -280,7 +287,7 @@
         font-style: var(--common-label-font-style);
     }
 
-     .arrow-forward-ios {
+    .danh-mc-sn-phm .arrow-forward-ios {
         position: absolute;
         width: 24px;
         height: 24px;
@@ -288,7 +295,7 @@
         left: 77px;
     }
 
-     .text-wrapper-14 {
+    .danh-mc-sn-phm .text-wrapper-14 {
         position: absolute;
         top: 2px;
         left: 112px;
@@ -302,7 +309,7 @@
         font-style: var(--common-label-font-style);
     }
 
-     .group-3 {
+    .danh-mc-sn-phm .group-3 {
         position: absolute;
         width: 1192px;
         height: 137px;
@@ -310,7 +317,7 @@
         left: 80px;
     }
 
-     .image {
+    .danh-mc-sn-phm .image {
         position: absolute;
         width: 100px;
         height: 100px;
@@ -319,7 +326,7 @@
         object-fit: cover;
     }
 
-    .img {
+    .danh-mc-sn-phm .img {
         left: 213px;
         object-fit: cover;
         position: absolute;
@@ -328,7 +335,7 @@
         top: 0;
     }
 
-    .image-2 {
+    .danh-mc-sn-phm .image-2 {
         left: 643px;
         object-fit: cover;
         position: absolute;
@@ -337,7 +344,7 @@
         top: 0;
     }
 
-     .image-3 {
+    .danh-mc-sn-phm .image-3 {
         left: 852px;
         position: absolute;
         width: 100px;
@@ -345,7 +352,7 @@
         top: 0;
     }
 
-     .image-4 {
+    .danh-mc-sn-phm .image-4 {
         left: 1065px;
         position: absolute;
         width: 100px;
@@ -353,7 +360,7 @@
         top: 0;
     }
 
-     .image-5 {
+    .danh-mc-sn-phm .image-5 {
         left: 419px;
         position: absolute;
         width: 100px;
@@ -361,7 +368,7 @@
         top: 0;
     }
 
-     .text-wrapper-15 {
+    .danh-mc-sn-phm .text-wrapper-15 {
         position: absolute;
         height: 24px;
         top: 113px;
@@ -375,7 +382,7 @@
         white-space: nowrap;
     }
 
-     .text-wrapper-16 {
+    .danh-mc-sn-phm .text-wrapper-16 {
         position: absolute;
         height: 24px;
         top: 113px;
@@ -389,7 +396,7 @@
         white-space: nowrap;
     }
 
-     .text-wrapper-17 {
+    .danh-mc-sn-phm .text-wrapper-17 {
         position: absolute;
         height: 24px;
         top: 113px;
@@ -403,7 +410,7 @@
         white-space: nowrap;
     }
 
-    .text-wrapper-18 {
+    .danh-mc-sn-phm .text-wrapper-18 {
         position: absolute;
         height: 24px;
         top: 113px;
@@ -417,7 +424,7 @@
         white-space: nowrap;
     }
 
-     .text-wrapper-19 {
+    .danh-mc-sn-phm .text-wrapper-19 {
         position: absolute;
         height: 24px;
         top: 113px;
@@ -431,7 +438,7 @@
         white-space: nowrap;
     }
 
-    .text-wrapper-20 {
+    .danh-mc-sn-phm .text-wrapper-20 {
         position: absolute;
         height: 24px;
         top: 113px;
@@ -445,7 +452,7 @@
         white-space: nowrap;
     }
 
-     .group-4 {
+    .danh-mc-sn-phm .group-4 {
         position: absolute;
         width: 330px;
         height: 1242px;
@@ -453,7 +460,7 @@
         left: 0;
     }
 
-     .overlap-group-wrapper {
+    .danh-mc-sn-phm .overlap-group-wrapper {
         position: absolute;
         width: 332px;
         height: 233px;
@@ -461,7 +468,7 @@
         left: 0;
     }
 
-    .overlap-group-2 {
+    .danh-mc-sn-phm .overlap-group-2 {
         position: relative;
         width: 330px;
         height: 233px;
@@ -471,7 +478,7 @@
         border-color: #ffc4d0;
     }
 
-     .div-wrapper {
+    .danh-mc-sn-phm .div-wrapper {
         position: absolute;
         width: 330px;
         height: 50px;
@@ -483,7 +490,7 @@
         border-color: #ffc4d0;
     }
 
-    .text-wrapper-21 {
+    .danh-mc-sn-phm .text-wrapper-21 {
         position: absolute;
         height: 24px;
         top: 12px;
@@ -498,7 +505,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-     .dy-chuyn {
+    .danh-mc-sn-phm .dy-chuyn {
         display: flex;
         width: 73px;
         align-items: center;
@@ -509,7 +516,7 @@
         left: 22px;
     }
 
-    .text-wrapper-22 {
+    .danh-mc-sn-phm .text-wrapper-22 {
         position: relative;
         width: fit-content;
         margin-top: -1px;
@@ -525,7 +532,7 @@
         font-style: var(--common-label-font-style);
     }
 
-     .d-y-chuy-n-wrapper {
+    .danh-mc-sn-phm .d-y-chuy-n-wrapper {
         display: flex;
         width: 67px;
         align-items: center;
@@ -536,7 +543,7 @@
         left: 22px;
     }
 
-     .d-y-chuy-n {
+    .danh-mc-sn-phm .d-y-chuy-n {
         position: relative;
         width: fit-content;
         margin-top: -1px;
@@ -552,7 +559,7 @@
         font-style: var(--common-label-font-style);
     }
 
-    .dy-chuyn-2 {
+    .danh-mc-sn-phm .dy-chuyn-2 {
         display: flex;
         width: 53px;
         align-items: center;
@@ -563,7 +570,7 @@
         left: 22px;
     }
 
-     .d-y-chuy-n-2 {
+    .danh-mc-sn-phm .d-y-chuy-n-2 {
         position: relative;
         width: fit-content;
         margin-top: -1px;
@@ -579,7 +586,7 @@
         font-style: var(--common-label-font-style);
     }
 
-   .dy-chuyn-3 {
+    .danh-mc-sn-phm .dy-chuyn-3 {
         display: flex;
         width: 32px;
         align-items: center;
@@ -590,7 +597,7 @@
         left: 22px;
     }
 
-     .d-y-chuy-n-3 {
+    .danh-mc-sn-phm .d-y-chuy-n-3 {
         position: relative;
         width: fit-content;
         margin-top: -1px;
@@ -606,7 +613,7 @@
         font-style: var(--common-label-font-style);
     }
 
-     .dy-chuyn-4 {
+    .danh-mc-sn-phm .dy-chuyn-4 {
         display: flex;
         width: 33px;
         align-items: center;
@@ -617,7 +624,7 @@
         left: 22px;
     }
 
-    .d-y-chuy-n-4 {
+    .danh-mc-sn-phm .d-y-chuy-n-4 {
         position: relative;
         width: fit-content;
         margin-top: -1px;
@@ -633,7 +640,7 @@
         font-style: var(--common-label-font-style);
     }
 
-    .dy-chuyn-5 {
+    .danh-mc-sn-phm .dy-chuyn-5 {
         display: flex;
         width: 42px;
         align-items: center;
@@ -644,7 +651,7 @@
         left: 22px;
     }
 
-    .d-y-chuy-n-5 {
+    .danh-mc-sn-phm .d-y-chuy-n-5 {
         position: relative;
         width: fit-content;
         margin-top: -1px;
@@ -660,7 +667,7 @@
         font-style: var(--common-label-font-style);
     }
 
-     .overlap-wrapper {
+    .danh-mc-sn-phm .overlap-wrapper {
         position: absolute;
         width: 332px;
         height: 186px;
@@ -668,7 +675,7 @@
         left: 0;
     }
 
-   .overlap {
+    .danh-mc-sn-phm .overlap {
         position: relative;
         width: 330px;
         height: 186px;
@@ -678,7 +685,7 @@
         border-color: #ffc4d0;
     }
 
-     .overlap-2 {
+    .danh-mc-sn-phm .overlap-2 {
         position: absolute;
         width: 293px;
         height: 99px;
@@ -686,7 +693,7 @@
         left: 14px;
     }
 
-    .group-5 {
+    .danh-mc-sn-phm .group-5 {
         position: absolute;
         width: 293px;
         height: 95px;
@@ -694,13 +701,13 @@
         left: 0;
     }
 
-     .overlap-3 {
+    .danh-mc-sn-phm .overlap-3 {
         position: relative;
         width: 295px;
         height: 95px;
     }
 
-   .overlap-4 {
+    .danh-mc-sn-phm .overlap-4 {
         position: absolute;
         width: 282px;
         height: 95px;
@@ -708,7 +715,7 @@
         left: 0;
     }
 
-     .line-2 {
+    .danh-mc-sn-phm .line-2 {
         position: absolute;
         width: 262px;
         height: 3px;
@@ -716,7 +723,7 @@
         left: 14px;
     }
 
-    .group-6 {
+    .danh-mc-sn-phm .group-6 {
         position: absolute;
         width: 249px;
         height: 95px;
@@ -724,7 +731,7 @@
         left: 0;
     }
 
-   .overlap-group-3 {
+    .danh-mc-sn-phm .overlap-group-3 {
         position: absolute;
         width: 31px;
         height: 34px;
@@ -732,7 +739,7 @@
         left: 0;
     }
 
-     .rectangle-4 {
+    .danh-mc-sn-phm .rectangle-4 {
         position: absolute;
         width: 31px;
         height: 26px;
@@ -741,7 +748,7 @@
         background-color: #f7ddde;
     }
 
-     .polygon {
+    .danh-mc-sn-phm .polygon {
         position: absolute;
         width: 12px;
         height: 11px;
@@ -749,7 +756,7 @@
         left: 8px;
     }
 
-    .text-wrapper-23 {
+    .danh-mc-sn-phm .text-wrapper-23 {
         position: absolute;
         height: 24px;
         top: 2px;
@@ -764,7 +771,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-     .text-wrapper-24 {
+    .danh-mc-sn-phm .text-wrapper-24 {
         position: absolute;
         height: 24px;
         top: 71px;
@@ -779,7 +786,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-     .text-wrapper-25 {
+    .danh-mc-sn-phm .text-wrapper-25 {
         position: absolute;
         height: 24px;
         top: 71px;
@@ -794,7 +801,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-     .ellipse {
+    .danh-mc-sn-phm .ellipse {
         position: absolute;
         width: 9px;
         height: 10px;
@@ -804,7 +811,7 @@
         border-radius: 4.52px/5px;
     }
 
-     .ellipse-2 {
+    .danh-mc-sn-phm .ellipse-2 {
         position: absolute;
         width: 9px;
         height: 10px;
@@ -814,7 +821,7 @@
         border-radius: 4.52px/5px;
     }
 
-     .group-7 {
+    .danh-mc-sn-phm .group-7 {
         position: absolute;
         width: 33px;
         height: 34px;
@@ -822,13 +829,13 @@
         left: 262px;
     }
 
- .overlap-5 {
+    .danh-mc-sn-phm .overlap-5 {
         position: relative;
         width: 31px;
         height: 34px;
     }
 
-     .text-wrapper-26 {
+    .danh-mc-sn-phm .text-wrapper-26 {
         position: absolute;
         height: 24px;
         top: 2px;
@@ -843,7 +850,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-     .rectangle-5 {
+    .danh-mc-sn-phm .rectangle-5 {
         position: absolute;
         width: 102px;
         height: 34px;
@@ -854,7 +861,7 @@
         border-color: #fe346e;
     }
 
-     .rectangle-6 {
+    .danh-mc-sn-phm .rectangle-6 {
         position: absolute;
         width: 103px;
         height: 34px;
@@ -865,7 +872,7 @@
         border-color: #fe346e;
     }
 
-     .line-3 {
+    .danh-mc-sn-phm .line-3 {
         position: absolute;
         width: 18px;
         height: 1px;
@@ -874,7 +881,7 @@
         object-fit: cover;
     }
 
-    .component-wrapper {
+    .danh-mc-sn-phm .component-wrapper {
         position: absolute;
         width: 330px;
         height: 237px;
@@ -882,7 +889,7 @@
         left: 0;
     }
 
-     .component {
+    .danh-mc-sn-phm .component {
         position: relative;
         height: 237px;
         background-color: #ffffff;
@@ -891,7 +898,7 @@
         border-color: #ffc4d0;
     }
 
-     .text-wrapper-27 {
+    .danh-mc-sn-phm .text-wrapper-27 {
         height: 24px;
         top: 12px;
         left: 23px;
@@ -906,7 +913,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-     .overlap-group-4 {
+    .danh-mc-sn-phm .overlap-group-4 {
         position: absolute;
         width: 287px;
         height: 169px;
@@ -914,7 +921,7 @@
         left: 25px;
     }
 
-     .line-4 {
+    .danh-mc-sn-phm .line-4 {
         position: absolute;
         width: 3px;
         height: 162px;
@@ -922,7 +929,7 @@
         left: 284px;
     }
 
-     .frame {
+    .danh-mc-sn-phm .frame {
         position: absolute;
         width: 287px;
         height: 169px;
@@ -932,7 +939,7 @@
         overflow-y: scroll;
     }
 
-     .rectangle-7 {
+    .danh-mc-sn-phm .rectangle-7 {
         position: absolute;
         width: 3px;
         height: 44px;
@@ -941,7 +948,7 @@
         background-color: #ffc4d0;
     }
 
-     .image-removebg-wrapper {
+    .danh-mc-sn-phm .image-removebg-wrapper {
         display: flex;
         width: 125px;
         height: 50px;
@@ -955,14 +962,14 @@
         background-color: #f8f8f8;
     }
 
-     .image-removebg {
+    .danh-mc-sn-phm .image-removebg {
         position: relative;
         width: 50px;
         height: 50px;
         object-fit: cover;
     }
 
-     .img-wrapper {
+    .danh-mc-sn-phm .img-wrapper {
         display: flex;
         width: 125px;
         height: 50px;
@@ -976,7 +983,7 @@
         background-color: #f8f8f8;
     }
 
-    .frame-2 {
+    .danh-mc-sn-phm .frame-2 {
         display: flex;
         width: 125px;
         height: 50px;
@@ -990,7 +997,7 @@
         background-color: #f8f8f8;
     }
 
-    .frame-3 {
+    .danh-mc-sn-phm .frame-3 {
         display: flex;
         width: 125px;
         height: 50px;
@@ -1004,7 +1011,7 @@
         background-color: #f8f8f8;
     }
 
-     .frame-4 {
+    .danh-mc-sn-phm .frame-4 {
         display: flex;
         width: 125px;
         height: 50px;
@@ -1018,7 +1025,7 @@
         background-color: #f8f8f8;
     }
 
-     .frame-5 {
+    .danh-mc-sn-phm .frame-5 {
         display: flex;
         width: 125px;
         height: 50px;
@@ -1032,7 +1039,7 @@
         background-color: #f8f8f8;
     }
 
-     .frame-6 {
+    .danh-mc-sn-phm .frame-6 {
         display: flex;
         width: 125px;
         height: 50px;
@@ -1046,7 +1053,7 @@
         background-color: #f8f8f8;
     }
 
-     .frame-7 {
+    .danh-mc-sn-phm .frame-7 {
         display: flex;
         width: 125px;
         height: 50px;
@@ -1060,7 +1067,7 @@
         background-color: #f8f8f8;
     }
 
-     .image-removebg-2 {
+    .danh-mc-sn-phm .image-removebg-2 {
         position: relative;
         width: 87px;
         height: 50px;
@@ -1069,7 +1076,7 @@
         object-fit: cover;
     }
 
-     .frame-8 {
+    .danh-mc-sn-phm .frame-8 {
         display: flex;
         width: 125px;
         height: 50px;
@@ -1083,7 +1090,7 @@
         background-color: #f8f8f8;
     }
 
-     .frame-9 {
+    .danh-mc-sn-phm .frame-9 {
         display: flex;
         width: 125px;
         height: 50px;
@@ -1097,7 +1104,7 @@
         background-color: #f8f8f8;
     }
 
-     .group-8 {
+    .danh-mc-sn-phm .group-8 {
         position: absolute;
         width: 332px;
         height: 233px;
@@ -1105,7 +1112,7 @@
         left: 0;
     }
 
-     .component-2 {
+    .danh-mc-sn-phm .component-2 {
         display: flex;
         width: 68px;
         align-items: center;
@@ -1116,7 +1123,7 @@
         left: 23px;
     }
 
-     .rectangle-8 {
+    .danh-mc-sn-phm .rectangle-8 {
         position: relative;
         width: 20px;
         height: 20px;
@@ -1124,7 +1131,7 @@
         background-color: #f8f8fa;
     }
 
-     .text-wrapper-28 {
+    .danh-mc-sn-phm .text-wrapper-28 {
         position: relative;
         width: fit-content;
         margin-top: -1px;
@@ -1139,7 +1146,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-     .component-3 {
+    .danh-mc-sn-phm .component-3 {
         display: flex;
         width: 58px;
         align-items: center;
@@ -1150,7 +1157,7 @@
         left: 23px;
     }
 
-     .rectangle-9 {
+    .danh-mc-sn-phm .rectangle-9 {
         margin-left: -3.07px;
         position: relative;
         width: 20px;
@@ -1158,7 +1165,7 @@
         background-color: #f8f8fa;
     }
 
-     .v-ng {
+    .danh-mc-sn-phm .v-ng {
         position: relative;
         width: fit-content;
         margin-top: -1px;
@@ -1173,7 +1180,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-     .component-4 {
+    .danh-mc-sn-phm .component-4 {
         display: flex;
         width: 111px;
         align-items: center;
@@ -1184,7 +1191,7 @@
         left: 23px;
     }
 
-     .rectangle-10 {
+    .danh-mc-sn-phm .rectangle-10 {
         margin-left: -5.9px;
         position: relative;
         width: 20px;
@@ -1192,7 +1199,7 @@
         background-color: #f8f8fa;
     }
 
-     .v-ng-2 {
+    .danh-mc-sn-phm .v-ng-2 {
         position: relative;
         width: fit-content;
         margin-top: -1px;
@@ -1207,7 +1214,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-     .component-5 {
+    .danh-mc-sn-phm .component-5 {
         display: flex;
         width: 112px;
         align-items: center;
@@ -1218,7 +1225,7 @@
         left: 23px;
     }
 
-     .rectangle-11 {
+    .danh-mc-sn-phm .rectangle-11 {
         margin-left: -5.95px;
         position: relative;
         width: 20px;
@@ -1226,7 +1233,7 @@
         background-color: #f8f8fa;
     }
 
-     .v-ng-3 {
+    .danh-mc-sn-phm .v-ng-3 {
         position: relative;
         width: fit-content;
         margin-top: -1px;
@@ -1241,7 +1248,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-     .group-9 {
+    .danh-mc-sn-phm .group-9 {
         position: absolute;
         width: 330px;
         height: 233px;
@@ -1249,7 +1256,7 @@
         left: 0;
     }
 
-     .component-6 {
+    .danh-mc-sn-phm .component-6 {
         position: relative;
         height: 233px;
         background-color: #ffffff;
@@ -1258,7 +1265,7 @@
         border-color: #ffc4d0;
     }
 
-     .frame-10 {
+    .danh-mc-sn-phm .frame-10 {
         position: absolute;
         width: 177px;
         height: 171px;
@@ -1268,7 +1275,7 @@
         overflow-y: scroll;
     }
 
-     .component-7 {
+    .danh-mc-sn-phm .component-7 {
         position: absolute;
         width: 155px;
         height: 24px;
@@ -1276,7 +1283,7 @@
         left: 3px;
     }
 
-     .rectangle-12 {
+    .danh-mc-sn-phm .rectangle-12 {
         position: absolute;
         width: 20px;
         height: 20px;
@@ -1285,7 +1292,7 @@
         background-color: #f8f8fa;
     }
 
-     .ellipse-3 {
+    .danh-mc-sn-phm .ellipse-3 {
         position: absolute;
         width: 24px;
         height: 24px;
@@ -1295,7 +1302,7 @@
         background: radial-gradient(50% 50% at 50% 50%, rgb(253, 226, 213) 0%, rgb(255, 191.81, 156.19) 91.5%);
     }
 
-     .dy-chuyn-6 {
+    .danh-mc-sn-phm .dy-chuyn-6 {
         display: flex;
         width: 81px;
         height: 19px;
@@ -1306,7 +1313,7 @@
         left: 78px;
     }
 
-    .d-y-chuy-n-6 {
+    .danh-mc-sn-phm .d-y-chuy-n-6 {
         position: relative;
         width: fit-content;
         margin-top: -1px;
@@ -1320,7 +1327,7 @@
         font-style: var(--common-label-font-style);
     }
 
-    .component-8 {
+    .danh-mc-sn-phm .component-8 {
         position: absolute;
         width: 155px;
         height: 24px;
@@ -1328,7 +1335,7 @@
         left: 3px;
     }
 
-     .ellipse-4 {
+    .danh-mc-sn-phm .ellipse-4 {
         background: radial-gradient(50% 50% at 50% 50%, rgb(255, 255, 255) 0%, rgb(156.19, 255, 225.36) 91.5%);
         position: absolute;
         width: 24px;
@@ -1338,7 +1345,7 @@
         border-radius: 12px;
     }
 
-     .group-10 {
+    .danh-mc-sn-phm .group-10 {
         position: absolute;
         width: 155px;
         height: 24px;
@@ -1346,12 +1353,12 @@
         left: 3px;
     }
 
-     .div-2 {
+    .danh-mc-sn-phm .div-2 {
         position: relative;
         height: 24px;
     }
 
-     .ellipse-5 {
+    .danh-mc-sn-phm .ellipse-5 {
         background: radial-gradient(50% 50% at 50% 50%, rgb(255, 255, 255) 22%, rgb(10, 33, 74) 100%);
         position: absolute;
         width: 24px;
@@ -1361,7 +1368,7 @@
         border-radius: 12px;
     }
 
-     .dy-chuyn-7 {
+    .danh-mc-sn-phm .dy-chuyn-7 {
         display: flex;
         width: 81px;
         height: 19px;
@@ -1373,7 +1380,7 @@
         left: 78px;
     }
 
-     .d-y-chuy-n-7 {
+    .danh-mc-sn-phm .d-y-chuy-n-7 {
         position: relative;
         width: fit-content;
         margin-top: -1px;
@@ -1389,7 +1396,7 @@
         font-style: var(--common-label-font-style);
     }
 
-     .group-11 {
+    .danh-mc-sn-phm .group-11 {
         position: absolute;
         width: 155px;
         height: 24px;
@@ -1397,7 +1404,7 @@
         left: 3px;
     }
 
-     .component-9 {
+    .danh-mc-sn-phm .component-9 {
         position: absolute;
         width: 155px;
         height: 24px;
@@ -1405,7 +1412,7 @@
         left: 0;
     }
 
-    .ellipse-6 {
+    .danh-mc-sn-phm .ellipse-6 {
         position: absolute;
         width: 24px;
         height: 24px;
@@ -1415,7 +1422,7 @@
         background: radial-gradient(50% 50% at 50% 50%, rgb(237.35, 237.35, 237.35) 0%, rgb(209, 207, 207) 100%);
     }
 
-     .group-12 {
+    .danh-mc-sn-phm .group-12 {
         position: absolute;
         width: 155px;
         height: 24px;
@@ -1423,7 +1430,7 @@
         left: 3px;
     }
 
-     .ellipse-7 {
+    .danh-mc-sn-phm .ellipse-7 {
         position: absolute;
         width: 24px;
         height: 24px;
@@ -1433,7 +1440,7 @@
         background: radial-gradient(50% 50% at 50% 50%, rgb(255, 255, 255) 50%, rgb(238.21, 236.43, 236.43) 90%);
     }
 
-     .group-13 {
+    .danh-mc-sn-phm .group-13 {
         position: absolute;
         width: 155px;
         height: 24px;
@@ -1441,7 +1448,7 @@
         left: 3px;
     }
 
-     .ellipse-8 {
+    .danh-mc-sn-phm .ellipse-8 {
         position: absolute;
         width: 24px;
         height: 24px;
@@ -1451,7 +1458,7 @@
         background: radial-gradient(50% 50% at 50% 50%, rgb(253, 226, 213) 0%, rgb(255, 226.75, 43.14) 91.5%);
     }
 
-     .rectangle-wrapper {
+    .danh-mc-sn-phm .rectangle-wrapper {
         position: absolute;
         width: 3px;
         height: 153px;
@@ -1461,14 +1468,14 @@
         background-size: 100% 100%;
     }
 
-     .rectangle-13 {
+    .danh-mc-sn-phm .rectangle-13 {
         position: relative;
         height: 35px;
         top: 7px;
         background-color: #ff9eaa;
     }
 
-     .group-14 {
+    .danh-mc-sn-phm .group-14 {
         position: absolute;
         width: 930px;
         height: 1739px;
@@ -1476,7 +1483,7 @@
         left: 346px;
     }
 
-     .group-15 {
+    .danh-mc-sn-phm .group-15 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1484,7 +1491,7 @@
         left: 0;
     }
 
-     .overlap-group-5 {
+    .danh-mc-sn-phm .overlap-group-5 {
         position: relative;
         width: 302px;
         height: 182px;
@@ -1496,7 +1503,7 @@
         border-color: #000000b2;
     }
 
-    .overlap-6 {
+    .danh-mc-sn-phm .overlap-6 {
         position: absolute;
         width: 276px;
         height: 114px;
@@ -1504,7 +1511,7 @@
         left: 6px;
     }
 
-     .text-wrapper-29 {
+    .danh-mc-sn-phm .text-wrapper-29 {
         position: absolute;
         height: 24px;
         top: 90px;
@@ -1519,7 +1526,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-    .overlap-group-6 {
+    .danh-mc-sn-phm .overlap-group-6 {
         position: absolute;
         width: 276px;
         height: 95px;
@@ -1527,7 +1534,7 @@
         left: 0;
     }
 
-    .text-wrapper-30 {
+    .danh-mc-sn-phm .text-wrapper-30 {
         position: absolute;
         width: 160px;
         height: 48px;
@@ -1542,7 +1549,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-    .rectangle-14 {
+    .danh-mc-sn-phm .rectangle-14 {
         position: absolute;
         width: 120px;
         height: 95px;
@@ -1551,7 +1558,7 @@
         object-fit: cover;
     }
 
-     .group-16 {
+    .danh-mc-sn-phm .group-16 {
         position: absolute;
         width: 96px;
         height: 16px;
@@ -1559,7 +1566,7 @@
         left: 116px;
     }
 
-     .star {
+    .danh-mc-sn-phm .star {
         position: absolute;
         width: 16px;
         height: 16px;
@@ -1567,7 +1574,7 @@
         left: 0;
     }
 
-    .star-2 {
+    .danh-mc-sn-phm .star-2 {
         left: 20px;
         position: absolute;
         width: 16px;
@@ -1575,7 +1582,7 @@
         top: 0;
     }
 
-    .star-3 {
+    .danh-mc-sn-phm .star-3 {
         left: 40px;
         position: absolute;
         width: 16px;
@@ -1583,7 +1590,7 @@
         top: 0;
     }
 
-     .star-4 {
+    .danh-mc-sn-phm .star-4 {
         left: 60px;
         position: absolute;
         width: 16px;
@@ -1591,7 +1598,7 @@
         top: 0;
     }
 
-     .star-5 {
+    .danh-mc-sn-phm .star-5 {
         left: 80px;
         position: absolute;
         width: 16px;
@@ -1599,7 +1606,7 @@
         top: 0;
     }
 
-     .group-17 {
+    .danh-mc-sn-phm .group-17 {
         position: absolute;
         width: 130px;
         height: 36px;
@@ -1607,7 +1614,7 @@
         left: 154px;
     }
 
-     .ng-nhp {
+    .danh-mc-sn-phm .ng-nhp {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -1617,7 +1624,7 @@
         left: 12px;
     }
 
-     .ng-nh-p {
+    .danh-mc-sn-phm .ng-nh-p {
         position: relative;
         width: fit-content;
         margin-top: -1px;
@@ -1631,7 +1638,7 @@
         font-style: var(--common-caption-font-style);
     }
 
-     .east {
+    .danh-mc-sn-phm .east {
         position: absolute;
         width: 16px;
         height: 16px;
@@ -1639,7 +1646,7 @@
         left: 52px;
     }
 
-     .group-18 {
+    .danh-mc-sn-phm .group-18 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1647,7 +1654,7 @@
         left: 0;
     }
 
-     .group-19 {
+    .danh-mc-sn-phm .group-19 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1655,7 +1662,7 @@
         left: 0;
     }
 
-    .group-20 {
+    .danh-mc-sn-phm .group-20 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1663,7 +1670,7 @@
         left: 0;
     }
 
-    .group-21 {
+    .danh-mc-sn-phm .group-21 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1671,7 +1678,7 @@
         left: 315px;
     }
 
-     .overlap-7 {
+    .danh-mc-sn-phm .overlap-7 {
         position: absolute;
         width: 285px;
         height: 114px;
@@ -1679,7 +1686,7 @@
         left: 6px;
     }
 
-     .text-wrapper-31 {
+    .danh-mc-sn-phm .text-wrapper-31 {
         left: 153px;
         position: absolute;
         height: 24px;
@@ -1694,7 +1701,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-     .overlap-group-7 {
+    .danh-mc-sn-phm .overlap-group-7 {
         position: absolute;
         width: 279px;
         height: 95px;
@@ -1702,7 +1709,7 @@
         left: 0;
     }
 
-     .text-wrapper-32 {
+    .danh-mc-sn-phm .text-wrapper-32 {
         position: absolute;
         width: 160px;
         height: 24px;
@@ -1717,7 +1724,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-     .group-22 {
+    .danh-mc-sn-phm .group-22 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1725,7 +1732,7 @@
         left: 315px;
     }
 
-     .group-23 {
+    .danh-mc-sn-phm .group-23 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1733,7 +1740,7 @@
         left: 315px;
     }
 
-     .group-24 {
+    .danh-mc-sn-phm .group-24 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1741,7 +1748,7 @@
         left: 315px;
     }
 
-     .group-25 {
+    .danh-mc-sn-phm .group-25 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1749,7 +1756,7 @@
         left: 315px;
     }
 
-     .overlap-8 {
+    .danh-mc-sn-phm .overlap-8 {
         position: absolute;
         width: 287px;
         height: 114px;
@@ -1757,7 +1764,7 @@
         left: 6px;
     }
 
-     .text-wrapper-33 {
+    .danh-mc-sn-phm .text-wrapper-33 {
         position: absolute;
         width: 160px;
         height: 48px;
@@ -1772,7 +1779,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-     .group-26 {
+    .danh-mc-sn-phm .group-26 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1780,7 +1787,7 @@
         left: 315px;
     }
 
-     .group-27 {
+    .danh-mc-sn-phm .group-27 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1788,7 +1795,7 @@
         left: 315px;
     }
 
-     .group-28 {
+    .danh-mc-sn-phm .group-28 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1796,7 +1803,7 @@
         left: 315px;
     }
 
-     .group-29 {
+    .danh-mc-sn-phm .group-29 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1804,7 +1811,7 @@
         left: 630px;
     }
 
-     .overlap-9 {
+    .danh-mc-sn-phm .overlap-9 {
         position: absolute;
         width: 288px;
         height: 114px;
@@ -1812,7 +1819,7 @@
         left: 6px;
     }
 
-     .group-30 {
+    .danh-mc-sn-phm .group-30 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1820,7 +1827,7 @@
         left: 630px;
     }
 
-     .group-31 {
+    .danh-mc-sn-phm .group-31 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1828,7 +1835,7 @@
         left: 630px;
     }
 
-     .group-32 {
+    .danh-mc-sn-phm .group-32 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1836,7 +1843,7 @@
         left: 630px;
     }
 
-     .group-33 {
+    .danh-mc-sn-phm .group-33 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1844,7 +1851,7 @@
         left: 630px;
     }
 
-     .group-34 {
+    .danh-mc-sn-phm .group-34 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1852,7 +1859,7 @@
         left: 630px;
     }
 
-     .group-35 {
+    .danh-mc-sn-phm .group-35 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1860,7 +1867,7 @@
         left: 630px;
     }
 
-    .group-36 {
+    .danh-mc-sn-phm .group-36 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1868,7 +1875,7 @@
         left: 630px;
     }
 
-     .group-37 {
+    .danh-mc-sn-phm .group-37 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1876,7 +1883,7 @@
         left: 0;
     }
 
-     .overlap-10 {
+    .danh-mc-sn-phm .overlap-10 {
         position: absolute;
         width: 279px;
         height: 114px;
@@ -1884,7 +1891,7 @@
         left: 6px;
     }
 
-     .text-wrapper-34 {
+    .danh-mc-sn-phm .text-wrapper-34 {
         left: 138px;
         position: absolute;
         height: 24px;
@@ -1899,7 +1906,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-     .group-38 {
+    .danh-mc-sn-phm .group-38 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1907,7 +1914,7 @@
         left: 0;
     }
 
-     .group-39 {
+    .danh-mc-sn-phm .group-39 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1915,7 +1922,7 @@
         left: 0;
     }
 
-     .group-40 {
+    .danh-mc-sn-phm .group-40 {
         position: absolute;
         width: 300px;
         height: 180px;
@@ -1923,7 +1930,7 @@
         left: 0;
     }
 
-    .overlap-11 {
+    .danh-mc-sn-phm .overlap-11 {
         position: absolute;
         width: 203px;
         height: 59px;
@@ -1931,7 +1938,7 @@
         left: 224px;
     }
 
-    .ellipse-9 {
+    .danh-mc-sn-phm .ellipse-9 {
         position: absolute;
         width: 59px;
         height: 59px;
@@ -1941,7 +1948,7 @@
         border-radius: 29.5px;
     }
 
-    .group-41 {
+    .danh-mc-sn-phm .group-41 {
         position: absolute;
         width: 203px;
         height: 24px;
@@ -1949,7 +1956,7 @@
         left: 0;
     }
 
-   .text-wrapper-35 {
+    .danh-mc-sn-phm .text-wrapper-35 {
         position: absolute;
         height: 24px;
         top: 0;
@@ -1963,7 +1970,7 @@
         white-space: nowrap;
     }
 
-     .arrow {
+    .danh-mc-sn-phm .arrow {
         position: absolute;
         width: 37px;
         height: 15px;
@@ -1971,7 +1978,7 @@
         left: 165px;
     }
 
-    .header {
+    .danh-mc-sn-phm .header {
         position: absolute;
         width: 1149px;
         height: 236px;
@@ -1980,7 +1987,7 @@
         background-color: transparent;
     }
 
-    .overlap-12 {
+    .danh-mc-sn-phm .overlap-12 {
         position: absolute;
         width: 1149px;
         height: 129px;
@@ -1988,7 +1995,7 @@
         left: 0;
     }
 
-     .group-42 {
+    .danh-mc-sn-phm .group-42 {
         position: absolute;
         width: 88px;
         height: 24px;
@@ -1996,7 +2003,7 @@
         left: 739px;
     }
 
-     .line-5 {
+    .danh-mc-sn-phm .line-5 {
         position: absolute;
         width: 2px;
         height: 35px;
@@ -2004,7 +2011,7 @@
         left: 847px;
     }
 
-    .line-6 {
+    .danh-mc-sn-phm .line-6 {
         position: absolute;
         width: 2px;
         height: 35px;
@@ -2012,7 +2019,7 @@
         left: 1020px;
     }
 
-    .group-43 {
+    .danh-mc-sn-phm .group-43 {
         position: absolute;
         width: 133px;
         height: 24px;
@@ -2020,7 +2027,7 @@
         left: 867px;
     }
 
-     .face {
+    .danh-mc-sn-phm .face {
         position: absolute;
         width: 24px;
         height: 24px;
@@ -2030,7 +2037,7 @@
         background-size: 100% 100%;
     }
 
-    .ng-nhp-2 {
+    .danh-mc-sn-phm .ng-nhp-2 {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -2040,7 +2047,7 @@
         left: 39px;
     }
 
-     .text-wrapper-36 {
+    .danh-mc-sn-phm .text-wrapper-36 {
         position: relative;
         width: fit-content;
         margin-top: -1px;
@@ -2054,7 +2061,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-     .group-44 {
+    .danh-mc-sn-phm .group-44 {
         position: absolute;
         width: 109px;
         height: 24px;
@@ -2062,7 +2069,7 @@
         left: 1040px;
     }
 
-    .exit-to-app {
+    .danh-mc-sn-phm .exit-to-app {
         position: absolute;
         width: 24px;
         height: 24px;
@@ -2072,7 +2079,7 @@
         background-size: 100% 100%;
     }
 
-    .group-45 {
+    .danh-mc-sn-phm .group-45 {
         position: absolute;
         width: 1082px;
         height: 115px;
@@ -2080,7 +2087,7 @@
         left: 0;
     }
 
-    .text-wrapper-37 {
+    .danh-mc-sn-phm .text-wrapper-37 {
         position: absolute;
         top: 0;
         left: 0;
@@ -2093,7 +2100,7 @@
         white-space: nowrap;
     }
 
-     .group-46 {
+    .danh-mc-sn-phm .group-46 {
         position: absolute;
         width: 357px;
         height: 40px;
@@ -2101,7 +2108,7 @@
         left: 245px;
     }
 
-     .overlap-group-8 {
+    .danh-mc-sn-phm .overlap-group-8 {
         position: relative;
         width: 355px;
         height: 40px;
@@ -2109,7 +2116,7 @@
         border-radius: 10px;
     }
 
-     .text-wrapper-38 {
+    .danh-mc-sn-phm .text-wrapper-38 {
         position: absolute;
         width: 76px;
         top: 10px;
@@ -2125,7 +2132,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-     .search-wrapper {
+    .danh-mc-sn-phm .search-wrapper {
         position: absolute;
         width: 85px;
         height: 40px;
@@ -2135,7 +2142,7 @@
         border-radius: 0px 10px 10px 0px;
     }
 
-    .search {
+    .danh-mc-sn-phm .search {
         position: absolute;
         width: 32px;
         height: 32px;
@@ -2143,7 +2150,7 @@
         left: 22px;
     }
 
-     .overlap-13 {
+    .danh-mc-sn-phm .overlap-13 {
         position: absolute;
         width: 174px;
         height: 50px;
@@ -2154,7 +2161,7 @@
         background: linear-gradient(180deg, rgb(250, 30, 14) 34%, rgb(189, 32, 0) 100%);
     }
 
-    .text-wrapper-39 {
+    .danh-mc-sn-phm .text-wrapper-39 {
         position: absolute;
         width: 118px;
         height: 15px;
@@ -2170,7 +2177,7 @@
         font-style: var(--common-subtitle-font-style);
     }
 
-     .shopping-bag-wrapper {
+    .danh-mc-sn-phm .shopping-bag-wrapper {
         position: absolute;
         width: 63px;
         height: 50px;
@@ -2180,7 +2187,7 @@
         border-radius: 15px;
     }
 
-    .shopping-bag {
+    .danh-mc-sn-phm .shopping-bag {
         position: absolute;
         width: 32px;
         height: 32px;
@@ -2188,7 +2195,7 @@
         left: 16px;
     }
 
-     .group-wrapper {
+    .danh-mc-sn-phm .group-wrapper {
         position: absolute;
         width: 990px;
         height: 70px;
@@ -2198,7 +2205,7 @@
         border-radius: 25px;
     }
 
-    .group-47 {
+    .danh-mc-sn-phm .group-47 {
         position: relative;
         width: 853px;
         height: 25px;
@@ -2206,7 +2213,7 @@
         left: 68px;
     }
 
-     .ng-nh-p-wrapper {
+    .danh-mc-sn-phm .ng-nh-p-wrapper {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -2216,7 +2223,7 @@
         left: 0;
     }
 
-    .ng-nhp-3 {
+    .danh-mc-sn-phm .ng-nhp-3 {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -2226,7 +2233,7 @@
         left: 252px;
     }
 
-     .ng-nhp-4 {
+    .danh-mc-sn-phm .ng-nhp-4 {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -2236,7 +2243,7 @@
         left: 485px;
     }
 
-     .ng-nhp-5 {
+    .danh-mc-sn-phm .ng-nhp-5 {
         display: inline-flex;
         align-items: center;
         justify-content: center;

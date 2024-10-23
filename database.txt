@@ -1,80 +1,83 @@
-use master
-go
-create database shoptrangsuc
-go
-use shoptrangsuc
-go
+USE MASTER
+GO
+
+CREATE DATABASE shoptrangsuc
+GO
 
 
-Create table Role(
-ID IDENTITY(1,1) PRIMARY KEY,
-TenRole Nvarchar(255)
-)
+USE shoptrangsuc
+GO
 
-Create table TaiKhoan (
-ID IDENTITY(1,1) PRIMARY KEY,
-HoVaTen Nvarchar(255),
-GioiTinh bit,
-NamSinh date,
-SDT char(10),
-Email char(255),
-UserName char(100) not null,
-Matkhau char not null,
-Avatar Nvarchar(255),
-IDRole int,
-CONSTRAINT FK__TaiKhoan_Role ForgeinKey (IDRole) Role(ID)
+
+CREATE TABLE Role (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    TenRole NVARCHAR(255)
 );
 
-Create table DiaChi(
-ID IDENTITY(1,1) PrimaryKey,
-IDUser int,
-DiaChi Nvarchar(255),
-CONSTRAINT FK_DiaChi_TaiKhoan ForgeinKey (IDuser) TaiKhoan(ID)
+CREATE TABLE TaiKhoan (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    HoVaTen NVARCHAR(255),
+    GioiTinh BIT,
+    NamSinh DATE,
+    SDT CHAR(10),
+    Email CHAR(255),
+    UserName CHAR(100) NOT NULL,
+    Matkhau CHAR(255) NOT NULL, 
+    Avatar NVARCHAR(255),
+    IDRole INT,
+    CONSTRAINT FK__TaiKhoan_Role FOREIGN KEY (IDRole) REFERENCES Role(ID)
 );
 
- Create table LoaiSanPham(
-ID IDENTITY(1,1) PrimaryKey,
-TenLoaiSanPham Nvarchar(255),
-HinhLoaiSanPham Nvarchar(255)
+CREATE TABLE DiaChi (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    IDUser INT,
+    DiaChi NVARCHAR(255),
+    CONSTRAINT FK_DiaChi_TaiKhoan FOREIGN KEY (IDUser) REFERENCES TaiKhoan(ID)
 );
 
-Create table SanPham(
-ID IDENTITY(1,1) PrimaryKey,
-TenSanPham Nvarchar(255),
-HinhSanPham NVarChar(255),
-Gia int,
-IDLoaiSanPham int,
-MoTaSanPham Nvarchar(255),
-SoLuongTonKho int,
-TrangThaiSanPham bit,
-NgayTaoSanPham date,
-IdDanhGia int,
-CONSTRAINT FK_SanPham _DanhGia ForeginKey (IdDanhGia) DanhGia(ID),
-CONSTRAINT FK_SanPham_LoaiSanPham ForeginKey (IDLoaiSanPham) LoaiSanPham(ID)
+CREATE TABLE LoaiSanPham (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    TenLoaiSanPham NVARCHAR(255),
+    HinhLoaiSanPham NVARCHAR(255)
 );
 
-Create table DanhGia(
-ID IDENTITY(1,1) PrimaryKey,
-Rate int
+CREATE TABLE SanPham (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    TenSanPham NVARCHAR(255),
+    HinhSanPham NVARCHAR(255),
+    Gia INT,
+    IDLoaiSanPham INT,
+    MoTaSanPham NVARCHAR(255),
+    SoLuongTonKho INT,
+    TrangThaiSanPham BIT,
+    NgayTaoSanPham DATE,
+    CONSTRAINT FK_SanPham_LoaiSanPham FOREIGN KEY (IDLoaiSanPham) REFERENCES LoaiSanPham(ID)
 );
 
-Create table Voucher(
-ID IDENTITY(1,1) PrimaryKey,
-TenVoucher Nvarchar(255),
-ThongTinVoucher NvarChar,
-GiaVoucher int
+CREATE TABLE DanhGia (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    IDSanPham INT, 
+    Rate INT,
+    CONSTRAINT FK_DanhGia_SanPham FOREIGN KEY (IDSanPham) REFERENCES SanPham(ID)
 );
 
-Create table DonHang(
-ID IDENTITY(1,1) PrimaryKey,
-IDUser int,
-TongTien int,
-NgayTaoHoaDon Date,
-TrangThaiGiaoHang int,
-TrangThaiDonHang int,
-IDVoucher int,
-CONSTRAINT FK_DonHang_TaiKhoan ForeignKey (IDUser) TaiKhoan(ID),
-CONSTRAINT FK_DonHang_Voucher ForeignKey (IDVoucher) Voucher(ID)
+CREATE TABLE Voucher (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    TenVoucher NVARCHAR(255),
+    ThongTinVoucher NVARCHAR(255),
+    GiaVoucher INT
+);
+
+CREATE TABLE DonHang (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    IDUser INT,
+    TongTien INT,
+    NgayTaoHoaDon DATE,
+    TrangThaiGiaoHang INT, 
+    TrangThaiDonHang INT, 
+    IDVoucher INT,
+    CONSTRAINT FK_DonHang_TaiKhoan FOREIGN KEY (IDUser) REFERENCES TaiKhoan(ID),
+    CONSTRAINT FK_DonHang_Voucher FOREIGN KEY (IDVoucher) REFERENCES Voucher(ID)
 );
 
 CREATE TABLE DonHangChiTiet (
@@ -86,3 +89,5 @@ CREATE TABLE DonHangChiTiet (
     CONSTRAINT FK_DonHangChiTiet_DonHang FOREIGN KEY (IDDonHang) REFERENCES DonHang(ID),
     CONSTRAINT FK_DonHangChiTiet_SanPham FOREIGN KEY (IDSanPham) REFERENCES SanPham(ID)
 );
+GO
+
