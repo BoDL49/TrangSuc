@@ -143,6 +143,27 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DanhGia.cs">
+      <DependentUpon>ShopTrangSuc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DiaChi.cs">
+      <DependentUpon>ShopTrangSuc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DonHang.cs">
+      <DependentUpon>ShopTrangSuc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DonHangChiTiet.cs">
+      <DependentUpon>ShopTrangSuc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoaiSanPham.cs">
+      <DependentUpon>ShopTrangSuc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Role.cs">
+      <DependentUpon>ShopTrangSuc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SanPham.cs">
+      <DependentUpon>ShopTrangSuc.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\ShopTrangSuc.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -157,6 +178,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ShopTrangSuc.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TaiKhoan.cs">
+      <DependentUpon>ShopTrangSuc.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Voucher.cs">
+      <DependentUpon>ShopTrangSuc.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -292,8 +319,8 @@
     <Content Include="img\vancleef.svg" />
     <Content Include="Models\ShopTrangSuc.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ShopTrangSuc.Context.cs</LastGenOutput>
       <DependentUpon>ShopTrangSuc.edmx</DependentUpon>
+      <LastGenOutput>ShopTrangSuc.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\ShopTrangSuc.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
