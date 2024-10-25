@@ -55,6 +55,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -146,6 +147,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ShopTrangSuc.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ShopTrangSuc.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShopTrangSuc.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ShopTrangSuc.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -287,6 +293,12 @@
     <Content Include="Models\ShopTrangSuc.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ShopTrangSuc.Context.cs</LastGenOutput>
+      <DependentUpon>ShopTrangSuc.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\ShopTrangSuc.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ShopTrangSuc.edmx</DependentUpon>
+      <LastGenOutput>ShopTrangSuc.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -302,9 +314,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ShopTrangSuc.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\ShopTrangSuc.edmx.diagram">
+    <Content Include="Models\ShopTrangSuc.edmx.diagram">
       <DependentUpon>ShopTrangSuc.edmx</DependentUpon>
-    </None>
+    </Content>
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />

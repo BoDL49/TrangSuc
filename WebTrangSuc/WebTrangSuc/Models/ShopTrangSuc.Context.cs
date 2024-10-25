@@ -13,10 +13,10 @@ namespace WebTrangSuc.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class shoptrangsucEntities : DbContext
+    public partial class shoptrangsucEntities1 : DbContext
     {
-        public shoptrangsucEntities()
-            : base("name=shoptrangsucEntities")
+        public shoptrangsucEntities1()
+            : base("name=shoptrangsucEntities1")
         {
         }
     

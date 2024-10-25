@@ -443,7 +443,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="shoptrangsucEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="shoptrangsucEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="DanhGias" EntityType="Self.DanhGia" />
           <EntitySet Name="DiaChis" EntityType="Self.DiaChi" />
           <EntitySet Name="DonHangs" EntityType="Self.DonHang" />
@@ -491,7 +491,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="shoptrangsucModelStoreContainer" CdmEntityContainer="shoptrangsucEntities">
+        <EntityContainerMapping StorageEntityContainer="shoptrangsucModelStoreContainer" CdmEntityContainer="shoptrangsucEntities1">
           <EntitySetMapping Name="DanhGias">
             <EntityTypeMapping TypeName="shoptrangsucModel.DanhGia">
               <MappingFragment StoreEntitySet="DanhGia">
