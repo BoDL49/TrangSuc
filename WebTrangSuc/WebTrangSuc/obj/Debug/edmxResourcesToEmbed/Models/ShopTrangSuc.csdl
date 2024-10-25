@@ -203,7 +203,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="shoptrangsucEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="shoptrangsucEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="DanhGias" EntityType="Self.DanhGia" />
     <EntitySet Name="DiaChis" EntityType="Self.DiaChi" />
     <EntitySet Name="DonHangs" EntityType="Self.DonHang" />
