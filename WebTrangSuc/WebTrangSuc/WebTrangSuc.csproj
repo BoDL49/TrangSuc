@@ -45,10 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -133,6 +141,16 @@
     <Compile Include="Controllers\TrangChuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ShopTrangSuc.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShopTrangSuc.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ShopTrangSuc.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShopTrangSuc.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -266,6 +284,10 @@
     <Content Include="img\swarovski.svg" />
     <Content Include="img\tiffany-co.svg" />
     <Content Include="img\vancleef.svg" />
+    <Content Include="Models\ShopTrangSuc.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ShopTrangSuc.Context.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -276,6 +298,13 @@
     <Content Include="Areas\XuLyDonHang\Views\web.config" />
     <Content Include="Areas\QuanLy\Views\web.config" />
     <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
+    <EntityDeploy Include="Models\ShopTrangSuc.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ShopTrangSuc.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\ShopTrangSuc.edmx.diagram">
+      <DependentUpon>ShopTrangSuc.edmx</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -319,7 +348,6 @@
     <Folder Include="Areas\XuLyDonHang\Controllers\" />
     <Folder Include="Areas\XuLyDonHang\Data\" />
     <Folder Include="Areas\XuLyDonHang\Views\Shared\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -347,6 +375,9 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.0.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
