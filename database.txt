@@ -91,3 +91,76 @@ CREATE TABLE DonHangChiTiet (
 );
 GO
 
+INSERT INTO Role (TenRole) 
+VALUES 
+    (N'admin'), 
+    (N'xulydonhang'), 
+    (N'quanly');
+GO
+USE shoptrangsuc
+GO
+
+INSERT INTO TaiKhoan (HoVaTen, GioiTinh, NamSinh, SDT, Email, UserName, Matkhau, Avatar, IDRole)
+VALUES
+(N'Nguyễn Văn A', 1, '2000-01-01', '0987654321', 'nguyenvana@example.com', 'nguyenvana', 'password123', 'avatar1.jpg', 1),
+(N'Trần Thị B', 0, '1995-05-05', '0912345678', 'tranthib@example.com', 'tranthib', 'password456', 'avatar2.jpg', 2),
+(N'Lê Văn C', 1, '1998-10-10', '0978901234', 'levanc@example.com', 'levanc', 'password789', 'avatar3.jpg', 3),
+(N'Phạm Thị D', 0, '2002-03-15', '0945678901', 'phamthid@example.com', 'phamthid', 'password001', 'avatar4.jpg', 2);
+
+
+go
+
+INSERT INTO DiaChi (IDUser, DiaChi)
+VALUES
+(1, N'123 Đường A, Quận 1, TP.HCM'),
+(2, N'456 Đường B, Quận 2, TP.HCM'),
+(3, N'789 Đường C, Quận 3, TP.HCM'),
+(4, N'101 Đường D, Quận 4, TP.HCM');
+go
+
+INSERT INTO LoaiSanPham (TenLoaiSanPham, HinhLoaiSanPham)
+VALUES
+(N'Nhẫn', 'nhan.jpg'),
+(N'Dây chuyền', 'daychuyen.jpg'),
+(N'Bông tai', 'bongtai.jpg'),
+(N'Lắc tay', 'lactay.jpg');
+
+go
+
+INSERT INTO SanPham (TenSanPham, HinhSanPham, Gia, IDLoaiSanPham, MoTaSanPham, SoLuongTonKho, TrangThaiSanPham, NgayTaoSanPham)
+VALUES
+(N'Nhẫn kim cương', 'nhankimcuong.jpg', 1000000, 1, N'Nhẫn kim cương sang trọng', 10, 1, '2023-10-26'),
+(N'Dây chuyền bạc', 'daychuyenbac.jpg', 500000, 2, N'Dây chuyền bạc tinh tế', 20, 1, '2023-10-26'),
+(N'Bông tai vàng', 'bongtaivang.jpg', 750000, 3, N'Bông tai vàng thời trang', 15, 1, '2023-10-26'),
+(N'Lắc tay bạch kim', 'lactaybachkim.jpg', 1200000, 4, N'Lắc tay bạch kim đẳng cấp', 5, 1, '2023-10-26');
+
+go
+
+INSERT INTO DanhGia (IDSanPham, Rate)
+VALUES
+(1, 5),
+(2, 4),
+(3, 5),
+(4, 3);
+
+go
+
+INSERT INTO Voucher (TenVoucher, ThongTinVoucher, GiaVoucher)
+VALUES
+(N'Giảm giá 10%', N'Áp dụng cho đơn hàng trên 500.000đ', 50000),
+(N'Giảm giá 20%', N'Áp dụng cho đơn hàng trên 1.000.000đ', 200000);
+
+go
+
+INSERT INTO DonHang (IDUser, TongTien, NgayTaoHoaDon, TrangThaiGiaoHang, TrangThaiDonHang, IDVoucher)
+VALUES
+(1, 1500000, '2023-10-27', 1, 1, 2),
+(2, 700000, '2023-10-27', 0, 0, 1);
+
+go
+
+INSERT INTO DonHangChiTiet (IDDonHang, IDSanPham, SoLuongSanPham, GiaSanPham)
+VALUES
+(1, 1, 1, 1000000),
+(1, 2, 1, 500000),
+(2, 3, 1, 750000);
