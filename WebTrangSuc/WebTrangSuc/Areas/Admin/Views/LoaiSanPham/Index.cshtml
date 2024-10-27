@@ -1,0 +1,62 @@
+﻿@model IEnumerable<WebTrangSuc.Models.LoaiSanPham>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title"> Quản lý danh mục sản phẩm </h3>
+        <nav aria-label="breadcrumb">
+            
+        </nav>
+    </div>
+    <p>
+        <a href="@Url.Action("Create", "LoaiSanPham")" class="btn btn-primary">Create New</a>
+    </p>
+
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên loại</th>
+                    <th>Hình loại</th>
+                </tr>
+            </thead>
+           @* <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    var i = 1;
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@i</td>
+                            <td>@item.TenLoaiSanPham</td>
+                            <td>@item.HinhLoaiSanPham</td>
+                            <td>
+                                <a href="/admin/category/edit/@item.ID" class="btn btn-sm btn-primary">Sửa</a>
+                                <a href="/admin/category/Delete/@item.ID" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this category?');">Xóa</a>
+
+                            </td>
+                        </tr>
+                        i++;
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="6">Không có bản ghi nào</td>
+                    </tr>
+                }
+            </tbody>*@
+
+        </table>
+
+    </div>
+    <!--/.card-body-->
+    <div class="card-footer">
+    </div>
+    <!--/.card-footer-->
+</div>
+
