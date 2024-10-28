@@ -1,0 +1,41 @@
+﻿@model WebTrangSuc.Models.Voucher
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Thông tin thêm mới danh mục </h3>
+            <div class="card-body">
+                @using (Html.BeginForm("Edit", "Voucher", FormMethod.Post))
+                {
+                    @Html.HiddenFor(x => x.ID)
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+                    <div class="form-group">
+                        <label for="TenVoucher">Tên voucher</label>
+                        @Html.TextBoxFor(x => x.TenVoucher, new { @class = "form-control", @placeholder = "Tên voucher" })
+                        @Html.ValidationMessageFor(x => x.TenVoucher, null, new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label for="ThongtinVoucher">Thông tin voucher</label>
+                        @Html.TextBoxFor(x => x.ThongTinVoucher, new { @class = "form-control", @placeholder = "Thông tin voucher" })
+                        @Html.ValidationMessageFor(x => x.ThongTinVoucher, null, new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label for="Giavoucher">Giá voucher</label>
+                        @Html.TextBoxFor(x => x.GiaVoucher, new { @class = "form-control", @placeholder = "Giá voucher" })
+                        @Html.ValidationMessageFor(x => x.GiaVoucher, null, new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <a href="/admin/loaisanpham" class="btn btn-danger">Quay lại</a>
+                        <button type="submit" class="btn btn-success mr-2">Submit</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+

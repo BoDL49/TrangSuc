@@ -28,7 +28,7 @@ namespace WebTrangSuc.Models
         public Nullable<int> IDLoaiSanPham { get; set; }
         public string MoTaSanPham { get; set; }
         public Nullable<int> SoLuongTonKho { get; set; }
-        public Nullable<bool> TrangThaiSanPham { get; set; }
+        public bool TrangThaiSanPham { get; set; }
         public Nullable<System.DateTime> NgayTaoSanPham { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

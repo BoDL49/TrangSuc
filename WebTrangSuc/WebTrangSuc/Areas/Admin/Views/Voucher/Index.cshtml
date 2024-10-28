@@ -1,0 +1,63 @@
+﻿@model IEnumerable<WebTrangSuc.Models.Voucher>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title"> Quản lý danh mục sản phẩm </h3>
+        <nav aria-label="breadcrumb">
+
+        </nav>
+    </div>
+    <p>
+        <a href="@Url.Action("Create", "Voucher")" class="btn btn-primary">Create New</a>
+    </p>
+
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên voucher</th>
+                    <th>Thông tin voucher</th>
+                    <th>Giá voucher</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    var i = 1;
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@i</td>
+                            <td>@item.TenVoucher</td>
+                            <td>@item.ThongTinVoucher</td>
+                            <td>@item.GiaVoucher</td>
+                            <td>
+                                <a href="/admin/voucher/edit/@item.ID" class="btn btn-sm btn-primary">Sửa</a>
+                                <a href="/admin/voucher/Delete/@item.ID" class="btn btn-sm btn-danger" onclick="return confirm('Bạn có muốn xóa không?');">Xóa</a>
+
+                            </td>
+                        </tr>
+                        i++;
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="6">Không có bản ghi nào</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+
+    </div>
+</div>
+
+
+
