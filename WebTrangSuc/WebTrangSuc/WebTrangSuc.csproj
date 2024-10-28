@@ -752,6 +752,8 @@
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Areas\Admin\Views\LoaiSanPham\Index.cshtml" />
     <Content Include="Areas\Admin\Views\LoaiSanPham\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiSanPham\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiSanPham\Delete.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
