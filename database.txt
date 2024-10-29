@@ -95,7 +95,8 @@ INSERT INTO Role (TenRole)
 VALUES 
     (N'admin'), 
     (N'xulydonhang'), 
-    (N'quanly');
+    (N'quanly'),
+    (N'user');
 GO
 USE shoptrangsuc
 GO
