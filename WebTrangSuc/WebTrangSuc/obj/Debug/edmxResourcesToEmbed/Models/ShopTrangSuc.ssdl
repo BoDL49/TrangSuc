@@ -38,11 +38,20 @@
     <Property Name="SoLuongSanPham" Type="int" />
     <Property Name="GiaSanPham" Type="int" />
   </EntityType>
+  <EntityType Name="HinhSanPham">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDSP" Type="int" />
+    <Property Name="HinhSP" Type="nvarchar" MaxLength="255" />
+  </EntityType>
   <EntityType Name="LoaiSanPham">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaSP" Type="nvarchar" MaxLength="255" />
     <Property Name="TenLoaiSanPham" Type="nvarchar" MaxLength="255" />
     <Property Name="HinhLoaiSanPham" Type="nvarchar" MaxLength="255" />
   </EntityType>
@@ -59,12 +68,11 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TenSanPham" Type="nvarchar" MaxLength="255" />
-    <Property Name="HinhSanPham" Type="nvarchar" MaxLength="255" />
     <Property Name="Gia" Type="int" />
     <Property Name="IDLoaiSanPham" Type="int" />
     <Property Name="MoTaSanPham" Type="nvarchar" MaxLength="255" />
     <Property Name="SoLuongTonKho" Type="int" />
-    <Property Name="TrangThaiSanPham" Type="bit" />
+    <Property Name="TrangThaiSanPham" Type="nvarchar" MaxLength="255" />
     <Property Name="NgayTaoSanPham" Type="date" />
   </EntityType>
   <EntityType Name="TaiKhoan">
@@ -90,6 +98,9 @@
     <Property Name="TenVoucher" Type="nvarchar" MaxLength="255" />
     <Property Name="ThongTinVoucher" Type="nvarchar" MaxLength="255" />
     <Property Name="GiaVoucher" Type="int" />
+    <Property Name="NgayBatDau" Type="date" />
+    <Property Name="NgayKetThuc" Type="date" />
+    <Property Name="SoLuongSuDung" Type="int" />
   </EntityType>
   <Association Name="FK__TaiKhoan_Role">
     <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
@@ -175,6 +186,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_HinhAnhSanPham_SanPham">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
+    <End Role="HinhSanPham" Type="Self.HinhSanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="HinhSanPham">
+        <PropertyRef Name="IDSP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_SanPham_LoaiSanPham">
     <End Role="LoaiSanPham" Type="Self.LoaiSanPham" Multiplicity="0..1" />
     <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
@@ -192,6 +215,7 @@
     <EntitySet Name="DiaChi" EntityType="Self.DiaChi" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DonHang" EntityType="Self.DonHang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DonHangChiTiet" EntityType="Self.DonHangChiTiet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HinhSanPham" EntityType="Self.HinhSanPham" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LoaiSanPham" EntityType="Self.LoaiSanPham" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
@@ -224,6 +248,10 @@
     <AssociationSet Name="FK_DonHangChiTiet_SanPham" Association="Self.FK_DonHangChiTiet_SanPham">
       <End Role="SanPham" EntitySet="SanPham" />
       <End Role="DonHangChiTiet" EntitySet="DonHangChiTiet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HinhAnhSanPham_SanPham" Association="Self.FK_HinhAnhSanPham_SanPham">
+      <End Role="SanPham" EntitySet="SanPham" />
+      <End Role="HinhSanPham" EntitySet="HinhSanPham" />
     </AssociationSet>
     <AssociationSet Name="FK_SanPham_LoaiSanPham" Association="Self.FK_SanPham_LoaiSanPham">
       <End Role="LoaiSanPham" EntitySet="LoaiSanPham" />

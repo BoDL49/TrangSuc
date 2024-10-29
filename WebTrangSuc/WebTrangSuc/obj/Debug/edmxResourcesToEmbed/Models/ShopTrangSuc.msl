@@ -46,6 +46,7 @@
     <EntitySetMapping Name="LoaiSanPhams">
       <EntityTypeMapping TypeName="shoptrangsucModel.LoaiSanPham">
         <MappingFragment StoreEntitySet="LoaiSanPham">
+          <ScalarProperty Name="MaSP" ColumnName="MaSP" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="TenLoaiSanPham" ColumnName="TenLoaiSanPham" />
           <ScalarProperty Name="HinhLoaiSanPham" ColumnName="HinhLoaiSanPham" />
@@ -65,7 +66,6 @@
         <MappingFragment StoreEntitySet="SanPham">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="TenSanPham" ColumnName="TenSanPham" />
-          <ScalarProperty Name="HinhSanPham" ColumnName="HinhSanPham" />
           <ScalarProperty Name="Gia" ColumnName="Gia" />
           <ScalarProperty Name="IDLoaiSanPham" ColumnName="IDLoaiSanPham" />
           <ScalarProperty Name="MoTaSanPham" ColumnName="MoTaSanPham" />
@@ -94,10 +94,22 @@
     <EntitySetMapping Name="Vouchers">
       <EntityTypeMapping TypeName="shoptrangsucModel.Voucher">
         <MappingFragment StoreEntitySet="Voucher">
+          <ScalarProperty Name="SoLuongSuDung" ColumnName="SoLuongSuDung" />
+          <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
+          <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="TenVoucher" ColumnName="TenVoucher" />
           <ScalarProperty Name="ThongTinVoucher" ColumnName="ThongTinVoucher" />
           <ScalarProperty Name="GiaVoucher" ColumnName="GiaVoucher" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HinhSanPhams">
+      <EntityTypeMapping TypeName="shoptrangsucModel.HinhSanPham">
+        <MappingFragment StoreEntitySet="HinhSanPham">
+          <ScalarProperty Name="HinhSP" ColumnName="HinhSP" />
+          <ScalarProperty Name="IDSP" ColumnName="IDSP" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -336,7 +336,6 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenSanPham" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Name="HinhSanPham" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Gia" Type="Int32" />
           <Property Name="IDLoaiSanPham" Type="Int32" />
           <Property Name="MoTaSanPham" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />

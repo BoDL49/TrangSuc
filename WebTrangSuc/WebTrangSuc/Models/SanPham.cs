@@ -24,7 +24,6 @@ namespace WebTrangSuc.Models
     
         public int ID { get; set; }
         public string TenSanPham { get; set; }
-        public string HinhSanPham { get; set; }
         public Nullable<int> Gia { get; set; }
         public Nullable<int> IDLoaiSanPham { get; set; }
         public string MoTaSanPham { get; set; }
