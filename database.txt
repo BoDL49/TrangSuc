@@ -148,7 +148,7 @@ VALUES
 GO
 
 
-INSERT INTO HinhSanPham (IDSanPham, HinhSP) VALUES
+INSERT INTO HinhSanPham (IDSP, HinhSP) VALUES
 (1, 'nhankimcuong_1.jpg'),
 (1, 'nhankimcuong_2.jpg'),
 (2, 'daychuyenbac_1.jpg'),
