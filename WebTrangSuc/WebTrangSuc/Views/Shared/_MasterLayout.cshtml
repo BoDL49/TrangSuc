@@ -9,27 +9,28 @@
     <link href="~/Content/Css/styleguild.css" rel="stylesheet" />
     <link href="~/Content/Css/MasterCss.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-        <style>
-            body, html {
-                height: 100%; 
-                margin: 0; 
-            }
+    <script src="https://kit.fontawesome.com/86c67604fc.js" crossorigin="anonymous"></script>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
 
-            #wrapper {
-                min-height: 100%; 
-                display: flex;
-                flex-direction: column;
-            }
+        #wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
 
-            main {
-                flex: 1; 
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding-top: 20px; 
-            }
-        </style>
-    </head>
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 20px;
+        }
+    </style>
+</head>
     <body>
         <div class="trang-ch">
             <div class="div">
@@ -38,13 +39,13 @@
                     <img class="line-2" src="~/img/line-2.svg" />
                     <img class="line-3" src="~/img/line-2.svg" />
                     <div class="signin">
-                        <div class="face"></div>
+                        <div class="face"><i class="fa-solid fa-user" style="color: #B4A398; padding-top: 5px;"></i></div>
                         <div class="ng-nhp">
                             <div class="text-wrapper-69">@Html.ActionLink("Đăng nhập", "Index", "Auth")</div>
                         </div>
                     </div>
                     <div class="signup">
-                        <div class="exit-to-app"></div>
+                        <div class="exit-to-app"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #B4A398; padding-top: 5px;"></i></div>
                         <div class="ng-nhp">
                             <div class="text-wrapper-69">@Html.ActionLink("Đăng ký", "Index", "Auth")</div>
                         </div>
@@ -69,7 +70,7 @@
                                 <div class="text-wrapper-69">Sự kiện</div>
                             </div>
                             <div class="ng-nhp-2">
-                                <div class="text-wrapper-69">Bộ sưu tập</div>
+                                <div class="text-wrapper-69">@Html.ActionLink("Bộ sưu tập", "Index", "BoSuuTap")</div>
                             </div>
                             <div class="ng-nhp-3">
                                 <div class="text-wrapper-69">Thương hiệu</div>

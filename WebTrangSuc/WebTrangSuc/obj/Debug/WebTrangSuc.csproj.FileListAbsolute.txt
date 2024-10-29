@@ -443,3 +443,7 @@ D:\Công nghệ phần mềm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\Page
 D:\Công nghệ phần mềm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\PagedList.Mvc.dll
 D:\Công nghệ phần mềm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\PagedList.xml
 D:\Công nghệ phần mềm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\PagedList.Mvc.xml
+C:\Users\tuant\Desktop\DoAn\DoAn\cnpm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\PagedList.dll
+C:\Users\tuant\Desktop\DoAn\DoAn\cnpm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\PagedList.Mvc.dll
+C:\Users\tuant\Desktop\DoAn\DoAn\cnpm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\PagedList.xml
+C:\Users\tuant\Desktop\DoAn\DoAn\cnpm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\PagedList.Mvc.xml

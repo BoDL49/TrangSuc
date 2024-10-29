@@ -60,11 +60,14 @@ namespace WebTrangSuc.Controllers
                 ViewBag.ErrorMessage = "Email hoặc Username đã tồn tại.";
                 return View("Index");
             }
+            //Console.WriteLine("HoVaTen" + taiKhoan.HoVaTen);
+            //Console.WriteLine("Email" + taiKhoan.Email);
+            //Console.WriteLine("UserName"
 
-            taiKhoan.Matkhau = HashPassword(taiKhoan.Matkhau);
+            //taiKhoan.Matkhau = HashPassword(taiKhoan.Matkhau);
 
-            db.TaiKhoans.Add(taiKhoan);
-            db.SaveChanges();
+            //db.TaiKhoans.Add(taiKhoan);
+            //db.SaveChanges();
 
             return RedirectToAction("Index", "Auth"); 
         }

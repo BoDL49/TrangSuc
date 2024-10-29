@@ -630,6 +630,7 @@
     <Content Include="img\east-4.svg" />
     <Content Include="img\exit-to-app-3.svg" />
     <Content Include="img\face-3.svg" />
+    <Content Include="img\face.png" />
     <Content Include="img\favorite-border-10.svg" />
     <Content Include="img\favorite-border-3.svg" />
     <Content Include="img\favorite-border-4.svg" />

@@ -13,10 +13,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\webtrangsuc\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\webtrangsuc\\content\\css\\mastercss.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\content\\css\\mastercss.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,20 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MasterCss.css",
-              "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Content\\Css\\MasterCss.css",
-              "RelativeDocumentMoniker": "WebTrangSuc\\Content\\Css\\MasterCss.css",
-              "ToolTip": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Content\\Css\\MasterCss.css",
-              "RelativeToolTip": "WebTrangSuc\\Content\\Css\\MasterCss.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-10-29T03:50:27.858Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -50,7 +34,8 @@
               "RelativeToolTip": "WebTrangSuc\\Models\\TaiKhoanModel.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAIwDQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T03:44:51.542Z"
+              "WhenOpened": "2024-10-29T03:44:51.542Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -60,7 +45,7 @@
               "RelativeDocumentMoniker": "WebTrangSuc\\Views\\Auth\\Index.cshtml",
               "ToolTip": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\Auth\\Index.cshtml",
               "RelativeToolTip": "WebTrangSuc\\Views\\Auth\\Index.cshtml",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAqwA4AAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAgwJkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-29T03:33:49.867Z",
               "EditorCaption": ""
@@ -75,7 +60,8 @@
               "RelativeToolTip": "WebTrangSuc\\Controllers\\AuthController.cs",
               "ViewState": "AgIAADoAAAAAAAAAAAAIwFYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T03:18:33.813Z"
+              "WhenOpened": "2024-10-29T03:18:33.813Z",
+              "EditorCaption": ""
             }
           ]
         }
