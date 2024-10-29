@@ -3,50 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\tuant\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\webtrangsuc\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\webtrangsuc\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\webtrangsuc\\areas\\admin\\views\\loaisanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\loaisanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Controllers\\SanPhamController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Controllers\\VoucherController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\tuant\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -56,185 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Delete.cshtml",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Delete.cshtml",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-28T04:20:36.689Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Edit.cshtml",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Edit.cshtml",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Edit.cshtml",
-              "ViewState": "AgIAABYAAAAAAAAAAAAiwDAAAAB2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-28T04:19:43.244Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SanPhamController.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Controllers\\SanPhamController.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Controllers\\SanPhamController.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Controllers\\SanPhamController.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Controllers\\SanPhamController.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAowJIAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T04:17:51.972Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_AdminLayout.cshtml",
-              "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ToolTip": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-28T04:15:46.843Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Create.cshtml",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Create.cshtml",
-              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Create.cshtml",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Create.cshtml",
-              "ViewState": "AgIAABcAAAAAAAAAAAAiwCwAAAB6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-28T04:18:52.64Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Index.cshtml",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Index.cshtml",
-              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Index.cshtml",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-28T04:18:18.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SanPham.cs",
-              "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Models\\SanPham.cs",
-              "RelativeDocumentMoniker": "WebTrangSuc\\Models\\SanPham.cs",
-              "ToolTip": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Models\\SanPham.cs",
-              "RelativeToolTip": "WebTrangSuc\\Models\\SanPham.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAAwB4AAAATAAAA",
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "WebTrangSuc\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T04:15:33.956Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Role.cs",
-              "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Models\\Role.cs",
-              "RelativeDocumentMoniker": "WebTrangSuc\\Models\\Role.cs",
-              "ToolTip": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Models\\Role.cs",
-              "RelativeToolTip": "WebTrangSuc\\Models\\Role.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T04:15:33.283Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\LoaiSanPham\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\LoaiSanPham\\Index.cshtml",
-              "ToolTip": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\LoaiSanPham\\Index.cshtml",
-              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\LoaiSanPham\\Index.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACYAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-28T04:14:39.054Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Delete.cshtml",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Delete.cshtml",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Delete.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-28T04:14:24.762Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Edit.cshtml",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Edit.cshtml",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Edit.cshtml",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAiwCkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-28T04:13:56.052Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Create.cshtml",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Create.cshtml",
-              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Create.cshtml",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Create.cshtml",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAiwCgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-28T04:13:12.293Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Index.cshtml",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Index.cshtml",
-              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Index.cshtml",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Index.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACkAAACVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-28T04:12:36.437Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "VoucherController.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Controllers\\VoucherController.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Controllers\\VoucherController.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Controllers\\VoucherController.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Controllers\\VoucherController.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAkwEwAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T04:11:50.044Z",
+              "WhenOpened": "2024-10-29T03:18:33.813Z",
               "EditorCaption": ""
             }
           ]

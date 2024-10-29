@@ -133,6 +133,8 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoaiSanPhamController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SanPhamController.cs" />
+    <Compile Include="Areas\Admin\Controllers\VoucherController.cs" />
     <Compile Include="Areas\QuanLy\QuanLyAreaRegistration.cs" />
     <Compile Include="Areas\XuLyDonHang\XuLyDonHangAreaRegistration.cs" />
     <Compile Include="Controllers\AuthController.cs" />
@@ -755,6 +757,16 @@
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
     <Content Include="Areas\Admin\Views\LoaiSanPham\Index.cshtml" />
     <Content Include="Areas\Admin\Views\LoaiSanPham\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiSanPham\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\LoaiSanPham\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Voucher\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Voucher\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Voucher\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Voucher\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\SanPham\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\SanPham\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\SanPham\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\SanPham\Delete.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />

@@ -1,0 +1,70 @@
+﻿@model WebTrangSuc.Models.SanPham
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Thông tin danh mục</h3>
+        <div class="card-body">
+            @using (Html.BeginForm("Edit", "SanPham", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.HiddenFor(x => x.ID) <!-- Use a hidden field for the ID -->
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+                <div class="form-group">
+                    <label for="TenSanPham">Tên sản phẩm </label>
+                    @Html.TextBoxFor(x => x.TenSanPham, new { @class = "form-control", @placeholder = "Tên sản phẩm" })
+                    @Html.ValidationMessageFor(x => x.TenSanPham, null, new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.Label("Ảnh hiện tại:")
+                    <img src="@Model.HinhSanPham" alt="Ảnh loại sản phẩm" style="max-width: 200px;" />
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2">Hình Sản Phẩm</label>
+                    <div class="col-md-10">
+                        <input type="file" name="file" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Gia">Giá </label>
+                    @Html.TextBoxFor(x => x.Gia, new { @class = "form-control", @placeholder = "Tên sản phẩm" })
+                    @Html.ValidationMessageFor(x => x.Gia, null, new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label for="IDLoaiSanPham">Loại sản phẩm</label>
+                    @Html.DropDownListFor(x => x.IDLoaiSanPham, (SelectList)ViewBag.LoaiSanPhamList,
+                        "Chọn loại sản phẩm", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.IDLoaiSanPham, null, new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label for="MotaSanpham">Mô tả sản phẩm </label>
+                    @Html.TextBoxFor(x => x.MoTaSanPham, new { @class = "form-control", @placeholder = "Mô tả sản phẩm" })
+                    @Html.ValidationMessageFor(x => x.MoTaSanPham, null, new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label for="SoLuongTon">Số lượng tồn</label>
+                    @Html.TextBoxFor(x => x.SoLuongTonKho, new { @class = "form-control", @placeholder = "Số lượng tồn" })
+                    @Html.ValidationMessageFor(x => x.SoLuongTonKho, null, new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            @Html.CheckBoxFor(x => x.TrangThaiSanPham, new { @class = "form-check-input" })
+                            Trạng thái sản phẩm (Kích hoạt)
+                        </label>
+                    </div>
+                    @Html.ValidationMessageFor(x => x.TrangThaiSanPham, null, new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    <a href="/admin/sanpham" class="btn btn-danger">Quay lại</a>
+                    <button type="submit" class="btn btn-success mr-2">Submit</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
