@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\controllers\\loaisanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\controllers\\loaisanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -48,6 +49,9 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\webtrangsuc\\views\\danhmucsanpham\\danhmucsanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+=======
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\trangsuc\\webtrangsuc\\webtrangsuc\\views\\danhmucsanpham\\danhmucsanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+>>>>>>> Stashed changes
       "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\views\\danhmucsanpham\\danhmucsanpham.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -62,6 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< Updated upstream
           "SelectedChildIndex": 6,
           "Children": [
             {
@@ -99,6 +104,25 @@
               "ViewState": "AQIAABAAAAAAAAAAAAAmwB8AAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-27T02:26:50.078Z",
+=======
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DanhMucSanPham.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\DanhMucSanPham\\DanhMucSanPham.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Views\\DanhMucSanPham\\DanhMucSanPham.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\DanhMucSanPham\\DanhMucSanPham.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Views\\DanhMucSanPham\\DanhMucSanPham.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-13T08:31:54.442Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
@@ -128,6 +152,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< Updated upstream
               "Title": "_AdminLayout.cshtml",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
               "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
@@ -172,6 +197,16 @@
               "ViewState": "AQIAACcAAAAAAAAAAAAAAD4AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2024-10-27T01:53:20.932Z",
+=======
+              "Title": "DanhMucSanPhamCss.css",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Content\\Css\\DanhMucSanPhamCss.css",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Content\\Css\\DanhMucSanPhamCss.css",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Content\\Css\\DanhMucSanPhamCss.css",
+              "RelativeToolTip": "WebTrangSuc\\Content\\Css\\DanhMucSanPhamCss.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-10-13T08:30:22.433Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
