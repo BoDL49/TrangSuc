@@ -17,7 +17,7 @@ CREATE TABLE Role (
 CREATE TABLE TaiKhoan (
     ID INT IDENTITY(1,1) PRIMARY KEY,
     HoVaTen NVARCHAR(255),
-    GioiTinh BIT,
+    GioiTinh Nvarchar(5),
     NamSinh DATE,
     SDT CHAR(10),
     Email CHAR(255),

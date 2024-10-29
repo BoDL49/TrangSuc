@@ -29,11 +29,11 @@ namespace WebTrangSuc.Models
         public virtual DbSet<DiaChi> DiaChis { get; set; }
         public virtual DbSet<DonHang> DonHangs { get; set; }
         public virtual DbSet<DonHangChiTiet> DonHangChiTiets { get; set; }
+        public virtual DbSet<HinhSanPham> HinhSanPhams { get; set; }
         public virtual DbSet<LoaiSanPham> LoaiSanPhams { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<Voucher> Vouchers { get; set; }
-        public virtual DbSet<HinhSanPham> HinhSanPhams { get; set; }
     }
 }

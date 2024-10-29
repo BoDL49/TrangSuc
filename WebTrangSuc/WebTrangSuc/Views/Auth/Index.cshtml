@@ -31,9 +31,10 @@
                     </label>
                     <a href="#" class="text-sm text-blue-600 hover:underline">Quên mật khẩu?</a>
                 </div>
-                <button type="submit" id="dangnhap"class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">
+                <button type="submit" id="dangnhap" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">
                     <span class="inline-flex items-center">Đăng nhập <span class="ml-2">➡️</span></span>
                 </button>
+                <div id="error-message" class="text-red-500 text-sm mt-2 hidden"></div>
             </form>
         </div>
         <div class="w-full md:w-1/2 p-8 bg-gradient-to-br from-blue-500 to-purple-600">
@@ -52,9 +53,9 @@
                         <label class="block text-sm font-medium text-white mb-1">Giới Tính</label>
                         <select name="GioiTinh" tabindex="2" class="w-full px-4 py-3 rounded-lg border border-transparent focus:ring-2 focus:ring-white focus:border-white transition-all bg-blue-600/50 text-white placeholder-blue-200">
                             <option value="">Chọn giới tính</option>
-                            <option value="0">Nam</option>
-                            <option value="1">Nữ</option>
-                            <option value="2">Khác</option>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                            <option value="Khác">Khác</option>
                         </select>
                     </div>
                 </div>
@@ -71,8 +72,6 @@
                     <label class="block text-sm font-medium text-white mb-1">Email Address</label>
                     <input type="Email" name="email" tabindex="5" class="w-full px-4 py-3 rounded-lg border border-transparent focus:ring-2 focus:ring-white focus:border-white transition-all bg-blue-600/50 text-white placeholder-blue-200" placeholder="you@example.com" required>
                 </div>
-
-
                 <div>
                     <label class="block text-sm font-medium text-white mb-1">Mật khẩu</label>
                     <div class="relative">
@@ -97,6 +96,8 @@
 </div>
 
 <script>
+
+
     document.getElementById("hidden").addEventListener("click", function () {
         const passwordInput = document.getElementById("password");
         const passwordRes = document.getElementById("passwordRes")
@@ -175,5 +176,62 @@
         const matkhau = document.getElementById("")
     });
 
-    document.getElementById("loginFor")
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector('form[action="/Auth/Create"]');
+        const errorMessage = document.getElementById("error-message");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const hoVaTen = form.querySelector('input[name="HoVaTen"]').value;
+            const gioiTinh = form.querySelector('select[name="GioiTinh"]').value;
+            const namSinh = form.querySelector('input[name="NamSinh"]').value;
+            const userName = form.querySelector('input[name="UserName"]').value;
+            const email = form.querySelector('input[name="email"]').value;
+            const matKhau = form.querySelector('input[name="Matkhau"]').value;
+            const confirmPassword = form.querySelector('input[name="confirmPassword"]').value;
+
+            
+            // Tạo object chứa dữ liệu từ form
+            const data = {
+                HoVaTen: hoVaTen,
+                GioiTinh: gioiTinh,
+                NamSinh: namSinh,
+                UserName: userName,
+                Email: email,
+                Matkhau: matKhau,
+                XacNhanMatKhau: confirmPassword,
+                IDRole: 4
+            };
+
+            // Gửi request đến API
+            fetch('/api/taikhoan/dangky', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(reponse.json());
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Xử lý kết quả từ API (ví dụ: hiển thị thông báo thành công)
+                    console.log('Đăng ký thành công:', data);
+                    errorMessage.textContent = data.message;
+                    errorMessage.classList.remove("hidden");
+                    form.reset()
+
+                })
+                .catch(error => {
+                    // Xử lý lỗi (ví dụ: hiển thị thông báo lỗi)
+                    console.error('Lỗi:', error);
+                    errorMessage.textContent = error.message;
+                    errorMessage.classList.remove("hidden");
+                });
+        });
+    });
 </script>

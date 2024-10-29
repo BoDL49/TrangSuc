@@ -16,7 +16,7 @@ namespace WebTrangSuc.Models
         public string HoVaTen { get; set; }
 
         [Display(Name = "Giới tính")]
-        public bool GioiTinh { get; set; }
+        public string GioiTinh { get; set; }
 
         [Display(Name = "Ngày sinh")]
         [DataType(DataType.Date)]
@@ -41,13 +41,11 @@ namespace WebTrangSuc.Models
         [Display(Name = "Mật khẩu")]
         public string Matkhau { get; set; }
 
-        [Display(Name = "Ảnh đại diện")]
         public string Avatar { get; set; }
 
-        [Display(Name = "Vai trò")]
         public int IDRole { get; set; }
 
         public virtual Role Role { get; set; }
-    
-}
+        public string XacNhanMatKhau { get;  set; }
+    }
 }

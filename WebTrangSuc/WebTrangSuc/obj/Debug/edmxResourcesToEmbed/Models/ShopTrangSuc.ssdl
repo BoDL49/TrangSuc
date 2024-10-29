@@ -81,7 +81,7 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="HoVaTen" Type="nvarchar" MaxLength="255" />
-    <Property Name="GioiTinh" Type="bit" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="5" />
     <Property Name="NamSinh" Type="date" />
     <Property Name="SDT" Type="char" MaxLength="10" />
     <Property Name="Email" Type="char" MaxLength="255" />

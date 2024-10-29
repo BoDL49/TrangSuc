@@ -66,7 +66,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
                     file.SaveAs(path);
 
                     // Lưu đường dẫn vào thuộc tính HinhSanPham
-                    sanPham.HinhSanPham = "/img/" + fileName;
+                    //sanPham.HinhSanPham = "/img/" + fileName;
                 }
 
                 // Kiểm tra và gán giá trị mặc định nếu cần
@@ -136,7 +136,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
                     file.SaveAs(path);
 
                     // Lưu đường dẫn vào thuộc tính HinhSanPham
-                    sanPham.HinhSanPham = "/img/" + fileName;
+                    //sanPham.HinhSanPham = "/img/" + fileName;
                 }
 
                 // Cập nhật thông tin sản phẩm trong database

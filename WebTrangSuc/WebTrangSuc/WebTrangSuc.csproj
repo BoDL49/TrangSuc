@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -166,6 +169,7 @@
     <Compile Include="Controllers\BoSuuTapController.cs" />
     <Compile Include="Controllers\ChiTietHoaDonController.cs" />
     <Compile Include="Controllers\ChiTietSanPhamController.cs" />
+    <Compile Include="Controllers\DangKyController.cs" />
     <Compile Include="Controllers\DanhMucSanPhamController.cs" />
     <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HighJewlryController.cs" />
@@ -734,27 +738,10 @@
     <Content Include="img\swarovski.svg" />
     <Content Include="img\tiffany-co.svg" />
     <Content Include="img\vancleef.svg" />
-    <Content Include="Models\ShopTrangSuc.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ShopTrangSuc.edmx</DependentUpon>
-      <LastGenOutput>ShopTrangSuc.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\ShopTrangSuc.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ShopTrangSuc.edmx</DependentUpon>
-      <LastGenOutput>ShopTrangSuc.cs</LastGenOutput>
-    </Content>
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\XuLyDonHang\Views\web.config" />
     <Content Include="Areas\QuanLy\Views\web.config" />
     <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
-    <EntityDeploy Include="Models\ShopTrangSuc.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ShopTrangSuc.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\ShopTrangSuc.edmx.diagram">
-      <DependentUpon>ShopTrangSuc.edmx</DependentUpon>
-    </Content>
     <Content Include="Content\assets\css\demo.css.map" />
     <Content Include="Content\assets\css\kaiadmin.css.map" />
     <Content Include="Content\assets\css\plugins.css.map" />
@@ -791,6 +778,16 @@
     <Content Include="Areas\Admin\Views\SanPham\Create.cshtml" />
     <Content Include="Areas\Admin\Views\SanPham\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\SanPham\Delete.cshtml" />
+    <Content Include="Models\ShopTrangSuc.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ShopTrangSuc.edmx</DependentUpon>
+      <LastGenOutput>ShopTrangSuc.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ShopTrangSuc.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ShopTrangSuc.edmx</DependentUpon>
+      <LastGenOutput>ShopTrangSuc.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -819,6 +816,13 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <EntityDeploy Include="Models\ShopTrangSuc.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ShopTrangSuc.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ShopTrangSuc.edmx.diagram">
+      <DependentUpon>ShopTrangSuc.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <None Include="Scripts\jquery-3.7.1-vsdoc.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
