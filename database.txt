@@ -59,7 +59,7 @@ CREATE TABLE HinhSanPham(
    ID INT IDENTITY(1,1) PRIMARY KEY,
    IDSP int,
    HinhSP Nvarchar(255),
-   CONSTRAINT FK_HinhAnhSanPham_SanPham FOREIGN KEY (IDSanPham) REFERENCES SanPham(ID)
+   CONSTRAINT FK_HinhAnhSanPham_SanPham FOREIGN KEY (IDSP) REFERENCES SanPham(ID) 
 );
 
 CREATE TABLE DanhGia (
@@ -102,10 +102,7 @@ CREATE TABLE DonHangChiTiet (
 );
 GO
 
-USE shoptrangsuc
-GO
 
--- Role
 INSERT INTO Role (TenRole) 
 VALUES 
     (N'admin'), 
