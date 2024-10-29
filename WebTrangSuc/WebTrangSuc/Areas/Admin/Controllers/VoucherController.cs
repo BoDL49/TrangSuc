@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebTrangSuc.Models;
+using PagedList;
+using PagedList.Mvc;
 
 namespace WebTrangSuc.Areas.Admin.Controllers
 {
@@ -12,9 +14,14 @@ namespace WebTrangSuc.Areas.Admin.Controllers
     {
         // GET: Admin/Voucher
         shoptrangsucEntities1 db = new shoptrangsucEntities1();
-        public ActionResult Index()
+
+        public ActionResult Index(int? page)
         {
-            var vouCher = db.Vouchers.ToList();
+            int pageSize = 5;
+            int pageNum = (page ?? 1);
+
+            var vouCher = db.Vouchers.ToList().ToPagedList(pageNum, pageSize);
+
             return View(vouCher);
         }
         public ActionResult Create()

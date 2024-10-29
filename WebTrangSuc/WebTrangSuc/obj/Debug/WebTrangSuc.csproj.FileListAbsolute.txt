@@ -439,3 +439,7 @@ C:\Users\HuỳnhNhậtDuy\Documents\GitHub\TrangSuc\WebTrangSuc\WebTrangSuc\obj\
 C:\Users\HuỳnhNhậtDuy\Documents\GitHub\TrangSuc\WebTrangSuc\WebTrangSuc\obj\Debug\WebTrangSuc.csproj.CopyComplete
 C:\Users\HuỳnhNhậtDuy\Documents\GitHub\TrangSuc\WebTrangSuc\WebTrangSuc\obj\Debug\WebTrangSuc.dll
 C:\Users\HuỳnhNhậtDuy\Documents\GitHub\TrangSuc\WebTrangSuc\WebTrangSuc\obj\Debug\WebTrangSuc.pdb
+D:\Công nghệ phần mềm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\PagedList.dll
+D:\Công nghệ phần mềm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\PagedList.Mvc.dll
+D:\Công nghệ phần mềm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\PagedList.xml
+D:\Công nghệ phần mềm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\PagedList.Mvc.xml

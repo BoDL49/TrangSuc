@@ -5,6 +5,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebTrangSuc.Models;
+using PagedList;
+using PagedList.Mvc;
 
 namespace WebTrangSuc.Areas.Admin.Controllers
 {
@@ -12,9 +14,13 @@ namespace WebTrangSuc.Areas.Admin.Controllers
     {
         // GET: Admin/LoaiSanPham
         shoptrangsucEntities1 db = new shoptrangsucEntities1();
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
-            var loaiSP = db.LoaiSanPhams.ToList();
+            int pageSize = 5;
+            int pageNum = (page ?? 1);
+
+            var loaiSP = db.LoaiSanPhams.ToList().ToPagedList(pageNum, pageSize);
+
             return View(loaiSP);
         }
         public ActionResult Create()

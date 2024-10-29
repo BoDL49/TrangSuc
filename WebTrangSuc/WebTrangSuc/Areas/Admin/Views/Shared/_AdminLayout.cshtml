@@ -12,21 +12,21 @@
     <!-- Fonts and icons -->
     <script src="~/Content/assets/js/plugin/webfont/webfont.min.js"></script>
     <script>
-      WebFont.load({
-        google: { families: ["Public Sans:300,400,500,600,700"] },
-        custom: {
-          families: [
-            "Font Awesome 5 Solid",
-            "Font Awesome 5 Regular",
-            "Font Awesome 5 Brands",
-            "simple-line-icons",
-          ],
-          urls: ["~/Content/assets/css/fonts.min.css"],
-        },
-        active: function () {
-          sessionStorage.fonts = true;
-        },
-      });
+        WebFont.load({
+            google: { families: ["Public Sans:300,400,500,600,700"] },
+            custom: {
+                families: [
+                    "Font Awesome 5 Solid",
+                    "Font Awesome 5 Regular",
+                    "Font Awesome 5 Brands",
+                    "simple-line-icons",
+                ],
+                urls: ["~/Content/assets/css/fonts.min.css"],
+            },
+            active: function () {
+                sessionStorage.fonts = true;
+            },
+        });
     </script>
 
     <!-- CSS Files -->
@@ -102,16 +102,16 @@
                                 <ul class="nav nav-collapse">
                                     <li>
                                         <a href="/admin/loaisanpham/index">
-                                            <span class="sub-item">Quản lý danh mục sản phẩm</span>
+                                            <span class="sub-item">Quản lý danh mục sản phẩm </span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="admin/voucher/index">
+                                        <a href="/admin/voucher/index">
                                             <span class="sub-item">Quản lý voucher</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="admin/sanpham/index">
+                                        <a href="/admin/sanpham/index">
                                             <span class="sub-item">Quản lý sản phẩm</span>
                                         </a>
                                     </li>
@@ -650,36 +650,10 @@
         </div>
 
         <div class="container">
-            @RenderBody()
-        </div>
-
-        <footer class="footer">
-            <div class="container-fluid d-flex justify-content-between">
-                <nav class="pull-left">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="http://www.themekita.com">
-                                ThemeKita
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> Help </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> Licenses </a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="copyright">
-                    2024, made with <i class="fa fa-heart heart text-danger"></i> by
-                    <a href="http://www.themekita.com">ThemeKita</a>
-                </div>
-                <div>
-                    Distributed by
-                    <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
-                </div>
+            <div class="page-inner">
+                @RenderBody()
             </div>
-        </footer>
+        </div>
     </div>
 
     <!-- Custom template | don't include it in your project! -->
@@ -845,35 +819,7 @@
     <script src="~/Content/assets/js/kaiadmin.min.js"></script>
 
     <!-- Kaiadmin DEMO methods, don't include it in your project! -->
-    <script src="~/Content/assets/js/setting-demo.js"></script>
-    <script src="~/Content/assets/js/demo.js"></script>
-    <script>
-      $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
-        type: "line",
-        height: "70",
-        width: "100%",
-        lineWidth: "2",
-        lineColor: "#177dff",
-        fillColor: "rgba(23, 125, 255, 0.14)",
-      });
-
-      $("#lineChart2").sparkline([99, 125, 122, 105, 110, 124, 115], {
-        type: "line",
-        height: "70",
-        width: "100%",
-        lineWidth: "2",
-        lineColor: "#f3545d",
-        fillColor: "rgba(243, 84, 93, .14)",
-      });
-
-      $("#lineChart3").sparkline([105, 103, 123, 100, 95, 105, 115], {
-        type: "line",
-        height: "70",
-        width: "100%",
-        lineWidth: "2",
-        lineColor: "#ffa534",
-        fillColor: "rgba(255, 165, 52, .14)",
-      });
-    </script>
+    <!--<script src="~/Content/assets/js/setting-demo.js"></script>
+    <script src="~/Content/assets/js/demo.js"></script>-->
 </body>
 </html>
