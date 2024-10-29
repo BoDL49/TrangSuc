@@ -24,6 +24,9 @@ namespace WebTrangSuc.Models
         public string TenVoucher { get; set; }
         public string ThongTinVoucher { get; set; }
         public Nullable<int> GiaVoucher { get; set; }
+        public Nullable<System.DateTime> NgayBatDau { get; set; }
+        public Nullable<System.DateTime> NgayKetThuc { get; set; }
+        public Nullable<int> SoLuongSuDung { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DonHang> DonHangs { get; set; }

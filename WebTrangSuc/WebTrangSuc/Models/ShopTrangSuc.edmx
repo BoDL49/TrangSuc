@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="shoptrangsucModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="shoptrangsucModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="DanhGia">
           <Key>
             <PropertyRef Name="ID" />
@@ -43,11 +43,20 @@
           <Property Name="SoLuongSanPham" Type="int" />
           <Property Name="GiaSanPham" Type="int" />
         </EntityType>
+        <EntityType Name="HinhSanPham">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDSP" Type="int" />
+          <Property Name="HinhSP" Type="nvarchar" MaxLength="255" />
+        </EntityType>
         <EntityType Name="LoaiSanPham">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaSP" Type="nvarchar" MaxLength="255" />
           <Property Name="TenLoaiSanPham" Type="nvarchar" MaxLength="255" />
           <Property Name="HinhLoaiSanPham" Type="nvarchar" MaxLength="255" />
         </EntityType>
@@ -64,12 +73,11 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenSanPham" Type="nvarchar" MaxLength="255" />
-          <Property Name="HinhSanPham" Type="nvarchar" MaxLength="255" />
           <Property Name="Gia" Type="int" />
           <Property Name="IDLoaiSanPham" Type="int" />
           <Property Name="MoTaSanPham" Type="nvarchar" MaxLength="255" />
           <Property Name="SoLuongTonKho" Type="int" />
-          <Property Name="TrangThaiSanPham" Type="bit" />
+          <Property Name="TrangThaiSanPham" Type="nvarchar" MaxLength="255" />
           <Property Name="NgayTaoSanPham" Type="date" />
         </EntityType>
         <EntityType Name="TaiKhoan">
@@ -95,6 +103,9 @@
           <Property Name="TenVoucher" Type="nvarchar" MaxLength="255" />
           <Property Name="ThongTinVoucher" Type="nvarchar" MaxLength="255" />
           <Property Name="GiaVoucher" Type="int" />
+          <Property Name="NgayBatDau" Type="date" />
+          <Property Name="NgayKetThuc" Type="date" />
+          <Property Name="SoLuongSuDung" Type="int" />
         </EntityType>
         <Association Name="FK__TaiKhoan_Role">
           <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
@@ -180,6 +191,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_HinhAnhSanPham_SanPham">
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
+          <End Role="HinhSanPham" Type="Self.HinhSanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HinhSanPham">
+              <PropertyRef Name="IDSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_SanPham_LoaiSanPham">
           <End Role="LoaiSanPham" Type="Self.LoaiSanPham" Multiplicity="0..1" />
           <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
@@ -197,6 +220,7 @@
           <EntitySet Name="DiaChi" EntityType="Self.DiaChi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DonHang" EntityType="Self.DonHang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DonHangChiTiet" EntityType="Self.DonHangChiTiet" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HinhSanPham" EntityType="Self.HinhSanPham" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoaiSanPham" EntityType="Self.LoaiSanPham" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
@@ -230,13 +254,16 @@
             <End Role="SanPham" EntitySet="SanPham" />
             <End Role="DonHangChiTiet" EntitySet="DonHangChiTiet" />
           </AssociationSet>
+          <AssociationSet Name="FK_HinhAnhSanPham_SanPham" Association="Self.FK_HinhAnhSanPham_SanPham">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="HinhSanPham" EntitySet="HinhSanPham" />
+          </AssociationSet>
           <AssociationSet Name="FK_SanPham_LoaiSanPham" Association="Self.FK_SanPham_LoaiSanPham">
             <End Role="LoaiSanPham" EntitySet="LoaiSanPham" />
             <End Role="SanPham" EntitySet="SanPham" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="shoptrangsucModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -293,6 +320,7 @@
           <Property Name="TenLoaiSanPham" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="HinhLoaiSanPham" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="SanPhams" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="LoaiSanPham" ToRole="SanPham" />
+          <Property Name="MaSP" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -318,6 +346,7 @@
           <NavigationProperty Name="DanhGias" Relationship="Self.FK_DanhGia_SanPham" FromRole="SanPham" ToRole="DanhGia" />
           <NavigationProperty Name="DonHangChiTiets" Relationship="Self.FK_DonHangChiTiet_SanPham" FromRole="SanPham" ToRole="DonHangChiTiet" />
           <NavigationProperty Name="LoaiSanPham" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="SanPham" ToRole="LoaiSanPham" />
+          <NavigationProperty Name="HinhSanPhams" Relationship="shoptrangsucModel.FK_HinhAnhSanPham_SanPham" FromRole="SanPham" ToRole="HinhSanPham" />
         </EntityType>
         <EntityType Name="TaiKhoan">
           <Key>
@@ -346,6 +375,9 @@
           <Property Name="ThongTinVoucher" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="GiaVoucher" Type="Int32" />
           <NavigationProperty Name="DonHangs" Relationship="Self.FK_DonHang_Voucher" FromRole="Voucher" ToRole="DonHang" />
+          <Property Name="NgayBatDau" Type="DateTime" Precision="0" />
+          <Property Name="NgayKetThuc" Type="DateTime" Precision="0" />
+          <Property Name="SoLuongSuDung" Type="Int32" />
         </EntityType>
         <Association Name="FK_DanhGia_SanPham">
           <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
@@ -485,7 +517,33 @@
             <End Role="Role" EntitySet="Roles" />
             <End Role="TaiKhoan" EntitySet="TaiKhoans" />
           </AssociationSet>
+          <EntitySet Name="HinhSanPhams" EntityType="shoptrangsucModel.HinhSanPham" />
+          <AssociationSet Name="FK_HinhAnhSanPham_SanPham" Association="shoptrangsucModel.FK_HinhAnhSanPham_SanPham">
+            <End Role="SanPham" EntitySet="SanPhams" />
+            <End Role="HinhSanPham" EntitySet="HinhSanPhams" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="HinhSanPham">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDSP" Type="Int32" />
+          <Property Name="HinhSP" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SanPham" Relationship="shoptrangsucModel.FK_HinhAnhSanPham_SanPham" FromRole="HinhSanPham" ToRole="SanPham" />
+        </EntityType>
+        <Association Name="FK_HinhAnhSanPham_SanPham">
+          <End Type="shoptrangsucModel.SanPham" Role="SanPham" Multiplicity="0..1" />
+          <End Type="shoptrangsucModel.HinhSanPham" Role="HinhSanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="HinhSanPham">
+              <PropertyRef Name="IDSP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -537,6 +595,7 @@
           <EntitySetMapping Name="LoaiSanPhams">
             <EntityTypeMapping TypeName="shoptrangsucModel.LoaiSanPham">
               <MappingFragment StoreEntitySet="LoaiSanPham">
+                <ScalarProperty Name="MaSP" ColumnName="MaSP" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="TenLoaiSanPham" ColumnName="TenLoaiSanPham" />
                 <ScalarProperty Name="HinhLoaiSanPham" ColumnName="HinhLoaiSanPham" />
@@ -556,7 +615,6 @@
               <MappingFragment StoreEntitySet="SanPham">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="TenSanPham" ColumnName="TenSanPham" />
-                <ScalarProperty Name="HinhSanPham" ColumnName="HinhSanPham" />
                 <ScalarProperty Name="Gia" ColumnName="Gia" />
                 <ScalarProperty Name="IDLoaiSanPham" ColumnName="IDLoaiSanPham" />
                 <ScalarProperty Name="MoTaSanPham" ColumnName="MoTaSanPham" />
@@ -585,10 +643,22 @@
           <EntitySetMapping Name="Vouchers">
             <EntityTypeMapping TypeName="shoptrangsucModel.Voucher">
               <MappingFragment StoreEntitySet="Voucher">
+                <ScalarProperty Name="SoLuongSuDung" ColumnName="SoLuongSuDung" />
+                <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
+                <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="TenVoucher" ColumnName="TenVoucher" />
                 <ScalarProperty Name="ThongTinVoucher" ColumnName="ThongTinVoucher" />
                 <ScalarProperty Name="GiaVoucher" ColumnName="GiaVoucher" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HinhSanPhams">
+            <EntityTypeMapping TypeName="shoptrangsucModel.HinhSanPham">
+              <MappingFragment StoreEntitySet="HinhSanPham">
+                <ScalarProperty Name="HinhSP" ColumnName="HinhSP" />
+                <ScalarProperty Name="IDSP" ColumnName="IDSP" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

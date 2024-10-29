@@ -34,5 +34,6 @@ namespace WebTrangSuc.Models
         public virtual DbSet<SanPham> SanPhams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<Voucher> Vouchers { get; set; }
+        public virtual DbSet<HinhSanPham> HinhSanPhams { get; set; }
     }
 }

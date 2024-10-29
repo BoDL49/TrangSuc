@@ -22,6 +22,8 @@
         <AssociationConnector Association="shoptrangsucModel.FK_DonHangChiTiet_SanPham" ManuallyRouted="false" />
         <AssociationConnector Association="shoptrangsucModel.FK_SanPham_LoaiSanPham" ManuallyRouted="false" />
         <AssociationConnector Association="shoptrangsucModel.FK__TaiKhoan_Role" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="shoptrangsucModel.HinhSanPham" Width="1.5" PointX="10.5" PointY="12" />
+        <AssociationConnector Association="shoptrangsucModel.FK_HinhAnhSanPham_SanPham" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

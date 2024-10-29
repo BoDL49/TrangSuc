@@ -23,6 +23,7 @@ namespace WebTrangSuc.Models
         public int ID { get; set; }
         public string TenLoaiSanPham { get; set; }
         public string HinhLoaiSanPham { get; set; }
+        public string MaSP { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SanPham> SanPhams { get; set; }
