@@ -11,22 +11,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
         <style>
             body, html {
-                height: 100%; /* Đảm bảo body và html có chiều cao 100% */
-                margin: 0; /* Loại bỏ margin mặc định */
+                height: 100%; 
+                margin: 0; 
             }
 
             #wrapper {
-                min-height: 100%; /* Đảm bảo wrapper có chiều cao tối thiểu 100% */
+                min-height: 100%; 
                 display: flex;
                 flex-direction: column;
             }
 
             main {
-                flex: 1; /* Cho phép content mở rộng để lấp đầy không gian còn lại */
+                flex: 1; 
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                padding-top: 20px; /*Thêm padding để tạo khoảng cách với header*/
+                padding-top: 20px; 
             }
         </style>
     </head>
@@ -40,13 +40,13 @@
                     <div class="signin">
                         <div class="face"></div>
                         <div class="ng-nhp">
-                            <div class="text-wrapper-69">Đăng nhập</div>
+                            <div class="text-wrapper-69">@Html.ActionLink("Đăng nhập", "Index", "Auth")</div>
                         </div>
                     </div>
                     <div class="signup">
                         <div class="exit-to-app"></div>
                         <div class="ng-nhp">
-                            <div class="text-wrapper-69">Đăng ký</div>
+                            <div class="text-wrapper-69">@Html.ActionLink("Đăng ký", "Index", "Auth")</div>
                         </div>
                     </div>
                     <div class="text-wrapper-70">joyas</div>

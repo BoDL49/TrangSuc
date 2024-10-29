@@ -186,6 +186,7 @@
     <Compile Include="Models\TaiKhoan.cs">
       <DependentUpon>ShopTrangSuc.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\TaiKhoanModel.cs" />
     <Compile Include="Models\Voucher.cs">
       <DependentUpon>ShopTrangSuc.tt</DependentUpon>
     </Compile>

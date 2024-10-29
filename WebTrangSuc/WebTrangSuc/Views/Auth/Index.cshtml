@@ -4,14 +4,14 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MasterLayout.cshtml";
 }
-<div class="w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden mt-64 mx-72">
+<div class="w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden mt-72 mx-72">
     <div class="flex flex-col md:flex-row">
         <div class="w-full md:w-1/2 p-8">
             <div class="text-center mb-8">
                 <h2 class="text-3xl font-bold text-gray-800">Welcome Back! 👋</h2>
                 <p class="text-gray-600 mt-2">Hãy đăng nhập tài khoản của bạn</p>
             </div>
-            <form class="space-y-6">
+            <form class="space-y-6" id="loginForm" action="/Auth/Login" method="post">
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1" for="email">Email hoặc Username</label>
                     <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all" placeholder="Email hoặc Username của bạn" required>
@@ -20,12 +20,12 @@
                     <label class="block text-sm font-medium text-gray-700 mb-1" for="password">Mật Khẩu</label>
                     <div class="relative">
                         <input type="password" id="password" name="password" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all" placeholder="Nhập mật khẩu" required>
-                        <button type="button" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700">👁️</button>
+                        <button type="button" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700" id="hidden">👁️</button>
                     </div>
                 </div>
                 <div class="flex items-center justify-between">
                     <label class="flex items-center">
-                        <input type="checkbox" class="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
+                        <input type="checkbox" id="rememberMe" class="w-4 h-4 text-blue-600 rounded border-gray-300 focus:ring-blue-500">
                         <span class="ml-2 text-sm text-gray-600">Lưu thông tin</span>
                     </label>
                     <a href="#" class="text-sm text-blue-600 hover:underline">Quên mật khẩu?</a>
@@ -40,12 +40,10 @@
                 <h2 class="text-3xl font-bold text-white">Tạo tài khoản ✨</h2>
                 <p class="text-blue-100 mt-2">Tạo tài khoản mới cho bạn</p>
             </div>
-            <form class="space-y-4" >
+            <form class="space-y-4" action="/Auth/Create" method="post">
                 <div>
-                    <div>
-                        <label class="block text-sm font-medium text-white mb-1">Họ và tên</label>
-                        <input type="text" name="firstName" class="w-full px-4 py-3 rounded-lg border border-transparent focus:ring-2 focus:ring-white focus:border-white transition-all bg-blue-600/50 text-white placeholder-blue-200" placeholder="Trần Văn A" required>
-                    </div>
+                    <label class="block text-sm font-medium text-white mb-1">Họ và tên</label>
+                    <input type="text" name="firstName" class="w-full px-4 py-3 rounded-lg border border-transparent focus:ring-2 focus:ring-white focus:border-white transition-all bg-blue-600/50 text-white placeholder-blue-200" placeholder="Trần Văn A" required>
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-white mb-1">Email Address</label>
@@ -67,3 +65,39 @@
     </div>
 </div>
 
+<script>
+    document.getElementById("hidden").addEventListener("click", function () {
+        const passwordInput = document.getElementById("password");
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            this.textContent = "🙈"; 
+        } else {
+            passwordInput.type = "password";
+            this.textContent = "👁️"; 
+        }
+    });
+
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const rememberMeCheckbox = document.getElementById("rememberMe");
+
+    document.addEventListener("DOMContentLoaded", function () {
+        if (localStorage.getItem("rememberMe") === "true") {
+            emailInput.value = localStorage.getItem("email");
+            passwordInput.value = localStorage.getItem("password");
+            rememberMeCheckbox.checked = true;
+        }
+    });
+
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+        if (rememberMeCheckbox.checked) {
+            localStorage.setItem("email", emailInput.value);
+            localStorage.setItem("password", passwordInput.value);
+            localStorage.setItem("rememberMe", true);
+        } else {
+            localStorage.removeItem("email");
+            localStorage.removeItem("password");
+            localStorage.removeItem("rememberMe");
+        }
+    });
+</script>
