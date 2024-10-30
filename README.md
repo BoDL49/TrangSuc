@@ -1,4 +1,7 @@
 # Joyas - Web trang sức
+- FE: HTML, CSS, JS
+- BE: Web API MVC ASP .net
+- DB: SQL Server
 
 ## Tài liệu dự án:
 - Link design:  [DesignFigma](https://www.figma.com/design/TGOq8QYkASMcdOY8wJf9u5/Untitled?node-id=0-1&node-type=canvas&t=j9W7KMvatXGa9Q3y-0)
