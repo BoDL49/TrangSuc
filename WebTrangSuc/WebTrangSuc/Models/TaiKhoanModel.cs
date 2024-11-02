@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -46,6 +47,10 @@ namespace WebTrangSuc.Models
         public int IDRole { get; set; }
 
         public virtual Role Role { get; set; }
-        public string XacNhanMatKhau { get;  set; }
+
+        [Required]
+        [Compare("Matkhau", ErrorMessage = "Mật khẩu và xác nhận mật khẩu không khớp.")]
+        [NotMapped]
+        public string XacNhanMatKhau { get; set; }
     }
 }

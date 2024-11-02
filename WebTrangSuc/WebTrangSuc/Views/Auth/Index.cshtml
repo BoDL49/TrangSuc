@@ -11,7 +11,7 @@
                 <h2 class="text-3xl font-bold text-gray-800">Welcome Back! 👋</h2>
                 <p class="text-gray-600 mt-2">Hãy đăng nhập tài khoản của bạn</p>
             </div>
-            <form class="space-y-6" id="loginForm" action="/Auth/Login" method="post">
+            <form class="space-y-6" id="loginForm"  method="post">
                 @Html.AntiForgeryToken()
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1" for="email">Email hoặc Username</label>
@@ -34,7 +34,8 @@
                 <button type="submit" id="dangnhap" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">
                     <span class="inline-flex items-center">Đăng nhập <span class="ml-2">➡️</span></span>
                 </button>
-                <div id="error-message" class="text-red-500 text-sm mt-2 hidden"></div>
+<div id="error-message" class="text-red-500 text-sm mt-2 hidden"></div>
+<div id="success-message" class="text-green-500 text-sm mt-2 hidden"></div>
             </form>
         </div>
         <div class="w-full md:w-1/2 p-8 bg-gradient-to-br from-blue-500 to-purple-600">
@@ -42,7 +43,7 @@
                 <h2 class="text-3xl font-bold text-white">Tạo tài khoản ✨</h2>
                 <p class="text-blue-100 mt-2">Tạo tài khoản mới cho bạn</p>
             </div>
-            <form class="space-y-4" action="/Auth/Create" method="post">
+            <form class="space-y-4" id="RegisForm">
                 @Html.AntiForgeryToken()
                 <div class="flex space-x-4">
                     <div class="flex-1">
@@ -82,7 +83,7 @@
                 <div>
                     <label class="block text-sm font-medium text-white mb-1">Xác nhận lại mật khẩu</label>
                     <div class="relative">
-                        <input type="password" tabindex="7" name="confirmPassword" id="RepasswordRes" class="w-full px-4 py-3 rounded-lg border border-transparent focus:ring-2 focus:ring-white focus:border-white transition-all bg-blue-600/50 text-white placeholder-blue-200" placeholder="Xác nhận lại mật khẩu" required>
+                        <input type="password" tabindex="7" name="XacNhanMatKhau" id="RepasswordRes" class="w-full px-4 py-3 rounded-lg border border-transparent focus:ring-2 focus:ring-white focus:border-white transition-all bg-blue-600/50 text-white placeholder-blue-200" placeholder="Xác nhận lại mật khẩu" required>
                         <button type="button"  class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700" id="rereshidden">👁️</button>
                     </div>
 
@@ -96,13 +97,55 @@
 </div>
 
 <script>
+    document.getElementById("RegisForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(this);
+        const data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
+
+        const messageDiv = document.getElementById("error-message");
+        const successDiv = document.getElementById("success-message"); 
+
+        fetch('/api/taikhoan/dangky', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
+            },
+            body: JSON.stringify(data)
+
+        })
+            .then(response => {
+                messageDiv.classList.add("hidden"); 
+                successDiv.classList.add("hidden");
+
+                if (!response.ok) {
+                    return response.json().then(errorData => {
+                        messageDiv.textContent = errorData.Message || "Đăng ký thất bại. Vui lòng thử lại.";
+                        messageDiv.classList.remove("hidden");
+                        messageDiv.classList.remove("text-green-500"); 
+                        messageDiv.classList.add("text-red-500");    
+                        throw new Error(errorData.Message || "Đăng ký thất bại.");
+                    });
+                }
+                return response.json();
+            })
+            .then(result => {
+                successDiv.textContent = result.message || "Đăng ký thành công!"; 
+                successDiv.classList.remove("hidden"); 
+                successDiv.classList.remove("text-red-500");
+                successDiv.classList.add("text-green-500"); 
+                this.reset();
+                messageDiv.classList.add("hidden"); 
+            })
+    });
 
 
     document.getElementById("hidden").addEventListener("click", function () {
         const passwordInput = document.getElementById("password");
-        const passwordRes = document.getElementById("passwordRes")
-        const RepasswordRes = document.getElementById("RepasswordRes")
-
         if (passwordInput.type === "password") {
             passwordInput.type = "text";
             this.textContent = "🙈";
@@ -110,25 +153,10 @@
             passwordInput.type = "password";
             this.textContent = "👁️";
         }
-        if (passwordRes.type === "password") {
-            passwordRes.type = "text";
-            this.textContent = "🙈";
-        } else {
-            passwordRes.type = "password";
-            this.textContent = "👁️";
-        }
-        if (RepasswordRes.type === "password") {
-            RepasswordRes.type = "text";
-            this.textContent = "🙈";
-        } else {
-            RepasswordRes.type = "password";
-            this.textContent = "👁️";
-        }
     });
 
     document.getElementById("reshidden").addEventListener("click", function () {
-        const passwordRes = document.getElementById("passwordRes")
-
+        const passwordRes = document.getElementById("passwordRes");
         if (passwordRes.type === "password") {
             passwordRes.type = "text";
             this.textContent = "🙈";
@@ -138,9 +166,9 @@
         }
     });
 
-    document.getElementById("rereshidden").addEventListener("click", function () {
-        const RepasswordRes = document.getElementById("RepasswordRes")
 
+    document.getElementById("rereshidden").addEventListener("click", function () {
+        const RepasswordRes = document.getElementById("RepasswordRes");
         if (RepasswordRes.type === "password") {
             RepasswordRes.type = "text";
             this.textContent = "🙈";
@@ -149,6 +177,8 @@
             this.textContent = "👁️";
         }
     });
+
+
 
     const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
@@ -172,66 +202,5 @@
             localStorage.removeItem("password");
             localStorage.removeItem("rememberMe");
         }
-
-        const matkhau = document.getElementById("")
-    });
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const form = document.querySelector('form[action="/Auth/Create"]');
-        const errorMessage = document.getElementById("error-message");
-
-        form.addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            const hoVaTen = form.querySelector('input[name="HoVaTen"]').value;
-            const gioiTinh = form.querySelector('select[name="GioiTinh"]').value;
-            const namSinh = form.querySelector('input[name="NamSinh"]').value;
-            const userName = form.querySelector('input[name="UserName"]').value;
-            const email = form.querySelector('input[name="email"]').value;
-            const matKhau = form.querySelector('input[name="Matkhau"]').value;
-            const confirmPassword = form.querySelector('input[name="confirmPassword"]').value;
-
-            
-            // Tạo object chứa dữ liệu từ form
-            const data = {
-                HoVaTen: hoVaTen,
-                GioiTinh: gioiTinh,
-                NamSinh: namSinh,
-                UserName: userName,
-                Email: email,
-                Matkhau: matKhau,
-                XacNhanMatKhau: confirmPassword,
-                IDRole: 4
-            };
-
-            // Gửi request đến API
-            fetch('/api/taikhoan/dangky', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(reponse.json());
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    // Xử lý kết quả từ API (ví dụ: hiển thị thông báo thành công)
-                    console.log('Đăng ký thành công:', data);
-                    errorMessage.textContent = data.message;
-                    errorMessage.classList.remove("hidden");
-                    form.reset()
-
-                })
-                .catch(error => {
-                    // Xử lý lỗi (ví dụ: hiển thị thông báo lỗi)
-                    console.error('Lỗi:', error);
-                    errorMessage.textContent = error.message;
-                    errorMessage.classList.remove("hidden");
-                });
-        });
     });
 </script>

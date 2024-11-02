@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
+using System.Net.Http.Formatting;
+
 
 namespace WebTrangSuc
 {
@@ -14,6 +16,7 @@ namespace WebTrangSuc
 
             // Web API routes
             config.MapHttpAttributeRoutes();
+
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

@@ -9,6 +9,8 @@ using System.Web.Http;
 using WebTrangSuc.Models;
 using BCrypt.Net;
 using System.Text.RegularExpressions;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebTrangSuc.Controllers
 {
@@ -57,7 +59,7 @@ namespace WebTrangSuc.Controllers
             {
                 return BadRequest("Tên đăng nhập hoặc Email đã tồn tại.");
             }
-
+            
             var taiKhoan = new TaiKhoan
             {
                 HoVaTen = model.HoVaTen,
@@ -68,7 +70,7 @@ namespace WebTrangSuc.Controllers
                 UserName = model.UserName,
                 Matkhau = BCrypt.Net.BCrypt.HashPassword(model.Matkhau),
                 Avatar = model.Avatar,
-                IDRole = model.IDRole 
+                IDRole = 4 
             };
 
             _context.TaiKhoans.Add(taiKhoan);
@@ -76,7 +78,6 @@ namespace WebTrangSuc.Controllers
 
             return Ok(new { message = "Đăng ký thành công!" });
         }
-
         // Hàm kiểm tra email hợp lệ
         private bool IsValidEmail(string email)
         {
