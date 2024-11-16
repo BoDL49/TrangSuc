@@ -443,7 +443,7 @@
         position: absolute;
         top: 371px;
         left: 960px;
-        background-image: url(./img/bulgari.svg);
+        background-image: url('/img/bulgari.svg');
         background-size: cover;
         background-position: 50% 50%;
     }
@@ -496,7 +496,7 @@
         position: absolute;
         top: 0;
         left: 960px;
-        background-image: url(./img/vancleef.svg);
+        background-image: url(/img/vancleef.svg);
         background-size: cover;
         background-position: 50% 50%;
     }
@@ -552,7 +552,7 @@
         position: absolute;
         top: 0;
         left: 320px;
-        background-image: url(./img/chaumet.svg);
+        background-image: url(/img/chaumet.svg);
         background-size: cover;
         background-position: 50% 50%;
     }
@@ -569,7 +569,7 @@
         position: absolute;
         top: 0;
         left: 640px;
-        background-image: url(./img/cartier.svg);
+        background-image: url(/img/cartier.svg);
         background-size: cover;
         background-position: 50% 50%;
     }
@@ -586,7 +586,7 @@
         position: absolute;
         top: 371px;
         left: 0;
-        background-image: url(./img/chanel.svg);
+        background-image: url(/img/chanel.svg);
         background-size: cover;
         background-position: 50% 50%;
     }
@@ -627,7 +627,7 @@
         position: absolute;
         top: 371px;
         left: 640px;
-        background-image: url(./img/swarovski.svg);
+        background-image: url(/img/swarovski.svg);
         background-size: cover;
         background-position: 50% 50%;
     }
@@ -644,7 +644,7 @@
         position: absolute;
         top: 371px;
         left: 320px;
-        background-image: url(./img/hermes.svg);
+        background-image: url(/img/hermes.svg);
         background-size: cover;
         background-position: 50% 50%;
     }
@@ -661,7 +661,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-image: url(./img/tiffany-co.svg);
+        background-image: url(/img/tiffany-co.svg);
         background-size: cover;
         background-position: 50% 50%;
     }
@@ -801,7 +801,7 @@
         height: 610px;
         top: 0;
         left: 0;
-        background-image: url(./img/image-removebg-preview-2-1.png);
+        background-image: url(/img/image-removebg-preview-2-1.png);
         background-size: cover;
         background-position: 50% 50%;
     }
@@ -868,7 +868,7 @@
         position: relative;
         width: 32px;
         height: 32px;
-        background-image: url(./img/brightness-high-4.svg);
+        background-image: url(/img/brightness-high-4.svg);
         background-size: 100% 100%;
     }
 
@@ -1324,7 +1324,7 @@
         height: 24px;
         top: 5px;
         left: 147px;
-        background-image: url(./img/favorite-border-8.svg);
+        background-image: url(/img/favorite-border-8.svg);
         background-size: 100% 100%;
     }
 
@@ -1357,7 +1357,7 @@
         height: 195px;
         top: 10px;
         left: 10px;
-        background-image: url(./img/image-30.svg);
+        background-image: url(/img/image-30.svg);
         background-size: 100% 100%;
     }
 
@@ -1470,7 +1470,7 @@
 
     .trang-ch .favorite-border-2 {
         left: 147px;
-        background-image: url(./img/favorite-border-9.svg);
+        background-image: url(/img/favorite-border-9.svg);
         position: absolute;
         width: 24px;
         height: 24px;
@@ -1484,7 +1484,7 @@
         height: 195px;
         top: 10px;
         left: 10px;
-        background-image: url(./img/image-10.png);
+        background-image: url(/img/image-10.png);
         background-size: cover;
         background-position: 50% 50%;
     }
@@ -1590,7 +1590,7 @@
 
     .trang-ch .favorite-border-3 {
         left: 156px;
-        background-image: url(./img/favorite-border-10.svg);
+        background-image: url(/img/favorite-border-10.svg);
         position: absolute;
         width: 24px;
         height: 24px;
@@ -1604,7 +1604,7 @@
         height: 195px;
         top: 10px;
         left: 10px;
-        background-image: url(./img/image-8.png);
+        background-image: url(/img/image-8.png);
         background-size: cover;
         background-position: 50% 50%;
     }
@@ -1714,7 +1714,7 @@
 
     .trang-ch .favorite-border-4 {
         left: 159px;
-        background-image: url(./img/favorite-border-4.svg);
+        background-image: url(/img/favorite-border-4.svg);
         position: absolute;
         width: 24px;
         height: 24px;
@@ -1728,7 +1728,7 @@
         height: 195px;
         top: 12px;
         left: 10px;
-        background-image: url(./img/image-33.svg);
+        background-image: url(/img/image-33.svg);
         background-size: 100% 100%;
     }
 
@@ -1823,7 +1823,7 @@
 
     .trang-ch .favorite-border-5 {
         left: 164px;
-        background-image: url(./img/favorite-border-5.svg);
+        background-image: url(/img/favorite-border-5.svg);
         position: absolute;
         width: 24px;
         height: 24px;
@@ -1837,7 +1837,7 @@
         height: 195px;
         top: 12px;
         left: 10px;
-        background-image: url(./img/image-34.svg);
+        background-image: url(/img/image-34.svg);
         background-size: 100% 100%;
     }
 
@@ -1922,7 +1922,7 @@
 
     .trang-ch .favorite-border-6 {
         left: 164px;
-        background-image: url(./img/favorite-border-6.svg);
+        background-image: url(/img/favorite-border-6.svg);
         position: absolute;
         width: 24px;
         height: 24px;
@@ -1936,7 +1936,7 @@
         height: 195px;
         top: 12px;
         left: 10px;
-        background-image: url(./img/image-35.svg);
+        background-image: url(/img/image-35.svg);
         background-size: 100% 100%;
     }
 
@@ -2043,7 +2043,7 @@
 
     .trang-ch .favorite-border-7 {
         left: 152px;
-        background-image: url(./img/favorite-border-7.svg);
+        background-image: url(/img/favorite-border-7.svg);
         position: absolute;
         width: 24px;
         height: 24px;
@@ -2057,7 +2057,7 @@
         height: 195px;
         top: 12px;
         left: 10px;
-        background-image: url(./img/image-36.svg);
+        background-image: url(/img/image-36.svg);
         background-size: 100% 100%;
     }
 
@@ -2107,7 +2107,7 @@
         height: 195px;
         top: 10px;
         left: 10px;
-        background-image: url(./img/image-29.svg);
+        background-image: url(/img/image-29.svg);
         background-size: 100% 100%;
     }
 
@@ -2127,7 +2127,7 @@
 
     .trang-ch .favorite-border-8 {
         left: 147px;
-        background-image: url(./img/favorite-border-3.svg);
+        background-image: url(/img/favorite-border-3.svg);
         position: absolute;
         width: 24px;
         height: 24px;
@@ -2405,7 +2405,7 @@
         height: 24px;
         top: 0;
         left: 0;
-        background-image: url(./img/face-3.svg);
+        background-image: url(/img/face-3.svg);
         background-size: 100% 100%;
     }
 
@@ -2447,7 +2447,7 @@
         height: 24px;
         top: 0;
         left: 0;
-        background-image: url(./img/exit-to-app-3.svg);
+        background-image: url(/img/exit-to-app-3.svg);
         background-size: 100% 100%;
     }
 
@@ -2609,3 +2609,11 @@
         top: 1px;
         left: 746px;
     }
+
+    .hide{
+        display: none;
+    }
+
+.background {
+    background-color: #f9f5f6;
+}

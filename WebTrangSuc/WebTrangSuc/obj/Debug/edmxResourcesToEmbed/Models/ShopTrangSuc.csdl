@@ -15,7 +15,7 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IDUser" Type="Int32" />
-    <Property Name="DiaChi1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Diachi" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="TaiKhoan" Relationship="Self.FK_DiaChi_TaiKhoan" FromRole="DiaChi" ToRole="TaiKhoan" />
   </EntityType>
   <EntityType Name="DonHang">
@@ -88,6 +88,12 @@
     <NavigationProperty Name="DonHangChiTiets" Relationship="Self.FK_DonHangChiTiet_SanPham" FromRole="SanPham" ToRole="DonHangChiTiet" />
     <NavigationProperty Name="HinhSanPhams" Relationship="Self.FK_HinhAnhSanPham_SanPham" FromRole="SanPham" ToRole="HinhSanPham" />
     <NavigationProperty Name="LoaiSanPham" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="SanPham" ToRole="LoaiSanPham" />
+    <Property Name="IDChatLieu" Type="Int32" />
+    <Property Name="IDMauSac" Type="Int32" />
+    <Property Name="IDThuongHieu" Type="Int32" />
+    <NavigationProperty Name="ChatLieu" Relationship="shoptrangsucModel.FK_SanPham_ChatLieu" FromRole="SanPham" ToRole="ChatLieu" />
+    <NavigationProperty Name="MauSac" Relationship="shoptrangsucModel.FK_SanPham_MauSac" FromRole="SanPham" ToRole="MauSac" />
+    <NavigationProperty Name="ThuongHieu" Relationship="shoptrangsucModel.FK_SanPham_ThuongHieu" FromRole="SanPham" ToRole="ThuongHieu" />
   </EntityType>
   <EntityType Name="TaiKhoan">
     <Key>
@@ -95,12 +101,12 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="HoVaTen" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
-    <Property Name="GioiTinh" Type="String" />
+    <Property Name="GioiTinh" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
     <Property Name="NamSinh" Type="DateTime" Precision="0" />
     <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
-    <Property Name="Email" Type="String" MaxLength="255" FixedLength="true" Unicode="false" />
-    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="true" Unicode="false" Nullable="false" />
-    <Property Name="Matkhau" Type="String" MaxLength="255" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Matkhau" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Avatar" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="IDRole" Type="Int32" />
     <NavigationProperty Name="DiaChis" Relationship="Self.FK_DiaChi_TaiKhoan" FromRole="TaiKhoan" ToRole="DiaChi" />
@@ -275,5 +281,80 @@
       <End Role="Role" EntitySet="Roles" />
       <End Role="TaiKhoan" EntitySet="TaiKhoans" />
     </AssociationSet>
+    <EntitySet Name="ChatLieux" EntityType="shoptrangsucModel.ChatLieu" />
+    <EntitySet Name="MauSacs" EntityType="shoptrangsucModel.MauSac" />
+    <EntitySet Name="ThuongHieux" EntityType="shoptrangsucModel.ThuongHieu" />
+    <AssociationSet Name="FK_SanPham_ChatLieu" Association="shoptrangsucModel.FK_SanPham_ChatLieu">
+      <End Role="ChatLieu" EntitySet="ChatLieux" />
+      <End Role="SanPham" EntitySet="SanPhams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SanPham_MauSac" Association="shoptrangsucModel.FK_SanPham_MauSac">
+      <End Role="MauSac" EntitySet="MauSacs" />
+      <End Role="SanPham" EntitySet="SanPhams" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SanPham_ThuongHieu" Association="shoptrangsucModel.FK_SanPham_ThuongHieu">
+      <End Role="ThuongHieu" EntitySet="ThuongHieux" />
+      <End Role="SanPham" EntitySet="SanPhams" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="ChatLieu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenChatLieu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SanPhams" Relationship="shoptrangsucModel.FK_SanPham_ChatLieu" FromRole="ChatLieu" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="MauSac">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenMau" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SanPhams" Relationship="shoptrangsucModel.FK_SanPham_MauSac" FromRole="MauSac" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="ThuongHieu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenThuongHieu" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SanPhams" Relationship="shoptrangsucModel.FK_SanPham_ThuongHieu" FromRole="ThuongHieu" ToRole="SanPham" />
+  </EntityType>
+  <Association Name="FK_SanPham_ChatLieu">
+    <End Type="shoptrangsucModel.ChatLieu" Role="ChatLieu" Multiplicity="0..1" />
+    <End Type="shoptrangsucModel.SanPham" Role="SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChatLieu">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SanPham">
+        <PropertyRef Name="IDChatLieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SanPham_MauSac">
+    <End Type="shoptrangsucModel.MauSac" Role="MauSac" Multiplicity="0..1" />
+    <End Type="shoptrangsucModel.SanPham" Role="SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MauSac">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SanPham">
+        <PropertyRef Name="IDMauSac" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SanPham_ThuongHieu">
+    <End Type="shoptrangsucModel.ThuongHieu" Role="ThuongHieu" Multiplicity="0..1" />
+    <End Type="shoptrangsucModel.SanPham" Role="SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThuongHieu">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SanPham">
+        <PropertyRef Name="IDThuongHieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

@@ -34,22 +34,46 @@
     <body>
         <div class="trang-ch">
             <div class="div">
-                <header class="header">
+                <div class="header">
                     <img class="icon" src="~/img/icon.png" />
                     <img class="line-2" src="~/img/line-2.svg" />
-                    <img class="line-3" src="~/img/line-2.svg" />
-                    <div class="signin">
-                        <div class="face"><i class="fa-solid fa-user" style="color: #B4A398; padding-top: 5px;"></i></div>
-                        <div class="ng-nhp">
-                            <div class="text-wrapper-69">@Html.ActionLink("Đăng nhập", "Index", "Auth")</div>
+                    <div id="loginSection">
+                        <div class="signin">
+                            <div class="face"></div>
+                            <div class="ng-nhp">
+                                <div class="text-wrapper-69">@Html.ActionLink("Đăng nhập / Đăng ký", "Index", "Auth")</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="signup">
-                        <div class="exit-to-app"><i class="fa-solid fa-arrow-right-from-bracket" style="color: #B4A398; padding-top: 5px;"></i></div>
-                        <div class="ng-nhp">
-                            <div class="text-wrapper-69">@Html.ActionLink("Đăng ký", "Index", "Auth")</div>
+
+                    <div id="profileSection" class="relative pt-1 pl-[890px] ">
+                        <button id="userMenuButton" aria-haspopup="true" aria-expanded="false" class="flex items-center space-x-2  p-1 shadow-md hover:shadow-lg transition duration-300 rounded-lg background">
+                            <img src="~/img/default-avatar.png" id="userAvatar" alt="User Avatar" class="w-8 h-8 rounded-full object-cover border border-indigo-500">
+                            <span id="userName" class="font-medium text-gray-700 text-sm">tuan159</span>
+                            <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+
+
+                        <div id="userMenu" class="absolute right-28 mt-2 w-32 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 transition-all duration-300 transform opacity-0 scale-95 invisible z-50 background">
+                            <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="userMenuButton">
+                                <a href="/Thongtintaikhoan" class="flex items-center px-3 py-1 text-sm text-gray-700  hover:bg-indigo-50 hover:text-indigo-600 transition-colors duration-200" role="menuitem">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                    </svg>
+                                    Thông tin tài khoản
+                                </a>
+                                <a href="#"   id="logoutButton" class="flex items-center px-3 py-1 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600 transition-colors duration-200" role="menuitem">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+                                    </svg>
+                                    Đăng xuất
+                                </a>
+                            </div>
                         </div>
                     </div>
+
                     <div class="text-wrapper-70">@Html.ActionLink("joyas", "Index", "TrangChu")</div>
                     <div class="search">
                         <div class="overlap-group-4">
@@ -77,11 +101,11 @@
                             </div>
                         </div>
                     </div>
-                </header>
+                </div>
                 <div class="body">
                     @RenderBody()
                 </div>
-                <footer class="footer">
+                <div class="footer">
                     <div class="overlap-group">
                         <div class="rectangle"></div>
                         <div class="text-wrapper">joyas</div>
@@ -108,8 +132,86 @@
                             <img class="line" src="~/img/line-3.svg" />
                         </div>
                     </div>
-                </footer>
+                </div>
             </div>
         </div>
     </body>
 </html>
+
+<script>
+    const button = document.getElementById('userMenuButton');
+    const menu = document.getElementById('userMenu');
+    let isOpen = false;
+
+    button.addEventListener('click', () => {
+        isOpen = !isOpen;
+        button.setAttribute('aria-expanded', isOpen);
+        menu.classList.toggle('invisible');
+        menu.classList.toggle('opacity-0');
+        menu.classList.toggle('scale-95');
+        menu.classList.toggle('opacity-100');
+        menu.classList.toggle('scale-100');
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const token = localStorage.getItem('token');
+        const loginSection = document.getElementById('loginSection');
+        const profileSection = document.getElementById('profileSection');
+        const userNameElement = document.getElementById('userName');
+        const userAvatarElement = document.getElementById('userAvatar');
+        const logoutButton = document.getElementById('logoutButton');
+
+        const avatarDefault = "/img/default-avatar.png";
+
+        if (token) {
+            fetchAccountInfo(token).then(data => {
+                userNameElement.textContent = data.userName || "User";
+                userAvatarElement.src = data.avatar || avatarDefault;
+                loginSection.classList.add('hide');
+                profileSection.classList.remove('hide');
+
+                console.log(data);
+            }).catch(error => {
+                console.error("Error fetching user data:", error);
+                loginSection.classList.remove('hide');
+                profileSection.classList.add('hide');
+            });
+        } else {
+            loginSection.classList.remove('hide');
+            profileSection.classList.add('hide');
+        }
+
+        logoutButton.addEventListener('click', function (event) {
+            event.preventDefault();
+            logout();
+        });
+    });
+
+    async function fetchAccountInfo(token) {
+        const userId = localStorage.getItem('userId'); 
+        const response = await fetch(`/api/taikhoan/${userId}`, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to fetch user data');
+        }
+        return response.json(); 
+    }
+
+    function logout() {
+        localStorage.removeItem('token');
+        localStorage.removeItem('userId');
+        localStorage.removeItem('role');
+
+        document.getElementById('loginSection').classList.remove('hide');
+        document.getElementById('profileSection').classList.add('hide');
+
+        window.location.href = '/Auth';
+    }
+
+
+</script>

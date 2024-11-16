@@ -4,10 +4,8 @@ GO
 CREATE DATABASE shoptrangsuc
 GO
 
-
 USE shoptrangsuc
 GO
-
 
 CREATE TABLE Role (
     ID INT IDENTITY(1,1) PRIMARY KEY,
@@ -17,15 +15,15 @@ CREATE TABLE Role (
 CREATE TABLE TaiKhoan (
     ID INT IDENTITY(1,1) PRIMARY KEY,
     HoVaTen NVARCHAR(255),
-    GioiTinh Nvarchar(5),
+    GioiTinh NVARCHAR(5),
     NamSinh DATE,
     SDT CHAR(10),
-    Email CHAR(255),
-    UserName CHAR(100) NOT NULL,
-    Matkhau CHAR(255) NOT NULL, 
+    Email NVARCHAR(255),
+    UserName NVARCHAR(100) NOT NULL,
+    Matkhau NVARCHAR(255) NOT NULL,
     Avatar NVARCHAR(255),
     IDRole INT,
-    CONSTRAINT FK__TaiKhoan_Role FOREIGN KEY (IDRole) REFERENCES Role(ID)
+    CONSTRAINT FK_TaiKhoan_Role FOREIGN KEY (IDRole) REFERENCES Role(ID)
 );
 
 CREATE TABLE DiaChi (
@@ -42,6 +40,20 @@ CREATE TABLE LoaiSanPham (
     HinhLoaiSanPham NVARCHAR(255)
 );
 
+CREATE TABLE ChatLieu (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    TenChatLieu NVARCHAR(255)
+);
+
+CREATE TABLE MauSac (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    TenMau NVARCHAR(100)
+);
+
+CREATE TABLE ThuongHieu (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    TenThuongHieu NVARCHAR(255)
+);
 
 CREATE TABLE SanPham (
     ID INT IDENTITY(1,1) PRIMARY KEY,
@@ -52,19 +64,25 @@ CREATE TABLE SanPham (
     SoLuongTonKho INT,
     TrangThaiSanPham NVARCHAR(255),
     NgayTaoSanPham DATE,
-    CONSTRAINT FK_SanPham_LoaiSanPham FOREIGN KEY (IDLoaiSanPham) REFERENCES LoaiSanPham(ID)
+    IDChatLieu INT,
+    IDMauSac INT,
+    IDThuongHieu INT,
+    CONSTRAINT FK_SanPham_LoaiSanPham FOREIGN KEY (IDLoaiSanPham) REFERENCES LoaiSanPham(ID),
+    CONSTRAINT FK_SanPham_ChatLieu FOREIGN KEY (IDChatLieu) REFERENCES ChatLieu(ID),
+    CONSTRAINT FK_SanPham_MauSac FOREIGN KEY (IDMauSac) REFERENCES MauSac(ID),
+    CONSTRAINT FK_SanPham_ThuongHieu FOREIGN KEY (IDThuongHieu) REFERENCES ThuongHieu(ID)
 );
 
-CREATE TABLE HinhSanPham(
-   ID INT IDENTITY(1,1) PRIMARY KEY,
-   IDSP int,
-   HinhSP Nvarchar(255),
-   CONSTRAINT FK_HinhAnhSanPham_SanPham FOREIGN KEY (IDSP) REFERENCES SanPham(ID) 
+CREATE TABLE HinhSanPham (
+    ID INT IDENTITY(1,1) PRIMARY KEY,
+    IDSP INT,
+    HinhSP NVARCHAR(255),
+    CONSTRAINT FK_HinhSanPham_SanPham FOREIGN KEY (IDSP) REFERENCES SanPham(ID)
 );
 
 CREATE TABLE DanhGia (
     ID INT IDENTITY(1,1) PRIMARY KEY,
-    IDSanPham INT, 
+    IDSanPham INT,
     Rate INT,
     CONSTRAINT FK_DanhGia_SanPham FOREIGN KEY (IDSanPham) REFERENCES SanPham(ID)
 );
@@ -74,8 +92,8 @@ CREATE TABLE Voucher (
     TenVoucher NVARCHAR(255),
     ThongTinVoucher NVARCHAR(255),
     GiaVoucher INT,
-    NgayBatDau Date,
-    NgayKetThuc Date,
+    NgayBatDau DATE,
+    NgayKetThuc DATE,
     SoLuongSuDung INT
 );
 
@@ -84,8 +102,8 @@ CREATE TABLE DonHang (
     IDUser INT,
     TongTien INT,
     NgayTaoHoaDon DATE,
-    TrangThaiGiaoHang INT, 
-    TrangThaiDonHang INT, 
+    TrangThaiGiaoHang INT,
+    TrangThaiDonHang INT,
     IDVoucher INT,
     CONSTRAINT FK_DonHang_TaiKhoan FOREIGN KEY (IDUser) REFERENCES TaiKhoan(ID),
     CONSTRAINT FK_DonHang_Voucher FOREIGN KEY (IDVoucher) REFERENCES Voucher(ID)
@@ -102,7 +120,6 @@ CREATE TABLE DonHangChiTiet (
 );
 GO
 
-
 INSERT INTO Role (TenRole) 
 VALUES 
     (N'admin'), 
@@ -111,82 +128,99 @@ VALUES
     (N'user');
 GO
 
+-- Insert data into TaiKhoan
+INSERT INTO TaiKhoan (HoVaTen, GioiTinh, NamSinh, SDT, Email, UserName, Matkhau, Avatar, IDRole) VALUES
+('Nguyen Van A', 'Nam', '1990-01-01', '0901234567', 'a@example.com', 'user_a', 'pass123', 'avatar1.png', 1),
+('Le Thi B', 'Nu', '1992-05-06', '0902345678', 'b@example.com', 'user_b', 'pass234', 'avatar2.png', 2),
+('Tran Van C', 'Nam', '1985-03-15', '0903456789', 'c@example.com', 'user_c', 'pass345', 'avatar3.png', 3),
+('Pham Thi D', 'Nu', '1995-07-20', '0904567890', 'd@example.com', 'user_d', 'pass456', 'avatar4.png', 4),
+('Hoang Van E', 'Nam', '1988-11-30', '0905678901', 'e@example.com', 'user_e', 'pass567', 'avatar5.png', 4);
 
-INSERT INTO TaiKhoan (HoVaTen, GioiTinh, NamSinh, SDT, Email, UserName, Matkhau, Avatar, IDRole)
-VALUES
-(N'Nguyễn Văn A', 1, '2000-01-01', '0987654321', 'nguyenvana@example.com', 'nguyenvana', 'password123', 'avatar1.jpg', 1),
-(N'Trần Thị B', 0, '1995-05-05', '0912345678', 'tranthib@example.com', 'tranthib', 'password456', 'avatar2.jpg', 2),
-(N'Lê Văn C', 1, '1998-10-10', '0978901234', 'levanc@example.com', 'levanc', 'password789', 'avatar3.jpg', 3),
-(N'Phạm Thị D', 0, '2002-03-15', '0945678901', 'phamthid@example.com', 'phamthid', 'password001', 'avatar4.jpg', 4);
-GO
+-- Insert data into DiaChi
+INSERT INTO DiaChi (IDUser, DiaChi) VALUES
+(1, '123 Main St'),
+(2, '456 Central Ave'),
+(3, '789 South Blvd'),
+(4, '321 West Ln'),
+(5, '654 East Rd');
 
+-- Insert data into LoaiSanPham
+INSERT INTO LoaiSanPham (MaSP, TenLoaiSanPham, HinhLoaiSanPham) VALUES
+('SP001', 'Rings', 'ring.jpg'),
+('SP002', 'Necklaces', 'necklace.jpg'),
+('SP003', 'Bracelets', 'bracelet.jpg'),
+('SP004', 'Earrings', 'earring.jpg'),
+('SP005', 'Watches', 'watch.jpg');
 
-INSERT INTO DiaChi (IDUser, DiaChi)
-VALUES
-(1, N'123 Đường A, Quận 1, TP.HCM'),
-(2, N'456 Đường B, Quận 2, TP.HCM'),
-(3, N'789 Đường C, Quận 3, TP.HCM'),
-(4, N'101 Đường D, Quận 4, TP.HCM');
-GO
+-- Insert data into ChatLieu
+INSERT INTO ChatLieu (TenChatLieu) VALUES
+('Gold'),
+('Silver'),
+('Platinum'),
+('Diamond'),
+('Copper');
 
+-- Insert data into MauSac
+INSERT INTO MauSac (TenMau) VALUES
+('Red'),
+('Blue'),
+('Green'),
+('Yellow'),
+('White');
 
-INSERT INTO LoaiSanPham (MaSP, TenLoaiSanPham, HinhLoaiSanPham)
-VALUES
-('N', N'Nhẫn', 'nhan.jpg'),
-('DC', N'Dây chuyền', 'daychuyen.jpg'),
-('BT', N'Bông tai', 'bongtai.jpg'),
-('LT', N'Lắc tay', 'lactay.jpg');
-GO
+-- Insert data into ThuongHieu
+INSERT INTO ThuongHieu (TenThuongHieu) VALUES
+('Brand A'),
+('Brand B'),
+('Brand C'),
+('Brand D'),
+('Brand E');
 
+-- Insert data into SanPham
+INSERT INTO SanPham (TenSanPham, Gia, IDLoaiSanPham, MoTaSanPham, SoLuongTonKho, TrangThaiSanPham, NgayTaoSanPham, IDChatLieu, IDMauSac, IDThuongHieu) VALUES
+('Gold Ring', 1000, 1, 'Beautiful gold ring', 10, 'Available', '2024-01-01', 1, 1, 1),
+('Silver Necklace', 2000, 2, 'Elegant silver necklace', 5, 'Limited', '2024-01-02', 2, 2, 2),
+('Platinum Bracelet', 3000, 3, 'Stunning platinum bracelet', 8, 'Out of stock', '2024-01-03', 3, 3, 3),
+('Diamond Earrings', 4000, 4, 'Sparkling diamond earrings', 2, 'Available', '2024-01-04', 4, 4, 4),
+('Copper Watch', 5000, 5, 'Stylish copper watch', 15, 'Pre-order', '2024-01-05', 5, 5, 5);
 
-INSERT INTO SanPham (TenSanPham, Gia, IDLoaiSanPham, MoTaSanPham, SoLuongTonKho, TrangThaiSanPham, NgayTaoSanPham)
-VALUES
-(N'Nhẫn kim cương', 1000000, 1, N'Nhẫn kim cương sang trọng', 10, N'Còn hàng', '2023-10-26'),
-(N'Dây chuyền bạc', 500000, 2, N'Dây chuyền bạc tinh tế', 20, N'Còn hàng', '2023-10-26'),
-(N'Bông tai vàng', 750000, 3, N'Bông tai vàng thời trang', 15, N'Còn hàng', '2023-10-26'),
-(N'Lắc tay bạch kim', 1200000, 4, N'Lắc tay bạch kim đẳng cấp', 5, N'Còn hàng', '2023-10-26');
-GO
-
-
+-- Insert data into HinhSanPham
 INSERT INTO HinhSanPham (IDSP, HinhSP) VALUES
-(1, 'nhankimcuong_1.jpg'),
-(1, 'nhankimcuong_2.jpg'),
-(2, 'daychuyenbac_1.jpg'),
-(3, 'bongtaivang_1.jpg');
-GO
+(1, 'gold_ring.jpg'),
+(2, 'silver_necklace.jpg'),
+(3, 'platinum_bracelet.jpg'),
+(4, 'diamond_earrings.jpg'),
+(5, 'copper_watch.jpg');
 
-
-INSERT INTO DanhGia (IDSanPham, Rate)
-VALUES
+-- Insert data into DanhGia
+INSERT INTO DanhGia (IDSanPham, Rate) VALUES
 (1, 5),
 (2, 4),
 (3, 5),
-(4, 3);
-GO
+(4, 3),
+(5, 4);
 
+-- Insert data into Voucher
+INSERT INTO Voucher (TenVoucher, ThongTinVoucher, GiaVoucher, NgayBatDau, NgayKetThuc, SoLuongSuDung) VALUES
+('Discount 10%', '10% off', 10, '2024-01-01', '2024-02-01', 100),
+('New Year Sale', 'Special New Year promotion', 20, '2024-03-01', '2024-03-31', 50),
+('Summer Special', 'Get summer deals', 30, '2024-06-01', '2024-06-30', 75),
+('Black Friday', 'Huge Black Friday discounts', 40, '2024-11-25', '2024-12-01', 25),
+('Holiday Offer', 'Exclusive holiday offer', 50, '2024-12-15', '2024-12-31', 30);
 
-INSERT INTO Voucher (TenVoucher, ThongTinVoucher, GiaVoucher, NgayBatDau, NgayKetThuc, SoLuongSuDung)
-VALUES
-(N'Giảm giá 10%', N'Áp dụng cho đơn hàng trên 500.000đ', 50000, '2023-11-01', '2023-11-30', 100),
-(N'Giảm giá 20%', N'Áp dụng cho đơn hàng trên 1.000.000đ', 200000, '2023-11-01', '2023-11-30', 50),
-(N'Freeship', N'Áp dụng cho đơn hàng trên 1.000.000đ', 0, '2023-11-01', '2023-11-30', 100),
-(N'Giảm giá 5%', N'Áp dụng cho đơn hàng trên 200.000đ', 50000, '2023-11-01', '2023-11-30', 100);
-GO
+-- Insert data into DonHang
+INSERT INTO DonHang (IDUser, TongTien, NgayTaoHoaDon, TrangThaiGiaoHang, TrangThaiDonHang, IDVoucher) VALUES
+(1, 5000, '2024-01-10', 1, 1, 1),
+(2, 10000, '2024-02-15', 2, 2, 2),
+(3, 7500, '2024-03-20', 1, 3, 3),
+(4, 3000, '2024-04-25', 3, 1, 4),
+(5, 9000, '2024-05-30', 2, 2, 5);
 
-
-INSERT INTO DonHang (IDUser, TongTien, NgayTaoHoaDon, TrangThaiGiaoHang, TrangThaiDonHang, IDVoucher)
-VALUES
-(1, 1500000, '2023-10-27', 1, 1, 2),
-(2, 700000, '2023-10-27', 0, 0, 1),
-(3, 1200000, '2023-10-28', 2, 2, 3),
-(4, 900000, '2023-10-28', 1, 0, 4);
-GO
-
-INSERT INTO DonHangChiTiet (IDDonHang, IDSanPham, SoLuongSanPham, GiaSanPham)
-VALUES
-(1, 1, 1, 1000000),
-(1, 2, 1, 500000),
-(2, 3, 1, 750000),
-(3, 4, 1, 1200000);
-
+-- Insert data into DonHangChiTiet
+INSERT INTO DonHangChiTiet (IDDonHang, IDSanPham, SoLuongSanPham, GiaSanPham) VALUES
+(1, 1, 2, 1000),
+(2, 2, 1, 2000),
+(3, 3, 3, 3000),
+(4, 4, 4, 4000),
+(5, 5, 1, 5000);
 GO

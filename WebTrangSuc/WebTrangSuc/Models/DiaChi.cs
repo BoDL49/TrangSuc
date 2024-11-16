@@ -16,7 +16,7 @@ namespace WebTrangSuc.Models
     {
         public int ID { get; set; }
         public Nullable<int> IDUser { get; set; }
-        public string DiaChi1 { get; set; }
+        public string Diachi { get; set; }
     
         public virtual TaiKhoan TaiKhoan { get; set; }
     }

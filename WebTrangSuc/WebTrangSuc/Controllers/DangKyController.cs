@@ -1,16 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System.Web.Helpers;
 using System.Web.Http;
 using WebTrangSuc.Models;
 using BCrypt.Net;
 using System.Text.RegularExpressions;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity;
+using System.Web.Security;
+using Microsoft.Ajax.Utilities;
+using System.Web.Helpers;
+using WebTrangSuc.Helpers;
 
 namespace WebTrangSuc.Controllers
 {
@@ -27,6 +28,8 @@ namespace WebTrangSuc.Controllers
         {
             _context = context;
         }
+
+        
 
         [HttpPost]
         [Route("api/taikhoan/dangky")]
@@ -59,7 +62,9 @@ namespace WebTrangSuc.Controllers
             {
                 return BadRequest("Tên đăng nhập hoặc Email đã tồn tại.");
             }
-            
+
+            string hashPassword = Crypto.HashPassword(model.Matkhau);
+
             var taiKhoan = new TaiKhoan
             {
                 HoVaTen = model.HoVaTen,
@@ -68,9 +73,9 @@ namespace WebTrangSuc.Controllers
                 SDT = model.SDT,
                 Email = model.Email,
                 UserName = model.UserName,
-                Matkhau = BCrypt.Net.BCrypt.HashPassword(model.Matkhau),
+                Matkhau = hashPassword,
                 Avatar = model.Avatar,
-                IDRole = 4 
+                IDRole = 4
             };
 
             _context.TaiKhoans.Add(taiKhoan);
@@ -78,6 +83,7 @@ namespace WebTrangSuc.Controllers
 
             return Ok(new { message = "Đăng ký thành công!" });
         }
+
         // Hàm kiểm tra email hợp lệ
         private bool IsValidEmail(string email)
         {
@@ -104,5 +110,137 @@ namespace WebTrangSuc.Controllers
 
             return Regex.IsMatch(password, @"^(?=.*[A-Z])(?=.*[!@#$&*])(?=.{8,})");
         }
+
+        [HttpPost]
+        [Route("api/taikhoan/dangnhap")]
+        public async Task<IHttpActionResult> DangNhap(LoginModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var taiKhoan = await _context.TaiKhoans.FirstOrDefaultAsync(x => x.UserName == model.Username || x.Email == model.Username);
+
+            if (taiKhoan == null)
+            {
+                return BadRequest("Tên đăng nhập không đúng.");
+            }
+
+            if (!Crypto.VerifyHashedPassword(taiKhoan.Matkhau, model.Password))
+            {
+                return BadRequest("Mật khẩu không đúng.");
+            }
+
+            var token = JwtHelper.GenerateToken(taiKhoan.ID, Convert.ToInt16(taiKhoan.IDRole));
+
+            return Ok(new
+            {
+                token,
+                userId = taiKhoan.ID,
+                role = taiKhoan.IDRole
+            });
+
+        }
+
+
+        [HttpGet]
+        [Route("api/taikhoan/{id}")]
+        public async Task<IHttpActionResult> GetTaiKhoanById(int id)
+        {
+            var taiKhoan = await _context.TaiKhoans.FirstOrDefaultAsync(t => t.ID == id);
+
+            if (taiKhoan == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(new
+            {
+                id = taiKhoan.ID,
+                hoVaTen = taiKhoan.HoVaTen,
+                gioiTinh = taiKhoan.GioiTinh,
+                namSinh = taiKhoan.NamSinh,
+                sdt = taiKhoan.SDT,
+                email = taiKhoan.Email,
+                userName = taiKhoan.UserName,
+                avatar = taiKhoan.Avatar,
+                idrole = taiKhoan.IDRole
+            });
+        }
+
+        [HttpGet]
+        [Route("api/taikhoan/diachi/{id}")]
+        public async Task<IHttpActionResult> GetDiaChiById(int id)
+        {
+            var diaChi = await _context.DiaChis.FirstOrDefaultAsync(d => d.IDUser == id);
+
+            if (diaChi == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(new
+            {
+                DiaChi = diaChi.Diachi
+            });
+        }
+
+        [HttpPut]
+        [Route("api/taikhoan/{id}")]
+        public async Task<IHttpActionResult> CapNhatThongTin(int id, TaiKhoanModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var taiKhoan = await _context.TaiKhoans.FirstOrDefaultAsync(t => t.ID == id);
+            if (taiKhoan == null)
+            {
+                return NotFound();
+            }
+
+            taiKhoan.HoVaTen = model.HoVaTen;
+            taiKhoan.GioiTinh = model.GioiTinh;
+            taiKhoan.NamSinh = model.NamSinh;
+            taiKhoan.SDT = model.SDT;
+            taiKhoan.Email = model.Email;
+            taiKhoan.UserName = model.UserName;
+            taiKhoan.Avatar = model.Avatar;
+
+
+            if (!string.IsNullOrEmpty(model.Matkhau))
+            {
+                taiKhoan.Matkhau = Crypto.HashPassword(model.Matkhau);
+            }
+
+            _context.Entry(taiKhoan).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Cập nhật thành công!" });
+        }
+
+        [HttpPut]
+        [Route("api/taikhoan/diachi/{id}")]
+        public async Task<IHttpActionResult> CapNhatDiaChi(int id, DiaChi diaChi)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var DiaChi = await _context.DiaChis.FirstOrDefaultAsync(d => d.IDUser == id);
+            if (DiaChi == null)
+            {
+                return NotFound();
+            }
+
+            DiaChi.Diachi = diaChi.Diachi;
+
+            return Ok(new { message = "Cập nhật thành công!" });
+
+        } 
+
     }
 }

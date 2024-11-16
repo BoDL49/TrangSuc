@@ -8,7 +8,7 @@ namespace WebTrangSuc.Controllers
 {
     public class DanhMucSanPhamController : Controller
     {
-        public ActionResult DanhMucSanPham()
+        public ActionResult Index()
         {
             return View();
         }

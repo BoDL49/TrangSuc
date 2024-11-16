@@ -30,6 +30,9 @@ namespace WebTrangSuc.Models
         public Nullable<int> SoLuongTonKho { get; set; }
         public string TrangThaiSanPham { get; set; }
         public Nullable<System.DateTime> NgayTaoSanPham { get; set; }
+        public Nullable<int> IDChatLieu { get; set; }
+        public Nullable<int> IDMauSac { get; set; }
+        public Nullable<int> IDThuongHieu { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DanhGia> DanhGias { get; set; }
@@ -38,5 +41,8 @@ namespace WebTrangSuc.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HinhSanPham> HinhSanPhams { get; set; }
         public virtual LoaiSanPham LoaiSanPham { get; set; }
+        public virtual ChatLieu ChatLieu { get; set; }
+        public virtual MauSac MauSac { get; set; }
+        public virtual ThuongHieu ThuongHieu { get; set; }
     }
 }

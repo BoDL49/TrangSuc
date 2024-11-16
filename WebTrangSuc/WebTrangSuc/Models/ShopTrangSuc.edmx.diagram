@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3c9442e0fb614e59bf006b559cdbfd57" Name="Diagram1" ZoomLevel="163">
+      <Diagram DiagramId="3c9442e0fb614e59bf006b559cdbfd57" Name="Diagram1" ZoomLevel="105">
         <EntityTypeShape EntityType="shoptrangsucModel.DanhGia" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
         <EntityTypeShape EntityType="shoptrangsucModel.DiaChi" Width="1.5" PointX="6" PointY="17.375" IsExpanded="true" />
         <EntityTypeShape EntityType="shoptrangsucModel.DonHang" Width="1.5" PointX="6" PointY="13.5" IsExpanded="true" />
@@ -24,6 +24,12 @@
         <AssociationConnector Association="shoptrangsucModel.FK_HinhAnhSanPham_SanPham" ManuallyRouted="false" />
         <AssociationConnector Association="shoptrangsucModel.FK_SanPham_LoaiSanPham" ManuallyRouted="false" />
         <AssociationConnector Association="shoptrangsucModel.FK__TaiKhoan_Role" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="shoptrangsucModel.ChatLieu" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="shoptrangsucModel.MauSac" Width="1.5" PointX="0.75" PointY="9.5" />
+        <EntityTypeShape EntityType="shoptrangsucModel.ThuongHieu" Width="1.5" PointX="0.75" PointY="7.125" />
+        <AssociationConnector Association="shoptrangsucModel.FK_SanPham_ChatLieu" />
+        <AssociationConnector Association="shoptrangsucModel.FK_SanPham_MauSac" />
+        <AssociationConnector Association="shoptrangsucModel.FK_SanPham_ThuongHieu" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

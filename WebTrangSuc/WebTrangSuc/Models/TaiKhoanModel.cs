@@ -44,7 +44,7 @@ namespace WebTrangSuc.Models
 
         public string Avatar { get; set; }
 
-        public int IDRole { get; set; }
+        public int IDRole { get; set; } 
 
         public virtual Role Role { get; set; }
 
@@ -52,5 +52,8 @@ namespace WebTrangSuc.Models
         [Compare("Matkhau", ErrorMessage = "Mật khẩu và xác nhận mật khẩu không khớp.")]
         [NotMapped]
         public string XacNhanMatKhau { get; set; }
+
+        [NotMapped]
+        public string Diachi { get; set; }
     }
 }

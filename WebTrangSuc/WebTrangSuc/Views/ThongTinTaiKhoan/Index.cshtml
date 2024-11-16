@@ -1,0 +1,255 @@
+﻿
+@{
+    ViewBag.Title = "Thông tin tài khoản";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<div class="min-h-screen p-6  flex items-center justify-center pt-52">
+    <div class="container max-w-screen-lg mx-auto">
+        <div class=" bg-white rounded-lg shadow-lg p-5 md:p-10 mx-2 mb-6">
+            <div class="text-center mb-10">
+                <h1 class="font-bold text-3xl">Thông tin tài khoản</h1>
+            </div>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="w-full md:w-1/4">
+                    <div class="text-center">
+                        <img src="~/img/default-avatar.png" alt="User Avatar" id="avatar" class="w-32 h-32 rounded-full object-cover border-4 border-gray-200 mx-auto">
+                        <h2 class="mt-4 text-xl font-semibold" id="name">John Doe</h2>
+                        <p class="text-gray-500" id="name2">@@johndoe</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-3/4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <p class="text-gray-500 text-sm">Họ và tên</p>
+                            <p class="font-medium" id="Hovaten">John Doe</p>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-500 text-sm">Username</p>
+                            <p class="font-medium" id="username">johndoe</p>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-500 text-sm">Email</p>
+                            <p class="font-medium" id="email">john.doe@example.com</p>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-500 text-sm">Số điện thoại</p>
+                            <p class="font-medium" id="sdt">+1 234 567 890</p>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-500 text-sm">Ngày sinh</p>
+                            <p class="font-medium" id="namsinh">January 1, 1990</p>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-500 text-sm">Giới tính</p>
+                            <p class="font-medium" id="gioitinh">Male</p>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-500 text-sm">Mật khẩu</p>
+                            <p class="font-medium" id="matkhau">••••••••</p>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-500 text-sm">Địa chỉ</p>
+                            <p class="font-medium" id="diachi">123 Main Street, Apt 4B, New York, NY 10001</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-end">
+                        <button onclick="toggleEditMode()" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                            Cập nhật thông tin
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Settings Form Section -->
+        <div id="edit-profile-section" class="bg-white rounded-lg shadow-lg p-5 md:p-10 mx-2 hidden">
+            <div class="text-center mb-10">
+                <h1 class="font-bold text-3xl">Cập nhật thông tin tài khoản</h1>
+            </div>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="w-full md:w-1/4">
+                    <div class="text-center">
+                        <div class="relative inline-block">
+                            <img src="~/img/default-avatar.png" alt="User Avatar" id="UpdateAvatar" class="w-32 h-32 rounded-full object-cover border-4 border-gray-200">
+                            <label for="avatar-upload" class="absolute bottom-0 right-0 bg-blue-500 p-2 rounded-full text-white cursor-pointer hover:bg-blue-600 transition">
+                                <i class="fas fa-camera"></i>
+                                <input type="file" id="avatar-upload" class="hidden" accept="image/*">
+                            </label>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-500">Ấn để tải lên Avatar</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-3/4">
+                    <form id="profile-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="fullname" class="text-sm font-medium text-gray-700" >Họ và tên</label>
+                                <input type="text" id="fullname" name="fullname" placeholder="" id="UpdateHoVaTen" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="username" class="text-sm font-medium text-gray-700" >Username</label>
+                                <input type="text" id="username" name="username" id="UpdateUsername" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="email" class="text-sm font-medium text-gray-700">Email</label>
+                                <input type="email" id="email" name="email" id="UpdateEmail" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="text-sm font-medium text-gray-700">Số điện thoại</label>
+                                <input type="tel" id="phone" name="phone" id="UpdateSdt" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="dob" class="text-sm font-medium text-gray-700">Ngày sinh</label>
+                                <input type="date" id="dob" name="dob" id="UpdateNgaySinh" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="gender" class="text-sm font-medium text-gray-700">Giới tính</label>
+                                <select id="gender" name="gender" id="UpdateGioiTinh" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                                    <option value="">Chọn giới tính</option>
+                                    <option value="Nam">Nam</option>
+                                    <option value="Nữ">Nữ</option>
+                                    <option value="Khác">Khác</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="current-password" class="text-sm font-medium text-gray-700">Mật khẩu cũ</label>
+                                <input type="password" id="current-password" name="current-password" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="new-password" class="text-sm font-medium text-gray-700">Mật khẩu mới</label>
+                                <input type="password" id="new-password" name="new-password" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="confirm-password" class="text-sm font-medium text-gray-700">Xác nhận lại mật khẩu mới</label>
+                                <input type="password" id="confirm-password" name="confirm-password" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="address" class="text-sm font-medium text-gray-700">Địa chỉ</label>
+                                <textarea id="address" name="address" id="UpdateDiaChi" rows="3" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required></textarea>
+                            </div>
+                        </div>
+                        <div class="flex justify-end space-x-4">
+                            <button type="button" onclick="toggleEditMode()" class="px-6 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
+                                Huỷ
+                            </button>
+                            <button type="submit" class="px-6 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
+                                Lưu thay đổi
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="success-message" class="hidden fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-all duration-500 ease-in-out">
+                Cập nhật tài khoản thành công
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const token = localStorage.getItem('token');
+        const HovaTen = document.getElementById('Hovaten');
+        const username = document.getElementById('username');
+        const email = document.getElementById('email');
+        const sdt = document.getElementById('sdt');
+        const namSinh = document.getElementById('namsinh');
+        const gioiTinh = document.getElementById('gioitinh');
+        const diaChi = document.getElementById('diachi');
+        const avatar = document.getElementById('avatar');
+        const name = document.getElementById('name');
+        const name2 = document.getElementById('name2');
+
+        const UpdateAvatar = document.getElementById('UpdateAvatar');
+        const UpdateHoVaTen = document.getElementById('UpdateHoVaTen');
+        const UpdateUsername = document.getElementById('UpdateUsername');
+        const UpdateEmail = document.getElementById('UpdateEmail');
+        const UpdateSdt = document.getElementById('UpdateSdt');
+        const UpdateNgaySinh = document.getElementById('UpdateNgaySinh');
+        const UpdateGioiTinh = document.getElementById('UpdateGioiTinh');
+        const UpdateDiaChi = document.getElementById('UpdateDiaChi');
+
+        const avatarDefault = "/img/default-avatar.png";
+
+        if (token) {
+            fetchAccountInfo(token).then(data => {
+                HovaTen.textContent = data.hoVaTen || 'N/A';
+                username.textContent = data.userName || 'N/A';
+                email.textContent = data.email || 'N/A';
+                sdt.textContent = data.sdt || 'N/A';
+                namSinh.textContent = data.namSinh ? new Date(data.namSinh).toLocaleDateString('vi-VN') : 'N/A';
+                gioiTinh.textContent = data.gioiTinh || 'N/A';
+                diaChi.textContent = data.DiaChi || 'N/A';
+                avatar.src = data.Avatar || avatarDefault;
+                name.textContent = data.userName || 'N/A';
+                name2.textContent = '@@' + data.userName || '@@N/A';
+
+                
+                UpdateAvatar.src = data.Avatar || avatarDefault;
+
+            }).catch(error => {
+                console.error("Error fetching user data:", error);
+            });
+
+            fetchAccountDC(token).then(data => {
+                diaChi.textContent = data.DiaChi || 'N/A';
+            }).catch(error => {
+                console.error("Error fetching user data:", error);
+            });
+        } else {
+            loginSection.classList.remove('hide');
+            profileSection.classList.add('hide');
+        }
+
+        logoutButton.addEventListener('click', function (event) {
+            event.preventDefault();
+            logout();
+        });
+    });
+
+    async function fetchAccountInfo(token) {
+        const userId = localStorage.getItem('userId');
+        const response = await fetch(`/api/taikhoan/${userId}`, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+
+        if (!response.ok) {
+            throw new Error('Failed to fetch user data');
+        }
+        return response.json();
+    }
+
+    async function fetchAccountDC(token) {
+                const userId = localStorage.getItem('userId');
+        const response = await fetch(`/api/taikhoan/diachi/${userId}`, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to fetch user data');
+        }
+        return response.json();
+    }
+
+
+    function toggleEditMode() {
+        const viewSection = document.querySelector('.container > div:first-child');
+        const editSection = document.getElementById('edit-profile-section');
+
+        if (editSection.classList.contains('hidden')) {
+            viewSection.classList.add('hidden');
+            editSection.classList.remove('hidden');
+        } else {
+            viewSection.classList.remove('hidden');
+            editSection.classList.add('hidden');
+        }
+    }
+</script>
+
