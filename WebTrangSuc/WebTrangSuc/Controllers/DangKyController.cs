@@ -12,6 +12,8 @@ using System.Web.Security;
 using Microsoft.Ajax.Utilities;
 using System.Web.Helpers;
 using WebTrangSuc.Helpers;
+using System.Web;
+using System.IO;
 
 namespace WebTrangSuc.Controllers
 {
@@ -201,25 +203,35 @@ namespace WebTrangSuc.Controllers
                 return NotFound();
             }
 
+            // Cập nhật thông tin cơ bản
             taiKhoan.HoVaTen = model.HoVaTen;
             taiKhoan.GioiTinh = model.GioiTinh;
             taiKhoan.NamSinh = model.NamSinh;
             taiKhoan.SDT = model.SDT;
             taiKhoan.Email = model.Email;
             taiKhoan.UserName = model.UserName;
-            taiKhoan.Avatar = model.Avatar;
 
-
+            // Kiểm tra nếu mật khẩu mới được gửi
             if (!string.IsNullOrEmpty(model.Matkhau))
             {
-                taiKhoan.Matkhau = Crypto.HashPassword(model.Matkhau);
+                taiKhoan.Matkhau = Crypto.HashPassword(model.Matkhau); // Mã hóa mật khẩu trước khi lưu
             }
 
             _context.Entry(taiKhoan).State = EntityState.Modified;
             await _context.SaveChangesAsync();
 
-            return Ok(new { message = "Cập nhật thành công!" });
+            return Ok(new { message = "Cập nhật thông tin thành công!" });
         }
+
+
+        private string SaveBase64ToFile(string base64String, string fileName)
+        {
+            string filePath = HttpContext.Current.Server.MapPath($"~/img/UploadedFiles/{fileName}");
+            byte[] bytes = Convert.FromBase64String(base64String);
+            File.WriteAllBytes(filePath, bytes);
+            return $"/UploadedFiles/{fileName}"; // Trả về đường dẫn lưu file
+        }
+
 
         [HttpPut]
         [Route("api/taikhoan/diachi/{id}")]
@@ -240,7 +252,44 @@ namespace WebTrangSuc.Controllers
 
             return Ok(new { message = "Cập nhật thành công!" });
 
-        } 
+        }
+
+
+        [HttpPut]
+        [Route("api/taikhoan/doi-mat-khau/{id}")]
+        public async Task<IHttpActionResult> DoiMatKhau(int id, DoiMatKhauModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var taiKhoan = await _context.TaiKhoans.FirstOrDefaultAsync(t => t.ID == id);
+            if (taiKhoan == null)
+            {
+                return NotFound();
+            }
+
+            // Kiểm tra mật khẩu cũ
+            if (!Crypto.VerifyHashedPassword(taiKhoan.Matkhau, model.MatKhauCu))
+            {
+                return BadRequest("Mật khẩu cũ không đúng.");
+            }
+
+            // Kiểm tra mật khẩu mới
+            if (!IsStrongPassword(model.MatKhauMoi))
+            {
+                return BadRequest("Mật khẩu mới không hợp lệ.");
+            }
+
+            // Cập nhật mật khẩu mới
+            taiKhoan.Matkhau = Crypto.HashPassword(model.MatKhauMoi);
+
+            _context.Entry(taiKhoan).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Đổi mật khẩu thành công!" });
+        }
 
     }
 }

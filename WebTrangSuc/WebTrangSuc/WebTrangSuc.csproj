@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -49,35 +49,35 @@
       <HintPath>..\packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.9.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Bcl.TimeProvider, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Bcl.TimeProvider.8.0.1\lib\net462\Microsoft.Bcl.TimeProvider.dll</HintPath>
+    <Reference Include="Microsoft.Bcl.TimeProvider, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.TimeProvider.9.0.0\lib\net462\Microsoft.Bcl.TimeProvider.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=8.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.IdentityModel.Abstractions.8.2.0\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=8.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Abstractions.8.2.1\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=8.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.8.2.0\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=8.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.8.2.1\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Logging, Version=8.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.IdentityModel.Logging.8.2.0\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=8.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.8.2.1\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Tokens, Version=8.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.8.2.0\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=8.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.8.2.1\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json.Bson, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.Bson.1.0.2\lib\net45\Newtonsoft.Json.Bson.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.Bson.1.0.3\lib\net45\Newtonsoft.Json.Bson.dll</HintPath>
     </Reference>
     <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
       <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
@@ -86,37 +86,40 @@
       <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    <Reference Include="System.Buffers, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.6.0\lib\net462\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=8.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.8.2.0\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=8.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.8.2.1\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
     </Reference>
     <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    <Reference Include="System.IO.Pipelines, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipelines.9.0.0\lib\net462\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.6.0\lib\net462\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.Formatting, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.6.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Numerics" />
-    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    <Reference Include="System.Numerics.Vectors, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.6.0\lib\net462\System.Numerics.Vectors.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.1.0\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -130,14 +133,14 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    <Reference Include="System.Text.Encodings.Web, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.9.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
-    <Reference Include="System.Text.Json, Version=8.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Text.Json.8.0.5\lib\net462\System.Text.Json.dll</HintPath>
+    <Reference Include="System.Text.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.9.0.0\lib\net462\System.Text.Json.dll</HintPath>
     </Reference>
-    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.6.0\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
@@ -224,6 +227,7 @@
     <Compile Include="Controllers\DanhMucSanPhamController.cs" />
     <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HighJewlryController.cs" />
+    <Compile Include="Controllers\SanPhamController.cs" />
     <Compile Include="Controllers\ThanhToanThanhCongController.cs" />
     <Compile Include="Controllers\ThongTinTaiKhoanController.cs" />
     <Compile Include="Controllers\TrangChuController.cs" />
@@ -241,6 +245,7 @@
     <Compile Include="Models\DiaChi.cs">
       <DependentUpon>ShopTrangSuc.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DoiMatKhauModel.cs" />
     <Compile Include="Models\DonHang.cs">
       <DependentUpon>ShopTrangSuc.tt</DependentUpon>
     </Compile>
@@ -250,9 +255,11 @@
     <Compile Include="Models\HinhSanPham.cs">
       <DependentUpon>ShopTrangSuc.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\HinhSanPhamModel.cs" />
     <Compile Include="Models\LoaiSanPham.cs">
       <DependentUpon>ShopTrangSuc.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\LoaiSanPhamModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\MauSac.cs">
       <DependentUpon>ShopTrangSuc.tt</DependentUpon>
@@ -263,6 +270,7 @@
     <Compile Include="Models\SanPham.cs">
       <DependentUpon>ShopTrangSuc.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\SanPhamModel.cs" />
     <Compile Include="Models\ShopTrangSuc.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -713,11 +721,38 @@
     <Content Include="img\bulgari.svg" />
     <Content Include="img\cartier.svg" />
     <Content Include="img\chanel.svg" />
+    <Content Include="img\charm2.png" />
+    <Content Include="img\charm3.png" />
+    <Content Include="img\charm4.png" />
     <Content Include="img\chaumet.svg" />
     <Content Include="img\clear-1.svg" />
     <Content Include="img\copyright-1.svg" />
     <Content Include="img\default-avatar.png" />
+    <Content Include="img\east-10.svg" />
+    <Content Include="img\east-11.svg" />
+    <Content Include="img\east-12.svg" />
+    <Content Include="img\east-13.svg" />
+    <Content Include="img\east-14.svg" />
+    <Content Include="img\east-15.svg" />
+    <Content Include="img\east-16.svg" />
+    <Content Include="img\east-17.svg" />
+    <Content Include="img\east-18.svg" />
+    <Content Include="img\east-19.svg" />
+    <Content Include="img\east-20.svg" />
+    <Content Include="img\east-21.svg" />
+    <Content Include="img\east-22.svg" />
+    <Content Include="img\east-23.svg" />
+    <Content Include="img\east-24.svg" />
+    <Content Include="img\east-25.svg" />
+    <Content Include="img\east-26.svg" />
+    <Content Include="img\east-27.svg" />
+    <Content Include="img\east-28.svg" />
+    <Content Include="img\east-29.svg" />
     <Content Include="img\east-3.svg" />
+    <Content Include="img\east-30.svg" />
+    <Content Include="img\east-31.svg" />
+    <Content Include="img\east-32.svg" />
+    <Content Include="img\east-33.svg" />
     <Content Include="img\east-4.svg" />
     <Content Include="img\exit-to-app-3.svg" />
     <Content Include="img\face-3.svg" />
@@ -759,13 +794,16 @@
     <Content Include="img\image-28.png" />
     <Content Include="img\image-29.svg" />
     <Content Include="img\image-3.png" />
+    <Content Include="img\image-3.svg" />
     <Content Include="img\image-30.svg" />
     <Content Include="img\image-33.svg" />
     <Content Include="img\image-34.svg" />
     <Content Include="img\image-35.svg" />
     <Content Include="img\image-36.svg" />
     <Content Include="img\image-4.png" />
+    <Content Include="img\image-4.svg" />
     <Content Include="img\image-5.png" />
+    <Content Include="img\image-5.svg" />
     <Content Include="img\image-7.png" />
     <Content Include="img\image-8.png" />
     <Content Include="img\image-removebg-preview-2-1.png" />
@@ -778,10 +816,15 @@
     <Content Include="img\image-removebg-preview-4-1-4.png" />
     <Content Include="img\image-removebg-preview-4-1-5.png" />
     <Content Include="img\image-removebg-preview-4-1-6.png" />
+    <Content Include="img\image-removebg-preview-4-1-7.png" />
+    <Content Include="img\image-removebg-preview-4-1-8.png" />
     <Content Include="img\image-removebg-preview-4-1.png" />
     <Content Include="img\image.png" />
     <Content Include="img\line-1-2.svg" />
+    <Content Include="img\line-1.svg" />
     <Content Include="img\line-10.svg" />
+    <Content Include="img\line-2-1.svg" />
+    <Content Include="img\line-2-2.svg" />
     <Content Include="img\line-2.svg" />
     <Content Include="img\line-3.svg" />
     <Content Include="img\line-4.svg" />
@@ -795,10 +838,136 @@
     <Content Include="img\polygon-1.svg" />
     <Content Include="img\polygon-2.svg" />
     <Content Include="img\print-3.svg" />
+    <Content Include="img\rectangle-34-1.png" />
+    <Content Include="img\rectangle-34-19.png" />
+    <Content Include="img\rectangle-34-23.png" />
+    <Content Include="img\rectangle-34-3.png" />
+    <Content Include="img\rectangle-34-5.png" />
+    <Content Include="img\rectangle-34-7.png" />
     <Content Include="img\rectangle-35.svg" />
     <Content Include="img\rectangle-38.png" />
     <Content Include="img\search-1.svg" />
     <Content Include="img\shopping-bag-1.svg" />
+    <Content Include="img\star-100.svg" />
+    <Content Include="img\star-101.svg" />
+    <Content Include="img\star-102.svg" />
+    <Content Include="img\star-103.svg" />
+    <Content Include="img\star-104.svg" />
+    <Content Include="img\star-105.svg" />
+    <Content Include="img\star-106.svg" />
+    <Content Include="img\star-107.svg" />
+    <Content Include="img\star-108.svg" />
+    <Content Include="img\star-109.svg" />
+    <Content Include="img\star-110.svg" />
+    <Content Include="img\star-111.svg" />
+    <Content Include="img\star-112.svg" />
+    <Content Include="img\star-113.svg" />
+    <Content Include="img\star-114.svg" />
+    <Content Include="img\star-115.svg" />
+    <Content Include="img\star-116.svg" />
+    <Content Include="img\star-117.svg" />
+    <Content Include="img\star-118.svg" />
+    <Content Include="img\star-119.svg" />
+    <Content Include="img\star-120.svg" />
+    <Content Include="img\star-121.svg" />
+    <Content Include="img\star-122.svg" />
+    <Content Include="img\star-123.svg" />
+    <Content Include="img\star-124.svg" />
+    <Content Include="img\star-125.svg" />
+    <Content Include="img\star-126.svg" />
+    <Content Include="img\star-127.svg" />
+    <Content Include="img\star-128.svg" />
+    <Content Include="img\star-129.svg" />
+    <Content Include="img\star-130.svg" />
+    <Content Include="img\star-131.svg" />
+    <Content Include="img\star-132.svg" />
+    <Content Include="img\star-133.svg" />
+    <Content Include="img\star-134.svg" />
+    <Content Include="img\star-135.svg" />
+    <Content Include="img\star-136.svg" />
+    <Content Include="img\star-137.svg" />
+    <Content Include="img\star-138.svg" />
+    <Content Include="img\star-139.svg" />
+    <Content Include="img\star-140.svg" />
+    <Content Include="img\star-141.svg" />
+    <Content Include="img\star-142.svg" />
+    <Content Include="img\star-143.svg" />
+    <Content Include="img\star-144.svg" />
+    <Content Include="img\star-145.svg" />
+    <Content Include="img\star-146.svg" />
+    <Content Include="img\star-147.svg" />
+    <Content Include="img\star-148.svg" />
+    <Content Include="img\star-149.svg" />
+    <Content Include="img\star-150.svg" />
+    <Content Include="img\star-151.svg" />
+    <Content Include="img\star-152.svg" />
+    <Content Include="img\star-153.svg" />
+    <Content Include="img\star-154.svg" />
+    <Content Include="img\star-155.svg" />
+    <Content Include="img\star-156.svg" />
+    <Content Include="img\star-157.svg" />
+    <Content Include="img\star-158.svg" />
+    <Content Include="img\star-159.svg" />
+    <Content Include="img\star-160.svg" />
+    <Content Include="img\star-41.svg" />
+    <Content Include="img\star-42.svg" />
+    <Content Include="img\star-43.svg" />
+    <Content Include="img\star-44.svg" />
+    <Content Include="img\star-45.svg" />
+    <Content Include="img\star-46.svg" />
+    <Content Include="img\star-47.svg" />
+    <Content Include="img\star-48.svg" />
+    <Content Include="img\star-49.svg" />
+    <Content Include="img\star-50.svg" />
+    <Content Include="img\star-51.svg" />
+    <Content Include="img\star-52.svg" />
+    <Content Include="img\star-53.svg" />
+    <Content Include="img\star-54.svg" />
+    <Content Include="img\star-55.svg" />
+    <Content Include="img\star-56.svg" />
+    <Content Include="img\star-57.svg" />
+    <Content Include="img\star-58.svg" />
+    <Content Include="img\star-59.svg" />
+    <Content Include="img\star-60.svg" />
+    <Content Include="img\star-61.svg" />
+    <Content Include="img\star-62.svg" />
+    <Content Include="img\star-63.svg" />
+    <Content Include="img\star-64.svg" />
+    <Content Include="img\star-65.svg" />
+    <Content Include="img\star-66.svg" />
+    <Content Include="img\star-67.svg" />
+    <Content Include="img\star-68.svg" />
+    <Content Include="img\star-69.svg" />
+    <Content Include="img\star-70.svg" />
+    <Content Include="img\star-71.svg" />
+    <Content Include="img\star-72.svg" />
+    <Content Include="img\star-73.svg" />
+    <Content Include="img\star-74.svg" />
+    <Content Include="img\star-75.svg" />
+    <Content Include="img\star-76.svg" />
+    <Content Include="img\star-77.svg" />
+    <Content Include="img\star-78.svg" />
+    <Content Include="img\star-79.svg" />
+    <Content Include="img\star-80.svg" />
+    <Content Include="img\star-81.svg" />
+    <Content Include="img\star-82.svg" />
+    <Content Include="img\star-83.svg" />
+    <Content Include="img\star-84.svg" />
+    <Content Include="img\star-85.svg" />
+    <Content Include="img\star-86.svg" />
+    <Content Include="img\star-87.svg" />
+    <Content Include="img\star-88.svg" />
+    <Content Include="img\star-89.svg" />
+    <Content Include="img\star-90.svg" />
+    <Content Include="img\star-91.svg" />
+    <Content Include="img\star-92.svg" />
+    <Content Include="img\star-93.svg" />
+    <Content Include="img\star-94.svg" />
+    <Content Include="img\star-95.svg" />
+    <Content Include="img\star-96.svg" />
+    <Content Include="img\star-97.svg" />
+    <Content Include="img\star-98.svg" />
+    <Content Include="img\star-99.svg" />
     <Content Include="img\star-rate-3.svg" />
     <Content Include="img\swarovski.svg" />
     <Content Include="img\tiffany-co.svg" />
@@ -935,6 +1104,7 @@
     <Folder Include="Areas\XuLyDonHang\Controllers\" />
     <Folder Include="Areas\XuLyDonHang\Data\" />
     <Folder Include="Areas\XuLyDonHang\Views\Shared\" />
+    <Folder Include="img\UploadedFiles\" />
     <Folder Include="Views\JwtAuthorizeAttribute\" />
   </ItemGroup>
   <ItemGroup>
@@ -976,11 +1146,11 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
   </Target>
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
-  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

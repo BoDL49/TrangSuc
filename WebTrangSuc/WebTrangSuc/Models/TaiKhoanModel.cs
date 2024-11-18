@@ -36,7 +36,6 @@ namespace WebTrangSuc.Models
         [Display(Name = "Tên đăng nhập")]
         public string UserName { get; set; }
 
-        [Required(ErrorMessage = "Vui lòng nhập mật khẩu.")]
         [StringLength(255, ErrorMessage = "Mật khẩu tối đa 255 ký tự.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Mật khẩu")]
@@ -48,7 +47,6 @@ namespace WebTrangSuc.Models
 
         public virtual Role Role { get; set; }
 
-        [Required]
         [Compare("Matkhau", ErrorMessage = "Mật khẩu và xác nhận mật khẩu không khớp.")]
         [NotMapped]
         public string XacNhanMatKhau { get; set; }

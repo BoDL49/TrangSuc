@@ -470,3 +470,5 @@ C:\Users\tuant\Desktop\DoAn\DoAn\cnpm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc
 C:\Users\tuant\Desktop\DoAn\DoAn\cnpm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\obj\Debug\WebTrang.696E43FC.Up2Date
 C:\Users\tuant\Desktop\DoAn\DoAn\cnpm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\obj\Debug\WebTrangSuc.dll
 C:\Users\tuant\Desktop\DoAn\DoAn\cnpm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\obj\Debug\WebTrangSuc.pdb
+C:\Users\tuant\Desktop\DoAn\DoAn\cnpm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\System.IO.Pipelines.dll
+C:\Users\tuant\Desktop\DoAn\DoAn\cnpm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\System.IO.Pipelines.xml

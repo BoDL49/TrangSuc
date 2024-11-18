@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_MasterLayout.cshtml";
 }
 
-<div class="min-h-screen p-6  flex items-center justify-center pt-52">
+<div class="min-h-screen p-6  flex items-center justify-center pt-60">
     <div class="container max-w-screen-lg mx-auto">
         <div class=" bg-white rounded-lg shadow-lg p-5 md:p-10 mx-2 mb-6">
             <div class="text-center mb-10">
@@ -85,27 +85,27 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
                                 <label for="fullname" class="text-sm font-medium text-gray-700" >Họ và tên</label>
-                                <input type="text" id="fullname" name="fullname" placeholder="" id="UpdateHoVaTen" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                                <input type="text"  name="fullname" placeholder="" id="UpdateHoVaTen" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
                             </div>
                             <div>
                                 <label for="username" class="text-sm font-medium text-gray-700" >Username</label>
-                                <input type="text" id="username" name="username" id="UpdateUsername" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                                <input type="text"  name="username" id="UpdateUsername" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
                             </div>
                             <div>
                                 <label for="email" class="text-sm font-medium text-gray-700">Email</label>
-                                <input type="email" id="email" name="email" id="UpdateEmail" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                                <input type="email" name="email" id="UpdateEmail" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
                             </div>
                             <div>
                                 <label for="phone" class="text-sm font-medium text-gray-700">Số điện thoại</label>
-                                <input type="tel" id="phone" name="phone" id="UpdateSdt" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                                <input type="tel"  name="phone" id="UpdateSdt" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
                             </div>
                             <div>
                                 <label for="dob" class="text-sm font-medium text-gray-700">Ngày sinh</label>
-                                <input type="date" id="dob" name="dob" id="UpdateNgaySinh" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                                <input type="date"  name="dob" id="UpdateNgaySinh" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
                             </div>
                             <div>
                                 <label for="gender" class="text-sm font-medium text-gray-700">Giới tính</label>
-                                <select id="gender" name="gender" id="UpdateGioiTinh" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                                <select  name="gender" id="UpdateGioiTinh" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
                                     <option value="">Chọn giới tính</option>
                                     <option value="Nam">Nam</option>
                                     <option value="Nữ">Nữ</option>
@@ -126,7 +126,7 @@
                             </div>
                             <div class="md:col-span-2">
                                 <label for="address" class="text-sm font-medium text-gray-700">Địa chỉ</label>
-                                <textarea id="address" name="address" id="UpdateDiaChi" rows="3" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required></textarea>
+                                <textarea  name="address" id="UpdateDiaChi" rows="3" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required></textarea>
                             </div>
                         </div>
                         <div class="flex justify-end space-x-4">
@@ -237,6 +237,144 @@
         }
         return response.json();
     }
+
+    async function fetchAndLoadProfileData(token) {
+        const userId = localStorage.getItem('userId');
+        try {
+            const response = await fetch(`/api/taikhoan/${userId}`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+
+            const response2 = await fetch(`/api/taikhoan/diachi/${userId}`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+
+            if (!response.ok) throw new Error('Failed to fetch user data');
+            if (!response2.ok) throw new Error('Failed to fetch user data');
+
+            const data = await response.json();
+            const data2 = await response2.json();
+
+            console.log(data, data2);
+
+
+            document.getElementById('UpdateHoVaTen').value = data.hoVaTen || '';
+            document.getElementById('UpdateUsername').value = data.userName || '';
+            document.getElementById('UpdateEmail').value = data.email || '';
+            document.getElementById('UpdateSdt').value = data.sdt || ''; 
+            document.getElementById('UpdateNgaySinh').value = data.namSinh ? new Date(data.namSinh).toISOString().split('T')[0] : '';
+            document.getElementById('UpdateGioiTinh').value = data.gioiTinh || '';
+            document.getElementById('UpdateDiaChi').value = data2.DiaChi || ''; 
+            document.getElementById('UpdateAvatar').src = data.avatar || '/img/default-avatar.png';
+
+        } catch (error) {
+            console.error('Error fetching user data:', error);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const token = localStorage.getItem('token');
+        if (token) {
+            fetchAndLoadProfileData(token);
+        }
+    });
+
+
+
+    document.getElementById('avatar-upload').addEventListener('change', function (event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const base64String = e.target.result.split(',')[1]; 
+                document.getElementById('UpdateAvatar').src = e.target.result; 
+                localStorage.setItem('avatarBase64', base64String); 
+            };
+            reader.readAsDataURL(file); 
+        }
+    });
+
+
+    async function updateProfile(userId, token) {
+        const hoVaTen = document.getElementById('UpdateHoVaTen').value;
+        const gioiTinh = document.getElementById('UpdateGioiTinh').value;
+        const namSinh = document.getElementById('UpdateNgaySinh').value;
+        const sdt = document.getElementById('UpdateSdt').value;
+        const email = document.getElementById('UpdateEmail').value;
+        const userName = document.getElementById('UpdateUsername').value;
+        const avatar = localStorage.getItem('avatarBase64') || null;
+        const diaChi = document.getElementById('UpdateDiaChi').value;
+
+        const newPassword = document.getElementById('new-password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
+
+        // Kiểm tra nếu mật khẩu mới được nhập
+        let data = {
+            hoVaTen,
+            gioiTinh,
+            namSinh,
+            sdt,
+            email,
+            userName,
+            avatar
+        };
+
+        if (newPassword || confirmPassword) {
+            if (newPassword !== confirmPassword) {
+                alert("Mật khẩu mới và xác nhận mật khẩu không khớp.");
+                return;
+            }
+            data.Matkhau = newPassword; // Thêm mật khẩu mới vào payload
+        }
+
+        // Cập nhật thông tin tài khoản
+        try {
+            const profileResponse = await fetch(`/api/taikhoan/${userId}`, {
+                method: 'PUT',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            const addressResponse = await fetch(`/api/taikhoan/diachi/${userId}`, {
+                method: 'PUT',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ DiaChi: diaChi })
+            });
+
+            if (!profileResponse.ok || !addressResponse.ok) {
+                const error = await profileResponse.json();
+                throw new Error(error.message || "Có lỗi xảy ra khi cập nhật thông tin.");
+            }
+
+            alert("Cập nhật thông tin thành công!");
+            localStorage.removeItem('avatarBase64'); // Xóa Base64 sau khi gửi thành công
+        } catch (error) {
+            console.error("Error updating profile:", error);
+            alert(error.message || "Có lỗi xảy ra khi cập nhật thông tin.");
+        }
+    }
+
+
+
+
+    document.getElementById('profile-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const userId = localStorage.getItem('userId');
+        const token = localStorage.getItem('token');
+        updateProfile(userId, token);
+    });
 
 
     function toggleEditMode() {

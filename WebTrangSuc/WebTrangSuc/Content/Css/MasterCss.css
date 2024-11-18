@@ -2087,6 +2087,7 @@
         width: 280px;
         height: 357px;
         top: 66px;
+        background-color: #ffffff;
         left: 1px;
         border-radius: 12px;
     }
@@ -2617,3 +2618,4 @@
 .background {
     background-color: #f9f5f6;
 }
+
