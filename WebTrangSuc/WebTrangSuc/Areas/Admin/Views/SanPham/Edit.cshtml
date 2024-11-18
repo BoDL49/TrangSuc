@@ -6,7 +6,7 @@
 
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title">Thông tin danh mục</h3>
+        <h3 class="card-title">Thông tin sản phẩm</h3>
         <div class="card-body">
             @using (Html.BeginForm("Edit", "SanPham", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
@@ -20,14 +20,28 @@
                 </div>
                 <div class="form-group">
                     @Html.Label("Ảnh hiện tại:")
-                    <img src="@Model.HinhSanPham" alt="Ảnh loại sản phẩm" style="max-width: 200px;" />
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-md-2">Hình Sản Phẩm</label>
-                    <div class="col-md-10">
-                        <input type="file" name="file" class="form-control" />
+                    <div>
+                        @if (Model.HinhSanPhams != null && Model.HinhSanPhams.Any())
+                        {
+                            foreach (var hinh in Model.HinhSanPhams)
+                            {
+                                <img src="@Url.Content(hinh.HinhSP)" alt="Ảnh sản phẩm" style="width: 100%; max-width: 300px; max-height: 300px;" />
+                            }
+                        }
+                        else
+                        {
+                            <span>Không có hình ảnh</span>
+                        }
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <label class="control-label col-md-2">Hình ảnh mới </label>
+                    <div class="col-md-10">
+                        <input type="file" name="files" multiple="multiple" />
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <label for="Gia">Giá </label>
                     @Html.TextBoxFor(x => x.Gia, new { @class = "form-control", @placeholder = "Tên sản phẩm" })
@@ -50,11 +64,12 @@
                     @Html.ValidationMessageFor(x => x.SoLuongTonKho, null, new { @class = "text-danger" })
                 </div>
                 <div class="form-group">
-                    <div class="form-check">
-                        <label class="form-check-label">
-                            @Html.CheckBoxFor(x => x.TrangThaiSanPham, new { @class = "form-check-input" })
-                            Trạng thái sản phẩm (Kích hoạt)
-                        </label>
+                    <div class="form-group">
+                        <label for="TrangThaiSanPham">Trạng thái sản phẩm</label>
+                        @Html.DropDownListFor(x => x.TrangThaiSanPham,
+                            new SelectList(new List<string> { "Còn hàng", "Hết hàng" }),
+                            "Chọn trạng thái",
+                            new { @class = "form-control", @id = "TrangThaiSanPham" })
                     </div>
                     @Html.ValidationMessageFor(x => x.TrangThaiSanPham, null, new { @class = "text-danger" })
                 </div>
