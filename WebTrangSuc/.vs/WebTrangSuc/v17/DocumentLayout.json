@@ -1,10 +1,152 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\",
+  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\tuant\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\views\\shared\\_masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\views\\shared\\_masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+=======
+<<<<<<< HEAD
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\loaisanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\loaisanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\sanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\sanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\voucher\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\voucher\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\webtrangsuc\\areas\\admin\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\order\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\order\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\webtrangsuc\\areas\\admin\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\voucher\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\voucher\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\sanpham\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\sanpham\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\color\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\color\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\chatlieu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\chatlieu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\shared\\_adminlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\loaisanpham\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\loaisanpham\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\loaisanpham\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\loaisanpham\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\voucher\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\voucher\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\taikhoan\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\taikhoan\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\review\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\review\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\review\\productlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\review\\productlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\taikhoan\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\taikhoan\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\taikhoan\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\taikhoan\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\controllers\\colorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\controllers\\colorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\controllers\\chatlieucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\controllers\\chatlieucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\webtrangsuc\\models\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\models\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\lenovo\\documents\\cnpmnc\\jewelry\\trangsuc\\webtrangsuc\\webtrangsuc\\controllers\\donhangapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\controllers\\donhangapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\webtrangsuc\\views\\donhang\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\views\\donhang\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\webtrangsuc\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\webtrangsuc\\views\\donhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\views\\donhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\webtrangsuc\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\webtrangsuc\\controllers\\giohangapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\controllers\\giohangapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\webtrangsuc\\models\\sanphamgiohangmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\models\\sanphamgiohangmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\webtrangsuc\\views\\danhmucsanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\views\\danhmucsanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\webtrangsuc\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\webtrangsuc\\models\\sanphammodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\models\\sanphammodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\webtrangsuc\\views\\trangchu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\views\\trangchu\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+=======
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\tuant\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\views\\shared\\_masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\views\\shared\\_masterlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+>>>>>>> 9b2511604f186a470d8a91dc80ca7bc4c946f53a
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -18,6 +160,7 @@
           "Children": [
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 0,
               "Title": "_MasterLayout.cshtml",
               "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\Shared\\_MasterLayout.cshtml",
@@ -28,6 +171,478 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-20T15:47:05.15Z",
               "EditorCaption": ""
+=======
+<<<<<<< HEAD
+              "DocumentIndex": 4,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Order\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\Order\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Order\\Edit.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\Order\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T16:14:58.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Order\\Details.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\Order\\Details.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Order\\Details.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\Order\\Details.cshtml",
+              "ViewState": "AQIAABQAAAAAAAAAAAAowDgAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T14:41:14.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAAAHkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T14:27:53.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAwwFoAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:10:51.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Index.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Index.cshtml",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAFsAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:48:46.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Delete.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Delete.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Delete.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:50:28.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\LoaiSanPham\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\LoaiSanPham\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\LoaiSanPham\\Index.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\LoaiSanPham\\Index.cshtml",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAAAGQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T16:03:40.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Index.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Index.cshtml",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAEQAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T16:09:19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Create.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Create.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\SanPham\\Create.cshtml",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADMAAABzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T16:10:25.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Color\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\Color\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Color\\Index.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\Color\\Index.cshtml",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADcAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:21:58.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\ChatLieu\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\ChatLieu\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\ChatLieu\\Index.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\ChatLieu\\Index.cshtml",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAowDcAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:21:47.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\LoaiSanPham\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\LoaiSanPham\\Create.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\LoaiSanPham\\Create.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\LoaiSanPham\\Create.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAB0AAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T16:04:08.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\LoaiSanPham\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\LoaiSanPham\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\LoaiSanPham\\Edit.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\LoaiSanPham\\Edit.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACEAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T16:03:53.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Edit.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\Voucher\\Edit.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACAAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T16:02:59.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_AdminLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\Shared\\_AdminLayout.cshtml",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAowHoAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:31:26.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\TaiKhoan\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\TaiKhoan\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\TaiKhoan\\Index.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\TaiKhoan\\Index.cshtml",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAAD4AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:27:50.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\TaiKhoan\\Create.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\TaiKhoan\\Create.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\TaiKhoan\\Create.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\TaiKhoan\\Create.cshtml",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAAAG0AAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:27:28.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\TaiKhoan\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\TaiKhoan\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\TaiKhoan\\Edit.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\TaiKhoan\\Edit.cshtml",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAAAHEAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:26:39.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ChatLieuController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Controllers\\ChatLieuController.cs",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Controllers\\ChatLieuController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Controllers\\ChatLieuController.cs",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Controllers\\ChatLieuController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:23:22.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ColorController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Controllers\\ColorController.cs",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Controllers\\ColorController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Controllers\\ColorController.cs",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Controllers\\ColorController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:23:16.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Review\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\Review\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Review\\Index.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\Review\\Index.cshtml",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAAF0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:20:47.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ProductList.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Review\\ProductList.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\Review\\ProductList.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Review\\ProductList.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\Review\\ProductList.cshtml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAEwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:21:03.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CreateOrderDto.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Models\\CreateOrderDto.cs",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Models\\CreateOrderDto.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Models\\CreateOrderDto.cs",
+              "RelativeToolTip": "WebTrangSuc\\Models\\CreateOrderDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T14:57:41.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\DonHang\\Detail.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Views\\DonHang\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\DonHang\\Detail.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Views\\DonHang\\Detail.cshtml",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAwwHQAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T14:45:44.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\DonHang\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Views\\DonHang\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\DonHang\\Index.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Views\\DonHang\\Index.cshtml",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAAAKwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T14:28:46.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "DonHangController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Controllers\\DonHangController.cs",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Controllers\\DonHangController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Controllers\\DonHangController.cs",
+              "RelativeToolTip": "WebTrangSuc\\Controllers\\DonHangController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T14:28:34.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "DonHangAPIController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Controllers\\DonHangAPIController.cs",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Controllers\\DonHangAPIController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Controllers\\DonHangAPIController.cs",
+              "RelativeToolTip": "WebTrangSuc\\Controllers\\DonHangAPIController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD8AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T14:07:42.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\GioHang\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Views\\GioHang\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\GioHang\\Index.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Views\\GioHang\\Index.cshtml",
+              "ViewState": "AgIAAIsBAAAAAAAAAADwv6ABAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T05:30:36.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "SanPhamGioHangModel.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Models\\SanPhamGioHangModel.cs",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Models\\SanPhamGioHangModel.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Models\\SanPhamGioHangModel.cs",
+              "RelativeToolTip": "WebTrangSuc\\Models\\SanPhamGioHangModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T03:42:36.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "GioHangAPIController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Controllers\\GioHangAPIController.cs",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Controllers\\GioHangAPIController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Controllers\\GioHangAPIController.cs",
+              "RelativeToolTip": "WebTrangSuc\\Controllers\\GioHangAPIController.cs",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAAALUAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T03:32:06.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\DanhMucSanPham\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Views\\DanhMucSanPham\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\DanhMucSanPham\\Index.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Views\\DanhMucSanPham\\Index.cshtml",
+              "ViewState": "AgIAADcDAAAAAAAAAAAwwO8DAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-18T02:58:17.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "SanPhamController.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Controllers\\SanPhamController.cs",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Controllers\\SanPhamController.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Controllers\\SanPhamController.cs",
+              "RelativeToolTip": "WebTrangSuc\\Controllers\\SanPhamController.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAwwHcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T09:49:14.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\TrangChu\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Views\\TrangChu\\Index.cshtml",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\TrangChu\\Index.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Views\\TrangChu\\Index.cshtml",
+              "ViewState": "AgIAAJ4BAAAAAAAAAAAiwK0BAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-17T07:53:17.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "SanPhamModel.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Models\\SanPhamModel.cs",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Models\\SanPhamModel.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Documents\\CNPMNC\\Jewelry\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Models\\SanPhamModel.cs",
+              "RelativeToolTip": "WebTrangSuc\\Models\\SanPhamModel.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAwwC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T09:43:07.961Z"
+=======
+              "DocumentIndex": 0,
+              "Title": "_MasterLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\Shared\\_MasterLayout.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Views\\Shared\\_MasterLayout.cshtml",
+              "ToolTip": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\Shared\\_MasterLayout.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Views\\Shared\\_MasterLayout.cshtml",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAwwNsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T15:47:05.15Z",
+              "EditorCaption": ""
+>>>>>>> 9b2511604f186a470d8a91dc80ca7bc4c946f53a
+>>>>>>> Stashed changes
             }
           ]
         }

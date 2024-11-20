@@ -49,7 +49,7 @@
                         <div class="form-group">
                             <label for="TrangThaiSanPham">Trạng thái sản phẩm</label>
                             @Html.DropDownListFor(x => x.TrangThaiSanPham,
-                                new SelectList(new List<string> { "Còn hàng", "Hết hàng" }),
+                                new SelectList(new List<string> { "Còn hàng", "Hết hàng","Giới hạn","Đặt hàng trước" }),
                                 "Chọn trạng thái",
                                 new { @class = "form-control", @id = "TrangThaiSanPham" })
                         </div>

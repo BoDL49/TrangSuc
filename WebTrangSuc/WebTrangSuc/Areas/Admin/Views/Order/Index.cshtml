@@ -75,9 +75,10 @@
                             <th>Tên khách hàng</th>
                             <th>Địa chỉ</th>
                             <th>Tổng tiền</th>
+                            <th>Phương thức thanh toán</th>
                             <th>Trạng thái đơn hàng</th>
                             <th>Trạng thái giao hàng</th>
-                            <th>Hành động</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -93,6 +94,7 @@
                                 </td>
 
                                 <td>@String.Format("{0:0,0} VND", order.TongTien)</td>
+                                <td>@order.PhuongThucThanhToan</td>
                                 <td>
                                     @if (order.TrangThaiDonHang == 1)
                                     {
@@ -106,16 +108,17 @@
                                 <td>
                                     @if (order.TrangThaiGiaoHang == 1)
                                     {
-                                        <span class="badge badge-primary">Đã giao</span>
+                                        <span class="badge badge-success">Đã giao</span>
                                     }
                                     else
                                     {
-                                        <span class="badge badge-secondary">Chưa giao</span>
+                                        <span class="badge badge-warning">Chưa giao</span>
                                     }
                                 </td>
                                 <td>
                                     <a href="@Url.Action("Details", "Order", new { id = order.ID })" class="btn btn-info btn-sm">Xem</a>
-                                    <a href="@Url.Action("UpdateDelivery", "Order", new { id = order.ID, updateDelivery = 1 })" class="btn btn-success btn-sm">Cập nhật giao hàng</a>
+                                    <a href="@Url.Action("UpdateDelivery", "Order", new { id = order.ID, updateDelivery = 1 })" class="btn btn-secondary btn-sm">Cập nhật giao hàng</a>
+                                    <a href="@Url.Action("UpdateDonHang", "Order", new { id = order.ID, updateDonhang = 1 })" class="btn btn-success btn-sm">Cập nhật đơn hàng</a>
                                     <a href="@Url.Action("Delete", "Order", new { id = order.ID })" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</a>
                                 </td>
                             </tr>

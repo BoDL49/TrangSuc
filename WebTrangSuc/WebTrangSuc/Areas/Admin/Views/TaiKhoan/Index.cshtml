@@ -52,16 +52,16 @@
 
 <h2>Quản lý tài khoản</h2>
 <p>
-    <a href="@Url.Action("Create", "TaiKhoan")" class="btn btn-primary">Create New</a>
+    <a href="@Url.Action("Create", "TaiKhoan")" class="btn btn-primary">Thêm tài khoản</a>
 </p>
 
 <table class="table table-hover">
     <thead>
         <tr>
-            <th>HoVaTen</th>
-            <th>UserName</th>
+            <th>Họ và tên</th>
+            <th>Tên người dùng</th>
             <th>Role</th>
-            <th>Actions</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -72,8 +72,8 @@
                 <td>@item.UserName</td>
                 <td>@item.Role.TenRole</td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.ID }, new { @class = "btn btn-warning" }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.ID }, new { @class = "btn btn-danger" })
                 </td>
             </tr>
         }

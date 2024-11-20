@@ -1,8 +1,10 @@
-﻿using System;
+﻿using PagedList;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 using WebTrangSuc.Models;
 using WebTrangSuc.Views.JwtAuthorizeAttribute;
 
@@ -14,9 +16,11 @@ namespace WebTrangSuc.Areas.Admin.Controllers
 
         [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         // GET: Admin/Color
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
-            var mauSacs = db.MauSacs.ToList();
+            int pageSize = 5;
+            int pageNum = (page ?? 1);
+            var mauSacs = db.MauSacs.ToList().ToPagedList(pageNum, pageSize);
             return View(mauSacs);
         }
 

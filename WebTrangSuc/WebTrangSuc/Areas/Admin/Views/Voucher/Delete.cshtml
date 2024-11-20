@@ -13,7 +13,9 @@
         <div class="card-body">
             <p><strong>Tên voucher:</strong> @Model.TenVoucher</p>
             <p><strong>Thông tin voucher:</strong> @Model.ThongTinVoucher</p>
-            <p><strong>Giá voucher:</strong> @Model.GiaVoucher</p>
+            <p>
+                <strong>Giá voucher:</strong> @Model.GiaVoucher %
+            </p>
             @using (Html.BeginForm("Delete", "Voucher", FormMethod.Post))
             {
                 @Html.AntiForgeryToken()
