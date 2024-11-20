@@ -105,6 +105,7 @@ CREATE TABLE DonHang (
     TrangThaiGiaoHang INT,
     TrangThaiDonHang INT,
     IDVoucher INT,
+    PhuongThucThanhToan Nvarchar(100),
     CONSTRAINT FK_DonHang_TaiKhoan FOREIGN KEY (IDUser) REFERENCES TaiKhoan(ID),
     CONSTRAINT FK_DonHang_Voucher FOREIGN KEY (IDVoucher) REFERENCES Voucher(ID)
 );
@@ -117,6 +118,16 @@ CREATE TABLE DonHangChiTiet (
     GiaSanPham INT,
     CONSTRAINT FK_DonHangChiTiet_DonHang FOREIGN KEY (IDDonHang) REFERENCES DonHang(ID),
     CONSTRAINT FK_DonHangChiTiet_SanPham FOREIGN KEY (IDSanPham) REFERENCES SanPham(ID)
+);
+GO
+
+CREATE TABLE SanPhamGioHang (
+   ID INT IDENTITY(1,1) PRIMARY KEY,
+   IDUser int,
+   IDSanPham int,
+   SoLuongSanPham INT,
+   CONSTRAINT FK_SanPhamGioHang_TaiKhoan FOREGIN KEY (IDUser) REFERENCES TaiKhoan(ID),
+   CONSTRAINT FK_SanPhamGioHang_SanPham FOREIGN KEY (IDSanPham) REFERENCES SanPham(ID)
 );
 GO
 

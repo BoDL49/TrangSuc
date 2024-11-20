@@ -20,6 +20,7 @@ namespace WebTrangSuc.Models
             this.DanhGias = new HashSet<DanhGia>();
             this.DonHangChiTiets = new HashSet<DonHangChiTiet>();
             this.HinhSanPhams = new HashSet<HinhSanPham>();
+            this.SanPhamGioHangs = new HashSet<SanPhamGioHang>();
         }
     
         public int ID { get; set; }
@@ -44,5 +45,7 @@ namespace WebTrangSuc.Models
         public virtual ChatLieu ChatLieu { get; set; }
         public virtual MauSac MauSac { get; set; }
         public virtual ThuongHieu ThuongHieu { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SanPhamGioHang> SanPhamGioHangs { get; set; }
     }
 }

@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Giỏ hàng";
     Layout = "~/Views/Shared/_MasterLayout.cshtml";
 }
@@ -8,130 +7,245 @@
 <link href="~/Content/Css/styleguild.css" rel="stylesheet" />
 <link href="~/Content/Css/GioHangCss.css" rel="stylesheet" />
 
-<div class="gi-hng">
-    <div class="text-wrapper-13">Tiếp tục mua sắm</div>
-    <img class="arrow-forward-ios" src="~/img/arrow-forward-ios-1.svg" />
-    <img class="img" src="~/img/line-6.svg" />
-    <div class="frame"><img class="img-2" src="~/img/arrow-forward-ios-2.svg" /></div>
-    <div class="group-2">
-        <p class="text-wrapper-14">Có Thể Bạn Cũng Thích</p>
-        <div class="arrow-forward-ios-wrapper">
-            <img class="arrow-forward-ios-2" src="~/img/arrow-forward-ios-3.svg" />
-        </div>
-        <div class="group-wrapper">
-            <div class="group-3">
-                <div class="group-4">
-                    <img class="image" src="~/img/image-2.png" />
-                    <div class="group-5">
-                        <div class="text-wrapper-15">Tiffany HardWear</div>
-                        <p class="text-wrapper-16">Vòng cổ ngọc trai nước ngọt bằng bạc Sterling, 16&#34;</p>
-                    </div>
-                </div>
-                <div class="group-6">
-                    <img class="image" src="~/img/image-3.png" />
-                    <div class="group-5">
-                        <div class="text-wrapper-15">Vòng cổ thiên nga</div>
-                        <p class="text-wrapper-16">Sự kết hợp hoàn hảo cho một buổi hòa nhạc buổi tối tinh tế.</p>
-                    </div>
-                </div>
-                <div class="group-7">
-                    <img class="image-2" src="~/img/image-11.svg" />
-                    <div class="group-5">
-                        <p class="text-wrapper-15">Vòng cổ DREAM của DIVAS</p>
-                        <p class="text-wrapper-16">Vòng cổ mặt dây chuyền vàng hồng 18 kt của Divas&#39; Dream.</p>
-                    </div>
-                </div>
-                <div class="group-8">
-                    <img class="image-3" src="~/img/image-12.svg" />
-                    <div class="group-5">
-                        <p class="text-wrapper-15">Vòng cổ biến tấu Soleil de CHANEL</p>
-                        <p class="text-wrapper-16">Vàng trắng và vàng vàng 18K, đính kim cương</p>
-                    </div>
-                </div>
-                <div class="group-9">
-                    <img class="image-4" src="~/img/image-8.png" />
-                    <div class="group-5">
-                        <p class="text-wrapper-17">Vòng cổ Rose des Vents và Rose Céleste</p>
-                        <p class="text-wrapper-16">Vàng và vàng trắng, kim cương, xà cừ và mã não</p>
-                    </div>
-                </div>
-                <div class="group-10">
-                    <img class="image-4" src="~/img/image-8.png" />
-                    <div class="group-5">
-                        <p class="text-wrapper-15">Vòng cổ Juste un Clou</p>
-                        <p class="text-wrapper-16">Vàng hồng 18K (750/1000), được đính 14 viên kim cương.</p>
-                    </div>
-                </div>
-                <div class="group-11">
-                    <img class="image-4" src="~/img/image-8.png" />
-                    <div class="group-12">
-                        <p class="text-wrapper-18">Vòng cổ dài Alhambra cổ điển, 20 họa tiết</p>
-                        <p class="text-wrapper-16">Vàng hồng 18K, Kim cương, Malachite</p>
-                    </div>
-                </div>
+<div class="gi-hng pt-60">
+    <div class="div">
+        <div class="body" style="margin-top: -220px;">
+            <div class="text-wrapper-13" onclick="BackToShop()" style="cursor: pointer;">Tiếp tục mua sắm</div>
+            <img class="arrow-forward-ios" src="~/img/Cart/arrow-forward-ios-1.svg" />
+            <img class="img" src="~/img/Cart/line-6.svg" />
+
+            @*<div class="group-2">
+            <div class="frame"><img class="img-2" src="~/img/Cart/arrow-forward-ios-2.svg" /></div>
+            <p class="text-wrapper-14">Có Thể Bạn Cũng Thích</p>
+            <div class="arrow-forward-ios-wrapper">
+                <img class="arrow-forward-ios-2" src="~/img/Cart/arrow-forward-ios-3.svg" />
             </div>
-        </div>
-    </div>
-    <div class="overlap-group-wrapper">
-        <div class="overlap-group-2">
-            <div class="overlap">
-                <p class="text-wrapper-19">Giao hàng trước thứ 2 ngày 23/09</p>
-                <p class="text-wrapper-20">Chuyển phát nhanh có chữ ký 0₫</p>
-            </div>
-            <div class="text-wrapper-21">Tóm tắt đơn hàng</div>
-            <div class="text-wrapper-22">Tổng phụ</div>
-            <div class="cn-n-sm">
-                <div class="frame-wrapper">
-                    <div class="frame-2">
-                        <div class="text-wrapper-23">Cần nó sớm hơn?</div>
-                        <img class="polygon" src="i~/mg/polygon-1-2.svg" />
+            <div class="group-wrapper">
+                <div class="group-3">
+                    <div class="group-4">
+                        <img class="image" src="~/img/Cart/image-2.png" />
+                        <div class="group-5">
+                            <div class="text-wrapper-15">Tiffany HardWear</div>
+                            <p class="text-wrapper-16">Vòng cổ ngọc trai nước ngọt bằng bạc Sterling, 16&#34;</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="group-13">
-                <div class="text-wrapper-24">Tổng số ước tính:</div>
-                <div class="text-wrapper-25">305.100.000 ₫</div>
-            </div>
-            <img class="line-2" src="~/img/line-8.svg" />
-            <div class="div-wrapper"><div class="text-wrapper-26">Đặt hàng</div></div>
-            <div class="image-wrapper"><img class="image-5" src="~/img/image-1.png" /></div>
-            <div class="ng-nhp"><div class="text-wrapper-27">Tiếp tục mua hàng</div></div>
-        </div>
-    </div>
-    <div class="group-14">
-        <div class="overlap-2">
-            <div class="favorite-border"></div>
-            <div class="overlap-3">
-                <div class="overlap-4">
-                    <img class="clear" src="~/img/clear-1.svg" />
-                    <img class="line-3" src="~/img/line-6.svg" />
-                    <p class="text-wrapper-28">Vòng cổ Rose des Vents và Rose Céleste</p>
-                    <p class="text-wrapper-29">Vàng và vàng trắng, kim cương, xà cừ và mã não</p>
-                    <div class="component">
-                        <div class="group-15">
-                            <div class="text-wrapper-30">Chọn cửa hàng</div>
-                            <img class="polygon-2" src="~/img/polygon-1.svg" />
+                    <div class="group-6">
+                        <img class="image" src="~/img/Cart/image-3.png" />
+                        <div class="group-5">
+                            <div class="text-wrapper-15">Vòng cổ thiên nga</div>
+                            <p class="text-wrapper-16">Sự kết hợp hoàn hảo cho một buổi hòa nhạc buổi tối tinh tế.</p>
+                        </div>
+                    </div>
+                    <div class="group-7">
+                        <img class="image-2" src="~/img/Cart/image-11.svg" />
+                        <div class="group-5">
+                            <p class="text-wrapper-15">Vòng cổ DREAM của DIVAS</p>
+                            <p class="text-wrapper-16">Vòng cổ mặt dây chuyền vàng hồng 18 kt của Divas&#39; Dream.</p>
+                        </div>
+                    </div>
+                    <div class="group-8">
+                        <img class="image-3" src="~/img/Cart/image-12.svg" />
+                        <div class="group-5">
+                            <p class="text-wrapper-15">Vòng cổ biến tấu Soleil de CHANEL</p>
+                            <p class="text-wrapper-16">Vàng trắng và vàng vàng 18K, đính kim cương</p>
+                        </div>
+                    </div>
+                    <div class="group-9">
+                        <img class="image-4" src="~/img/Cart/image-8.png" />
+                        <div class="group-5">
+                            <p class="text-wrapper-17">Vòng cổ Rose des Vents và Rose Céleste</p>
+                            <p class="text-wrapper-16">Vàng và vàng trắng, kim cương, xà cừ và mã não</p>
+                        </div>
+                    </div>
+                    <div class="group-10">
+                        <img class="image-4" src="~/img/Cart/image-8.png" />
+                        <div class="group-5">
+                            <p class="text-wrapper-15">Vòng cổ Juste un Clou</p>
+                            <p class="text-wrapper-16">Vàng hồng 18K (750/1000), được đính 14 viên kim cương.</p>
+                        </div>
+                    </div>
+                    <div class="group-11">
+                        <img class="image-4" src="~/img/Cart/image-8.png" />
+                        <div class="group-12">
+                            <p class="text-wrapper-18">Vòng cổ dài Alhambra cổ điển, 20 họa tiết</p>
+                            <p class="text-wrapper-16">Vàng hồng 18K, Kim cương, Malachite</p>
                         </div>
                     </div>
                 </div>
-                <p class="text-wrapper-31">Kiểm tra tình trạng sẵn sàng nhận hàng tại cửa hàng:</p>
-                <img class="rectangle-4" src="~/img/rectangle-38.png" />
             </div>
-            <div class="text-wrapper-32">Số lượng</div>
-            <div class="frame-3">
-                <div class="frame-4">
-                    <div class="group-16">
-                        <img class="polygon-3" src="~/img/polygon-2.svg" />
-                        <div class="text-wrapper-33">1</div>
+        </div>*@
+            <div class="overlap-group-wrapper">
+                <div class="overlap-group-2">
+                    <div class="overlap">
+                        <p class="text-wrapper-19">Giao hàng trước thứ 2 ngày 23/09</p>
+                        <p class="text-wrapper-20">Chuyển phát nhanh có chữ ký 0₫</p>
                     </div>
+                    <div class="text-wrapper-21">Tóm tắt đơn hàng</div>
+                    <div class="text-wrapper-22">Tổng phụ</div>
+                    <div class="cn-n-sm">
+                        <div class="frame-wrapper">
+                            <div class="frame-2">
+                                <div class="text-wrapper-23">Cần nó sớm hơn?</div>
+                                <img class="polygon" src="~/img/Cart/polygon-1-2.svg" />
+                            </div>
+                            <div class="pt-5">
+                                <div class="text-wrapper-23">Áp dụng voucher:</div>
+                                <input style="background-color: #f9f5f6; margin-left: 15px; margin-top: 5px; height:20px;" placeholder="Nhập mã voucher" />
+                                <button style="margin-left: 60px; margin-top: 10px;" class="text-wrapper-23">Áp dụng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group-13">
+                    <div class="text-wrapper-24">Tổng số ước tính:</div>
+                    <div class="text-wrapper-25">305.100.000 ₫</div>
+                </div>
+                <img class="line-2" src="~/img/Cart/line-8.svg" />
+                <div class="div-wrapper"><div class="text-wrapper-26 text-nowrap">Đặt hàng</div></div>
+                <div class="image-wrapper"><img class="image-5" src="~/img/Cart/image-1.png" /></div>
+                <div class="ng-nhp" onclick="BackToShop()" style="cursor: pointer;"><div class="text-wrapper-27">Tiếp tục mua hàng</div></div>
+            </div>
+        </div>
+            <div class="group-14">
+                <div class="overlap-2">
+                    <div class="favorite-border"></div>
+                    <p class="text-wrapper-31">Kiểm tra tình trạng sẵn sàng nhận hàng tại cửa hàng:</p>
+                    <div class="overlap-3">
+                        <div class="overlap-41">
+                            <img class="clear" src="~/img/Cart/clear-1.svg" />
+                            <img class="line-3" src="~/img/Cart/line-6.svg" />
+                            <p class="text-wrapper-28">Vòng cổ Rose des Vents và Rose Céleste</p>
+                            <p class="text-wrapper-29">Vàng và vàng trắng, kim cương, xà cừ và mã não</p>
+                            <img class="rectangle-4" src="~/img/rectangle-38.png" />
+                        </div>
+
+
+                        <div class="text-wrapper-32">Số lượng</div>
+                        <div class="frame-3">
+                            <div class="frame-4">
+                                <div class="group-16">
+                                    <img class="polygon-3" src="~/img/Cart/polygon-2.svg" />
+                                    <input class="text-wrapper-33" placeholder="1" style= ="background-color: #f9f5f6;" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-wrapper-32" style="padding-left: 480px;">Giá</div>
+                        <div class="text-wrapper-32" style="padding-left: 450px; padding-top: 15px;">50000000đ</div>
+                    </div>
+
+                </div>
+                <div class="text-wrapper-34">Giỏ hàng (1)</div>
+                <div class="group-17">
+                    <div class="div-2"><img class="img-2" src="~/img/Cart/print-3.svg" /></div>
+                    <div class="mail-outline"><img class="img-2" src="~/img/Cart/mail-outline-3.svg" /></div>
                 </div>
             </div>
         </div>
-        <div class="text-wrapper-34">Giỏ hàng (1)</div>
-        <div class="group-17">
-            <div class="div-2"><img class="img-2" src=~/"img/print-3.svg" /></div>
-            <div class="mail-outline"><img class="img-2" src="~/img/mail-outline-3.svg" /></div>
-        </div>
+        
     </div>
 </div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+        const userId = localStorage.getItem('userId'); 
+
+        // Hàm tải giỏ hàng
+        function loadCart() {
+            $.ajax({
+                url: `/api/cart/${userId}`,
+                method: "GET",
+                success: function (data) {
+                    renderCart(data);
+                },
+                error: function () {
+                    alert("Lỗi khi tải giỏ hàng.");
+                }
+            });
+        }
+
+        // Hàm hiển thị giỏ hàng
+        function renderCart(cartItems) {
+            let cartHTML = "";
+            let totalPrice = 0;
+
+            if (cartItems.length === 0) {
+                cartHTML = "<p>Giỏ hàng của bạn hiện đang trống.</p>";
+            } else {
+                cartItems.forEach(item => {
+                    totalPrice += item.Price * item.SoLuongSanPham;
+                    cartHTML += `
+                        <div class="cart-item" data-id="${item.ID}">
+                            <img src="/Content/Images/${item.Image}" alt="${item.ProductName}" style="width: 100px; height: 100px;" />
+                            <div>
+                                <h4>${item.ProductName}</h4>
+                                <p>Giá: ${item.Price.toLocaleString()}₫</p>
+                                <p>Số lượng:
+                                    <input type="number" class="quantity" value="${item.SoLuongSanPham}" min="1" />
+                                </p>
+                                <button class="remove-btn">Xóa</button>
+                            </div>
+                        </div>
+
+                    `;
+                });
+            }
+
+            $("#cart-items").html(cartHTML);
+            $("#total-price").text(totalPrice.toLocaleString() + "₫");
+
+            // Gán sự kiện cho các nút
+            $(".remove-btn").click(removeCartItem);
+            $(".quantity").change(updateCartItem);
+        }
+
+        // Hàm xóa sản phẩm khỏi giỏ hàng
+        function removeCartItem() {
+            const cartItemId = $(this).closest(".cart-item").data("id");
+            $.ajax({
+                url: `/api/cart/remove/${cartItemId}`,
+                method: "DELETE",
+                success: function () {
+                    alert("Sản phẩm đã được xóa khỏi giỏ hàng.");
+                    loadCart();
+                },
+                error: function () {
+                    alert("Lỗi khi xóa sản phẩm.");
+                }
+            });
+        }
+
+        // Hàm cập nhật số lượng sản phẩm
+        function updateCartItem() {
+            const cartItemId = $(this).closest(".cart-item").data("id");
+            const newQuantity = $(this).val();
+
+            $.ajax({
+                url: `/api/cart/update/${cartItemId}`,
+                method: "PUT",
+                contentType: "application/json",
+                data: JSON.stringify({ SoLuongSanPham: parseInt(newQuantity) }),
+                success: function () {
+                    alert("Cập nhật số lượng thành công.");
+                    loadCart();
+                },
+                error: function () {
+                    alert("Lỗi khi cập nhật số lượng.");
+                }
+            });
+        }
+
+        function BackToShop() {
+            window.location.href = '/danhmucsanpham';
+        }
+
+        // Tải giỏ hàng khi trang được load
+        loadCart();
+    });
+
+</script>
 

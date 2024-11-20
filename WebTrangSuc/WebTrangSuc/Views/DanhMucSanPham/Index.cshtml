@@ -13,7 +13,7 @@
         <div class="body" style="margin-top: -220px">
             <div class="group-2">
                 <div class="text-wrapper-13">Trang chủ</div>
-                <img class="arrow-forward-ios" src="img/arrow-forward-ios-1.svg" />
+                <img class="arrow-forward-ios" src="~/img/arrow-forward-ios-1.svg" />
                 <div class="text-wrapper-14">Danh mục sản phẩm</div>
             </div>
             <div class="group-3">
@@ -861,15 +861,115 @@
     }
 
     async function LayDanhMuc() {
-        const response = await fetch(`/api/sanpham/loaisanpham`);
-        const categories = await response.json();
+        try {
+            const response = await fetch(`/api/sanpham/loaisanpham`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
 
-        console.log(categories);
-       
+            const categories = await response.json();
+
+            const danhMucContainer = document.querySelector('.overlap-group-2');
+
+            // Làm sạch nội dung trước khi thêm mới
+            danhMucContainer.innerHTML = `
+        <div class="div-wrapper">
+            <div class="text-wrapper-21">Danh mục sản phẩm</div>
+        </div>
+        `;
+
+            const overlapClasses = ["dy-chuyn", "d-y-chuy-n-wrapper", "dy-chuyn-2", "dy-chuyn-3", "dy-chuyn-4", "dy-chuyn-5"];
+
+            const overlapas = ["text-wrapper-22", "d-y-chuy-n", "d-y-chuy-n-2", "d-y-chuy-n-3", "d-y-chuy-n-4", "d-y-chuy-n-5"]
+
+            // Giới hạn danh mục hiển thị
+            const limitedCategories = categories.slice(0, 6);
+
+            limitedCategories.forEach((category, index) => {
+                const overlapClass = overlapClasses[index % overlapClasses.length];
+                const overlapa = overlapas[index % overlapas.length];
+
+                const categoryHTML = `
+                <div class="${overlapClass}" data-id="${category.ID}" style="cursor: pointer;">
+                    <div class="${overlapa}">${category.TenLoaiSanPham.trim()}</div>
+                </div>
+            `;
+                danhMucContainer.insertAdjacentHTML('beforeend', categoryHTML);
+            });
+
+            // Thêm sự kiện click vào từng danh mục
+            danhMucContainer.querySelectorAll('[data-id]').forEach((element) => {
+                element.addEventListener('click', () => {
+                    const categoryId = element.getAttribute('data-id');
+                    localStorage.setItem('selectedCategoryId', categoryId);
+                    laySanPhamTheoLoai(categoryId); 
+                    localStorage.removeItem('selectedCategoryId');
+                });
+            });
+        } catch (error) {
+            console.error('Lỗi khi tải danh mục sản phẩm:', error);
+        }
     }
+
+    async function laySanPhamTheoLoai(idLoaiSanPham) {
+        try {
+            const response = await fetch(`/api/sanpham/loaisanpham/${idLoaiSanPham}`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const products = await response.json();
+            const productList = document.querySelector('.group-14');
+
+            // Làm sạch danh sách sản phẩm hiện tại
+            productList.innerHTML = '';
+
+            const overlapClasses = [
+                "group-15", "group-21", "group-33", "group-37",
+                "group-25", "group-29", "group-18", "group-22"
+            ];
+
+            products.forEach((product, index) => {
+                const overlapClass = overlapClasses[index % overlapClasses.length];
+
+                const productHTML = `
+                <div class="${overlapClass}" style="cursor: pointer;" onclick="redirectToProduct(${product.ID})">
+                    <div class="overlap-group-5">
+                        <div class="overlap-6">
+                            <div class="text-wrapper-29">${product.Gia.toLocaleString('vi-VN')}₫</div>
+                            <div class="overlap-group-6">
+                                <div class="text-wrapper-30" style="padding-left: 10px;">${product.TenSanPham}</div>
+                                <img class="rectangle-14" src="${product.HinhSanPham || 'img/rectangle-34-7.png'}" />
+                            </div>
+                        </div>
+                        <div class="group-17">
+                            <div class="ng-nhp">
+                                <div class="ng-nh-p">Thêm vào giỏ hàng</div>
+                            </div>
+                            <img class="east" src="~/img/east-10.svg" />
+                        </div>
+                    </div>
+                </div>
+            `;
+                productList.insertAdjacentHTML('beforeend', productHTML);
+            });
+        } catch (error) {
+            console.error('Lỗi khi tải sản phẩm theo loại:', error);
+        }
+    }
+
+
+
 
     LayDanhMuc();
 
-    getProducts();
+    document.addEventListener('DOMContentLoaded', () => {
+        const selectedCategoryId = localStorage.getItem('selectedCategoryId');
+        if (selectedCategoryId) {
+            laySanPhamTheoLoai(selectedCategoryId); 
+        } else {
+            getProducts(); 
+        }
+    });
 
 </script>

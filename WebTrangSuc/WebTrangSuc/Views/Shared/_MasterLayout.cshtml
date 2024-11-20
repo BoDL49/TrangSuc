@@ -90,7 +90,7 @@
                     <div class="overlap-14">
                         <div class="text-wrapper-71">CONTACT US</div>
                     </div>
-                    <div class="cart"><img class="shopping-bag" src="~/img/shopping-bag-1.svg" /></div>
+                    <div class="cart" onclick="GoToCart()" style="cursor: pointer;"><img class="shopping-bag" src="~/img/shopping-bag-1.svg" /></div>
                     <div class="menu">
                         <div class="group-27">
                             <div class="div-wrapper-2">
@@ -217,5 +217,8 @@
         window.location.href = '/Auth';
     }
 
+    function GoToCart() {
+        window.location.href = '/giohang';
+    }
 
 </script>

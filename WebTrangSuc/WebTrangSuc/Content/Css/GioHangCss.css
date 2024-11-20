@@ -287,7 +287,7 @@
     .gi-hng .text-wrapper-13 {
         position: absolute;
         top: 2px;
-        left: 195px;
+        left: 100px;
         font-family: var(--common-label-font-family);
         font-weight: var(--common-label-font-weight);
         color: #908f8c;
@@ -303,7 +303,7 @@
         width: 24px;
         height: 24px;
         top: 0;
-        left: 155px;
+        left: 74px;
     }
 
     .gi-hng .img {
@@ -648,6 +648,7 @@
     .gi-hng .frame-wrapper {
         width: 197px;
         height: 22px;
+        background: none;
     }
 
     .gi-hng .frame-2 {
@@ -664,11 +665,13 @@
         width: fit-content;
         font-family: "Cabin", Helvetica;
         font-weight: 400;
-        color: #00000040;
         font-size: 16px;
         letter-spacing: 0;
         line-height: normal;
         white-space: nowrap;
+        height: 20px;
+        top: 0px;
+        left: 0px;
     }
 
     .gi-hng .polygon {
@@ -757,6 +760,7 @@
         height: 45px;
         top: 524px;
         left: 32px;
+        background: none;
     }
 
     .gi-hng .image-5 {
@@ -789,6 +793,9 @@
         line-height: var(--common-subtitle-line-height);
         white-space: nowrap;
         font-style: var(--common-subtitle-font-style);
+        height: 0px;
+        top: 0px;
+        left: 0px;
     }
 
     .gi-hng .group-14 {
@@ -796,7 +803,7 @@
         width: 750px;
         height: 287px;
         top: 73px;
-        left: 69px;
+        left: 184px;
     }
 
     .gi-hng .overlap-2 {
@@ -813,7 +820,7 @@
         height: 24px;
         top: 204px;
         left: 203px;
-        background-image: url(./img/favorite-border-3.svg);
+        background-image: url(/img/favorite-border-3.svg);
         background-size: 100% 100%;
     }
 
@@ -823,14 +830,19 @@
         height: 211px;
         top: 0;
         left: 0;
+        filter: none;
+        background: none;
+    }
+op: 220px;
     }
 
-    .gi-hng .overlap-4 {
+    .gi-hng .overlap-41 {
         position: absolute;
         width: 740px;
         height: 126px;
         top: 0;
         left: 0;
+        background: none;
     }
 
     .gi-hng .clear {
@@ -964,6 +976,8 @@
         position: relative;
         width: 43px;
         height: 16px;
+        left: 10px;
+        top: -4px;
     }
 
     .gi-hng .polygon-3 {
@@ -1083,7 +1097,7 @@
         height: 24px;
         top: 0;
         left: 0;
-        background-image: url(./img/face-3.svg);
+        background-image: url(/img/face-3.svg);
         background-size: 100% 100%;
     }
 
@@ -1111,7 +1125,7 @@
         height: 24px;
         top: 0;
         left: 0;
-        background-image: url(./img/exit-to-app-3.svg);
+        background-image: url(/img/exit-to-app-3.svg);
         background-size: 100% 100%;
     }
 

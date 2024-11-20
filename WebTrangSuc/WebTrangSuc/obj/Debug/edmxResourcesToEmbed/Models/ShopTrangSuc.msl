@@ -22,6 +22,7 @@
     <EntitySetMapping Name="DonHangs">
       <EntityTypeMapping TypeName="shoptrangsucModel.DonHang">
         <MappingFragment StoreEntitySet="DonHang">
+          <ScalarProperty Name="PhuongThucThanhToan" ColumnName="PhuongThucThanhToan" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="IDUser" ColumnName="IDUser" />
           <ScalarProperty Name="TongTien" ColumnName="TongTien" />
@@ -136,6 +137,16 @@
       <EntityTypeMapping TypeName="shoptrangsucModel.ThuongHieu">
         <MappingFragment StoreEntitySet="ThuongHieu">
           <ScalarProperty Name="TenThuongHieu" ColumnName="TenThuongHieu" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SanPhamGioHangs">
+      <EntityTypeMapping TypeName="shoptrangsucModel.SanPhamGioHang">
+        <MappingFragment StoreEntitySet="SanPhamGioHang">
+          <ScalarProperty Name="SoLuongSanPham" ColumnName="SoLuongSanPham" />
+          <ScalarProperty Name="IDSanPham" ColumnName="IDSanPham" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>

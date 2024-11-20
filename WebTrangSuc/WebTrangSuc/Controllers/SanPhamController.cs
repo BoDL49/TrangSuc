@@ -80,10 +80,10 @@ namespace WebTrangSuc.Controllers
         [Route("api/sanpham/loaisanpham/")]
         public async Task<IHttpActionResult> LayDanhMucSP()
         {
-            var danhmuc = _context.SanPhams.Select(sp => new LoaiSanPhamModel
+            var danhmuc = _context.LoaiSanPhams.Select(sp => new LoaiSanPhamModel
             {
                 ID = sp.ID,
-                TenLoaiSanPham = sp.LoaiSanPham.TenLoaiSanPham
+                TenLoaiSanPham = sp.TenLoaiSanPham
             }).ToList();
 
             if(danhmuc == null)
@@ -93,5 +93,30 @@ namespace WebTrangSuc.Controllers
 
             return Ok(danhmuc);
         }
+
+        [HttpGet]
+        [Route("api/sanpham/loaisanpham/{id}")]
+        public async Task<IHttpActionResult> LaySanPhamTheoLoai(int id)
+        {
+            var sanPhams = _context.SanPhams
+                .Where(sp => sp.IDLoaiSanPham == id)
+                .Select(sp => new SanPhamModel
+                {
+                    ID = sp.ID,
+                    TenSanPham = sp.TenSanPham,
+                    Gia = (int)sp.Gia,
+                    MoTaSanPham = sp.MoTaSanPham,
+                    IDLoaiSanPham = (int)sp.IDLoaiSanPham,
+                    HinhSanPham = sp.HinhSanPhams.FirstOrDefault().HinhSP,
+                }).ToList();
+
+            if (!sanPhams.Any())
+            {
+                return NotFound();
+            }
+
+            return Ok(sanPhams);
+        }
+
     }
 }

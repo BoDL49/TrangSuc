@@ -19,6 +19,7 @@ namespace WebTrangSuc.Models
         {
             this.DiaChis = new HashSet<DiaChi>();
             this.DonHangs = new HashSet<DonHang>();
+            this.SanPhamGioHangs = new HashSet<SanPhamGioHang>();
         }
     
         public int ID { get; set; }
@@ -37,5 +38,7 @@ namespace WebTrangSuc.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DonHang> DonHangs { get; set; }
         public virtual Role Role { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SanPhamGioHang> SanPhamGioHangs { get; set; }
     }
 }

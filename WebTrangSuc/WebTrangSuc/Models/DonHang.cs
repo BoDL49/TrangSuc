@@ -27,6 +27,7 @@ namespace WebTrangSuc.Models
         public Nullable<int> TrangThaiGiaoHang { get; set; }
         public Nullable<int> TrangThaiDonHang { get; set; }
         public Nullable<int> IDVoucher { get; set; }
+        public string PhuongThucThanhToan { get; set; }
     
         public virtual TaiKhoan TaiKhoan { get; set; }
         public virtual Voucher Voucher { get; set; }

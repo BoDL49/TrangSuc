@@ -38,5 +38,6 @@ namespace WebTrangSuc.Models
         public virtual DbSet<ChatLieu> ChatLieux { get; set; }
         public virtual DbSet<MauSac> MauSacs { get; set; }
         public virtual DbSet<ThuongHieu> ThuongHieux { get; set; }
+        public virtual DbSet<SanPhamGioHang> SanPhamGioHangs { get; set; }
     }
 }

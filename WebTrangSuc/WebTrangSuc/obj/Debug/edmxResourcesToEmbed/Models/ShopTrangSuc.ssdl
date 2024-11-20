@@ -34,6 +34,7 @@
     <Property Name="TrangThaiGiaoHang" Type="int" />
     <Property Name="TrangThaiDonHang" Type="int" />
     <Property Name="IDVoucher" Type="int" />
+    <Property Name="PhuongThucThanhToan" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="DonHangChiTiet">
     <Key>
@@ -91,6 +92,15 @@
     <Property Name="IDChatLieu" Type="int" />
     <Property Name="IDMauSac" Type="int" />
     <Property Name="IDThuongHieu" Type="int" />
+  </EntityType>
+  <EntityType Name="SanPhamGioHang">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDUser" Type="int" />
+    <Property Name="IDSanPham" Type="int" />
+    <Property Name="SoLuongSanPham" Type="int" />
   </EntityType>
   <EntityType Name="TaiKhoan">
     <Key>
@@ -258,6 +268,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_SanPhamGioHang_SanPham">
+    <End Role="SanPham" Type="Self.SanPham" Multiplicity="0..1" />
+    <End Role="SanPhamGioHang" Type="Self.SanPhamGioHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SanPhamGioHang">
+        <PropertyRef Name="IDSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SanPhamGioHang_TaiKhoan">
+    <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="0..1" />
+    <End Role="SanPhamGioHang" Type="Self.SanPhamGioHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaiKhoan">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SanPhamGioHang">
+        <PropertyRef Name="IDUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_TaiKhoan_Role">
     <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
     <End Role="TaiKhoan" Type="Self.TaiKhoan" Multiplicity="*" />
@@ -281,6 +315,7 @@
     <EntitySet Name="MauSac" EntityType="Self.MauSac" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SanPhamGioHang" EntityType="Self.SanPhamGioHang" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ThuongHieu" EntityType="Self.ThuongHieu" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Voucher" EntityType="Self.Voucher" Schema="dbo" store:Type="Tables" />
@@ -327,6 +362,14 @@
     <AssociationSet Name="FK_SanPham_ThuongHieu" Association="Self.FK_SanPham_ThuongHieu">
       <End Role="ThuongHieu" EntitySet="ThuongHieu" />
       <End Role="SanPham" EntitySet="SanPham" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SanPhamGioHang_SanPham" Association="Self.FK_SanPhamGioHang_SanPham">
+      <End Role="SanPham" EntitySet="SanPham" />
+      <End Role="SanPhamGioHang" EntitySet="SanPhamGioHang" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SanPhamGioHang_TaiKhoan" Association="Self.FK_SanPhamGioHang_TaiKhoan">
+      <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+      <End Role="SanPhamGioHang" EntitySet="SanPhamGioHang" />
     </AssociationSet>
     <AssociationSet Name="FK_TaiKhoan_Role" Association="Self.FK_TaiKhoan_Role">
       <End Role="Role" EntitySet="Role" />

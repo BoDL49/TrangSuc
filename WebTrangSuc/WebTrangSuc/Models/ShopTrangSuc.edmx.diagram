@@ -30,6 +30,9 @@
         <AssociationConnector Association="shoptrangsucModel.FK_SanPham_ChatLieu" />
         <AssociationConnector Association="shoptrangsucModel.FK_SanPham_MauSac" />
         <AssociationConnector Association="shoptrangsucModel.FK_SanPham_ThuongHieu" />
+        <EntityTypeShape EntityType="shoptrangsucModel.SanPhamGioHang" Width="1.5" PointX="8" PointY="8.125" />
+        <AssociationConnector Association="shoptrangsucModel.FK_SanPhamGioHang_SanPham" />
+        <AssociationConnector Association="shoptrangsucModel.FK_SanPhamGioHang_TaiKhoan" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

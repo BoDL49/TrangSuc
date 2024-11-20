@@ -32,6 +32,7 @@
     <NavigationProperty Name="TaiKhoan" Relationship="Self.FK_DonHang_TaiKhoan" FromRole="DonHang" ToRole="TaiKhoan" />
     <NavigationProperty Name="Voucher" Relationship="Self.FK_DonHang_Voucher" FromRole="DonHang" ToRole="Voucher" />
     <NavigationProperty Name="DonHangChiTiets" Relationship="Self.FK_DonHangChiTiet_DonHang" FromRole="DonHang" ToRole="DonHangChiTiet" />
+    <Property Name="PhuongThucThanhToan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="DonHangChiTiet">
     <Key>
@@ -94,6 +95,7 @@
     <NavigationProperty Name="ChatLieu" Relationship="shoptrangsucModel.FK_SanPham_ChatLieu" FromRole="SanPham" ToRole="ChatLieu" />
     <NavigationProperty Name="MauSac" Relationship="shoptrangsucModel.FK_SanPham_MauSac" FromRole="SanPham" ToRole="MauSac" />
     <NavigationProperty Name="ThuongHieu" Relationship="shoptrangsucModel.FK_SanPham_ThuongHieu" FromRole="SanPham" ToRole="ThuongHieu" />
+    <NavigationProperty Name="SanPhamGioHangs" Relationship="shoptrangsucModel.FK_SanPhamGioHang_SanPham" FromRole="SanPham" ToRole="SanPhamGioHang" />
   </EntityType>
   <EntityType Name="TaiKhoan">
     <Key>
@@ -112,6 +114,7 @@
     <NavigationProperty Name="DiaChis" Relationship="Self.FK_DiaChi_TaiKhoan" FromRole="TaiKhoan" ToRole="DiaChi" />
     <NavigationProperty Name="DonHangs" Relationship="Self.FK_DonHang_TaiKhoan" FromRole="TaiKhoan" ToRole="DonHang" />
     <NavigationProperty Name="Role" Relationship="Self.FK__TaiKhoan_Role" FromRole="TaiKhoan" ToRole="Role" />
+    <NavigationProperty Name="SanPhamGioHangs" Relationship="shoptrangsucModel.FK_SanPhamGioHang_TaiKhoan" FromRole="TaiKhoan" ToRole="SanPhamGioHang" />
   </EntityType>
   <EntityType Name="Voucher">
     <Key>
@@ -296,6 +299,15 @@
       <End Role="ThuongHieu" EntitySet="ThuongHieux" />
       <End Role="SanPham" EntitySet="SanPhams" />
     </AssociationSet>
+    <EntitySet Name="SanPhamGioHangs" EntityType="shoptrangsucModel.SanPhamGioHang" />
+    <AssociationSet Name="FK_SanPhamGioHang_SanPham" Association="shoptrangsucModel.FK_SanPhamGioHang_SanPham">
+      <End Role="SanPham" EntitySet="SanPhams" />
+      <End Role="SanPhamGioHang" EntitySet="SanPhamGioHangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SanPhamGioHang_TaiKhoan" Association="shoptrangsucModel.FK_SanPhamGioHang_TaiKhoan">
+      <End Role="TaiKhoan" EntitySet="TaiKhoans" />
+      <End Role="SanPhamGioHang" EntitySet="SanPhamGioHangs" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="ChatLieu">
     <Key>
@@ -354,6 +366,41 @@
       </Principal>
       <Dependent Role="SanPham">
         <PropertyRef Name="IDThuongHieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SanPhamGioHang">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDUser" Type="Int32" />
+    <Property Name="IDSanPham" Type="Int32" />
+    <Property Name="SoLuongSanPham" Type="Int32" />
+    <NavigationProperty Name="SanPham" Relationship="shoptrangsucModel.FK_SanPhamGioHang_SanPham" FromRole="SanPhamGioHang" ToRole="SanPham" />
+    <NavigationProperty Name="TaiKhoan" Relationship="shoptrangsucModel.FK_SanPhamGioHang_TaiKhoan" FromRole="SanPhamGioHang" ToRole="TaiKhoan" />
+  </EntityType>
+  <Association Name="FK_SanPhamGioHang_SanPham">
+    <End Type="shoptrangsucModel.SanPham" Role="SanPham" Multiplicity="0..1" />
+    <End Type="shoptrangsucModel.SanPhamGioHang" Role="SanPhamGioHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SanPhamGioHang">
+        <PropertyRef Name="IDSanPham" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SanPhamGioHang_TaiKhoan">
+    <End Type="shoptrangsucModel.TaiKhoan" Role="TaiKhoan" Multiplicity="0..1" />
+    <End Type="shoptrangsucModel.SanPhamGioHang" Role="SanPhamGioHang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TaiKhoan">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SanPhamGioHang">
+        <PropertyRef Name="IDUser" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

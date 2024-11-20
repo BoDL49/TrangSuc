@@ -548,6 +548,9 @@
         line-height: var(--common-label-line-height);
         white-space: nowrap;
         font-style: var(--common-label-font-style);
+        height: 0px;
+        top: 0px;
+        left: 0px;
     }
 
     .danh-mc-sn-phm .d-y-chuy-n-wrapper {
@@ -602,6 +605,7 @@
         line-height: var(--common-label-line-height);
         white-space: nowrap;
         font-style: var(--common-label-font-style);
+        padding-left: 31px;
     }
 
     .danh-mc-sn-phm .dy-chuyn-3 {
@@ -613,6 +617,7 @@
         position: absolute;
         top: 146px;
         left: 22px;
+        padding-left: 49px;
     }
 
     .danh-mc-sn-phm .d-y-chuy-n-3 {
