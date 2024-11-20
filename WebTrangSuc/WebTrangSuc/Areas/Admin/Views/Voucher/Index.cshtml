@@ -55,7 +55,7 @@
 
 <div class="content-wrapper">
     <div class="page-header">
-        <h3 class="page-title"> Quản lý danh mục sản phẩm </h3>
+        <h3 class="page-title"> Quản lý voucher</h3>
         <nav aria-label="breadcrumb">
 
         </nav>
@@ -84,7 +84,7 @@
                             <td>@i</td>
                             <td>@item.TenVoucher</td>
                             <td>@item.ThongTinVoucher</td>
-                            <td>@item.GiaVoucher</td>
+                            <td>@String.Format("{0:0,0} VND", item.GiaVoucher)</td>
                             <td>
                                 <a href="/admin/voucher/edit/@item.ID" class="btn btn-sm btn-primary">Sửa</a>
                                 <a href="/admin/voucher/Delete/@item.ID" class="btn btn-sm btn-danger" onclick="return confirm('Bạn có muốn xóa không?');">Xóa</a>

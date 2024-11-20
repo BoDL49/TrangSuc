@@ -88,9 +88,27 @@
                             <td>@item.IDLoaiSanPham</td> <!-- Hiển thị tên loại sản phẩm -->
                             <td>@item.MoTaSanPham</td>
                             <td>
-                                <img src="@item.HinhSanPham" alt="Hình sản phẩm" style="max-width:100px; max-height:100px;" />
+                                @if (item.HinhSanPhams != null && item.HinhSanPhams.Any())
+                                {
+                                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
+                                        @for (int index = 0; index < item.HinhSanPhams.Count(); index++)
+                                        {
+                                            var hinh = item.HinhSanPhams.ElementAt(index);
+
+                                            <div style="overflow: hidden; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                                                <img src="@Url.Content(hinh.HinhSP)" alt="Hình sản phẩm" style="width: 100%; height: 100%; object-fit: cover;" />
+                                            </div>
+                                        }
+                                    </div>
+                                }
+                                else
+                                {
+                                    <span>Không có hình</span>
+                                }
                             </td>
-                            <td>@item.Gia</td>
+
+
+                            <td>@String.Format("{0:0,0} VND", item.Gia)</td>
                             <td>@item.SoLuongTonKho</td>
                             <td>@item.TrangThaiSanPham</td>
                             <td>

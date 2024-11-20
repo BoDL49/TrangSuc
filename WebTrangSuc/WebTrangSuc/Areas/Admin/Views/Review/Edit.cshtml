@@ -1,0 +1,25 @@
+﻿@model WebTrangSuc.Models.DanhGia
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<h2>Sửa đánh giá</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(m => m.ID)
+
+    <div class="form-group">
+        <label for="Rate">Xếp hạng</label>
+        @Html.TextBoxFor(m => m.Rate, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Rate)
+    </div>
+
+    <button type="submit" class="btn btn-success">Lưu</button>
+    <a href="@Url.Action("Index", "Review", new { productId = Model.IDSanPham })" class="btn btn-secondary">Hủy</a>
+}
+
+

@@ -9,7 +9,7 @@
 <div class="content-wrapper">
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Bạn có chắc chắn muốn xóa danh mục này không?</h3>
+            <h3 class="card-title">Bạn có chắc chắn muốn xóa không?</h3>
         </div>
         <div class="card-body">
             <p><strong>Tên sản phẩm:</strong> @Model.TenSanPham</p>
@@ -17,7 +17,20 @@
             <p><strong>Mô tả sản phẩm:</strong> @Model.MoTaSanPham</p>
             <p>
                 <strong>Hình sản phẩm:</strong>
-                <img src="@Model.HinhSanPham" alt="Ảnh loại sản phẩm" style="max-width: 200px;" />
+                @Html.Label("Ảnh hiện tại:")
+                <div>
+                    @if (Model.HinhSanPhams != null && Model.HinhSanPhams.Any())
+                    {
+                        foreach (var hinh in Model.HinhSanPhams)
+                        {
+                            <img src="@Url.Content(hinh.HinhSP)" alt="Ảnh sản phẩm" style="width: 100%; max-width: 300px; max-height: 300px;" />
+                        }
+                    }
+                    else
+                    {
+                        <span>Không có hình ảnh</span>
+                    }
+                </div>
             </p>
             <p><strong>Giá sản phẩm:</strong> @Model.Gia</p>
             <p><strong>Số lượng sản phẩm:</strong> @Model.SoLuongTonKho</p>
