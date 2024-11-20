@@ -249,6 +249,8 @@
     <Compile Include="Controllers\ChiTietSanPhamController.cs" />
     <Compile Include="Controllers\DangKyController.cs" />
     <Compile Include="Controllers\DanhMucSanPhamController.cs" />
+    <Compile Include="Controllers\DonHangAPIController.cs" />
+    <Compile Include="Controllers\DonHangController.cs" />
     <Compile Include="Controllers\GioHangAPIController.cs" />
     <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HighJewlryController.cs" />
@@ -264,6 +266,7 @@
     <Compile Include="Models\ChatLieu.cs">
       <DependentUpon>ShopTrangSuc.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\CreateOrderDto.cs" />
     <Compile Include="Models\DanhGia.cs">
       <DependentUpon>ShopTrangSuc.tt</DependentUpon>
     </Compile>
@@ -1170,6 +1173,8 @@
     <Content Include="Scripts\jquery-3.7.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.1.min.map" />
     <Content Include="Views\ThongTinTaiKhoan\Index.cshtml" />
+    <Content Include="Views\DonHang\Index.cshtml" />
+    <Content Include="Views\DonHang\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

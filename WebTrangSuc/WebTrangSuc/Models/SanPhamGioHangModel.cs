@@ -31,4 +31,11 @@ namespace WebTrangSuc.Models
         public int SoLuongSanPham { get; set; }
         public int Gia { get; set; }
     }
+
+    public class ApplyVoucherDto
+    {
+        public int UserId { get; set; }
+        public string VoucherCode { get; set; }
+    }
+
 }

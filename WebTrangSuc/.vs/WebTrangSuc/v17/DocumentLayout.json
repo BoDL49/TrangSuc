@@ -3,16 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\webtrangsuc\\models\\sanphamgiohangmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\models\\sanphamgiohangmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\tuant\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\controllers\\donhangapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\controllers\\donhangapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\tuant\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\views\\donhang\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\views\\donhang\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\tuant\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\models\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\models\\createorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\tuant\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\tuant\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\tuant\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\views\\donhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\views\\donhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\tuant\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\tuant\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\webtrangsuc\\controllers\\giohangapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\controllers\\giohangapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\tuant\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\views\\giohang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\webtrangsuc\\models\\sanphamgiohangmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\models\\sanphamgiohangmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\webtrangsuc\\views\\danhmucsanpham\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -38,63 +66,154 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "CreateOrderDto.cs",
+              "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Models\\CreateOrderDto.cs",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Models\\CreateOrderDto.cs",
+              "ToolTip": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Models\\CreateOrderDto.cs",
+              "RelativeToolTip": "WebTrangSuc\\Models\\CreateOrderDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T14:57:41.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Detail.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\DonHang\\Detail.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Views\\DonHang\\Detail.cshtml",
+              "ToolTip": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\DonHang\\Detail.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Views\\DonHang\\Detail.cshtml",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAwwHQAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T14:45:44.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Order\\Details.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\Order\\Details.cshtml",
+              "ToolTip": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Order\\Details.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\Order\\Details.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAwwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T14:41:14.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\DonHang\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Views\\DonHang\\Index.cshtml",
+              "ToolTip": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\DonHang\\Index.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Views\\DonHang\\Index.cshtml",
+              "ViewState": "AgIAAJMAAAAAAAAAAAAAAKwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T14:28:46.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DonHangController.cs",
+              "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Controllers\\DonHangController.cs",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Controllers\\DonHangController.cs",
+              "ToolTip": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Controllers\\DonHangController.cs",
+              "RelativeToolTip": "WebTrangSuc\\Controllers\\DonHangController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T14:28:34.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "ToolTip": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAwwAsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-20T14:27:53.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DonHangAPIController.cs",
+              "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Controllers\\DonHangAPIController.cs",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Controllers\\DonHangAPIController.cs",
+              "ToolTip": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Controllers\\DonHangAPIController.cs",
+              "RelativeToolTip": "WebTrangSuc\\Controllers\\DonHangAPIController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAYwHQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T14:07:42.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\GioHang\\Index.cshtml",
               "RelativeDocumentMoniker": "WebTrangSuc\\Views\\GioHang\\Index.cshtml",
               "ToolTip": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\GioHang\\Index.cshtml",
               "RelativeToolTip": "WebTrangSuc\\Views\\GioHang\\Index.cshtml",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAUwIQAAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAIsBAAAAAAAAAADwv6ABAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-20T05:30:36.331Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "SanPhamGioHangModel.cs",
               "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Models\\SanPhamGioHangModel.cs",
               "RelativeDocumentMoniker": "WebTrangSuc\\Models\\SanPhamGioHangModel.cs",
               "ToolTip": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Models\\SanPhamGioHangModel.cs",
               "RelativeToolTip": "WebTrangSuc\\Models\\SanPhamGioHangModel.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAwwB8AAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T03:42:36.135Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "GioHangAPIController.cs",
               "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Controllers\\GioHangAPIController.cs",
               "RelativeDocumentMoniker": "WebTrangSuc\\Controllers\\GioHangAPIController.cs",
               "ToolTip": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Controllers\\GioHangAPIController.cs",
               "RelativeToolTip": "WebTrangSuc\\Controllers\\GioHangAPIController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAEMAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAAALUAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T03:32:06.918Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\DanhMucSanPham\\Index.cshtml",
               "RelativeDocumentMoniker": "WebTrangSuc\\Views\\DanhMucSanPham\\Index.cshtml",
               "ToolTip": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\DanhMucSanPham\\Index.cshtml",
               "RelativeToolTip": "WebTrangSuc\\Views\\DanhMucSanPham\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAADcDAAAAAAAAAAAwwO8DAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-11-18T02:58:17.81Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "SanPhamController.cs",
               "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Controllers\\SanPhamController.cs",
               "RelativeDocumentMoniker": "WebTrangSuc\\Controllers\\SanPhamController.cs",
@@ -107,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\TrangChu\\Index.cshtml",
               "RelativeDocumentMoniker": "WebTrangSuc\\Views\\TrangChu\\Index.cshtml",
@@ -119,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "SanPhamModel.cs",
               "DocumentMoniker": "C:\\Users\\tuant\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Models\\SanPhamModel.cs",
               "RelativeDocumentMoniker": "WebTrangSuc\\Models\\SanPhamModel.cs",
@@ -127,8 +246,7 @@
               "RelativeToolTip": "WebTrangSuc\\Models\\SanPhamModel.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAwwC0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T09:43:07.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T09:43:07.961Z"
             }
           ]
         }

@@ -1,0 +1,147 @@
+﻿
+@{
+    ViewBag.Title = "Chi tiết đơn hàng";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<div class="container mx-auto px-4 py-8 pt-72">
+    <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <h1 class="text-2xl font-bold text-gray-800 mb-6">Order Details</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <!-- Customer Information -->
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <h2 class="text-lg font-semibold text-gray-700 mb-4">Customer Information</h2>
+                <div class="space-y-3">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600">Name</label>
+                        <p class="mt-1 text-gray-800">John Doe</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600">Address</label>
+                        <p class="mt-1 text-gray-800">123 Main St, City, Country</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600">Email</label>
+                        <p class="mt-1 text-gray-800">johndoe@example.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Status -->
+            <div class="bg-gray-50 p-6 rounded-lg">
+                <h2 class="text-lg font-semibold text-gray-700 mb-4">Order Status</h2>
+                <div class="space-y-3">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600">Order Number</label>
+                        <p class="mt-1 text-gray-800">#ORD12345</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600">Order Date</label>
+                        <p class="mt-1 text-gray-800">January 15, 2023</p>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600">Status</label>
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800 mt-1">Delivered</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Details Table -->
+        <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Product</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Quantity</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Total</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <tr class="hover:bg-gray-50 cursor-pointer transition-colors duration-200">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Product A</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$25.99</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$51.98</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 cursor-pointer transition-colors duration-200">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Product B</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$19.99</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$19.99</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr class="bg-gray-50">
+                        <td colspan="3" class="px-6 py-4 text-sm font-medium text-gray-900 text-right">Total Amount:</td>
+                        <td class="px-6 py-4 text-sm font-medium text-gray-900">$71.97</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const orderId = localStorage.getItem("orderId");
+        if (!orderId) {
+            alert("Không tìm thấy mã hóa đơn. Vui lòng thử lại.");
+            return;
+        }
+
+        loadOrderDetails(orderId);
+
+        async function loadOrderDetails(orderId) {
+            try {
+                const response = await fetch(`/api/donhang/hoadon/${orderId}`);
+                if (!response.ok) {
+                    showError("Không thể tải chi tiết hóa đơn. Vui lòng thử lại.");
+                    return;
+                }
+
+                const order = await response.json();
+                renderOrderDetails(order);
+            } catch (error) {
+                console.error("Lỗi khi tải chi tiết hóa đơn:", error);
+                showError("Đã xảy ra lỗi. Vui lòng thử lại.");
+            }
+        }
+
+        function renderOrderDetails(order) {
+            // Hiển thị thông tin khách hàng
+            document.querySelector(".customer-name").innerText = order.TenKhachHang || "N/A";
+            document.querySelector(".customer-address").innerText = order.diaChi || "N/A";
+            document.querySelector(".customer-email").innerText = order.email || "N/A";
+
+            // Hiển thị thông tin đơn hàng
+            document.querySelector(".order-id").innerText = `#ORD${order.OrderId}`;
+            document.querySelector(".order-date").innerText = new Date(order.OrderDate).toLocaleDateString();
+            document.querySelector(".order-status").innerText = order.Status || "N/A";
+            document.querySelector(".order-total").innerText = `${order.TotalAmount.toLocaleString()} ₫`;
+
+            // Hiển thị danh sách sản phẩm
+            const tbody = document.querySelector(".product-details tbody");
+            tbody.innerHTML = ""; // Xóa nội dung cũ
+
+            order.Items.forEach(item => {
+                const rowHTML = `
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${item.ProductName}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${item.Quantity}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${item.Price.toLocaleString()} ₫</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${(item.Price * item.Quantity).toLocaleString()} ₫</td>
+                    </tr>
+                `;
+                tbody.insertAdjacentHTML("beforeend", rowHTML);
+            });
+        }
+
+        function showError(message) {
+            alert(message);
+        }
+    });
+</script>
+

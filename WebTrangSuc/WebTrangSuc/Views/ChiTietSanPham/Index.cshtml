@@ -66,6 +66,7 @@
                     const response = await fetch(`/api/sanpham/${productId}`);
                     const data = await response.json();
 
+
                     const product = data.sanpham;
                     const images = data.HinhSanpham;
 
@@ -82,40 +83,79 @@
 
                     // Tạo nội dung HTML để hiển thị chi tiết sản phẩm
                     const productHTML = `
-                <div class="product-details">
+            <div class="product-details">
                 <img class="img" src="${image1}" />
-    <img class="image" src="${image2}" />
-    <img class="image-2" src="${image3}" />
-    <img class="image-3" src="${image4}" />
-    <div class="text-wrapper-15" style="width: auto;">${product.TenSanPham}</div>
-    <div class="text-wrapper-16" style="padding-top: 40px;">Màu: ${product.TenMau}</div>
-    <p class="m-t-chi-ti-t">Mô tả &amp; Chi tiết</p>
-    <p class="text-wrapper-17">
-        ${product.MoTaSanPham}
-    </p>
-    <div class="group-3">
-     <div class="ellipse"></div>
-     <div class="ng-nhp"><p class="ng-nh-p"> Chất liệu: ${product.TenChatLieu}</p></div>
- </div>
- <div class="group-4">
-     <div class="ellipse-2"></div>
-     <div class="ng-nhp"><p class="ng-nh-p" style="width: 200px">Thương hiệu: ${product.TenThuongHieu}</p></div>
- </div>
- <div class="group-5">
-     <div class="ellipse"></div>
-     <div class="ng-nhp"><p class="ng-nh-p">Được thiết kế để thoải mái và dễ mặc</p></div>
- </div>
-    <div class="detail" style="width: 580px;">
-        <div class="text-wrapper-18"> ${product.Gia.toLocaleString('vi-VN')}₫</div>
-        <div class="text-wrapper-19">Thêm vào giỏ</div>
-        </div>
-            `;
+                <img class="image" src="${image2}" />
+                <img class="image-2" src="${image3}" />
+                <img class="image-3" src="${image4}" />
+                <div class="text-wrapper-15" style="width: auto;">${product.TenSanPham}</div>
+                <div class="text-wrapper-16" style="padding-top: 40px;">Màu: ${product.TenMau}</div>
+                <p class="m-t-chi-ti-t">Mô tả &amp; Chi tiết</p>
+                <p class="text-wrapper-17">${product.MoTaSanPham}</p>
+                <div class="group-3">
+                    <div class="ellipse"></div>
+                    <div class="ng-nhp"><p class="ng-nh-p">Chất liệu: ${product.TenChatLieu}</p></div>
+                </div>
+                <div class="group-4">
+                    <div class="ellipse-2"></div>
+                    <div class="ng-nhp"><p class="ng-nh-p" style="width: 200px">Thương hiệu: ${product.TenThuongHieu}</p></div>
+                </div>
+                <div class="group-5">
+                    <div class="ellipse"></div>
+                    <div class="ng-nhp"><p class="ng-nh-p">Được thiết kế để thoải mái và dễ mặc</p></div>
+                </div>
+                <div class="detail" style="width: 580px;">
+                    <div class="text-wrapper-18">${product.Gia.toLocaleString('vi-VN')}₫</div>
+                    <div class="text-wrapper-19 btn-add-to-cart" style="cursor: pointer;">Thêm vào giỏ</div>
+                </div>
+            </div>
+        `;
 
                     productInfo.innerHTML = productHTML;
+
+                    // Gắn sự kiện vào nút "Thêm vào giỏ"
+                    document.querySelector('.btn-add-to-cart').addEventListener('click', () => {
+                        themVaoGioHang(product.ID);
+                    });
                 } catch (error) {
                     console.error('Lỗi khi gọi API hoặc hiển thị sản phẩm:', error);
                 }
             }
+
+
+            async function themVaoGioHang(productId) {
+                const userId = localStorage.getItem('userId');
+                if (!userId || isNaN(userId) || parseInt(userId, 10) <= 0) {
+                    alert('Vui lòng đăng nhập để thêm sản phẩm vào giỏ hàng.');
+                    return;
+                }
+
+                try {
+                    const response = await fetch(`/api/cart/add`, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            IDUser: parseInt(userId, 10),
+                            IDSanPham: parseInt(productId, 10),
+                            SoLuongSanPham: 1, // Thêm 1 sản phẩm vào giỏ
+                        }),
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+
+                    const result = await response.json();
+                    alert('Sản phẩm đã được thêm vào giỏ hàng.');
+                } catch (error) {
+                    console.error('Lỗi khi thêm sản phẩm vào giỏ hàng:', error);
+                    alert('Không thể thêm sản phẩm vào giỏ hàng. Vui lòng thử lại.');
+                }
+            }
+
 
             const categoryLink = document.querySelector('.text-wrapper-13');
             if (categoryLink) {
@@ -127,5 +167,6 @@
             // Gọi API để lấy chi tiết sản phẩm
             getProductDetail();
         });
+
     </script>
 
