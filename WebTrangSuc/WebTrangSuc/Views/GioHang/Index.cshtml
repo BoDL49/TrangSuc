@@ -74,39 +74,42 @@
                         </div>
                     </div>
                 </div>*@
-            <div class="overlap-group-wrapper">
-                <div class="overlap-group-2">
-                    <div class="overlap">
-                        <p class="text-wrapper-19">Giao hàng trước thứ 2 ngày 23/09</p>
-                        <p class="text-wrapper-20">Chuyển phát nhanh có chữ ký 0₫</p>
-                    </div>
-                    <div class="text-wrapper-21">Tóm tắt đơn hàng</div>
-                    <div class="text-wrapper-22">Tổng phụ</div>
-                    <div class="cn-n-sm">
-                        <div class="frame-wrapper">
-                            <div class="frame-2">
-                                <div class="text-wrapper-23">Cần nó sớm hơn?</div>
-                                <img class="polygon" src="~/img/Cart/polygon-1-2.svg" />
-                            </div>
-                            <div class="pt-5">
-                                <div class="text-wrapper-23">Áp dụng voucher:</div>
-                                <input style="background-color: #f9f5f6; margin-left: 15px; margin-top: 5px; height:20px;" placeholder="Nhập mã voucher" />
-                                <button id="applyVoucherBtn" style="margin-left: 60px; margin-top: 10px;" class="text-wrapper-23">Áp dụng</button>
-
-                            </div>
+        <div class="overlap-group-wrapper">
+            <div class="overlap-group-2">
+                <div class="overlap">
+                    <p class="text-wrapper-19">Giao hàng trước thứ 2 ngày 23/09</p>
+                    <p class="text-wrapper-20">Chuyển phát nhanh có chữ ký 0₫</p>
+                </div>
+                <div class="text-wrapper-21">Tóm tắt đơn hàng</div>
+                <div class="text-wrapper-22">Tổng phụ</div>
+                <div class="cn-n-sm">
+                    <div class="frame-wrapper">
+                        <div class="frame-2">
+                            <div class="text-wrapper-23">Cần nó sớm hơn?</div>
+                            <img class="polygon" src="~/img/Cart/polygon-1-2.svg" />
+                        </div>
+                        <div class="pt-5">
+                            <div class="text-wrapper-23">Áp dụng voucher:</div>
+                            <input style="background-color: #f9f5f6; margin-left: 15px; margin-top: 5px; height:20px;" placeholder="Nhập mã voucher" />
+                            <button id="applyVoucherBtn" style="margin-left: 60px; margin-top: 10px;" class="text-wrapper-23">Áp dụng</button>
 
                         </div>
+
                     </div>
                 </div>
-                <div class="group-13">
-                    <div class="text-wrapper-24">Tổng số ước tính:</div>
-                    <div class="text-wrapper-25">305.100.000 ₫</div>
-                </div>
-                <img class="line-2" src="~/img/Cart/line-8.svg" />
-                <div class="div-wrapper"><div class="text-wrapper-26 text-nowrap">Đặt hàng</div></div>
-                <div class="image-wrapper"><img class="image-5" src="~/img/Cart/image-1.png" /></div>
-                <div class="ng-nhp" onclick="BackToShop()" style="cursor: pointer;"><div class="text-wrapper-27">Tiếp tục mua hàng</div></div>
             </div>
+            <div class="group-13">
+                <div class="text-wrapper-24">Tổng số ước tính:</div>
+                <div class="text-wrapper-25">305.100.000 ₫</div>
+            </div>
+            <img class="line-2" src="~/img/Cart/line-8.svg" />
+            <div class="div-wrapper"><div class="text-wrapper-26 text-nowrap">Đặt hàng</div></div>
+            <div class="image-wrapper">
+                <img class="image-5" src="~/img/Cart/image-1.png" onclick="initiatePayPalPayment()" style="cursor: pointer;" />
+            </div>
+
+            <div class="ng-nhp" onclick="BackToShop()" style="cursor: pointer;"><div class="text-wrapper-27">Tiếp tục mua hàng</div></div>
+        </div>
         </div>
         <div class="group-14">
             <div class="overlap-2">
@@ -433,6 +436,67 @@
         }
 
     });
+
+    async function initiatePayPalPayment() {
+        const userId = localStorage.getItem("userId");
+        const totalPrice = localStorage.getItem("totalPrice");
+
+        if (!userId || !totalPrice) {
+            alert("Dữ liệu không hợp lệ. Vui lòng thử lại.");
+            return;
+        }
+
+        try {
+            const response = await fetch("/api/paypal/create-payment", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ TotalAmount: totalPrice }),
+            });
+
+            if (!response.ok) {
+                const error = await response.json();
+                alert(error.Message || "Không thể khởi tạo thanh toán PayPal.");
+                return;
+            }
+
+            const result = await response.json();
+            window.location.href = result.ApprovalUrl; // Chuyển hướng người dùng đến PayPal
+        } catch (error) {
+            console.error("Lỗi khi khởi tạo thanh toán PayPal:", error);
+            alert("Có lỗi xảy ra. Vui lòng thử lại.");
+        }
+    }
+
+    //const urlParams = new URLSearchParams(window.location.search);
+    //const paymentId = urlParams.get("paymentId");
+    //const payerId = urlParams.get("PayerID");
+
+    //if (paymentId && payerId) {
+    //    fetch("/api/paypal/execute-payment", {
+    //        method: "POST",
+    //        headers: {
+    //            "Content-Type": "application/json",
+    //        },
+    //        body: JSON.stringify({ PaymentId: paymentId, PayerId: payerId }),
+    //    })
+    //        .then((response) => response.json())
+    //        .then((data) => {
+    //            if (data.Status === "approved") {
+    //                alert("Thanh toán thành công!");
+    //                window.location.href = "/donhang";
+    //            } else {
+    //                alert("Thanh toán không thành công.");
+    //            }
+    //        })
+    //        .catch((error) => {
+    //            console.error("Lỗi khi xử lý thanh toán:", error);
+    //            alert("Có lỗi xảy ra. Vui lòng thử lại.");
+    //        });
+    //}
+
+
 </script>
 
 

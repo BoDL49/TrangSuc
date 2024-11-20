@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using WebTrangSuc.Models;
 using System.Data.Entity;
+using PayPal.Api;
+using System.Configuration;
 
 namespace WebTrangSuc.Controllers
 {
@@ -178,8 +180,57 @@ namespace WebTrangSuc.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("cart/success")]
+        public IHttpActionResult Success(string paymentId, string token, string PayerID)
+        {
+            var apiContext = GetAPIContext();
 
-       
+            var paymentExecution = new PaymentExecution { payer_id = PayerID };
+            var payment = new Payment { id = paymentId };
+
+            try
+            {
+                var executedPayment = payment.Execute(apiContext, paymentExecution);
+
+                if (executedPayment.state == "approved")
+                {
+                    // Giao dịch thành công
+                    return Ok(new { Message = "Thanh toán thành công!" });
+                }
+                else
+                {
+                    // Giao dịch không thành công
+                    return BadRequest("Thanh toán không thành công.");
+                }
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(new Exception("Lỗi khi xử lý thanh toán.", ex));
+            }
+        }
+
+
+        [HttpGet]
+        [Route("cart/cancel")]
+        public IHttpActionResult Cancel()
+        {
+            return Ok(new { Message = "Bạn đã hủy thanh toán. Vui lòng kiểm tra lại giỏ hàng." });
+        }
+
+
+        private APIContext GetAPIContext()
+        {
+            var clientId = ConfigurationManager.AppSettings["PayPal:ClientID"];
+            var clientSecret = ConfigurationManager.AppSettings["PayPal:ClientSecret"];
+            var config = new Dictionary<string, string>
+    {
+        { "mode", ConfigurationManager.AppSettings["PayPal:Environment"] }
+    };
+
+            var accessToken = new OAuthTokenCredential(clientId, clientSecret, config).GetAccessToken();
+            return new APIContext(accessToken) { Config = config };
+        }
 
     }
 }

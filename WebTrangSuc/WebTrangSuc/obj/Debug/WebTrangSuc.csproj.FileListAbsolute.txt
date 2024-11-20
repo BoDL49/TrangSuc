@@ -484,3 +484,5 @@ C:\Users\tuant\Desktop\DoAn\DoAn\cnpm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc
 C:\Users\tuant\Desktop\DoAn\DoAn\cnpm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\Microsoft.AspNetCore.Routing.Abstractions.xml
 C:\Users\tuant\Desktop\DoAn\DoAn\cnpm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\Microsoft.Extensions.Primitives.xml
 C:\Users\tuant\Desktop\DoAn\DoAn\cnpm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\tuant\Desktop\DoAn\DoAn\cnpm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\PayPal.dll
+C:\Users\tuant\Desktop\DoAn\DoAn\cnpm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\PayPal.xml
