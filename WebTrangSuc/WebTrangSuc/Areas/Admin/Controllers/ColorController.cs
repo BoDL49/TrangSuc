@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebTrangSuc.Models;
+using WebTrangSuc.Views.JwtAuthorizeAttribute;
 
 namespace WebTrangSuc.Areas.Admin.Controllers
 {
@@ -11,6 +12,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
     {
         shoptrangsucEntities1 db = new shoptrangsucEntities1();
 
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         // GET: Admin/Color
         public ActionResult Index()
         {
@@ -18,12 +20,14 @@ namespace WebTrangSuc.Areas.Admin.Controllers
             return View(mauSacs);
         }
 
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         // GET: Admin/Color/Create
         public ActionResult Create()
         {
             return View();
         }
 
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         // POST: Admin/Color/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -38,6 +42,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
             return View(mauSac);
         }
 
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         // GET: Admin/Color/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -51,6 +56,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
             return View(mauSac);
         }
 
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         // POST: Admin/Color/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -65,6 +71,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
             return View(mauSac);
         }
 
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         // GET: Admin/Color/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -78,6 +85,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
             return View(mauSac);
         }
 
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         // POST: Admin/Color/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

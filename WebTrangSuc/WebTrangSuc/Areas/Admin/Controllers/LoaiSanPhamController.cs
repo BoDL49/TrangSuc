@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using WebTrangSuc.Models;
 using PagedList;
 using PagedList.Mvc;
+using WebTrangSuc.Views.JwtAuthorizeAttribute;
 
 namespace WebTrangSuc.Areas.Admin.Controllers
 {
@@ -14,6 +15,8 @@ namespace WebTrangSuc.Areas.Admin.Controllers
     {
         // GET: Admin/LoaiSanPham
         shoptrangsucEntities1 db = new shoptrangsucEntities1();
+
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Index(int? page)
         {
             int pageSize = 5;
@@ -23,11 +26,15 @@ namespace WebTrangSuc.Areas.Admin.Controllers
 
             return View(loaiSP);
         }
+
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Create()
         {
             var loaiSP = new LoaiSanPham(); // Khởi tạo một thể hiện mới của Category
             return View(loaiSP);
         }
+
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(LoaiSanPham loaiSP, HttpPostedFileBase file)
@@ -56,6 +63,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
             return View(loaiSP); // Trả về view nếu có lỗi
         }
 
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         [HttpGet]
         public ActionResult Edit(int id)
         {
@@ -68,6 +76,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
             return View(loaiSP);
         }
 
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(LoaiSanPham loaiSP, HttpPostedFileBase file)
@@ -106,7 +115,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
 
             return View(loaiSP); // Trả về view nếu có lỗi
         }
-
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Delete(int id)
         {
             var loaiSP = db.LoaiSanPhams.Find(id); // Tìm sản phẩm theo ID
@@ -116,7 +125,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
             }
             return View(loaiSP); // Trả về view để xác nhận xóa
         }
-
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         // POST: Books/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

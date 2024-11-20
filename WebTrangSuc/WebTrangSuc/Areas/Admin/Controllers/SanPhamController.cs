@@ -8,6 +8,7 @@ using WebTrangSuc.Models;
 using PagedList;
 using PagedList.Mvc;
 using System.IO;
+using WebTrangSuc.Views.JwtAuthorizeAttribute;
 
 namespace WebTrangSuc.Areas.Admin.Controllers
 {
@@ -16,6 +17,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         // GET: Admin/SanPham
         shoptrangsucEntities1 db = new shoptrangsucEntities1();
 
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Index(int? page)
         {
             int pageSize = 5;
@@ -25,6 +27,8 @@ namespace WebTrangSuc.Areas.Admin.Controllers
 
             return View(sanPham);
         }
+
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Create()
         {
             var loaiSanPhams = db.LoaiSanPhams.ToList();
@@ -33,8 +37,10 @@ namespace WebTrangSuc.Areas.Admin.Controllers
             ViewBag.LoaiSanPhamList = new SelectList(loaiSanPhams, "ID", "TenLoaiSanPham");
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Create(SanPham sanPham, IEnumerable<HttpPostedFileBase> files)
         {
             if (ModelState.IsValid)
@@ -76,6 +82,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
             return View(sanPham);
         }
         // GET: Admin/SanPham/Edit/5
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Edit(int id)
         {
             var sanPham = db.SanPhams.Find(id);
@@ -93,6 +100,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         // POST: Admin/SanPham/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Edit(SanPham model, IEnumerable<HttpPostedFileBase> files)
         {
             if (ModelState.IsValid)
@@ -163,7 +171,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
             return View(model);
         }
 
-
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Delete(int id)
         {
             // Lấy sản phẩm từ database
@@ -175,8 +183,10 @@ namespace WebTrangSuc.Areas.Admin.Controllers
 
             return View(sanPham); // Trả về view xác nhận xóa
         }
+
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult DeleteConfirmed(int id)
         {
             var sanPham = db.SanPhams.Include(s => s.HinhSanPhams).FirstOrDefault(s => s.ID == id);

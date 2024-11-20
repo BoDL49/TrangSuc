@@ -13,7 +13,7 @@
             <div class="flex flex-col md:flex-row gap-8">
                 <div class="w-full md:w-1/4">
                     <div class="text-center">
-                        <img src="~/img/default-avatar.png" alt="User Avatar" id="avatar" class="w-32 h-32 rounded-full object-cover border-4 border-gray-200 mx-auto">
+                        <img src="" alt="User Avatar" id="avatar" class="w-32 h-32 rounded-full object-cover border-4 border-gray-200 mx-auto">
                         <h2 class="mt-4 text-xl font-semibold" id="name">John Doe</h2>
                         <p class="text-gray-500" id="name2">@@johndoe</p>
                     </div>
@@ -180,7 +180,7 @@
                 namSinh.textContent = data.namSinh ? new Date(data.namSinh).toLocaleDateString('vi-VN') : 'N/A';
                 gioiTinh.textContent = data.gioiTinh || 'N/A';
                 diaChi.textContent = data.DiaChi || 'N/A';
-                avatar.src = data.Avatar || avatarDefault;
+                avatar.src = data.avatar || avatarDefault;
                 name.textContent = data.userName || 'N/A';
                 name2.textContent = '@@' + data.userName || '@@N/A';
 
@@ -389,5 +389,44 @@
             editSection.classList.add('hidden');
         }
     }
+
+
+
+
+    document.getElementById('avatar-upload').addEventListener('change', async function (event) {
+        const file = event.target.files[0];
+        if (file) {
+            const userId = localStorage.getItem('userId');
+            const token = localStorage.getItem('token');
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch(`/api/taikhoan/upload-avatar/${userId}`, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error("Lỗi khi tải lên ảnh. Vui lòng thử lại.");
+                }
+
+                const data = await response.json();
+
+                // Hiển thị ảnh mới trên giao diện
+                document.getElementById('avatar').src = data.avatarPath;
+                document.getElementById('UpdateAvatar').src = data.avatarPath;
+
+                alert("Tải lên ảnh thành công!");
+            } catch (error) {
+                console.error("Error uploading avatar:", error);
+                alert(error.message || "Có lỗi xảy ra khi tải lên ảnh.");
+            }
+        }
+    });
+
 </script>
 

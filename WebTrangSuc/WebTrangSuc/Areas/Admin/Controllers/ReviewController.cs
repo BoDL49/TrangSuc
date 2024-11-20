@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.UI;
 using WebTrangSuc.Models;
+using WebTrangSuc.Views.JwtAuthorizeAttribute;
 
 namespace WebTrangSuc.Areas.Admin.Controllers
 {
@@ -21,6 +22,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         }
 
         // Hiển thị danh sách sản phẩm
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult ProductList(int? page)
         {
             int pageSize = 5;
@@ -30,6 +32,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         }
 
         // Hiển thị danh sách đánh giá của sản phẩm
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Index(int productId,int?page)
         {
             int pageSize = 5;
@@ -50,6 +53,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
                 return View(reviews);
 
         }
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Create(int productId)
         {
             var product = db.SanPhams.Find(productId);
@@ -71,6 +75,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Create(DanhGia review)
         {
             if (ModelState.IsValid)
@@ -92,6 +97,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
 
 
         // Sửa đánh giá (GET)
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         [HttpGet]
         public ActionResult Edit(int id)
         {
@@ -104,6 +110,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         }
 
         // Sửa đánh giá (POST)
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         [HttpPost]
         public ActionResult Edit(DanhGia danhGia)
         {
@@ -121,6 +128,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         }
 
         // Xóa đánh giá
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Delete(int id)
         {
             var review = db.DanhGias.Find(id);

@@ -291,5 +291,60 @@ namespace WebTrangSuc.Controllers
             return Ok(new { message = "Đổi mật khẩu thành công!" });
         }
 
+
+        [HttpPost]
+        [Route("api/taikhoan/upload-avatar/{userId}")]
+        public async Task<IHttpActionResult> UploadAvatar(int userId)
+        {
+            var httpRequest = HttpContext.Current.Request;
+
+            if (httpRequest.Files.Count == 0)
+            {
+                return BadRequest("Không có tệp nào được tải lên.");
+            }
+
+            var file = httpRequest.Files[0];
+            if (file == null || file.ContentLength == 0)
+            {
+                return BadRequest("Tệp tải lên không hợp lệ.");
+            }
+
+            // Kiểm tra định dạng file
+            var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
+            var fileExtension = Path.GetExtension(file.FileName)?.ToLower();
+
+            if (!allowedExtensions.Contains(fileExtension))
+            {
+                return BadRequest("Chỉ chấp nhận các định dạng tệp JPG, JPEG, PNG, GIF.");
+            }
+
+            // Tạo tên file duy nhất
+            var fileName = $"{Guid.NewGuid()}{fileExtension}";
+            var filePath = HttpContext.Current.Server.MapPath($"~/img/UploadedFiles/{fileName}");
+
+            try
+            {
+                // Lưu file vào server
+                file.SaveAs(filePath);
+
+                // Cập nhật đường dẫn avatar vào cơ sở dữ liệu
+                var user = await _context.TaiKhoans.FindAsync(userId);
+                if (user == null)
+                {
+                    return NotFound();
+                }
+
+                user.Avatar = $"/img/UploadedFiles/{fileName}";
+                _context.Entry(user).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
+
+                return Ok(new { avatarPath = user.Avatar });
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(new Exception("Lỗi khi lưu ảnh.", ex));
+            }
+        }
+
     }
 }

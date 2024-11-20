@@ -639,3 +639,16 @@
     <script src="~/Content/assets/js/demo.js"></script>-->
 </body>
 </html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const role = localStorage.getItem("role"); // Lấy role từ localStorage
+
+        if (!role || role == "4") {
+            // Chuyển hướng người dùng nếu không có quyền
+            alert("Bạn không có quyền truy cập vào trang này.");
+            window.location.href = "/"; // Chuyển hướng về trang chủ
+        }
+    });
+
+</script>

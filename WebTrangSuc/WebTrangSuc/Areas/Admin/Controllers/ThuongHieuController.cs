@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.UI;
 using WebTrangSuc.Models;
+using WebTrangSuc.Views.JwtAuthorizeAttribute;
 
 namespace WebTrangSuc.Areas.Admin.Controllers
 {
@@ -15,6 +16,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         private readonly shoptrangsucEntities1 db = new shoptrangsucEntities1();
 
         // GET: ThuongHieu
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Index(int? page)
         {
             int pageSize = 5;
@@ -24,6 +26,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         }
 
         // GET: ThuongHieu/Create
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Create()
         {
             return View();
@@ -32,6 +35,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         // POST: ThuongHieu/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Create([Bind(Include = "ID,TenThuongHieu")] ThuongHieu thuongHieu)
         {
             if (ModelState.IsValid)
@@ -44,6 +48,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         }
 
         // GET: ThuongHieu/Edit/5
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -60,6 +65,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
 
         // POST: ThuongHieu/Edit/5
         [HttpPost]
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,TenThuongHieu")] ThuongHieu thuongHieu)
         {
@@ -73,6 +79,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         }
 
         // GET: ThuongHieu/Delete/5
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -88,6 +95,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         }
 
         // POST: ThuongHieu/Delete/5
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

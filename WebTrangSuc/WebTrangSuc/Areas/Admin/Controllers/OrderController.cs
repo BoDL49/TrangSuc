@@ -6,12 +6,15 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebTrangSuc.Models;
+using WebTrangSuc.Views.JwtAuthorizeAttribute;
 
 namespace WebTrangSuc.Areas.Admin.Controllers
 {
     public class OrderController : Controller
     {
         shoptrangsucEntities1 db = new shoptrangsucEntities1();
+
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         // GET: Admin/Order
         public ActionResult Index(int? page)
         {
@@ -26,6 +29,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
             return View(orders);
         }
 
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         // GET: Admin/Order/Details/5
         public ActionResult Details(int id)
         {
@@ -42,6 +46,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         }
 
         // GET: Admin/Order/UpdateDelivery/5
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult UpdateDelivery(int id, int updateDelivery)
         {
             var order = db.DonHangs.Find(id);
@@ -58,6 +63,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
 
         // GET: Admin/Order/Delete/5
         // GET: Admin/Order/Delete/5
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Delete(int id)
         {
             // Lấy thông tin đơn hàng và bao gồm DonHangChiTiets

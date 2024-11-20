@@ -113,26 +113,33 @@ namespace WebTrangSuc.Controllers
                 TotalAmount = order.TongTien,
                 OrderDate = order.NgayTaoHoaDon,
                 TenKhachHang = order.TaiKhoan.HoVaTen,
-                diaChi = order.TaiKhoan.DiaChis.FirstOrDefault(p => p.IDUser == order.TaiKhoan.ID),
+                diaChi = order.TaiKhoan?.DiaChis.FirstOrDefault()?.Diachi,
                 email = order.TaiKhoan.Email,
+                PaymentMethod = order.PhuongThucThanhToan,
                 Items = order.DonHangChiTiets.Select(d => new
                 {
-                    ProductName = d.SanPham.TenSanPham,
+                    ProductName = d.SanPham?.TenSanPham ?? "N/A",
                     Quantity = d.SoLuongSanPham,
                     Price = d.GiaSanPham
-                })
+                }).ToList()
             });
         }
 
         [HttpGet]
         [Route("api/donhang/get")]
-        public async Task<IHttpActionResult> GetOrders(int userId)
+        public async Task<IHttpActionResult> GetOrders(int userId, int page = 1, int pageSize = 10)
         {
             try
             {
+                var totalOrders = await _context.DonHangs
+                    .Where(o => o.IDUser == userId)
+                    .CountAsync();
+
                 var orders = await _context.DonHangs
                     .Where(o => o.IDUser == userId)
                     .OrderByDescending(o => o.NgayTaoHoaDon)
+                    .Skip((page - 1) * pageSize)
+                    .Take(pageSize)
                     .Select(o => new
                     {
                         OrderId = o.ID,
@@ -144,13 +151,20 @@ namespace WebTrangSuc.Controllers
                     })
                     .ToListAsync();
 
-                return Ok(orders);
+                return Ok(new
+                {
+                    TotalOrders = totalOrders,
+                    Page = page,
+                    PageSize = pageSize,
+                    Orders = orders
+                });
             }
             catch (Exception ex)
             {
                 return InternalServerError(new Exception("Lỗi khi lấy danh sách đơn hàng.", ex));
             }
         }
+
 
 
     }

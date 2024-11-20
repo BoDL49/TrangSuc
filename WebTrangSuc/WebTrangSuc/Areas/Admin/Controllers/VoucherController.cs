@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using WebTrangSuc.Models;
 using PagedList;
 using PagedList.Mvc;
+using WebTrangSuc.Views.JwtAuthorizeAttribute;
 
 namespace WebTrangSuc.Areas.Admin.Controllers
 {
@@ -15,6 +16,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         // GET: Admin/Voucher
         shoptrangsucEntities1 db = new shoptrangsucEntities1();
 
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Index(int? page)
         {
             int pageSize = 5;
@@ -24,6 +26,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
 
             return View(vouCher);
         }
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Create()
         {
             var vouCher = new Voucher(); // Khởi tạo một thể hiện mới của Category
@@ -31,6 +34,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Create(Voucher vouCher)
         {
 
@@ -45,6 +49,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         }
 
         [HttpGet]
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Edit(int id)
         {
             // Lấy loại sản phẩm theo ID để hiển thị trong form Edit
@@ -57,6 +62,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Voucher vouCher)
         {
@@ -81,6 +87,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
 
             return View(vouCher); // Trả về view nếu có lỗi
         }
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Delete(int id)
         {
             // Lấy loại sản phẩm theo ID để hiển thị trong form Edit
@@ -95,6 +102,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         // POST: Books/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult DeleteConfirmed(int id)
         {
             var vouCher = db.Vouchers.Find(id); // Tìm sản phẩm theo ID

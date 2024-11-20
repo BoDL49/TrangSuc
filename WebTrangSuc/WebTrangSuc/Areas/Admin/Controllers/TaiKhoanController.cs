@@ -6,6 +6,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WebTrangSuc.Models;
+using WebTrangSuc.Views.JwtAuthorizeAttribute;
 
 namespace WebTrangSuc.Areas.Admin.Controllers
 {
@@ -14,6 +15,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         private shoptrangsucEntities1 db = new shoptrangsucEntities1();
 
         // GET: Admin/TaiKhoan
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Index(int? page)
         {
             int pageSize = 5;
@@ -23,6 +25,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         }
 
         // GET: Admin/TaiKhoan/Details/5
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -38,6 +41,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         }
 
         // GET: Admin/TaiKhoan/Create
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Create()
         {
             // Lấy danh sách Role từ cơ sở dữ liệu và truyền vào ViewBag
@@ -48,6 +52,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         // POST: Admin/TaiKhoan/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Create([Bind(Include = "HoVaTen,GioiTinh,NamSinh,SDT,Email,UserName,Matkhau,Avatar,IDRole")] TaiKhoan taiKhoan, HttpPostedFileBase Avatar)
         {
             if (ModelState.IsValid)
@@ -71,6 +76,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         }
 
         // GET: Admin/TaiKhoan/Edit/5
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -87,6 +93,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         }
 
         // POST: Admin/TaiKhoan/Edit/5
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,HoVaTen,GioiTinh,NamSinh,SDT,Email,UserName,Matkhau,Avatar,IDRole")] TaiKhoan taiKhoan, HttpPostedFileBase Avatar)
@@ -111,6 +118,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         }
 
         // GET: Admin/TaiKhoan/Delete/5
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -127,6 +135,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
 
         // POST: Admin/TaiKhoan/Delete/5
         [HttpPost, ActionName("Delete")]
+        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
