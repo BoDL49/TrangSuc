@@ -1141,6 +1141,7 @@
     <Content Include="Areas\Admin\Views\Color\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Color\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Color\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Order\Edit.cshtml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <None Include="Scripts\jquery-3.7.1-vsdoc.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />

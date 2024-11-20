@@ -11,13 +11,14 @@
         </div>
         <div class="card-body">
             <h3>Thông tin khách hàng</h3>
-            <p><strong>Tên khách hàng:</strong> @Model.TaiKhoan.HoVaTen ?? "Không rõ"</p>
+            <p><strong>Tên khách hàng:</strong> @Model.TaiKhoan.HoVaTen</p>
             <p>
                 <strong>Địa chỉ:</strong>@(Model.TaiKhoan?.DiaChis?.FirstOrDefault()?.Diachi != null
 ? Model.TaiKhoan.DiaChis.FirstOrDefault().Diachi
 : "Không rõ")
             </p>
-            <p><strong>Ngày tạo hóa đơn:</strong> @Model.NgayTaoHoaDon?.ToString("dd/MM/yyyy") ?? "Không rõ"</p>
+            <p><strong>Phương thức thanh toán:</strong>@Model.PhuongThucThanhToan</p>
+            <p><strong>Ngày tạo hóa đơn:</strong> @Model.NgayTaoHoaDon</p>
 
             <h3>Thông tin đơn hàng</h3>
             <p><strong>Tổng tiền:</strong> @String.Format("{0:0,0} VND", Model.TongTien)</p>
@@ -42,6 +43,10 @@
                 {
                     <span class="badge badge-secondary">Chưa giao</span>
                 }
+            </p>
+            <p>
+                <strong>Voucher:</strong>
+                @(Model.Voucher != null ? Model.Voucher.ID : "Không áp dụng voucher")
             </p>
 
             <h5>Chi tiết sản phẩm</h5>

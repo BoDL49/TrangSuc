@@ -93,3 +93,6 @@ else
 
 <a href="@Url.Action("ProductList", "Review")" class="btn btn-secondary">Quay lại danh sách sản phẩm</a>
 
+<div>
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+</div>

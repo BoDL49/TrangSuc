@@ -60,6 +60,63 @@ namespace WebTrangSuc.Areas.Admin.Controllers
 
             return RedirectToAction("Index");
         }
+        // GET: Admin/Order/UpdateDelivery/5
+        public ActionResult UpdateDonHang(int id, int updateDonHang)
+        {
+            var order = db.DonHangs.Find(id);
+            if (order == null)
+            {
+                return HttpNotFound();
+            }
+
+            order.TrangThaiDonHang = updateDonHang;
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        // GET: Admin/Order/Edit/5
+        public ActionResult Edit(int id)
+        {
+            var order = db.DonHangs
+                .Include("TaiKhoan") // Nếu bạn cần thông tin tài khoản khách hàng
+                .Include("DonHangChiTiets") // Nếu bạn cần hiển thị các chi tiết đơn hàng
+                .FirstOrDefault(o => o.ID == id);
+
+            if (order == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(order);
+        }
+        // POST: Admin/Order/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(DonHang updatedOrder)
+        {
+            if (ModelState.IsValid)
+            {
+                var existingOrder = db.DonHangs.Find(updatedOrder.ID);
+                if (existingOrder == null)
+                {
+                    return HttpNotFound();
+                }
+
+                // Cập nhật các thông tin đơn hàng cần thiết từ `updatedOrder`
+                existingOrder.TrangThaiDonHang = updatedOrder.TrangThaiDonHang;
+                existingOrder.TrangThaiGiaoHang = updatedOrder.TrangThaiGiaoHang;
+
+                db.Entry(existingOrder).State = EntityState.Modified;
+                db.SaveChanges();
+
+                TempData["Success"] = "Order updated successfully.";
+                return RedirectToAction("Index");
+            }
+
+            return View(updatedOrder);
+        }
+
 
         // GET: Admin/Order/Delete/5
         // GET: Admin/Order/Delete/5

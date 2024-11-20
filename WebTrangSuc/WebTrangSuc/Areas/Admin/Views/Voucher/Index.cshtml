@@ -61,14 +61,14 @@
         </nav>
     </div>
     <p>
-        <a href="@Url.Action("Create", "Voucher")" class="btn btn-primary">Create New</a>
+        <a href="@Url.Action("Create", "Voucher")" class="btn btn-primary">Thêm mới voucher</a>
     </p>
 
     <div class="card-body">
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th>STT</th>
+                    <th>ID Voucher</th>
                     <th>Tên voucher</th>
                     <th>Thông tin voucher</th>
                     <th>Giá voucher</th>
@@ -77,21 +77,19 @@
             <tbody>
                 @if (Model != null && Model.Any())
                 {
-                    var i = 1;
                     foreach (var item in Model)
                     {
                         <tr>
-                            <td>@i</td>
+                            <td>@item.ID</td>
                             <td>@item.TenVoucher</td>
                             <td>@item.ThongTinVoucher</td>
-                            <td>@String.Format("{0:0,0} VND", item.GiaVoucher)</td>
+                            <td>@item.GiaVoucher %</td>
                             <td>
                                 <a href="/admin/voucher/edit/@item.ID" class="btn btn-sm btn-primary">Sửa</a>
                                 <a href="/admin/voucher/Delete/@item.ID" class="btn btn-sm btn-danger" onclick="return confirm('Bạn có muốn xóa không?');">Xóa</a>
 
                             </td>
                         </tr>
-                        i++;
                     }
                 }
                 else

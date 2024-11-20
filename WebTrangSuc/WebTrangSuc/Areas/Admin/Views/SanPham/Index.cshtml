@@ -59,14 +59,14 @@
         </nav>
     </div>
     <p>
-        <a href="@Url.Action("Create", "SanPham")" class="btn btn-primary">Create New</a>
+        <a href="@Url.Action("Create", "SanPham")" class="btn btn-primary">Thêm mới</a>
     </p>
 
     <div class="card-body">
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th>STT</th>
+                    <th>IDSP</th>
                     <th>Tên sản phẩm</th>
                     <th>Loại sản phẩm</th>
                     <th>Mô tả sản phẩm</th>
@@ -79,11 +79,10 @@
             <tbody>
                 @if (Model != null && Model.Any())
                 {
-                    var i = 1;
                     foreach (var item in Model)
                     {
                         <tr>
-                            <td>@i</td>
+                            <td>@item.ID</td>
                             <td>@item.TenSanPham</td>
                             <td>@item.IDLoaiSanPham</td> <!-- Hiển thị tên loại sản phẩm -->
                             <td>@item.MoTaSanPham</td>
@@ -117,7 +116,6 @@
 
                             </td>
                         </tr>
-                        i++;
                     }
                 }
                 else
