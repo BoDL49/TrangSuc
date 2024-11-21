@@ -29,6 +29,21 @@
                         @Html.ValidationMessageFor(x => x.GiaVoucher, null, new { @class = "text-danger" })
                     </div>
                     <div class="form-group">
+                        <label for="Giavoucher">Ngày bắt đầu</label>
+                        @Html.TextBoxFor(x => x.NgayBatDau, new { @class = "form-control", @placeholder = "Ngày bắt đầur" })
+                        @Html.ValidationMessageFor(x => x.NgayBatDau, null, new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label for="Giavoucher">Ngày kết thúc</label>
+                        @Html.TextBoxFor(x => x.NgayKetThuc, new { @class = "form-control", @placeholder = "Ngày kết thúc" })
+                        @Html.ValidationMessageFor(x => x.NgayKetThuc, null, new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label for="Giavoucher">Số lượng sử dụng</label>
+                        @Html.TextBoxFor(x => x.SoLuongSuDung, new { @class = "form-control", @placeholder = "Số lượng sử dụng" })
+                        @Html.ValidationMessageFor(x => x.SoLuongSuDung, null, new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
                         <a href="/admin/voucher" class="btn btn-danger">Quay lại</a>
                         <button type="submit" class="btn btn-success mr-2">Submit</button>
                     </div>

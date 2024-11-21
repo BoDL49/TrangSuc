@@ -32,9 +32,16 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         public ActionResult Create()
         {
             var loaiSanPhams = db.LoaiSanPhams.ToList();
+            var mauSacs = db.MauSacs.ToList();
+            var chatLieux = db.ChatLieux.ToList();
+            var thuongHieux = db.ThuongHieux.ToList();
+
 
             // Tạo SelectList cho dropdown
             ViewBag.LoaiSanPhamList = new SelectList(loaiSanPhams, "ID", "TenLoaiSanPham");
+            ViewBag.MauList = new SelectList(mauSacs, "ID", "TenMau");
+            ViewBag.ChatLieuList = new SelectList(chatLieux, "ID", "TenChatLieu");
+            ViewBag.ThuongHieuList = new SelectList(thuongHieux, "ID", "TenThuongHieu");
             return View();
         }
 
@@ -93,6 +100,9 @@ namespace WebTrangSuc.Areas.Admin.Controllers
 
             // Truyền danh sách loại sản phẩm vào ViewBag để hiển thị trong Dropdown
             ViewBag.LoaiSanPhamList = new SelectList(db.LoaiSanPhams, "ID", "TenLoaiSanPham", sanPham.IDLoaiSanPham);
+            ViewBag.MauList = new SelectList(db.MauSacs, "ID", "TenMau", sanPham.IDMauSac);
+            ViewBag.ChatLieuList = new SelectList(db.ChatLieux, "ID", "TenChatLieu", sanPham.IDChatLieu);
+            ViewBag.ThuongHieuList = new SelectList(db.ThuongHieux, "ID", "TenThuongHieu", sanPham.IDThuongHieu);
 
             return View(sanPham);
         }
@@ -118,6 +128,9 @@ namespace WebTrangSuc.Areas.Admin.Controllers
                 sanPham.SoLuongTonKho = model.SoLuongTonKho;
                 sanPham.TrangThaiSanPham = model.TrangThaiSanPham;
                 sanPham.IDLoaiSanPham = model.IDLoaiSanPham;
+                sanPham.IDMauSac = model.IDMauSac;
+                sanPham.IDChatLieu = model.IDChatLieu;
+                sanPham.IDThuongHieu = model.IDThuongHieu;
 
                 // Xóa các hình ảnh cũ nếu có
                 var existingImages = db.HinhSanPhams.Where(h => h.IDSP == sanPham.ID).ToList();
@@ -168,6 +181,9 @@ namespace WebTrangSuc.Areas.Admin.Controllers
 
             // Nếu có lỗi trong model, giữ lại danh sách loại sản phẩm trong ViewBag
             ViewBag.LoaiSanPhamList = new SelectList(db.LoaiSanPhams, "ID", "TenLoaiSanPham", model.IDLoaiSanPham);
+            ViewBag.MauList = new SelectList(db.MauSacs, "ID", "TenMau", model.IDMauSac);
+            ViewBag.ChatLieuList = new SelectList(db.ChatLieux, "ID", "TenChatLieu", model.IDChatLieu);
+            ViewBag.ThuongHieuList = new SelectList(db.ThuongHieux, "ID", "TenThuongHieu", model.IDThuongHieu);
             return View(model);
         }
 

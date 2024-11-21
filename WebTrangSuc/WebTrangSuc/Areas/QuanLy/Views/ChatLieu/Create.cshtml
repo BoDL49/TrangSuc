@@ -1,0 +1,21 @@
+﻿@model WebTrangSuc.Models.ChatLieu
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/QuanLy/Views/Shared/_QuanLyLayout.cshtml";
+}
+
+
+<h2>Thêm mới Chất Liệu</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.TenChatLieu)
+        @Html.EditorFor(model => model.TenChatLieu, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Lưu</button>
+    <a href="@Url.Action("Index", "ChatLieu", new { area = "QuanLy" })" class="btn btn-secondary">Hủy</a>
+}
+

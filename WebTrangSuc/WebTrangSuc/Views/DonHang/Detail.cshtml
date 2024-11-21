@@ -46,7 +46,7 @@
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-600">Status</label>
-                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800 mt-1 order-status">Loading...</span>
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium mt-1 order-status">Loading...</span>
                     </div>
 
                 </div>
@@ -100,6 +100,8 @@
                 }
 
                 const order = await response.json();
+
+                console.log(order);
                 renderOrderDetails(order);
             } catch (error) {
                 console.error("Lỗi khi tải chi tiết hóa đơn:", error);
@@ -112,6 +114,10 @@
                 ? "Chưa giao"
                 : "Đã giao";
 
+            const statusClass = order.DeliveryStatus === 0
+                ? ["bg-yellow-100", "text-yellow-800"]
+                : ["bg-green-100", "text-green-800"];
+
             // Hiển thị thông tin khách hàng
             document.querySelector(".customer-name").innerText = order.TenKhachHang || "N/A";
             document.querySelector(".customer-address").innerText = order.diaChi || "N/A";
@@ -121,6 +127,7 @@
             document.querySelector(".order-id").innerText = `#ORD${order.OrderId}`;
             document.querySelector(".order-date").innerText = new Date(order.OrderDate).toLocaleDateString();
             document.querySelector(".order-status").innerText = deliveryStatusText;
+            document.querySelector(".order-status").classList.add(...statusClass);
             document.querySelector(".order-total").innerText = `${order.TotalAmount.toLocaleString()} ₫`;
             document.querySelector(".order-payment").innerText = order.PaymentMethod;
 

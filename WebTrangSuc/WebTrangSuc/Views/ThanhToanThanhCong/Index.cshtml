@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Thanh toán thành công";
     Layout = "~/Views/Shared/_EmptyLayout.cshtml";
 }
@@ -8,32 +7,57 @@
 <link href="~/Content/Css/styleguild.css" rel="stylesheet" />
 <link href="~/Content/Css/ThanhToanThanhCongCss.css" rel="stylesheet" />
 
-
-
 <div class="thanh-ton-thnh-cng">
     <div class="overlap-wrapper">
         <div class="overlap">
-            <div class="text-wrapper">Thanh toán:</div>
-            <p class="div">Mã số đơn hàng của bạn là :</p>
-            <div class="text-wrapper-2">Tổng tiền :</div>
-            <div class="text-wrapper-3">15,000,000đ</div>
-            <div class="text-wrapper-4">Thanh toán bằng Paypal</div>
-            <div class="text-wrapper-5">0215478799</div>
-            <div class="text-wrapper-6">Thanh toán thành công</div>
-            <div class="group">
-                <div class="overlap-group-wrapper">
-                    <div class="overlap-group"> 
-                        <div class="ng-nhp"><p class="ng-nh-p">Xem chi tiết đơn hàng</p></div>
-                        <img class="east" src="~/img/east-3.svg" />
-                    </div>
-                </div>
-                <div class="div-wrapper">
-                    <div class="overlap-2">
-                        <div class="ng-nhp"><div class="ng-nh-p">Tiếp tục mua hàng</div></div>
-                        <img class="img" src="~/img/east-4.svg" />
-                    </div>
+            <div id="loading" style="display: block;">Đang tải thông tin...</div>
+            <div id="orderDetails" style="display: none;">
+                <div class="text-wrapper">Thanh toán:</div>
+                <p class="div">Mã số đơn hàng của bạn là: <strong id="orderId"></strong></p>
+                <div class="text-wrapper-2">Tổng tiền:</div>
+                <div class="text-wrapper-3" id="totalPrice"></div>
+                <div class="text-wrapper-4">Thanh toán bằng <span id="paymentMethod"></span></div>
+                <div class="text-wrapper-6">Thanh toán thành công</div>
+                <div class="group">
+                    <a href="/donhang" class="ng-nhp">
+                        <p class="ng-nh-p">Xem chi tiết đơn hàng</p>
+                    </a>
+                    <a href="/danhmucsanpham" class="ng-nhp" style="left: 450px;">
+                        <p class="ng-nh-p" >Tiếp tục mua hàng</p>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderId = urlParams.get("orderId");
+
+        if (!orderId) {
+            alert("Không tìm thấy mã đơn hàng.");
+            return;
+        }
+
+        fetch(`/api/donhang/${orderId}`)
+            .then(response => {
+                if (!response.ok) throw new Error("Không thể tải thông tin đơn hàng.");
+                return response.json();
+            })
+            .then(order => {
+                document.getElementById("loading").style.display = "none";
+                document.getElementById("orderDetails").style.display = "block";
+
+                document.getElementById("orderId").innerText = order.OrderId;
+                document.getElementById("totalPrice").innerText = `${order.TotalPrice.toLocaleString()} ₫`;
+                document.getElementById("paymentMethod").innerText = order.PaymentMethod;
+            })
+            .catch(error => {
+                console.error("Lỗi:", error);
+                alert("Không thể tải thông tin đơn hàng.");
+            });
+    });
+
+</script>

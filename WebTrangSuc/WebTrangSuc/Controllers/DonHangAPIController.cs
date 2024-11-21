@@ -44,20 +44,32 @@ namespace WebTrangSuc.Controllers
                         IDUser = model.UserId,
                         TongTien = model.TotalAmount,
                         NgayTaoHoaDon = DateTime.Now,
-                        TrangThaiGiaoHang = 0, // Mặc định trạng thái giao hàng là chưa giao
-                        TrangThaiDonHang = 0, // Mặc định trạng thái đơn hàng là mới
+                        TrangThaiGiaoHang = 0, // Mặc định chưa giao hàng
+                        TrangThaiDonHang = 0,  // Mặc định trạng thái là mới
                         IDVoucher = model.VoucherId,
                         PhuongThucThanhToan = model.PaymentMethod
                     };
                     _context.DonHangs.Add(newOrder);
                     await _context.SaveChangesAsync();
 
-                    // Lấy ID đơn hàng vừa tạo
                     var orderId = newOrder.ID;
 
                     // Tạo chi tiết đơn hàng
                     foreach (var item in model.CartItems)
                     {
+                        var product = await _context.SanPhams.FindAsync(item.ProductId);
+                        if (product == null)
+                        {
+                            transaction.Rollback();
+                            return BadRequest($"Sản phẩm với ID {item.ProductId} không tồn tại.");
+                        }
+
+                        if (product.SoLuongTonKho < item.Quantity)
+                        {
+                            transaction.Rollback();
+                            return BadRequest($"Sản phẩm {product.TenSanPham} không đủ số lượng tồn kho.");
+                        }
+
                         var orderDetail = new DonHangChiTiet
                         {
                             IDDonHang = orderId,
@@ -67,21 +79,15 @@ namespace WebTrangSuc.Controllers
                         };
                         _context.DonHangChiTiets.Add(orderDetail);
 
-                        // Cập nhật số lượng tồn kho
-                        var product = await _context.SanPhams.FindAsync(item.ProductId);
-                        if (product != null)
-                        {
-                            product.SoLuongTonKho -= item.Quantity;
-                        }
+                        // Cập nhật tồn kho sản phẩm
+                        product.SoLuongTonKho -= item.Quantity;
                     }
 
-                    // Xóa giỏ hàng sau khi đặt hàng
+                    // Xóa giỏ hàng sau khi tạo đơn hàng
                     var cartItems = _context.SanPhamGioHangs.Where(c => c.IDUser == model.UserId);
                     _context.SanPhamGioHangs.RemoveRange(cartItems);
 
                     await _context.SaveChangesAsync();
-
-                    // Commit transaction
                     transaction.Commit();
 
                     return Ok(new { Message = "Đặt hàng thành công.", OrderId = orderId });
@@ -89,10 +95,16 @@ namespace WebTrangSuc.Controllers
                 catch (Exception ex)
                 {
                     transaction.Rollback();
+                    Console.WriteLine("Lỗi tạo đơn hàng: " + ex.Message);
+                    if (ex.InnerException != null)
+                    {
+                        Console.WriteLine("Chi tiết lỗi bên trong: " + ex.InnerException.Message);
+                    }
                     return InternalServerError(new Exception("Lỗi khi tạo đơn hàng.", ex));
                 }
             }
         }
+
 
 
         [HttpGet]
@@ -116,6 +128,7 @@ namespace WebTrangSuc.Controllers
                 diaChi = order.TaiKhoan?.DiaChis.FirstOrDefault()?.Diachi,
                 email = order.TaiKhoan.Email,
                 PaymentMethod = order.PhuongThucThanhToan,
+                DeliveryStatus = order.TrangThaiGiaoHang,
                 Items = order.DonHangChiTiets.Select(d => new
                 {
                     ProductName = d.SanPham?.TenSanPham ?? "N/A",
@@ -163,6 +176,40 @@ namespace WebTrangSuc.Controllers
             {
                 return InternalServerError(new Exception("Lỗi khi lấy danh sách đơn hàng.", ex));
             }
+        }
+
+
+        [HttpGet]
+        [Route("api/donhang/{orderId}")]
+        public async Task<IHttpActionResult> GetOrderDetails(int orderId)
+        {
+            var order = await _context.DonHangs
+                .Include(o => o.DonHangChiTiets.Select(c => c.SanPham))
+                .FirstOrDefaultAsync(o => o.ID == orderId);
+
+            if (order == null)
+            {
+                return NotFound();
+            }
+
+            var response = new
+            {
+                OrderId = order.ID,
+                UserId = order.IDUser,
+                TotalPrice = order.TongTien,
+                PaymentMethod = order.PhuongThucThanhToan,
+                OrderDate = order.NgayTaoHoaDon,
+                OrderStatus = order.TrangThaiDonHang,
+                Items = order.DonHangChiTiets.Select(c => new
+                {
+                    ProductName = c.SanPham.TenSanPham,
+                    Quantity = c.SoLuongSanPham,
+                    Price = c.GiaSanPham,
+                    Total = c.SoLuongSanPham * c.GiaSanPham
+                }).ToList()
+            };
+
+            return Ok(response);
         }
 
 

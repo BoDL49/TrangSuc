@@ -1,0 +1,25 @@
+﻿
+@model WebTrangSuc.Models.TaiKhoan
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/QuanLy/Views/shared/_QuanLyLayout.cshtml";
+}
+
+
+<h2>Xóa tài khoản</h2>
+
+<h3>Bạn chắc chắn muốn xóa @Model.HoVaTen?</h3>
+
+@using (Html.BeginForm("Delete", "TaiKhoan", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-default" })
+    </div>
+}
+
+
+
+

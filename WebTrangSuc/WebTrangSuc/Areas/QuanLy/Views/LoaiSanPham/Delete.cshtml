@@ -1,0 +1,25 @@
+﻿@model WebTrangSuc.Models.LoaiSanPham
+@{
+    ViewBag.Title = "DeleteConfirmed";
+    Layout = "~/Areas/QuanLy/Views/shared/_QuanLyLayout.cshtml";
+}
+
+<h2>Xác nhận xóa danh mục</h2>
+<div class="content-wrapper">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Bạn có chắc chắn muốn xóa danh mục này không?</h3>
+        </div>
+        <div class="card-body">
+            <p><strong>Tên loại:</strong> @Model.TenLoaiSanPham</p>
+            <p><strong>Hình loại:</strong> @Model.HinhLoaiSanPham</p>
+            @using (Html.BeginForm("Delete", "LoaiSanPham", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(m => m.ID)
+                <button type="submit" class="btn btn-danger">Xóa</button>
+                <a href="@Url.Action("Index")" class="btn btn-secondary">Quay lại</a>
+            }
+        </div>
+    </div>
+</div>

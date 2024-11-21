@@ -72,6 +72,9 @@
                     <th>Tên voucher</th>
                     <th>Thông tin voucher</th>
                     <th>Giá voucher</th>
+                    <th>Ngày bắt đầu</th>
+                    <th>Ngày kết thúc</th>
+                    <th>Số lượng sử dụng</th>
                 </tr>
             </thead>
             <tbody>
@@ -84,6 +87,9 @@
                             <td>@item.TenVoucher</td>
                             <td>@item.ThongTinVoucher</td>
                             <td>@item.GiaVoucher %</td>
+                            <td>@item.NgayBatDau.Value.ToString("dd/MM/yyyy")</td>
+                            <td>@item.NgayKetThuc.Value.ToString("dd/MM/yyyy")</td>
+                            <td>@item.SoLuongSuDung</td>
                             <td>
                                 <a href="/admin/voucher/edit/@item.ID" class="btn btn-sm btn-primary">Sửa</a>
                                 <a href="/admin/voucher/Delete/@item.ID" class="btn btn-sm btn-danger" onclick="return confirm('Bạn có muốn xóa không?');">Xóa</a>

@@ -60,7 +60,7 @@ CREATE TABLE SanPham (
     TenSanPham NVARCHAR(255),
     Gia INT,
     IDLoaiSanPham INT,
-    MoTaSanPham NVARCHAR(255),
+    MoTaSanPham NVARCHAR,
     SoLuongTonKho INT,
     TrangThaiSanPham NVARCHAR(255),
     NgayTaoSanPham DATE,

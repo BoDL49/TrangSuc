@@ -90,10 +90,13 @@
                 <div class="text-wrapper-70">@Html.ActionLink("joyas", "Index", "TrangChu")</div>
                 <div class="search">
                     <div class="overlap-group-4">
-                        <input class="input" placeholder="Search ..." type="text" />
-                        <div class="search-wrapper"><img class="search-2" src="~/img/search-1.svg" /></div>
+                        <input id="searchInput" class="input" placeholder="Search ..." type="text" />
+                        <div class="search-wrapper">
+                            <img id="searchButton" class="search-2" src="~/img/search-1.svg" style="cursor: pointer;" />
+                        </div>
                     </div>
                 </div>
+
                 <div class="overlap-14">
                     <div class="text-wrapper-71">CONTACT US</div>
                 </div>
@@ -220,10 +223,10 @@
                 manageLink.href = "/admin/home";
                 break;
             case 2:
-                manageLink.href = "/xulydonhang";
+                manageLink.href = "/quanly/home";
                 break;
             case 3:
-                manageLink.href = "/quanly";
+                manageLink.href = "/xulydonhang/home";
                 break;
             case 4:
                 manageLink.style.display = "none"; // Ẩn mục "Quản lý"
@@ -231,6 +234,27 @@
             default:
                 manageLink.style.display = "none"; // Ẩn nếu role không hợp lệ
         }
+
+        const searchInput = document.getElementById('searchInput');
+        const searchButton = document.getElementById('searchButton');
+
+        function redirectToSearchPage(query) {
+            if (!query) return;
+            // Chuyển hướng tới trang danh mục sản phẩm
+            window.location.href = `/DanhMucSanPham?query=${encodeURIComponent(query)}`;
+        }
+
+        searchInput.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                redirectToSearchPage(searchInput.value.trim());
+            }
+        });
+
+        searchButton.addEventListener("click", function () {
+            redirectToSearchPage(searchInput.value.trim());
+        });
+
     });
 
     async function updateCartQuantity() {

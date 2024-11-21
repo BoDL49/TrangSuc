@@ -69,6 +69,9 @@
                     <th>IDSP</th>
                     <th>Tên sản phẩm</th>
                     <th>Loại sản phẩm</th>
+                    <th>Màu sắc</th>
+                    <th>Thương hiệu</th>
+                    <th>Chất liệu</th>
                     <th>Mô tả sản phẩm</th>
                     <th>Hình</th>
                     <th>Giá</th>
@@ -84,7 +87,10 @@
                         <tr>
                             <td>@item.ID</td>
                             <td>@item.TenSanPham</td>
-                            <td>@item.IDLoaiSanPham</td> <!-- Hiển thị tên loại sản phẩm -->
+                            <td>@item.LoaiSanPham.TenLoaiSanPham</td>
+                            <td>@item.MauSac.TenMau</td>
+                            <td>@item.ThuongHieu.TenThuongHieu</td>
+                            <td>@item.ChatLieu.TenChatLieu</td>
                             <td>@item.MoTaSanPham</td>
                             <td>
                                 @if (item.HinhSanPhams != null && item.HinhSanPhams.Any())

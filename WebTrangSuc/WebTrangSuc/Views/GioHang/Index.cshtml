@@ -435,67 +435,43 @@
             }
         }
 
-    });
+        async function initiatePayPalPayment() {
+            const totalPrice = localStorage.getItem("totalPrice");
 
-    async function initiatePayPalPayment() {
-        const userId = localStorage.getItem("userId");
-        const totalPrice = localStorage.getItem("totalPrice");
-
-        if (!userId || !totalPrice) {
-            alert("Dữ liệu không hợp lệ. Vui lòng thử lại.");
-            return;
-        }
-
-        try {
-            const response = await fetch("/api/paypal/create-payment", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ TotalAmount: totalPrice }),
-            });
-
-            if (!response.ok) {
-                const error = await response.json();
-                alert(error.Message || "Không thể khởi tạo thanh toán PayPal.");
+            if (!userId || !totalPrice) {
+                alert("Dữ liệu không hợp lệ. Vui lòng thử lại.");
                 return;
             }
 
-            const result = await response.json();
-            window.location.href = result.ApprovalUrl; // Chuyển hướng người dùng đến PayPal
-        } catch (error) {
-            console.error("Lỗi khi khởi tạo thanh toán PayPal:", error);
-            alert("Có lỗi xảy ra. Vui lòng thử lại.");
+            try {
+                const response = await fetch("/api/paypal/create-payment", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        TotalAmount: totalPrice,
+                        UserId: parseInt(userId),
+                    }),
+                });
+
+                if (!response.ok) {
+                    const error = await response.json();
+                    alert(error.Message || "Không thể khởi tạo thanh toán PayPal.");
+                    return;
+                }
+
+                const result = await response.json();
+                window.location.href = result.ApprovalUrl; // Chuyển hướng người dùng đến PayPal
+            } catch (error) {
+                console.error("Lỗi khi khởi tạo thanh toán PayPal:", error);
+                alert("Có lỗi xảy ra. Vui lòng thử lại.");
+            }
         }
-    }
 
-    //const urlParams = new URLSearchParams(window.location.search);
-    //const paymentId = urlParams.get("paymentId");
-    //const payerId = urlParams.get("PayerID");
+        window.initiatePayPalPayment = initiatePayPalPayment;
 
-    //if (paymentId && payerId) {
-    //    fetch("/api/paypal/execute-payment", {
-    //        method: "POST",
-    //        headers: {
-    //            "Content-Type": "application/json",
-    //        },
-    //        body: JSON.stringify({ PaymentId: paymentId, PayerId: payerId }),
-    //    })
-    //        .then((response) => response.json())
-    //        .then((data) => {
-    //            if (data.Status === "approved") {
-    //                alert("Thanh toán thành công!");
-    //                window.location.href = "/donhang";
-    //            } else {
-    //                alert("Thanh toán không thành công.");
-    //            }
-    //        })
-    //        .catch((error) => {
-    //            console.error("Lỗi khi xử lý thanh toán:", error);
-    //            alert("Có lỗi xảy ra. Vui lòng thử lại.");
-    //        });
-    //}
-
+    });
 
 </script>
 

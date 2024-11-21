@@ -21,7 +21,7 @@
                     <div class="form-group">
                         <label class="control-label col-md-2">Hình Sản Phẩm</label>
                         <div class="col-md-10">
-                            <input type="file" name="files" class="form-control" multiple="multiple"/>
+                            <input type="file" name="files" class="form-control" multiple="multiple" />
                         </div>
                     </div>
                     <div class="form-group">
@@ -34,6 +34,24 @@
                         @Html.DropDownListFor(x => x.IDLoaiSanPham, (SelectList)ViewBag.LoaiSanPhamList,
                             "Chọn loại sản phẩm", new { @class = "form-control" })
                         @Html.ValidationMessageFor(x => x.IDLoaiSanPham, null, new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label for="IDMauSac">Màu</label>
+                        @Html.DropDownListFor(x => x.IDMauSac, (SelectList)ViewBag.MauList,
+                            "Chọn loại màu", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.IDMauSac, null, new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label for="IDThuongHieu">Thương hiệu</label>
+                        @Html.DropDownListFor(x => x.IDThuongHieu, (SelectList)ViewBag.ThuongHieuList,
+                            "Chọn loại thương hiệu", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.IDThuongHieu, null, new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label for="IDChatLieu">Chất liệu</label>
+                        @Html.DropDownListFor(x => x.IDChatLieu, (SelectList)ViewBag.ChatLieuList,
+                            "Chọn loại chất liệu", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.IDChatLieu, null, new { @class = "text-danger" })
                     </div>
                     <div class="form-group">
                         <label for="MotaSanpham">Mô tả sản phẩm </label>
@@ -49,7 +67,7 @@
                         <div class="form-group">
                             <label for="TrangThaiSanPham">Trạng thái sản phẩm</label>
                             @Html.DropDownListFor(x => x.TrangThaiSanPham,
-                                new SelectList(new List<string> { "Còn hàng", "Hết hàng","Giới hạn","Đặt hàng trước" }),
+                                new SelectList(new List<string> { "Còn hàng", "Hết hàng", "Giới hạn", "Đặt hàng trước" }),
                                 "Chọn trạng thái",
                                 new { @class = "form-control", @id = "TrangThaiSanPham" })
                         </div>

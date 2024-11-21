@@ -272,11 +272,20 @@
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const role = localStorage.getItem("role"); // Lấy role từ localStorage
+        const path = window.location.pathname; // Lấy đường dẫn hiện tại
+
+        console.log(path);
 
         if (!role || role == "4") {
             // Chuyển hướng người dùng nếu không có quyền
             alert("Bạn không có quyền truy cập vào trang này.");
             window.location.href = "/"; // Chuyển hướng về trang chủ
+        }
+
+        if (path == "/QuanLy/home" && role == "3") {
+            // Chuyển hướng người dùng nếu không có quyền
+            alert("Bạn không có quyền truy cập vào trang này.");
+            window.location.href = "/XuLyDonHang/home"; // Chuyển hướng về trang chủ
         }
     });
 

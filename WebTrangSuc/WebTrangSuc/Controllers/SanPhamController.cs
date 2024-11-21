@@ -118,5 +118,28 @@ namespace WebTrangSuc.Controllers
             return Ok(sanPhams);
         }
 
+        [HttpGet]
+        [Route("api/sanpham/search/{query}")]
+        public IHttpActionResult SearchProducts(string query)
+        {
+            if (string.IsNullOrWhiteSpace(query))
+                return BadRequest("Query cannot be empty.");
+
+            var products = _context.SanPhams
+                .Where(sp => sp.TenSanPham.Contains(query))
+                .Select(sp => new
+                {
+                    sp.ID,
+                    sp.TenSanPham,
+                    sp.Gia,
+                    sp.MoTaSanPham,
+                    HinhSanPham = sp.HinhSanPhams.FirstOrDefault().HinhSP
+                }).ToList();
+
+            return Ok(products);
+        }
+
+
+
     }
 }

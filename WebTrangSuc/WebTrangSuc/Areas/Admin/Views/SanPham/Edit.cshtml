@@ -54,6 +54,24 @@
                     @Html.ValidationMessageFor(x => x.IDLoaiSanPham, null, new { @class = "text-danger" })
                 </div>
                 <div class="form-group">
+                    <label for="IDMauSac">Màu</label>
+                    @Html.DropDownListFor(x => x.IDMauSac, (SelectList)ViewBag.MauList,
+                        "Chọn loại màu", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.IDMauSac, null, new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label for="IDThuongHieu">Thương hiệu</label>
+                    @Html.DropDownListFor(x => x.IDThuongHieu, (SelectList)ViewBag.ThuongHieuList,
+                        "Chọn loại thương hiệu", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.IDThuongHieu, null, new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <label for="IDChatLieu">Chất liệu</label>
+                    @Html.DropDownListFor(x => x.IDChatLieu, (SelectList)ViewBag.ChatLieuList,
+                        "Chọn loại chất liệu", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(x => x.IDChatLieu, null, new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
                     <label for="MotaSanpham">Mô tả sản phẩm </label>
                     @Html.TextBoxFor(x => x.MoTaSanPham, new { @class = "form-control", @placeholder = "Mô tả sản phẩm" })
                     @Html.ValidationMessageFor(x => x.MoTaSanPham, null, new { @class = "text-danger" })
