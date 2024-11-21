@@ -18,15 +18,24 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         shoptrangsucEntities1 db = new shoptrangsucEntities1();
 
         [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
-        public ActionResult Index(int? page)
+        public ActionResult Index(int? page, string SearchString = "")
         {
             int pageSize = 5;
             int pageNum = (page ?? 1);
 
-            var sanPham = db.SanPhams.ToList().ToPagedList(pageNum, pageSize);
+            // Lấy danh sách sản phẩm
+            var sanPham = db.SanPhams.AsQueryable();
 
-            return View(sanPham);
+            // Tìm kiếm chính xác theo tên sản phẩm hoặc loại sản phẩm
+            if (!string.IsNullOrEmpty(SearchString))
+            {
+                sanPham = sanPham.Where(s => s.TenSanPham.Equals(SearchString) || s.LoaiSanPham.TenLoaiSanPham.Equals(SearchString));
+            }
+
+            // Phân trang và chuyển dữ liệu sang View
+            return View(sanPham.OrderBy(s => s.ID).ToPagedList(pageNum, pageSize));
         }
+
 
         [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Create()
