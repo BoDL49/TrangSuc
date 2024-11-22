@@ -1007,7 +1007,7 @@
         }
     }
 
-    function attachAddToCartHandlers() {
+     async function attachAddToCartHandlers() {
         const productList = document.querySelector('.group-14'); // Gắn sự kiện vào container lớn
         productList.addEventListener('click', (event) => {
             const button = event.target.closest('.ng-nh-p');
@@ -1033,14 +1033,11 @@
 
         if (selectedCategoryId) {
             laySanPhamTheoLoai(selectedCategoryId);
-        } else {
-            getProducts();
         }
-        LayDanhMuc();
-
-        if (query) {
+        else if (query) {
             laySanPhamTheoTimKiem(query);
-        } else {
+        }
+        else {
             getProducts();
         }
         LayDanhMuc();
@@ -1095,7 +1092,7 @@
             });
 
             // Gắn sự kiện cho nút "Thêm vào giỏ hàng"
-            attachAddToCartHandlers();
+            //attachAddToCartHandlers();
         } catch (error) {
             console.error('Lỗi khi tải sản phẩm theo từ khóa:', error);
         }

@@ -17,7 +17,11 @@ namespace WebTrangSuc.Controllers
         {
             return View();
         }
-
+        
+        public ActionResult QuenMatKhau()
+        {
+            return View();
+        }
 
     }
 }

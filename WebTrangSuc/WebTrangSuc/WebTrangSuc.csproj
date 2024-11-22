@@ -1241,6 +1241,7 @@
     <Content Include="Views\ThongTinTaiKhoan\Index.cshtml" />
     <Content Include="Views\DonHang\Index.cshtml" />
     <Content Include="Views\DonHang\Detail.cshtml" />
+    <Content Include="Views\Auth\QuenMatKhau.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
