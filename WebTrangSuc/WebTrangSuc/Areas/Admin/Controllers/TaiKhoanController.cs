@@ -16,12 +16,24 @@ namespace WebTrangSuc.Areas.Admin.Controllers
 
         // GET: Admin/TaiKhoan
         [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
-        public ActionResult Index(int? page)
+        public ActionResult Index(int? page, string SearchString = "")
         {
             int pageSize = 5;
             int pageNum = (page ?? 1);
-            var taiKhoans = db.TaiKhoans.Include("Role").ToList().ToPagedList(pageNum, pageSize);
-            return View(taiKhoans);
+
+            // Lấy danh sách tài khoản
+            var taiKhoans = db.TaiKhoans.AsQueryable();
+
+            // Tìm kiếm chính xác theo tên người dùng hoặc tên role
+            if (!string.IsNullOrEmpty(SearchString))
+            {
+                taiKhoans = taiKhoans.Where(s => s.UserName.Equals(SearchString, StringComparison.OrdinalIgnoreCase) ||
+                                 s.Role.TenRole.Equals(SearchString, StringComparison.OrdinalIgnoreCase));
+
+            }
+
+            return View(taiKhoans.OrderBy(s => s.ID).ToPagedList(pageNum, pageSize));
+
         }
 
         // GET: Admin/TaiKhoan/Details/5

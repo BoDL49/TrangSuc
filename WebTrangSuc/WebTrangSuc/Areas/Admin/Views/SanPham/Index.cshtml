@@ -58,9 +58,20 @@
 
         </nav>
     </div>
-    <p>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <!-- Button Thêm mới -->
         <a href="@Url.Action("Create", "SanPham")" class="btn btn-primary">Thêm mới</a>
-    </p>
+
+        <!-- Form tìm kiếm -->
+        @using (Html.BeginForm())
+        {
+            <div class="input-group" style="width: 300px;">
+                <span class="input-group-text">Tìm sản phẩm:</span>
+                @Html.TextBox("SearchString", "", new { @class = "form-control", placeholder = "Nhập tên, loại sản phẩm...", style = "width: 300px;" })
+                <input type="submit" class="btn btn-secondary" value="Search" />
+            </div>
+        }
+    </div>
 
     <div class="card-body">
         <table class="table table-hover">
@@ -95,15 +106,11 @@
                             <td>
                                 @if (item.HinhSanPhams != null && item.HinhSanPhams.Any())
                                 {
-                                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
-                                        @for (int index = 0; index < item.HinhSanPhams.Count(); index++)
-                                        {
-                                            var hinh = item.HinhSanPhams.ElementAt(index);
+                                    
+                                    var firstImage = item.HinhSanPhams.First();
 
-                                            <div style="overflow: hidden; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
-                                                <img src="@Url.Content(hinh.HinhSP)" alt="Hình sản phẩm" style="width: 100%; height: 100%; object-fit: cover;" />
-                                            </div>
-                                        }
+                                    <div style="overflow: hidden; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                                        <img src="@Url.Content(firstImage.HinhSP)" alt="Hình sản phẩm" style="width: 100%; height: 100%; object-fit: cover;" />
                                     </div>
                                 }
                                 else
@@ -111,7 +118,6 @@
                                     <span>Không có hình</span>
                                 }
                             </td>
-
 
                             <td>@String.Format("{0:0,0} VND", item.Gia)</td>
                             <td>@item.SoLuongTonKho</td>

@@ -610,3 +610,5 @@ C:\Users\LENOVO\Documents\CNPMNC\Jewelry\TrangSuc\WebTrangSuc\WebTrangSuc\obj\De
 C:\Users\LENOVO\Documents\CNPMNC\Jewelry\TrangSuc\WebTrangSuc\WebTrangSuc\obj\Debug\WebTrangSuc.pdb
 C:\Users\tuant\Desktop\DoAn\DoAn\cnpm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\PayPal.dll
 C:\Users\tuant\Desktop\DoAn\DoAn\cnpm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\bin\PayPal.xml
+C:\Users\LENOVO\Documents\CNPMNC\Jewelry\TrangSuc\WebTrangSuc\WebTrangSuc\bin\PayPal.dll
+C:\Users\LENOVO\Documents\CNPMNC\Jewelry\TrangSuc\WebTrangSuc\WebTrangSuc\bin\PayPal.xml
