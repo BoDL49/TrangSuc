@@ -36,6 +36,7 @@ namespace WebTrangSuc.Models
     {
         public int UserId { get; set; }
         public string VoucherCode { get; set; }
+        public int VoucherId { get; set; }
     }
 
 }

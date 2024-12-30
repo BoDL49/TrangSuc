@@ -160,7 +160,7 @@ namespace WebTrangSuc.Controllers
                 var totalPrice = cartItems.Sum(item => item.SoLuongSanPham * item.SanPham.Gia);
                 var discountAmount = (totalPrice * voucher.GiaVoucher) / 100;
                 var newTotalPrice = totalPrice - discountAmount;
-
+                var mavoucher = voucher.ID;
                 // Cập nhật số lượng sử dụng của voucher
                 voucher.SoLuongSuDung--;
 
@@ -171,6 +171,7 @@ namespace WebTrangSuc.Controllers
                     OriginalPrice = totalPrice,
                     DiscountAmount = discountAmount,
                     TotalPriceAfterDiscount = newTotalPrice,
+                    VoucherId = mavoucher,
                     Message = "Áp dụng voucher thành công."
                 });
             }

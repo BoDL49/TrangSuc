@@ -1,0 +1,22 @@
+﻿@model WebTrangSuc.Models.MauSac
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<h2>Thêm mới Màu Sắc</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.TenMau)
+        @Html.EditorFor(model => model.TenMau, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Lưu</button>
+    <a href="@Url.Action("Index", "Color", new { area = "Admin" })" class="btn btn-secondary">Hủy</a>
+}
+

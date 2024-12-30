@@ -1202,6 +1202,8 @@
     <Content Include="Areas\XuLyDonHang\Views\Order\Index.cshtml" />
     <Content Include="Areas\XuLyDonHang\Views\Order\Details.cshtml" />
     <Content Include="Areas\XuLyDonHang\Views\Order\Edit.cshtml" />
+    <None Include="Properties\PublishProfiles\leanhtuan-001-site1 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\leanhtuan-001-site1 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <None Include="Scripts\jquery-3.7.1-vsdoc.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
@@ -1242,6 +1244,7 @@
     <Content Include="Views\DonHang\Index.cshtml" />
     <Content Include="Views\DonHang\Detail.cshtml" />
     <Content Include="Views\Auth\QuenMatKhau.cshtml" />
+    <Content Include="Views\Auth\DoiMatKhau.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

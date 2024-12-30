@@ -24,6 +24,7 @@
     <_SelectedScaffolderCategoryPath>root/Common/MVC/Area</_SelectedScaffolderCategoryPath>
     <WebStackScaffolding_AreaDialogWidth>600</WebStackScaffolding_AreaDialogWidth>
     <WebStackScaffolding_DbContextTypeFullName>WebTrangSuc.Models.shoptrangsucEntities1</WebStackScaffolding_DbContextTypeFullName>
+    <NameOfLastUsedPublishProfile>C:\Users\tuant\Desktop\DoAn\DoAn\cnpm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\Properties\PublishProfiles\leanhtuan-001-site1 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

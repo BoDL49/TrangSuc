@@ -1,0 +1,32 @@
+﻿@model WebTrangSuc.Models.ThuongHieu
+@using WebTrangSuc.Models;
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Thông tin thương hiệu </h3>
+            <div class="card-body">
+                @using (Html.BeginForm("Edit", "ThuongHieu", FormMethod.Post))
+                {
+                    @Html.HiddenFor(x => x.ID)
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+                    <div class="form-group">
+                        <label for="TenVoucher">Tên thương hiệu</label>
+                        @Html.TextBoxFor(x => x.TenThuongHieu, new { @class = "form-control", @placeholder = "Tên voucher" })
+                        @Html.ValidationMessageFor(x => x.TenThuongHieu, null, new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <a href="/admin/thuonghieu" class="btn btn-danger">Quay lại</a>
+                        <button type="submit" class="btn btn-success mr-2">Submit</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+

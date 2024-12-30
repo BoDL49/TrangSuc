@@ -1,0 +1,39 @@
+﻿@model WebTrangSuc.Models.LoaiSanPham
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Thông tin danh mục</h3>
+        <div class="card-body">
+            @using (Html.BeginForm("Edit", "LoaiSanPham", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.HiddenFor(x => x.ID) <!-- Use a hidden field for the ID -->
+
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+                <div class="form-group">
+                    <label for="TenLoaiSanPham">Tên loại</label>
+                    @Html.TextBoxFor(x => x.TenLoaiSanPham, new { @class = "form-control", @placeholder = "Tên danh mục" })
+                    @Html.ValidationMessageFor(x => x.TenLoaiSanPham, null, new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.Label("Ảnh hiện tại:")
+                    <img src="@Model.HinhLoaiSanPham" alt="Ảnh loại sản phẩm" style="max-width: 200px;" />
+                </div>
+
+                <div class="form-group">
+                    @Html.Label("Chọn ảnh mới (nếu cần):")
+                    <input type="file" name="file" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <a href="/admin/loaisanpham" class="btn btn-danger">Quay lại</a>
+                    <button type="submit" class="btn btn-success mr-2">Lưu</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

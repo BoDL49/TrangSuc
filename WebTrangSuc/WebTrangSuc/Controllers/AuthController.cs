@@ -23,5 +23,10 @@ namespace WebTrangSuc.Controllers
             return View();
         }
 
+        public ActionResult DoiMatKhau()
+        {
+            return View();
+        }
+
     }
 }

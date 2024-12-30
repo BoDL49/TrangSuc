@@ -1,0 +1,119 @@
+﻿@*@model IEnumerable<WebTrangSuc.Models.Voucher>*@
+
+@using WebTrangSuc.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<Voucher>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<style>
+    .pagination {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+        .pagination li {
+            margin: 0 5px;
+        }
+
+            .pagination li a,
+            .pagination li span {
+                padding: 8px 12px;
+                text-decoration: none;
+                color: #007bff;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                transition: background-color 0.3s ease;
+            }
+
+                .pagination li a:hover,
+                .pagination li span:hover {
+                    background-color: #007bff;
+                    color: white;
+                }
+
+            .pagination li.active span {
+                background-color: #007bff;
+                color: white;
+                border-color: #007bff;
+            }
+
+            .pagination li.disabled span {
+                color: #6c757d;
+                cursor: not-allowed;
+                background-color: #e9ecef;
+                border-color: #ddd;
+            }
+</style>
+
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title"> Quản lý voucher</h3>
+        <nav aria-label="breadcrumb">
+
+        </nav>
+    </div>
+    <p>
+        <a href="@Url.Action("Create", "Voucher")" class="btn btn-primary">Thêm mới voucher</a>
+    </p>
+
+    <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID Voucher</th>
+                    <th>Tên voucher</th>
+                    <th>Thông tin voucher</th>
+                    <th>Giá voucher</th>
+                    <th>Ngày bắt đầu</th>
+                    <th>Ngày kết thúc</th>
+                    <th>Số lượng sử dụng</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.ID</td>
+                            <td>@item.TenVoucher</td>
+                            <td>@item.ThongTinVoucher</td>
+                            <td>@item.GiaVoucher %</td>
+                            <td>@item.NgayBatDau.Value.ToString("dd/MM/yyyy")</td>
+                            <td>@item.NgayKetThuc.Value.ToString("dd/MM/yyyy")</td>
+                            <td>@item.SoLuongSuDung</td>
+                            <td>
+                                <a href="/admin/voucher/edit/@item.ID" class="btn btn-sm btn-primary">Sửa</a>
+                                <a href="/admin/voucher/Delete/@item.ID" class="btn btn-sm btn-danger" onclick="return confirm('Bạn có muốn xóa không?');">Xóa</a>
+
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="6">Không có bản ghi nào</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+        <div>
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+        </div>
+
+
+    </div>
+</div>
+
+
+

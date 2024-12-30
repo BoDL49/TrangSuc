@@ -1,0 +1,20 @@
+﻿@model WebTrangSuc.Models.ChatLieu
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/QuanLy/Views/Shared/_QuanLyLayout.cshtml";
+}
+
+
+
+<h2>Xóa Chất Liệu</h2>
+<div>
+    <p>Bạn có chắc muốn xóa chất liệu: <strong>@Model.TenChatLieu</strong>?</p>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-danger">Xóa</button>
+        <a href="@Url.Action("Index", "ChatLieu", new { area = "QuanLy" })" class="btn btn-secondary">Hủy</a>
+    }
+</div>
+
+

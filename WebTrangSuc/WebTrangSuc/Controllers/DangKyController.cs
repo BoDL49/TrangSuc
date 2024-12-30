@@ -66,6 +66,7 @@ namespace WebTrangSuc.Controllers
             }
 
             string hashPassword = Crypto.HashPassword(model.Matkhau);
+            
 
             var taiKhoan = new TaiKhoan
             {
@@ -179,6 +180,7 @@ namespace WebTrangSuc.Controllers
 
             if (diaChi == null)
             {
+                await TaoDiaChiTheoIdUser(id, "Chưa có");
                 return NotFound();
             }
 
@@ -243,12 +245,15 @@ namespace WebTrangSuc.Controllers
             }
 
             var DiaChi = await _context.DiaChis.FirstOrDefaultAsync(d => d.IDUser == id);
+
             if (DiaChi == null)
             {
                 return NotFound();
             }
 
             DiaChi.Diachi = diaChi.Diachi;
+
+            await _context.SaveChangesAsync();
 
             return Ok(new { message = "Cập nhật thành công!" });
 
@@ -345,6 +350,94 @@ namespace WebTrangSuc.Controllers
                 return InternalServerError(new Exception("Lỗi khi lưu ảnh.", ex));
             }
         }
+
+        [HttpPut]
+        [Route("api/taikhoan/doimatkhau/{email}")]
+        public async Task<IHttpActionResult> DoiMatKhauBangEmail(string email, [FromBody] DoiMatKhauModel model)
+        {
+            if (string.IsNullOrEmpty(email))
+            {
+                return BadRequest("Email không được để trống.");
+            }
+
+            var taiKhoan = await _context.TaiKhoans.FirstOrDefaultAsync(t => t.Email == email);
+            if (taiKhoan == null)
+            {
+                return BadRequest("Email không tồn tại.");
+            }
+
+            // Kiểm tra mật khẩu mới và xác nhận mật khẩu
+            if (string.IsNullOrEmpty(model.MatKhauMoi) || model.MatKhauMoi != model.XacNhanMatKhau)
+            {
+                return BadRequest("Mật khẩu mới và xác nhận mật khẩu không khớp.");
+            }
+
+            if (!IsStrongPassword(model.MatKhauMoi))
+            {
+                return BadRequest("Mật khẩu mới không hợp lệ. Mật khẩu phải có ít nhất 8 ký tự, 1 chữ cái in hoa và 1 ký tự đặc biệt.");
+            }
+
+            // Cập nhật mật khẩu
+            taiKhoan.Matkhau = Crypto.HashPassword(model.MatKhauMoi);
+            _context.Entry(taiKhoan).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Đổi mật khẩu thành công!" });
+        }
+
+
+        [HttpPut]
+        [Route("api/auth/quenmatkhau")]
+        public async Task<IHttpActionResult> QuenMatKhau([FromUri] string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                return BadRequest("Email không được để trống.");
+            }
+
+            var taiKhoan = await _context.TaiKhoans.FirstOrDefaultAsync(t => t.Email == email);
+
+            if (taiKhoan == null)
+            {
+                return BadRequest("Email không tồn tại.");
+            }
+
+            // Không cần thay đổi mật khẩu tại đây nếu chỉ kiểm tra tồn tại
+            return Ok(new { message = "Email tồn tại. Tiếp tục đổi mật khẩu." });
+        }
+
+        [HttpPost]
+        [Route("api/taikhoan/tao-diachi/{id}")]
+        public async Task<IHttpActionResult> TaoDiaChiTheoIdUser(int id, string diaChiModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var existingDiaChi = await _context.DiaChis.FirstOrDefaultAsync(d => d.IDUser == id);
+
+            if (existingDiaChi != null)
+            {
+                return BadRequest("Địa chỉ đã tồn tại cho người dùng này.");
+            }
+
+            var diaChi = new DiaChi
+            {
+                IDUser = id,
+                Diachi = diaChiModel
+            };
+
+            _context.DiaChis.Add(diaChi);
+            await _context.SaveChangesAsync();
+
+            return Ok(new
+            {
+                message = "Tạo địa chỉ thành công!",
+                DiaChi = diaChi.Diachi
+            });
+        }
+
 
     }
 }

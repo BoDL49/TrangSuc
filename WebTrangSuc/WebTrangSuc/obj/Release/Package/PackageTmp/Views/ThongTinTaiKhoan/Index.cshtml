@@ -1,0 +1,432 @@
+﻿
+@{
+    ViewBag.Title = "Thông tin tài khoản";
+    Layout = "~/Views/Shared/_MasterLayout.cshtml";
+}
+
+<div class="min-h-screen p-6  flex items-center justify-center pt-60">
+    <div class="container max-w-screen-lg mx-auto">
+        <div class=" bg-white rounded-lg shadow-lg p-5 md:p-10 mx-2 mb-6">
+            <div class="text-center mb-10">
+                <h1 class="font-bold text-3xl">Thông tin tài khoản</h1>
+            </div>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="w-full md:w-1/4">
+                    <div class="text-center">
+                        <img src="" alt="User Avatar" id="avatar" class="w-32 h-32 rounded-full object-cover border-4 border-gray-200 mx-auto">
+                        <h2 class="mt-4 text-xl font-semibold" id="name">John Doe</h2>
+                        <p class="text-gray-500" id="name2">@@johndoe</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-3/4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <p class="text-gray-500 text-sm">Họ và tên</p>
+                            <p class="font-medium" id="Hovaten">John Doe</p>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-500 text-sm">Username</p>
+                            <p class="font-medium" id="username">johndoe</p>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-500 text-sm">Email</p>
+                            <p class="font-medium" id="email">john.doe@example.com</p>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-500 text-sm">Số điện thoại</p>
+                            <p class="font-medium" id="sdt">+1 234 567 890</p>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-500 text-sm">Ngày sinh</p>
+                            <p class="font-medium" id="namsinh">January 1, 1990</p>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-500 text-sm">Giới tính</p>
+                            <p class="font-medium" id="gioitinh">Male</p>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-500 text-sm">Mật khẩu</p>
+                            <p class="font-medium" id="matkhau">••••••••</p>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-gray-500 text-sm">Địa chỉ</p>
+                            <p class="font-medium" id="diachi">123 Main Street, Apt 4B, New York, NY 10001</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-end">
+                        <button onclick="toggleEditMode()" class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors">
+                            Cập nhật thông tin
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Settings Form Section -->
+        <div id="edit-profile-section" class="bg-white rounded-lg shadow-lg p-5 md:p-10 mx-2 hidden">
+            <div class="text-center mb-10">
+                <h1 class="font-bold text-3xl">Cập nhật thông tin tài khoản</h1>
+            </div>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="w-full md:w-1/4">
+                    <div class="text-center">
+                        <div class="relative inline-block">
+                            <img src="~/img/default-avatar.png" alt="User Avatar" id="UpdateAvatar" class="w-32 h-32 rounded-full object-cover border-4 border-gray-200">
+                            <label for="avatar-upload" class="absolute bottom-0 right-0 bg-blue-500 p-2 rounded-full text-white cursor-pointer hover:bg-blue-600 transition">
+                                <i class="fas fa-camera"></i>
+                                <input type="file" id="avatar-upload" class="hidden" accept="image/*">
+                            </label>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-500">Ấn để tải lên Avatar</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-3/4">
+                    <form id="profile-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="fullname" class="text-sm font-medium text-gray-700" >Họ và tên</label>
+                                <input type="text"  name="fullname" placeholder="" id="UpdateHoVaTen" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="username" class="text-sm font-medium text-gray-700" >Username</label>
+                                <input type="text"  name="username" id="UpdateUsername" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="email" class="text-sm font-medium text-gray-700">Email</label>
+                                <input type="email" name="email" id="UpdateEmail" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="text-sm font-medium text-gray-700">Số điện thoại</label>
+                                <input type="tel"  name="phone" id="UpdateSdt" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="dob" class="text-sm font-medium text-gray-700">Ngày sinh</label>
+                                <input type="date"  name="dob" id="UpdateNgaySinh" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="gender" class="text-sm font-medium text-gray-700">Giới tính</label>
+                                <select  name="gender" id="UpdateGioiTinh" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                                    <option value="">Chọn giới tính</option>
+                                    <option value="Nam">Nam</option>
+                                    <option value="Nữ">Nữ</option>
+                                    <option value="Khác">Khác</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="current-password" class="text-sm font-medium text-gray-700">Mật khẩu cũ</label>
+                                <input type="password" id="current-password" name="current-password" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="new-password" class="text-sm font-medium text-gray-700">Mật khẩu mới</label>
+                                <input type="password" id="new-password" name="new-password" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="confirm-password" class="text-sm font-medium text-gray-700">Xác nhận lại mật khẩu mới</label>
+                                <input type="password" id="confirm-password" name="confirm-password" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label for="address" class="text-sm font-medium text-gray-700">Địa chỉ</label>
+                                <textarea  name="address" id="UpdateDiaChi" rows="3" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" required></textarea>
+                            </div>
+                        </div>
+                        <div class="flex justify-end space-x-4">
+                            <button type="button" onclick="toggleEditMode()" class="px-6 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
+                                Huỷ
+                            </button>
+                            <button type="submit" class="px-6 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
+                                Lưu thay đổi
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="success-message" class="hidden fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-all duration-500 ease-in-out">
+                Cập nhật tài khoản thành công
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const token = localStorage.getItem('token');
+        const HovaTen = document.getElementById('Hovaten');
+        const username = document.getElementById('username');
+        const email = document.getElementById('email');
+        const sdt = document.getElementById('sdt');
+        const namSinh = document.getElementById('namsinh');
+        const gioiTinh = document.getElementById('gioitinh');
+        const diaChi = document.getElementById('diachi');
+        const avatar = document.getElementById('avatar');
+        const name = document.getElementById('name');
+        const name2 = document.getElementById('name2');
+
+        const UpdateAvatar = document.getElementById('UpdateAvatar');
+        const UpdateHoVaTen = document.getElementById('UpdateHoVaTen');
+        const UpdateUsername = document.getElementById('UpdateUsername');
+        const UpdateEmail = document.getElementById('UpdateEmail');
+        const UpdateSdt = document.getElementById('UpdateSdt');
+        const UpdateNgaySinh = document.getElementById('UpdateNgaySinh');
+        const UpdateGioiTinh = document.getElementById('UpdateGioiTinh');
+        const UpdateDiaChi = document.getElementById('UpdateDiaChi');
+
+        const avatarDefault = "/img/default-avatar.png";
+
+        if (token) {
+            fetchAccountInfo(token).then(data => {
+                HovaTen.textContent = data.hoVaTen || 'N/A';
+                username.textContent = data.userName || 'N/A';
+                email.textContent = data.email || 'N/A';
+                sdt.textContent = data.sdt || 'N/A';
+                namSinh.textContent = data.namSinh ? new Date(data.namSinh).toLocaleDateString('vi-VN') : 'N/A';
+                gioiTinh.textContent = data.gioiTinh || 'N/A';
+                diaChi.textContent = data.DiaChi || 'N/A';
+                avatar.src = data.avatar || avatarDefault;
+                name.textContent = data.userName || 'N/A';
+                name2.textContent = '@@' + data.userName || '@@N/A';
+
+                
+                UpdateAvatar.src = data.Avatar || avatarDefault;
+
+            }).catch(error => {
+                console.error("Error fetching user data:", error);
+            });
+
+            fetchAccountDC(token).then(data => {
+                diaChi.textContent = data.DiaChi || 'N/A';
+            }).catch(error => {
+                console.error("Error fetching user data:", error);
+            });
+        } else {
+            loginSection.classList.remove('hide');
+            profileSection.classList.add('hide');
+        }
+
+        logoutButton.addEventListener('click', function (event) {
+            event.preventDefault();
+            logout();
+        });
+    });
+
+    async function fetchAccountInfo(token) {
+        const userId = localStorage.getItem('userId');
+        const response = await fetch(`/api/taikhoan/${userId}`, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+
+        if (!response.ok) {
+            throw new Error('Failed to fetch user data');
+        }
+        return response.json();
+    }
+
+    async function fetchAccountDC(token) {
+                const userId = localStorage.getItem('userId');
+        const response = await fetch(`/api/taikhoan/diachi/${userId}`, {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to fetch user data');
+        }
+        return response.json();
+    }
+
+    async function fetchAndLoadProfileData(token) {
+        const userId = localStorage.getItem('userId');
+        try {
+            const response = await fetch(`/api/taikhoan/${userId}`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+
+            const response2 = await fetch(`/api/taikhoan/diachi/${userId}`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+
+            if (!response.ok) throw new Error('Failed to fetch user data');
+            if (!response2.ok) throw new Error('Failed to fetch user data');
+
+            const data = await response.json();
+            const data2 = await response2.json();
+
+            console.log(data, data2);
+
+
+            document.getElementById('UpdateHoVaTen').value = data.hoVaTen || '';
+            document.getElementById('UpdateUsername').value = data.userName || '';
+            document.getElementById('UpdateEmail').value = data.email || '';
+            document.getElementById('UpdateSdt').value = data.sdt || ''; 
+            document.getElementById('UpdateNgaySinh').value = data.namSinh ? new Date(data.namSinh).toISOString().split('T')[0] : '';
+            document.getElementById('UpdateGioiTinh').value = data.gioiTinh || '';
+            document.getElementById('UpdateDiaChi').value = data2.DiaChi || ''; 
+            document.getElementById('UpdateAvatar').src = data.avatar || '/img/default-avatar.png';
+
+        } catch (error) {
+            console.error('Error fetching user data:', error);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const token = localStorage.getItem('token');
+        if (token) {
+            fetchAndLoadProfileData(token);
+        }
+    });
+
+
+
+    document.getElementById('avatar-upload').addEventListener('change', function (event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const base64String = e.target.result.split(',')[1]; 
+                document.getElementById('UpdateAvatar').src = e.target.result; 
+                localStorage.setItem('avatarBase64', base64String); 
+            };
+            reader.readAsDataURL(file); 
+        }
+    });
+
+
+    async function updateProfile(userId, token) {
+        const hoVaTen = document.getElementById('UpdateHoVaTen').value;
+        const gioiTinh = document.getElementById('UpdateGioiTinh').value;
+        const namSinh = document.getElementById('UpdateNgaySinh').value;
+        const sdt = document.getElementById('UpdateSdt').value;
+        const email = document.getElementById('UpdateEmail').value;
+        const userName = document.getElementById('UpdateUsername').value;
+        const avatar = localStorage.getItem('avatarBase64') || null;
+        const diaChi = document.getElementById('UpdateDiaChi').value;
+
+        const newPassword = document.getElementById('new-password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
+
+        // Kiểm tra nếu mật khẩu mới được nhập
+        let data = {
+            hoVaTen,
+            gioiTinh,
+            namSinh,
+            sdt,
+            email,
+            userName,
+            avatar
+        };
+
+        if (newPassword || confirmPassword) {
+            if (newPassword !== confirmPassword) {
+                alert("Mật khẩu mới và xác nhận mật khẩu không khớp.");
+                return;
+            }
+            data.Matkhau = newPassword; // Thêm mật khẩu mới vào payload
+        }
+
+        // Cập nhật thông tin tài khoản
+        try {
+            const profileResponse = await fetch(`/api/taikhoan/${userId}`, {
+                method: 'PUT',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            const addressResponse = await fetch(`/api/taikhoan/diachi/${userId}`, {
+                method: 'PUT',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ DiaChi: diaChi })
+            });
+
+            if (!profileResponse.ok || !addressResponse.ok) {
+                const error = await profileResponse.json();
+                throw new Error(error.message || "Có lỗi xảy ra khi cập nhật thông tin.");
+            }
+
+            alert("Cập nhật thông tin thành công!");
+            localStorage.removeItem('avatarBase64'); // Xóa Base64 sau khi gửi thành công
+        } catch (error) {
+            console.error("Error updating profile:", error);
+            alert(error.message || "Có lỗi xảy ra khi cập nhật thông tin.");
+        }
+    }
+
+
+
+
+    document.getElementById('profile-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const userId = localStorage.getItem('userId');
+        const token = localStorage.getItem('token');
+        updateProfile(userId, token);
+    });
+
+
+    function toggleEditMode() {
+        const viewSection = document.querySelector('.container > div:first-child');
+        const editSection = document.getElementById('edit-profile-section');
+
+        if (editSection.classList.contains('hidden')) {
+            viewSection.classList.add('hidden');
+            editSection.classList.remove('hidden');
+        } else {
+            viewSection.classList.remove('hidden');
+            editSection.classList.add('hidden');
+        }
+    }
+
+
+
+
+    document.getElementById('avatar-upload').addEventListener('change', async function (event) {
+        const file = event.target.files[0];
+        if (file) {
+            const userId = localStorage.getItem('userId');
+            const token = localStorage.getItem('token');
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                const response = await fetch(`/api/taikhoan/upload-avatar/${userId}`, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error("Lỗi khi tải lên ảnh. Vui lòng thử lại.");
+                }
+
+                const data = await response.json();
+
+                // Hiển thị ảnh mới trên giao diện
+                document.getElementById('avatar').src = data.avatarPath;
+                document.getElementById('UpdateAvatar').src = data.avatarPath;
+
+                alert("Tải lên ảnh thành công!");
+            } catch (error) {
+                console.error("Error uploading avatar:", error);
+                alert(error.message || "Có lỗi xảy ra khi tải lên ảnh.");
+            }
+        }
+    });
+
+</script>
+

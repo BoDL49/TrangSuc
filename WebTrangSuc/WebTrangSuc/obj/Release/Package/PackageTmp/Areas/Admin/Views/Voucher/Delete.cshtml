@@ -1,0 +1,28 @@
+﻿@model WebTrangSuc.Models.Voucher
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Xác nhận xóa danh mục</h2>
+<div class="content-wrapper">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Bạn có chắc chắn muốn xóa không?</h3>
+        </div>
+        <div class="card-body">
+            <p><strong>Tên voucher:</strong> @Model.TenVoucher</p>
+            <p><strong>Thông tin voucher:</strong> @Model.ThongTinVoucher</p>
+            <p>
+                <strong>Giá voucher:</strong> @Model.GiaVoucher %
+            </p>
+            @using (Html.BeginForm("Delete", "Voucher", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(m => m.ID)
+                <button type="submit" class="btn btn-danger">Xóa</button>
+                <a href="@Url.Action("Index")" class="btn btn-secondary">Quay lại</a>
+            }
+        </div>
+    </div>
+</div>

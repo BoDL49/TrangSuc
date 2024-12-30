@@ -1,0 +1,2414 @@
+﻿.high-jewelry {
+    background-color: #f9f5f6;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+    .high-jewelry .div {
+        background-color: #f9f5f6;
+        overflow: hidden;
+        width: 1440px;
+        height: 2532px;
+        position: relative;
+    }
+
+    .high-jewelry .group {
+        position: absolute;
+        width: 1175px;
+        height: 236px;
+        top: 0;
+        left: 175px;
+    }
+
+    .high-jewelry .group-2 {
+        position: absolute;
+        width: 410px;
+        height: 35px;
+        top: 0;
+        left: 761px;
+    }
+
+    .high-jewelry .img {
+        position: absolute;
+        width: 88px;
+        height: 24px;
+        top: 5px;
+        left: 0;
+    }
+
+    .high-jewelry .line {
+        position: absolute;
+        width: 2px;
+        height: 35px;
+        top: 0;
+        left: 108px;
+    }
+
+    .high-jewelry .line-2 {
+        position: absolute;
+        width: 2px;
+        height: 35px;
+        top: 0;
+        left: 281px;
+    }
+
+    .high-jewelry .group-3 {
+        position: absolute;
+        width: 133px;
+        height: 24px;
+        top: 5px;
+        left: 128px;
+    }
+
+    .high-jewelry .face {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 0;
+        left: 0;
+        background-image: url(./img/face-3.svg);
+        background-size: 100% 100%;
+    }
+
+    .high-jewelry .ng-nhp {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 0;
+        left: 39px;
+    }
+
+    .high-jewelry .text-wrapper {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        color: #ff9eaa;
+        font-size: var(--common-subtitle-font-size);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        white-space: nowrap;
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .group-4 {
+        position: absolute;
+        width: 109px;
+        height: 24px;
+        top: 5px;
+        left: 301px;
+    }
+
+    .high-jewelry .exit-to-app {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 0;
+        left: 0;
+        background-image: url(./img/exit-to-app-3.svg);
+        background-size: 100% 100%;
+    }
+
+    .high-jewelry .text-wrapper-2 {
+        position: absolute;
+        top: 14px;
+        left: 0;
+        font-family: "Dancing Script", Helvetica;
+        font-weight: 700;
+        color: #ff9eaa;
+        font-size: 96px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .high-jewelry .overlap-group-wrapper {
+        position: absolute;
+        width: 357px;
+        height: 40px;
+        top: 66px;
+        left: 245px;
+    }
+
+    .high-jewelry .overlap-group {
+        position: relative;
+        width: 355px;
+        height: 40px;
+        background-color: #fbe8e7;
+        border-radius: 10px;
+    }
+
+    .high-jewelry .text-wrapper-3 {
+        position: absolute;
+        width: 76px;
+        top: 10px;
+        left: 28px;
+        opacity: 0.3;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        color: #000000;
+        font-size: var(--common-subtitle-font-size);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        white-space: nowrap;
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .overlap {
+        position: absolute;
+        width: 85px;
+        height: 40px;
+        top: 0;
+        left: 270px;
+        background-color: #ffc4d0;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    .high-jewelry .search {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 4px;
+        left: 22px;
+    }
+
+    .high-jewelry .div-wrapper {
+        position: absolute;
+        width: 174px;
+        height: 50px;
+        top: 52px;
+        left: 710px;
+        border-radius: 15px;
+        box-shadow: 0px 43px 14.6px -32px #00000040;
+        background: linear-gradient(180deg, rgb(250, 30, 14) 34%, rgb(189, 32, 0) 100%);
+    }
+
+    .high-jewelry .text-wrapper-4 {
+        position: absolute;
+        width: 118px;
+        height: 15px;
+        top: 17px;
+        left: 27px;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        color: #ffc4d0;
+        font-size: var(--common-subtitle-font-size);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        white-space: nowrap;
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .shopping-bag-wrapper {
+        position: absolute;
+        width: 63px;
+        height: 50px;
+        top: 51px;
+        left: 1015px;
+        background-color: #ffc4d0;
+        border-radius: 15px;
+    }
+
+    .high-jewelry .shopping-bag {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 7px;
+        left: 16px;
+    }
+
+    .high-jewelry .group-wrapper {
+        position: absolute;
+        width: 990px;
+        height: 70px;
+        top: 166px;
+        left: 72px;
+        background-color: #fefefe;
+        border-radius: 25px;
+    }
+
+    .high-jewelry .group-5 {
+        position: relative;
+        width: 853px;
+        height: 25px;
+        top: 22px;
+        left: 68px;
+    }
+
+    .high-jewelry .div-wrapper-2 {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .high-jewelry .ng-nh-p-wrapper {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 0;
+        left: 252px;
+    }
+
+    .high-jewelry .ng-nhp-2 {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 0;
+        left: 485px;
+    }
+
+    .high-jewelry .ng-nhp-3 {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 1px;
+        left: 746px;
+    }
+
+    .high-jewelry .overlap-wrapper {
+        position: absolute;
+        width: 286px;
+        height: 357px;
+        top: 792px;
+        left: 456px;
+    }
+
+    .high-jewelry .overlap-2 {
+        position: relative;
+        width: 280px;
+        height: 357px;
+        border-radius: 12px;
+    }
+
+    .high-jewelry .frame {
+        position: absolute;
+        width: 280px;
+        height: 357px;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        border-radius: 12px;
+    }
+
+    .high-jewelry .PAN {
+        position: relative;
+        width: 260px;
+        height: 195px;
+        top: 10px;
+        left: 10px;
+        background-image: url(./img/image-22.svg);
+        background-size: 100% 100%;
+    }
+
+    .high-jewelry .frame-2 {
+        display: flex;
+        width: 62px;
+        height: 27px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 4px 11px;
+        position: relative;
+        top: 10px;
+        left: 10px;
+        border-radius: 5px;
+        border: 0.5px solid;
+        border-color: #ff9eaa;
+    }
+
+    .high-jewelry .text-wrapper-5 {
+        position: relative;
+        width: fit-content;
+        font-family: var(--common-caption-font-family);
+        font-weight: var(--common-caption-font-weight);
+        color: #fe346e;
+        font-size: var(--common-caption-font-size);
+        letter-spacing: var(--common-caption-letter-spacing);
+        line-height: var(--common-caption-line-height);
+        font-style: var(--common-caption-font-style);
+    }
+
+    .high-jewelry .text-wrapper-6 {
+        position: absolute;
+        height: 12px;
+        top: 215px;
+        left: 214px;
+        font-family: "Cabin", Helvetica;
+        font-weight: 400;
+        color: #ff9eaa;
+        font-size: 10px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .high-jewelry .text-wrapper-7 {
+        position: absolute;
+        height: 12px;
+        top: 215px;
+        left: 10px;
+        font-family: "Cabin", Helvetica;
+        font-weight: 400;
+        color: #ff9eaa;
+        font-size: 10px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .high-jewelry .p {
+        position: absolute;
+        width: 238px;
+        height: 38px;
+        top: 232px;
+        left: 10px;
+        font-family: var(--common-body-4-font-family);
+        font-weight: var(--common-body-4-font-weight);
+        color: #603f26;
+        font-size: var(--common-body-4-font-size);
+        letter-spacing: var(--common-body-4-letter-spacing);
+        line-height: var(--common-body-4-line-height);
+        font-style: var(--common-body-4-font-style);
+    }
+
+    .high-jewelry .group-6 {
+        position: absolute;
+        width: 102px;
+        height: 24px;
+        top: 280px;
+        left: 10px;
+    }
+
+    .high-jewelry .text-wrapper-8 {
+        position: absolute;
+        height: 12px;
+        top: 6px;
+        left: 0;
+        font-family: "Cabin", Helvetica;
+        font-weight: 400;
+        color: #ff9eaa;
+        font-size: 10px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .high-jewelry .ellipse {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 0;
+        left: 42px;
+        border-radius: 12px;
+        background: radial-gradient(50% 50% at 50% 50%, rgb(253, 226, 213) 0%, rgb(255, 191.81, 156.19) 91.5%);
+    }
+
+    .high-jewelry .ellipse-2 {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 0;
+        left: 76px;
+        border-radius: 12px;
+        background: radial-gradient(50% 50% at 50% 50%, rgb(237.35, 237.35, 237.35) 0%, rgb(209, 207, 207) 100%);
+    }
+
+    .high-jewelry .group-7 {
+        position: absolute;
+        width: 171px;
+        height: 29px;
+        top: 311px;
+        left: 89px;
+    }
+
+    .high-jewelry .favorite-border {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 5px;
+        left: 147px;
+        background-image: url(./img/favorite-border-3.svg);
+        background-size: 100% 100%;
+    }
+
+    .high-jewelry .text-wrapper-9 {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        font-family: var(--deskstop-heading-4-font-family);
+        font-weight: var(--deskstop-heading-4-font-weight);
+        color: #fa1e0e;
+        font-size: var(--deskstop-heading-4-font-size);
+        letter-spacing: var(--deskstop-heading-4-letter-spacing);
+        line-height: var(--deskstop-heading-4-line-height);
+        font-style: var(--deskstop-heading-4-font-style);
+    }
+
+    .high-jewelry .group-8 {
+        position: absolute;
+        width: 286px;
+        height: 357px;
+        top: 792px;
+        left: 1066px;
+    }
+
+    .high-jewelry .overlap-3 {
+        position: relative;
+        width: 280px;
+        height: 357px;
+        background-color: #ffffff;
+        border-radius: 12px;
+    }
+
+    .high-jewelry .text-wrapper-10 {
+        position: absolute;
+        height: 12px;
+        top: 215px;
+        left: 239px;
+        font-family: "Cabin", Helvetica;
+        font-weight: 400;
+        color: #ff9eaa;
+        font-size: 10px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .high-jewelry .text-wrapper-11 {
+        position: absolute;
+        height: 12px;
+        top: 215px;
+        left: 13px;
+        font-family: "Cabin", Helvetica;
+        font-weight: 400;
+        color: #ff9eaa;
+        font-size: 10px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .high-jewelry .text-wrapper-12 {
+        position: absolute;
+        width: 238px;
+        height: 19px;
+        top: 232px;
+        left: 13px;
+        font-family: var(--common-body-4-font-family);
+        font-weight: var(--common-body-4-font-weight);
+        color: #603f26;
+        font-size: var(--common-body-4-font-size);
+        letter-spacing: var(--common-body-4-letter-spacing);
+        line-height: var(--common-body-4-line-height);
+        font-style: var(--common-body-4-font-style);
+    }
+
+    .high-jewelry .group-9 {
+        position: absolute;
+        width: 68px;
+        height: 24px;
+        top: 280px;
+        left: 13px;
+    }
+
+    .high-jewelry .group-10 {
+        position: absolute;
+        width: 180px;
+        height: 29px;
+        top: 308px;
+        left: 83px;
+    }
+
+    .high-jewelry .favorite-border-2 {
+        left: 156px;
+        background-image: url(./img/favorite-border-4.svg);
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 5px;
+        background-size: 100% 100%;
+    }
+
+    .high-jewelry .KHUYN-TAI {
+        top: 10px;
+        background-image: url(./img/image-18.png);
+        background-size: cover;
+        background-position: 50% 50%;
+        position: absolute;
+        width: 260px;
+        height: 195px;
+        left: 10px;
+    }
+
+    .high-jewelry .frame-3 {
+        display: flex;
+        width: 70px;
+        height: 27px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 4px 11px;
+        position: relative;
+        top: 10px;
+        left: 10px;
+        border-radius: 5px;
+        border: 0.5px solid;
+        border-color: #ff9eaa;
+    }
+
+    .high-jewelry .text-wrapper-13 {
+        position: relative;
+        width: fit-content;
+        margin-left: -6px;
+        margin-right: -4px;
+        font-family: var(--common-caption-font-family);
+        font-weight: var(--common-caption-font-weight);
+        color: #fe346e;
+        font-size: var(--common-caption-font-size);
+        letter-spacing: var(--common-caption-letter-spacing);
+        line-height: var(--common-caption-line-height);
+        font-style: var(--common-caption-font-style);
+    }
+
+    .high-jewelry .group-11 {
+        position: absolute;
+        width: 286px;
+        height: 357px;
+        top: 1179px;
+        left: 456px;
+    }
+
+    .high-jewelry .text-wrapper-14 {
+        position: absolute;
+        height: 12px;
+        top: 216px;
+        left: 19px;
+        font-family: "Cabin", Helvetica;
+        font-weight: 400;
+        color: #ff9eaa;
+        font-size: 10px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .high-jewelry .text-wrapper-15 {
+        top: 243px;
+        left: 19px;
+        position: absolute;
+        width: 238px;
+        height: 19px;
+        font-family: var(--common-body-4-font-family);
+        font-weight: var(--common-body-4-font-weight);
+        color: #603f26;
+        font-size: var(--common-body-4-font-size);
+        letter-spacing: var(--common-body-4-letter-spacing);
+        line-height: var(--common-body-4-line-height);
+        font-style: var(--common-body-4-font-style);
+    }
+
+    .high-jewelry .text-wrapper-16 {
+        position: absolute;
+        height: 12px;
+        top: 216px;
+        left: 224px;
+        font-family: "Cabin", Helvetica;
+        font-weight: 400;
+        color: #ff9eaa;
+        font-size: 10px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .high-jewelry .group-12 {
+        position: absolute;
+        width: 128px;
+        height: 24px;
+        top: 279px;
+        left: 19px;
+    }
+
+    .high-jewelry .ellipse-3 {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 0;
+        left: 72px;
+        border-radius: 12px;
+        background: radial-gradient(50% 50% at 50% 50%, rgb(253, 226, 213) 0%, rgb(255, 226.75, 43.14) 91.5%);
+    }
+
+    .high-jewelry .ellipse-4 {
+        left: 102px;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 0;
+        border-radius: 12px;
+        background: radial-gradient(50% 50% at 50% 50%, rgb(237.35, 237.35, 237.35) 0%, rgb(209, 207, 207) 100%);
+    }
+
+    .high-jewelry .group-13 {
+        position: absolute;
+        width: 183px;
+        height: 29px;
+        top: 310px;
+        left: 78px;
+    }
+
+    .high-jewelry .favorite-border-3 {
+        left: 159px;
+        background-image: url(./img/favorite-border-5.svg);
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 5px;
+        background-size: 100% 100%;
+    }
+
+    .high-jewelry .VNG {
+        position: absolute;
+        width: 260px;
+        height: 195px;
+        top: 12px;
+        left: 10px;
+        background-image: url(./img/image-24.svg);
+        background-size: 100% 100%;
+    }
+
+    .high-jewelry .group-14 {
+        position: absolute;
+        width: 286px;
+        height: 357px;
+        top: 1179px;
+        left: 761px;
+    }
+
+    .high-jewelry .text-wrapper-17 {
+        position: absolute;
+        height: 12px;
+        top: 216px;
+        left: 14px;
+        font-family: "Cabin", Helvetica;
+        font-weight: 400;
+        color: #ff9eaa;
+        font-size: 10px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .high-jewelry .text-wrapper-18 {
+        position: absolute;
+        width: 238px;
+        height: 19px;
+        top: 243px;
+        left: 14px;
+        font-family: var(--common-body-4-font-family);
+        font-weight: var(--common-body-4-font-weight);
+        color: #603f26;
+        font-size: var(--common-body-4-font-size);
+        letter-spacing: var(--common-body-4-letter-spacing);
+        line-height: var(--common-body-4-line-height);
+        font-style: var(--common-body-4-font-style);
+    }
+
+    .high-jewelry .TIFFANY-CO {
+        left: 206px;
+        position: absolute;
+        height: 12px;
+        top: 216px;
+        font-family: "Cabin", Helvetica;
+        font-weight: 400;
+        color: #ff9eaa;
+        font-size: 10px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .high-jewelry .group-15 {
+        position: absolute;
+        width: 101px;
+        height: 24px;
+        top: 279px;
+        left: 14px;
+    }
+
+    .high-jewelry .ellipse-5 {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 0;
+        left: 41px;
+        border-radius: 12px;
+        background: radial-gradient(50% 50% at 50% 50%, rgb(253, 226, 213) 0%, rgb(255, 191.81, 156.19) 91.5%);
+    }
+
+    .high-jewelry .ellipse-6 {
+        left: 75px;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 0;
+        border-radius: 12px;
+        background: radial-gradient(50% 50% at 50% 50%, rgb(237.35, 237.35, 237.35) 0%, rgb(209, 207, 207) 100%);
+    }
+
+    .high-jewelry .group-16 {
+        position: absolute;
+        width: 188px;
+        height: 29px;
+        top: 310px;
+        left: 81px;
+    }
+
+    .high-jewelry .favorite-border-4 {
+        left: 164px;
+        background-image: url(./img/favorite-border-6.svg);
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 5px;
+        background-size: 100% 100%;
+    }
+
+    .high-jewelry .frame-wrapper {
+        position: absolute;
+        width: 260px;
+        height: 195px;
+        top: 12px;
+        left: 10px;
+        background-image: url(./img/image-25.svg);
+        background-size: 100% 100%;
+    }
+
+    .high-jewelry .text-wrapper-19 {
+        position: relative;
+        width: fit-content;
+        margin-left: -9.5px;
+        margin-right: -7.5px;
+        font-family: var(--common-caption-font-family);
+        font-weight: var(--common-caption-font-weight);
+        color: #fe346e;
+        font-size: var(--common-caption-font-size);
+        letter-spacing: var(--common-caption-letter-spacing);
+        line-height: var(--common-caption-line-height);
+        font-style: var(--common-caption-font-style);
+    }
+
+    .high-jewelry .group-17 {
+        position: absolute;
+        width: 286px;
+        height: 357px;
+        top: 1179px;
+        left: 1066px;
+    }
+
+    .high-jewelry .text-wrapper-20 {
+        position: absolute;
+        height: 12px;
+        top: 216px;
+        left: 10px;
+        font-family: "Cabin", Helvetica;
+        font-weight: 400;
+        color: #ff9eaa;
+        font-size: 10px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .high-jewelry .text-wrapper-21 {
+        top: 247px;
+        left: 7px;
+        position: absolute;
+        width: 238px;
+        height: 19px;
+        font-family: var(--common-body-4-font-family);
+        font-weight: var(--common-body-4-font-weight);
+        color: #603f26;
+        font-size: var(--common-body-4-font-size);
+        letter-spacing: var(--common-body-4-letter-spacing);
+        line-height: var(--common-body-4-line-height);
+        font-style: var(--common-body-4-font-style);
+    }
+
+    .high-jewelry .group-18 {
+        position: absolute;
+        width: 72px;
+        height: 24px;
+        top: 279px;
+        left: 7px;
+    }
+
+    .high-jewelry .group-19 {
+        position: absolute;
+        width: 38px;
+        height: 12px;
+        top: 6px;
+        left: 0;
+    }
+
+    .high-jewelry .text-wrapper-22 {
+        position: absolute;
+        height: 12px;
+        top: 0;
+        left: 0;
+        font-family: "Cabin", Helvetica;
+        font-weight: 400;
+        color: #ff9eaa;
+        font-size: 10px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .high-jewelry .ellipse-7 {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 0;
+        left: 48px;
+        border-radius: 12px;
+        background: radial-gradient(50% 50% at 50% 50%, rgb(253, 226, 213) 0%, rgb(255, 191.81, 156.19) 91.5%);
+    }
+
+    .high-jewelry .group-20 {
+        position: absolute;
+        width: 176px;
+        height: 29px;
+        top: 310px;
+        left: 94px;
+    }
+
+    .high-jewelry .favorite-border-5 {
+        left: 152px;
+        background-image: url(./img/favorite-border-7.svg);
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 5px;
+        background-size: 100% 100%;
+    }
+
+    .high-jewelry .VNG-2 {
+        position: absolute;
+        width: 260px;
+        height: 195px;
+        top: 12px;
+        left: 10px;
+        background-image: url(./img/image-26.svg);
+        background-size: 100% 100%;
+    }
+
+    .high-jewelry .text-wrapper-23 {
+        left: 196px;
+        position: absolute;
+        height: 12px;
+        top: 216px;
+        font-family: "Cabin", Helvetica;
+        font-weight: 400;
+        color: #ff9eaa;
+        font-size: 10px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .high-jewelry .group-21 {
+        position: absolute;
+        width: 286px;
+        height: 357px;
+        top: 792px;
+        left: 761px;
+    }
+
+    .high-jewelry .text-wrapper-24 {
+        position: absolute;
+        height: 12px;
+        top: 216px;
+        left: 11px;
+        font-family: "Cabin", Helvetica;
+        font-weight: 400;
+        color: #ff9eaa;
+        font-size: 10px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .high-jewelry .text-wrapper-25 {
+        position: absolute;
+        width: 238px;
+        height: 38px;
+        top: 237px;
+        left: 10px;
+        font-family: var(--common-body-4-font-family);
+        font-weight: var(--common-body-4-font-weight);
+        color: #603f26;
+        font-size: var(--common-body-4-font-size);
+        letter-spacing: var(--common-body-4-letter-spacing);
+        line-height: var(--common-body-4-line-height);
+        font-style: var(--common-body-4-font-style);
+    }
+
+    .high-jewelry .group-22 {
+        position: absolute;
+        width: 70px;
+        height: 24px;
+        top: 279px;
+        left: 10px;
+    }
+
+    .high-jewelry .ellipse-8 {
+        left: 44px;
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 0;
+        border-radius: 12px;
+        background: radial-gradient(50% 50% at 50% 50%, rgb(237.35, 237.35, 237.35) 0%, rgb(209, 207, 207) 100%);
+    }
+
+    .high-jewelry .group-23 {
+        position: absolute;
+        width: 188px;
+        height: 29px;
+        top: 310px;
+        left: 78px;
+    }
+
+    .high-jewelry .favorite-border-6 {
+        left: 164px;
+        background-image: url(./img/favorite-border-8.svg);
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 5px;
+        background-size: 100% 100%;
+    }
+
+    .high-jewelry .KHUYN-TAI-2 {
+        top: 12px;
+        background-image: url(./img/image-27.svg);
+        background-size: 100% 100%;
+        position: absolute;
+        width: 260px;
+        height: 195px;
+        left: 10px;
+    }
+
+    .high-jewelry .text-wrapper-26 {
+        position: absolute;
+        height: 12px;
+        top: 216px;
+        left: 237px;
+        font-family: "Cabin", Helvetica;
+        font-weight: 400;
+        color: #ff9eaa;
+        font-size: 10px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .high-jewelry .component {
+        position: absolute;
+        width: 330px;
+        height: 237px;
+        top: 792px;
+        left: 94px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: 0.5px solid;
+        border-color: #ffc4d0;
+    }
+
+    .high-jewelry .overlap-group-2 {
+        position: absolute;
+        width: 330px;
+        height: 50px;
+        top: 0;
+        left: 0;
+        background-color: #fbe8e7;
+        border-radius: 5px 5px 0px 0px;
+        border: 0.5px solid;
+        border-color: #ffc4d0;
+    }
+
+    .high-jewelry .text-wrapper-27 {
+        height: 24px;
+        top: 12px;
+        left: 23px;
+        color: #0a214a;
+        font-size: var(--common-subtitle-font-size);
+        white-space: nowrap;
+        position: absolute;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .overlap-4 {
+        position: absolute;
+        width: 287px;
+        height: 169px;
+        top: 60px;
+        left: 25px;
+    }
+
+    .high-jewelry .line-3 {
+        position: absolute;
+        width: 3px;
+        height: 162px;
+        top: 0;
+        left: 284px;
+    }
+
+    .high-jewelry .frame-4 {
+        position: absolute;
+        width: 287px;
+        height: 169px;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+
+    .high-jewelry .rectangle {
+        position: absolute;
+        width: 3px;
+        height: 44px;
+        top: 0;
+        left: 285px;
+        background-color: #ffc4d0;
+    }
+
+    .high-jewelry .image-removebg-wrapper {
+        display: flex;
+        width: 125px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        padding: 0px 36px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #f8f8f8;
+    }
+
+    .high-jewelry .image-removebg {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    }
+
+    .high-jewelry .img-wrapper {
+        display: flex;
+        width: 125px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        padding: 0px 36px;
+        position: absolute;
+        top: 0;
+        left: 146px;
+        background-color: #f8f8f8;
+    }
+
+    .high-jewelry .frame-5 {
+        display: flex;
+        width: 125px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        padding: 0px 36px;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        background-color: #f8f8f8;
+    }
+
+    .high-jewelry .frame-6 {
+        display: flex;
+        width: 125px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        padding: 0px 36px;
+        position: absolute;
+        top: 118px;
+        left: 0;
+        background-color: #f8f8f8;
+    }
+
+    .high-jewelry .frame-7 {
+        display: flex;
+        width: 125px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        padding: 0px 36px;
+        position: absolute;
+        top: 118px;
+        left: 146px;
+        background-color: #f8f8f8;
+    }
+
+    .high-jewelry .frame-8 {
+        display: flex;
+        width: 125px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        padding: 0px 36px;
+        position: absolute;
+        top: 177px;
+        left: 0;
+        background-color: #f8f8f8;
+    }
+
+    .high-jewelry .frame-9 {
+        display: flex;
+        width: 125px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        padding: 0px 36px;
+        position: absolute;
+        top: 177px;
+        left: 146px;
+        background-color: #f8f8f8;
+    }
+
+    .high-jewelry .frame-10 {
+        display: flex;
+        width: 125px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        padding: 0px 36px;
+        position: absolute;
+        top: 236px;
+        left: 0;
+        background-color: #f8f8f8;
+    }
+
+    .high-jewelry .image-removebg-2 {
+        position: relative;
+        width: 87px;
+        height: 50px;
+        margin-left: -17px;
+        margin-right: -17px;
+        object-fit: cover;
+    }
+
+    .high-jewelry .frame-11 {
+        display: flex;
+        width: 125px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        padding: 0px 36px;
+        position: absolute;
+        top: 236px;
+        left: 146px;
+        background-color: #f8f8f8;
+    }
+
+    .high-jewelry .frame-12 {
+        display: flex;
+        width: 125px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        padding: 0px 36px;
+        position: absolute;
+        top: 55px;
+        left: 146px;
+        background-color: #f8f8f8;
+    }
+
+    .high-jewelry .group-24 {
+        position: absolute;
+        width: 332px;
+        height: 233px;
+        top: 1034px;
+        left: 94px;
+    }
+
+    .high-jewelry .overlap-5 {
+        position: relative;
+        width: 330px;
+        height: 233px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: 0.5px solid;
+        border-color: #ffc4d0;
+    }
+
+    .high-jewelry .text-wrapper-28 {
+        position: absolute;
+        height: 24px;
+        top: 12px;
+        left: 24px;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        color: #0a214a;
+        font-size: var(--common-subtitle-font-size);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        white-space: nowrap;
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .dy-chuyn {
+        display: flex;
+        width: 73px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        left: 22px;
+    }
+
+    .high-jewelry .text-wrapper-29 {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        margin-left: -3.88px;
+        margin-right: -3.88px;
+        font-family: var(--common-label-font-family);
+        font-weight: var(--common-label-font-weight);
+        color: #ffc4d0;
+        font-size: var(--common-label-font-size);
+        letter-spacing: var(--common-label-letter-spacing);
+        line-height: var(--common-label-line-height);
+        white-space: nowrap;
+        font-style: var(--common-label-font-style);
+    }
+
+    .high-jewelry .d-y-chuy-n-wrapper {
+        display: flex;
+        width: 67px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 88px;
+        left: 22px;
+    }
+
+    .high-jewelry .d-y-chuy-n {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        margin-left: -3.55px;
+        margin-right: -3.55px;
+        font-family: var(--common-label-font-family);
+        font-weight: var(--common-label-font-weight);
+        color: #ffc4d0;
+        font-size: var(--common-label-font-size);
+        letter-spacing: var(--common-label-letter-spacing);
+        line-height: var(--common-label-line-height);
+        white-space: nowrap;
+        font-style: var(--common-label-font-style);
+    }
+
+    .high-jewelry .dy-chuyn-2 {
+        display: flex;
+        width: 53px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 118px;
+        left: 22px;
+    }
+
+    .high-jewelry .d-y-chuy-n-2 {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        margin-left: -2.83px;
+        margin-right: -2.83px;
+        font-family: var(--common-label-font-family);
+        font-weight: var(--common-label-font-weight);
+        color: #ffc4d0;
+        font-size: var(--common-label-font-size);
+        letter-spacing: var(--common-label-letter-spacing);
+        line-height: var(--common-label-line-height);
+        white-space: nowrap;
+        font-style: var(--common-label-font-style);
+    }
+
+    .high-jewelry .dy-chuyn-3 {
+        display: flex;
+        width: 32px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 146px;
+        left: 22px;
+    }
+
+    .high-jewelry .d-y-chuy-n-3 {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        margin-left: -1.68px;
+        margin-right: -1.68px;
+        font-family: var(--common-label-font-family);
+        font-weight: var(--common-label-font-weight);
+        color: #ffc4d0;
+        font-size: var(--common-label-font-size);
+        letter-spacing: var(--common-label-letter-spacing);
+        line-height: var(--common-label-line-height);
+        white-space: nowrap;
+        font-style: var(--common-label-font-style);
+    }
+
+    .high-jewelry .dy-chuyn-4 {
+        display: flex;
+        width: 33px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 176px;
+        left: 22px;
+    }
+
+    .high-jewelry .d-y-chuy-n-4 {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        margin-left: -1.77px;
+        margin-right: -1.77px;
+        font-family: var(--common-label-font-family);
+        font-weight: var(--common-label-font-weight);
+        color: #ffc4d0;
+        font-size: var(--common-label-font-size);
+        letter-spacing: var(--common-label-letter-spacing);
+        line-height: var(--common-label-line-height);
+        white-space: nowrap;
+        font-style: var(--common-label-font-style);
+    }
+
+    .high-jewelry .dy-chuyn-5 {
+        display: flex;
+        width: 42px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 204px;
+        left: 22px;
+    }
+
+    .high-jewelry .d-y-chuy-n-5 {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        margin-left: -2.21px;
+        margin-right: -2.21px;
+        font-family: var(--common-label-font-family);
+        font-weight: var(--common-label-font-weight);
+        color: #ffc4d0;
+        font-size: var(--common-label-font-size);
+        letter-spacing: var(--common-label-letter-spacing);
+        line-height: var(--common-label-line-height);
+        white-space: nowrap;
+        font-style: var(--common-label-font-style);
+    }
+
+    .high-jewelry .group-25 {
+        position: absolute;
+        width: 724px;
+        height: 430px;
+        top: 303px;
+        left: 720px;
+    }
+
+    .high-jewelry .overlap-6 {
+        position: relative;
+        width: 720px;
+        height: 430px;
+        background-color: #ffffff;
+    }
+
+    .high-jewelry .text-wrapper-30 {
+        position: absolute;
+        height: 49px;
+        top: 120px;
+        left: 158px;
+        font-family: var(--deskstop-heading-2-font-family);
+        font-weight: var(--deskstop-heading-2-font-weight);
+        color: #0a214a;
+        font-size: var(--deskstop-heading-2-font-size);
+        letter-spacing: var(--deskstop-heading-2-letter-spacing);
+        line-height: var(--deskstop-heading-2-line-height);
+        font-style: var(--deskstop-heading-2-font-style);
+    }
+
+    .high-jewelry .text-wrapper-31 {
+        position: absolute;
+        width: 469px;
+        height: 96px;
+        top: 220px;
+        left: 158px;
+        font-family: "Dancing Script", Helvetica;
+        font-weight: 400;
+        color: #000000b2;
+        font-size: 20px;
+        letter-spacing: 1px;
+        line-height: 24px;
+    }
+
+    .high-jewelry .image-cartier {
+        position: absolute;
+        width: 720px;
+        height: 430px;
+        top: 303px;
+        left: 0;
+        background-image: url(./img/image-8.png);
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+
+    .high-jewelry .group-26 {
+        position: absolute;
+        width: 332px;
+        height: 186px;
+        top: 1272px;
+        left: 94px;
+    }
+
+    .high-jewelry .overlap-7 {
+        position: relative;
+        width: 330px;
+        height: 186px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        border: 0.5px solid;
+        border-color: #ffc4d0;
+    }
+
+    .high-jewelry .overlap-8 {
+        position: absolute;
+        width: 293px;
+        height: 99px;
+        top: 62px;
+        left: 14px;
+    }
+
+    .high-jewelry .group-27 {
+        position: absolute;
+        width: 293px;
+        height: 95px;
+        top: 0;
+        left: 0;
+    }
+
+    .high-jewelry .overlap-9 {
+        position: relative;
+        width: 295px;
+        height: 95px;
+    }
+
+    .high-jewelry .overlap-10 {
+        position: absolute;
+        width: 282px;
+        height: 95px;
+        top: 0;
+        left: 0;
+    }
+
+    .high-jewelry .line-4 {
+        position: absolute;
+        width: 262px;
+        height: 3px;
+        top: 40px;
+        left: 14px;
+    }
+
+    .high-jewelry .group-28 {
+        position: absolute;
+        width: 249px;
+        height: 95px;
+        top: 0;
+        left: 0;
+    }
+
+    .high-jewelry .overlap-group-3 {
+        position: absolute;
+        width: 31px;
+        height: 34px;
+        top: 0;
+        left: 0;
+    }
+
+    .high-jewelry .rectangle-2 {
+        position: absolute;
+        width: 31px;
+        height: 26px;
+        top: 0;
+        left: 0;
+        background-color: #f7ddde;
+    }
+
+    .high-jewelry .polygon {
+        position: absolute;
+        width: 12px;
+        height: 11px;
+        top: 23px;
+        left: 8px;
+    }
+
+    .high-jewelry .text-wrapper-32 {
+        position: absolute;
+        height: 24px;
+        top: 2px;
+        left: 4px;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        color: #0a214a;
+        font-size: var(--common-subtitle-font-size);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        white-space: nowrap;
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .text-wrapper-33 {
+        position: absolute;
+        height: 24px;
+        top: 71px;
+        left: 49px;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        color: #0a214a;
+        font-size: var(--common-subtitle-font-size);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        white-space: nowrap;
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .text-wrapper-34 {
+        position: absolute;
+        height: 24px;
+        top: 71px;
+        left: 219px;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        color: #0a214a;
+        font-size: var(--common-subtitle-font-size);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        white-space: nowrap;
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .ellipse-9 {
+        position: absolute;
+        width: 9px;
+        height: 10px;
+        top: 36px;
+        left: 11px;
+        background-color: #ff9eaa;
+        border-radius: 4.52px/5px;
+    }
+
+    .high-jewelry .ellipse-10 {
+        position: absolute;
+        width: 9px;
+        height: 10px;
+        top: 36px;
+        left: 273px;
+        background-color: #ff9eaa;
+        border-radius: 4.52px/5px;
+    }
+
+    .high-jewelry .group-29 {
+        position: absolute;
+        width: 33px;
+        height: 34px;
+        top: 0;
+        left: 262px;
+    }
+
+    .high-jewelry .overlap-11 {
+        position: relative;
+        width: 31px;
+        height: 34px;
+    }
+
+    .high-jewelry .text-wrapper-35 {
+        position: absolute;
+        height: 24px;
+        top: 2px;
+        left: 5px;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        color: #0a214a;
+        font-size: var(--common-subtitle-font-size);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        white-space: nowrap;
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .rectangle-3 {
+        position: absolute;
+        width: 102px;
+        height: 34px;
+        top: 65px;
+        left: 12px;
+        border-radius: 5px;
+        border: 0.5px solid;
+        border-color: #fe346e;
+    }
+
+    .high-jewelry .rectangle-4 {
+        position: absolute;
+        width: 103px;
+        height: 34px;
+        top: 65px;
+        left: 177px;
+        border-radius: 5px;
+        border: 0.5px solid;
+        border-color: #fe346e;
+    }
+
+    .high-jewelry .line-5 {
+        position: absolute;
+        width: 18px;
+        height: 1px;
+        top: 81px;
+        left: 137px;
+        object-fit: cover;
+    }
+
+    .high-jewelry .group-30 {
+        position: absolute;
+        width: 332px;
+        height: 233px;
+        top: 1463px;
+        left: 94px;
+    }
+
+    .high-jewelry .component-2 {
+        display: flex;
+        width: 68px;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        position: absolute;
+        top: 62px;
+        left: 23px;
+    }
+
+    .high-jewelry .rectangle-5 {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        margin-left: -3.6px;
+        background-color: #f8f8fa;
+    }
+
+    .high-jewelry .text-wrapper-36 {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        margin-right: -3.6px;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        color: #0a214a;
+        font-size: var(--common-subtitle-font-size);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        white-space: nowrap;
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .component-3 {
+        display: flex;
+        width: 58px;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        position: absolute;
+        top: 100px;
+        left: 23px;
+    }
+
+    .high-jewelry .rectangle-6 {
+        margin-left: -3.07px;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background-color: #f8f8fa;
+    }
+
+    .high-jewelry .v-ng {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        margin-right: -3.07px;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        color: #0a214a;
+        font-size: var(--common-subtitle-font-size);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        white-space: nowrap;
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .component-4 {
+        display: flex;
+        width: 111px;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        position: absolute;
+        top: 136px;
+        left: 23px;
+    }
+
+    .high-jewelry .rectangle-7 {
+        margin-left: -5.9px;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background-color: #f8f8fa;
+    }
+
+    .high-jewelry .v-ng-2 {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        margin-right: -5.9px;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        color: #0a214a;
+        font-size: var(--common-subtitle-font-size);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        white-space: nowrap;
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .component-5 {
+        display: flex;
+        width: 112px;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        position: absolute;
+        top: 174px;
+        left: 23px;
+    }
+
+    .high-jewelry .rectangle-8 {
+        margin-left: -5.95px;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background-color: #f8f8fa;
+    }
+
+    .high-jewelry .v-ng-3 {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        margin-right: -5.95px;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        color: #0a214a;
+        font-size: var(--common-subtitle-font-size);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        white-space: nowrap;
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .text-wrapper-37 {
+        position: absolute;
+        height: 24px;
+        top: 1575px;
+        left: 877px;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        color: #908f8c;
+        font-size: var(--common-subtitle-font-size);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        white-space: nowrap;
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .text-wrapper-38 {
+        position: absolute;
+        top: 256px;
+        left: 250px;
+        font-family: var(--common-label-font-family);
+        font-weight: var(--common-label-font-weight);
+        color: #d1cfcf;
+        font-size: var(--common-label-font-size);
+        letter-spacing: var(--common-label-letter-spacing);
+        line-height: var(--common-label-line-height);
+        white-space: nowrap;
+        font-style: var(--common-label-font-style);
+    }
+
+    .high-jewelry .arrow-forward-ios {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 257px;
+        left: 316px;
+    }
+
+    .high-jewelry .group-31 {
+        position: absolute;
+        width: 88px;
+        height: 19px;
+        top: 259px;
+        left: 351px;
+    }
+
+    .high-jewelry .text-wrapper-39 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: var(--common-label-font-family);
+        font-weight: var(--common-label-font-weight);
+        color: #908f8c;
+        font-size: var(--common-label-font-size);
+        letter-spacing: var(--common-label-letter-spacing);
+        line-height: var(--common-label-line-height);
+        white-space: nowrap;
+        font-style: var(--common-label-font-style);
+    }
+
+    .high-jewelry .frame-13 {
+        position: absolute;
+        width: 1445px;
+        height: 290px;
+        top: 2242px;
+        left: -2px;
+    }
+
+    .high-jewelry .overlap-12 {
+        position: relative;
+        width: 1442px;
+        height: 291px;
+        top: -1px;
+    }
+
+    .high-jewelry .rectangle-9 {
+        position: absolute;
+        width: 1440px;
+        height: 290px;
+        top: 1px;
+        left: 0;
+        background-color: #fbe8e7;
+    }
+
+    .high-jewelry .text-wrapper-40 {
+        position: absolute;
+        top: 0;
+        left: 134px;
+        font-family: "Dancing Script", Helvetica;
+        font-weight: 700;
+        color: #ff9eaa;
+        font-size: 96px;
+        letter-spacing: 0;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .high-jewelry .text-wrapper-41 {
+        position: absolute;
+        top: 127px;
+        left: 163px;
+        font-family: "Cabin", Helvetica;
+        font-weight: 600;
+        color: #603f26;
+        font-size: 16px;
+        letter-spacing: 5.92px;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .high-jewelry .text-wrapper-42 {
+        top: 47px;
+        left: 443px;
+        color: #fe346e;
+        font-size: var(--deskstop-heading-3-font-size);
+        position: absolute;
+        font-family: var(--deskstop-heading-3-font-family);
+        font-weight: var(--deskstop-heading-3-font-weight);
+        letter-spacing: var(--deskstop-heading-3-letter-spacing);
+        line-height: var(--deskstop-heading-3-line-height);
+        font-style: var(--deskstop-heading-3-font-style);
+    }
+
+    .high-jewelry .text-wrapper-43 {
+        position: absolute;
+        top: 47px;
+        left: 957px;
+        font-family: var(--deskstop-heading-3-font-family);
+        font-weight: var(--deskstop-heading-3-font-weight);
+        color: #fe346e;
+        font-size: var(--deskstop-heading-3-font-size);
+        letter-spacing: var(--deskstop-heading-3-letter-spacing);
+        line-height: var(--deskstop-heading-3-line-height);
+        font-style: var(--deskstop-heading-3-font-style);
+    }
+
+    .high-jewelry .text-wrapper-44 {
+        position: absolute;
+        top: 113px;
+        left: 443px;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        color: #ff9eaa;
+        font-size: var(--common-subtitle-font-size);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        white-space: nowrap;
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .text-wrapper-45 {
+        position: absolute;
+        top: 113px;
+        left: 685px;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        color: #ff9eaa;
+        font-size: var(--common-subtitle-font-size);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        white-space: nowrap;
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .text-wrapper-46 {
+        position: absolute;
+        top: 169px;
+        left: 685px;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        color: #ff9eaa;
+        font-size: var(--common-subtitle-font-size);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        white-space: nowrap;
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .text-wrapper-47 {
+        position: absolute;
+        top: 220px;
+        left: 685px;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        color: #ff9eaa;
+        font-size: var(--common-subtitle-font-size);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        white-space: nowrap;
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .text-wrapper-48 {
+        position: absolute;
+        top: 169px;
+        left: 443px;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        color: #ff9eaa;
+        font-size: var(--common-subtitle-font-size);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        white-space: nowrap;
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .i-u-kho-n-i-u-ki-n {
+        position: absolute;
+        top: 220px;
+        left: 443px;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        color: #ff9eaa;
+        font-size: var(--common-subtitle-font-size);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        white-space: nowrap;
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .rectangle-10 {
+        position: absolute;
+        width: 305px;
+        height: 50px;
+        top: 132px;
+        left: 957px;
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
+
+    .high-jewelry .text-wrapper-49 {
+        position: absolute;
+        top: 142px;
+        left: 974px;
+        font-family: var(--deskstop-heading-4-font-family);
+        font-weight: var(--deskstop-heading-4-font-weight);
+        color: #d1cfcf;
+        font-size: var(--deskstop-heading-4-font-size);
+        letter-spacing: var(--deskstop-heading-4-letter-spacing);
+        line-height: var(--deskstop-heading-4-line-height);
+        font-style: var(--deskstop-heading-4-font-style);
+    }
+
+    .high-jewelry .rectangle-11 {
+        position: absolute;
+        width: 86px;
+        height: 50px;
+        top: 131px;
+        left: 1287px;
+        background-color: #ff9eaa;
+        border-radius: 10px;
+    }
+
+    .high-jewelry .text-wrapper-50 {
+        position: absolute;
+        top: 143px;
+        left: 1316px;
+        font-family: var(--common-subtitle-font-family);
+        font-weight: var(--common-subtitle-font-weight);
+        color: #fe346e;
+        font-size: var(--common-subtitle-font-size);
+        letter-spacing: var(--common-subtitle-letter-spacing);
+        line-height: var(--common-subtitle-line-height);
+        white-space: nowrap;
+        font-style: var(--common-subtitle-font-style);
+    }
+
+    .high-jewelry .line-6 {
+        position: absolute;
+        width: 1437px;
+        height: 1px;
+        top: 272px;
+        left: 5px;
+    }
+
+    .high-jewelry .group-32 {
+        position: absolute;
+        width: 47px;
+        height: 12px;
+        top: 276px;
+        left: 705px;
+    }
+
+    .high-jewelry .copyright {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: 2px;
+        left: 0;
+    }
+
+    .high-jewelry .element-joyas {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        font-family: "Cabin", Helvetica;
+        font-weight: 400;
+        color: transparent;
+        font-size: 6px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .high-jewelry .span {
+        color: #603f26;
+    }
+
+    .high-jewelry .text-wrapper-51 {
+        font-family: "Dancing Script", Helvetica;
+        font-weight: 700;
+        color: #000000;
+        font-size: 10px;
+    }
+
+    .high-jewelry .text-wrapper-52 {
+        font-family: "Dancing Script", Helvetica;
+        font-weight: 700;
+        color: #ff9eaa;
+        font-size: 10px;
+    }
+
+    .high-jewelry .component-6 {
+        position: absolute;
+        width: 1269px;
+        height: 412px;
+        top: 1767px;
+        left: 86px;
+    }
+
+    .high-jewelry .frame-14 {
+        position: absolute;
+        width: 1159px;
+        height: 412px;
+        top: 0;
+        left: 59px;
+        overflow: hidden;
+    }
+
+    .high-jewelry .group-33 {
+        position: relative;
+        width: 3124px;
+        height: 412px;
+    }
+
+    .high-jewelry .group-34 {
+        position: absolute;
+        width: 373px;
+        height: 412px;
+        top: 0;
+        left: 0;
+    }
+
+    .high-jewelry .image {
+        position: absolute;
+        width: 373px;
+        height: 357px;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+
+    .high-jewelry .PANTHER {
+        left: 127px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 367px;
+    }
+
+    .high-jewelry .PANTHER-2 {
+        position: relative;
+        width: fit-content;
+        margin-top: -1px;
+        font-family: "Cabin", Helvetica;
+        font-weight: 400;
+        color: #0a214a;
+        font-size: 20px;
+        letter-spacing: 5px;
+        line-height: normal;
+        white-space: nowrap;
+    }
+
+    .high-jewelry .XEM-THM {
+        position: absolute;
+        width: 85px;
+        height: 16px;
+        top: 396px;
+        left: 144px;
+    }
+
+    .high-jewelry .text-wrapper-53 {
+        position: absolute;
+        height: 16px;
+        top: -1px;
+        left: 0;
+        font-family: "Cabin", Helvetica;
+        font-weight: 400;
+        color: #ff9eaa;
+        font-size: 13px;
+        letter-spacing: 3.25px;
+        line-height: normal;
+    }
+
+    .high-jewelry .group-35 {
+        position: absolute;
+        width: 373px;
+        height: 412px;
+        top: 0;
+        left: 393px;
+    }
+
+    .high-jewelry .PANTHER-wrapper {
+        left: 66px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 367px;
+    }
+
+    .high-jewelry .group-36 {
+        position: absolute;
+        width: 373px;
+        height: 412px;
+        top: 0;
+        left: 786px;
+    }
+
+    .high-jewelry .PANTHER-3 {
+        left: 53px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 367px;
+    }
+
+    .high-jewelry .group-37 {
+        position: absolute;
+        width: 373px;
+        height: 412px;
+        top: 0;
+        left: 1179px;
+    }
+
+    .high-jewelry .image-2 {
+        position: absolute;
+        width: 373px;
+        height: 357px;
+        top: -1122px;
+        left: -5749px;
+        object-fit: cover;
+    }
+
+    .high-jewelry .PANTHER-4 {
+        left: 19px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 367px;
+    }
+
+    .high-jewelry .group-38 {
+        position: absolute;
+        width: 373px;
+        height: 412px;
+        top: 0;
+        left: 1572px;
+    }
+
+    .high-jewelry .PANTHER-5 {
+        left: 6px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 367px;
+    }
+
+    .high-jewelry .group-39 {
+        position: absolute;
+        width: 373px;
+        height: 412px;
+        top: 0;
+        left: 1965px;
+    }
+
+    .high-jewelry .PANTHER-6 {
+        left: 5px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 367px;
+    }
+
+    .high-jewelry .group-40 {
+        position: absolute;
+        width: 373px;
+        height: 412px;
+        top: 0;
+        left: 2358px;
+    }
+
+    .high-jewelry .PANTHER-7 {
+        left: 3px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 367px;
+    }
+
+    .high-jewelry .group-41 {
+        position: absolute;
+        width: 373px;
+        height: 412px;
+        top: 0;
+        left: 2751px;
+    }
+
+    .high-jewelry .PANTHER-8 {
+        left: 15px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        top: 367px;
+    }
+
+    .high-jewelry .arrow-forward-ios-2 {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        top: 167px;
+        left: 1245px;
+    }

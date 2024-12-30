@@ -1,0 +1,93 @@
+﻿
+@model WebTrangSuc.Models.DonHang
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/XuLyDonHang/Views/shared/_XuLyDonHangLayout.cshtml";
+}
+
+<div class="content-wrapper">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Chi tiết đơn hàng: @Model.ID</h3>
+        </div>
+        <div class="card-body">
+            <h3>Thông tin khách hàng</h3>
+            <p><strong>Tên khách hàng:</strong> @Model.TaiKhoan.HoVaTen</p>
+            <p>
+                <strong>Địa chỉ:</strong>@(Model.TaiKhoan?.DiaChis?.FirstOrDefault()?.Diachi != null
+? Model.TaiKhoan.DiaChis.FirstOrDefault().Diachi
+: "Không rõ")
+            </p>
+            <p><strong>Phương thức thanh toán:</strong>@Model.PhuongThucThanhToan</p>
+            <p><strong>Ngày tạo hóa đơn:</strong> @Model.NgayTaoHoaDon</p>
+
+            <h3>Thông tin đơn hàng</h3>
+            <p><strong>Tổng tiền:</strong> @String.Format("{0:0,0} VND", Model.TongTien)</p>
+            <p>
+                <strong>Trạng thái đơn hàng:</strong>
+                @if (Model.TrangThaiDonHang == 1)
+                {
+                    <span class="badge badge-success">Đã xác nhận</span>
+                }
+                else
+                {
+                    <span class="badge badge-warning">Chưa xác nhận</span>
+                }
+            </p>
+            <p>
+                <strong>Trạng thái giao hàng:</strong>
+                @if (Model.TrangThaiGiaoHang == 1)
+                {
+                    <span class="badge badge-primary">Đã giao</span>
+                }
+                else
+                {
+                    <span class="badge badge-secondary">Chưa giao</span>
+                }
+            </p>
+            <p>
+                <strong>Voucher:</strong>
+                @(Model.Voucher != null ? Model.Voucher.ID : "Không áp dụng voucher")
+            </p>
+
+            <h5>Chi tiết sản phẩm</h5>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Mã sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Giá</th>
+                        <th>Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        decimal tongThanhTien = 0; // Khởi tạo biến tổng thành tiền
+                    }
+                    @foreach (var item in Model.DonHangChiTiets)
+                    {
+                        var thanhTien = item.SoLuongSanPham * item.GiaSanPham; // Tính thành tiền của từng dòng
+                        tongThanhTien += (decimal)thanhTien; // Cộng vào tổng
+                        <tr>
+                            <td>@item.SanPham.ID</td>
+                            <td>@item.SanPham.TenSanPham</td>
+                            <td>@item.SoLuongSanPham</td>
+                            <td>@String.Format("{0:0,0} VND", item.GiaSanPham)</td>
+                            <td>@String.Format("{0:0,0} VND", thanhTien)</td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" style="text-align: right;"><strong>Tổng cộng:</strong></td>
+                        <td><strong>@String.Format("{0:0,0} VND", tongThanhTien)</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <a href="/xulydonhang/order" class="btn btn-primary">Quay lại</a>
+            <a href="@Url.Action("Delete", "Order", new { id = Model.ID })" class="btn btn-danger " onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</a>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,37 @@
+﻿@model WebTrangSuc.Models.LoaiSanPham
+@{
+    ViewBag.Title = "Creat";
+    Layout = "~/Areas/QuanLy/Views/shared/_QuanLyLayout.cshtml";
+}
+
+
+<div class="content-wrapper">
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Thông tin thêm mới danh mục </h3>
+            <div class="card-body">
+                @using (Html.BeginForm("Create", "LoaiSanPham", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+                    <div class="form-group">
+                        <label for="TenLoaiSanPham">Tên loại</label>
+                        @Html.TextBoxFor(x => x.TenLoaiSanPham, new { @class = "form-control", @placeholder = "Tên danh mục" })
+                        @Html.ValidationMessageFor(x => x.TenLoaiSanPham, null, new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Hình Loại Sản Phẩm</label>
+                        <div class="col-md-10">
+                            <input type="file" name="file" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <a href="/QuanLy/loaisanpham" class="btn btn-danger">Quay lại</a>
+                        <button type="submit" class="btn btn-success mr-2">Lưu</button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+

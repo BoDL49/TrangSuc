@@ -26,10 +26,9 @@ namespace WebTrangSuc.Areas.Admin.Controllers
             // Lấy danh sách sản phẩm
             var sanPham = db.SanPhams.AsQueryable();
 
-            // Tìm kiếm chính xác theo tên sản phẩm hoặc loại sản phẩm
             if (!string.IsNullOrEmpty(SearchString))
             {
-                sanPham = sanPham.Where(s => s.TenSanPham.Equals(SearchString) || s.LoaiSanPham.TenLoaiSanPham.Equals(SearchString));
+                sanPham = sanPham.Where(s => s.TenSanPham.Contains(SearchString) || s.LoaiSanPham.TenLoaiSanPham.Contains(SearchString));
             }
 
             // Phân trang và chuyển dữ liệu sang View
