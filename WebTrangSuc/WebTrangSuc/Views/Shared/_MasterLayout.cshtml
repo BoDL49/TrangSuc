@@ -235,27 +235,29 @@
                 manageLink.style.display = "none"; // Ẩn nếu role không hợp lệ
         }
 
-        const searchInput = document.getElementById('searchInput');
-        const searchButton = document.getElementById('searchButton');
-
-        function redirectToSearchPage(query) {
-            if (!query) return;
-            // Chuyển hướng tới trang danh mục sản phẩm
-            window.location.href = `/DanhMucSanPham?query=${encodeURIComponent(query)}`;
-        }
-
-        searchInput.addEventListener("keypress", function (event) {
-            if (event.key === "Enter") {
-                event.preventDefault();
-                redirectToSearchPage(searchInput.value.trim());
-            }
-        });
-
-        searchButton.addEventListener("click", function () {
-            redirectToSearchPage(searchInput.value.trim());
-        });
-
+        
     });
+
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+
+    function redirectToSearchPage(query) {
+        if (!query) return;
+        // Chuyển hướng tới trang danh mục sản phẩm
+        window.location.href = `/DanhMucSanPham?query=${encodeURIComponent(query)}`;
+    }
+
+    searchInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            redirectToSearchPage(searchInput.value.trim());
+        }
+    });
+
+    searchButton.addEventListener("click", function () {
+        redirectToSearchPage(searchInput.value.trim());
+    });
+
 
     async function updateCartQuantity() {
         const userId = localStorage.getItem('userId'); // Lấy ID người dùng từ localStorage
