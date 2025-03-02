@@ -1,6 +1,9 @@
 ﻿using PagedList;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
+using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -88,7 +91,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         }
 
         // GET: Admin/TaiKhoan/Edit/5
-        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
+        [RoleAuthorization(1, 2, 3)]// Chỉ cho phép role 1, 2, 3
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -105,43 +108,62 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         }
 
         // POST: Admin/TaiKhoan/Edit/5
-        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [RoleAuthorization(1, 2, 3)]
         public ActionResult Edit([Bind(Include = "ID,HoVaTen,GioiTinh,NamSinh,SDT,Email,UserName,Matkhau,Avatar,IDRole")] TaiKhoan taiKhoan, HttpPostedFileBase Avatar)
         {
             if (ModelState.IsValid)
             {
-                if (Avatar != null)
+                try
                 {
-                    string fileName = System.IO.Path.GetFileName(Avatar.FileName);
-                    string path = Server.MapPath("~/img/" + fileName);
-                    Avatar.SaveAs(path);
-                    taiKhoan.Avatar = "/img/" + fileName;
-                }
+                    // Lấy entity hiện có từ database
+                    var existingTaiKhoan = db.TaiKhoans.Find(taiKhoan.ID);
+                    if (existingTaiKhoan == null)
+                    {
+                        return HttpNotFound();
+                    }
 
-                db.Entry(taiKhoan).State = System.Data.Entity.EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                    // Cập nhật các trường thông tin
+                    existingTaiKhoan.HoVaTen = taiKhoan.HoVaTen;
+                    existingTaiKhoan.GioiTinh = taiKhoan.GioiTinh;
+                    existingTaiKhoan.NamSinh = taiKhoan.NamSinh;
+                    existingTaiKhoan.SDT = taiKhoan.SDT;
+                    existingTaiKhoan.Email = taiKhoan.Email;
+                    existingTaiKhoan.UserName = taiKhoan.UserName;
+                    existingTaiKhoan.IDRole = taiKhoan.IDRole;
+
+                    // Chỉ cập nhật mật khẩu nếu có nhập
+                    if (!string.IsNullOrEmpty(taiKhoan.Matkhau))
+                    {
+                        existingTaiKhoan.Matkhau = taiKhoan.Matkhau;
+                    }
+
+                    // Xử lý avatar
+                    if (Avatar != null)
+                    {
+                        string fileName = Path.GetFileName(Avatar.FileName);
+                        string path = Server.MapPath("~/img/" + fileName);
+                        Avatar.SaveAs(path);
+                        existingTaiKhoan.Avatar = "/img/" + fileName;
+                    }
+
+                    db.Entry(existingTaiKhoan).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (DbEntityValidationException ex)
+                {
+                    // Xử lý hiển thị lỗi validation
+                    var errorMessages = ex.EntityValidationErrors
+                                        .SelectMany(x => x.ValidationErrors)
+                                        .Select(x => x.ErrorMessage);
+                    var fullErrorMessage = string.Join("; ", errorMessages);
+                    ModelState.AddModelError("", "Lỗi validation: " + fullErrorMessage);
+                }
             }
 
             ViewBag.IDRole = new SelectList(db.Roles, "ID", "TenRole", taiKhoan.IDRole);
-            return View(taiKhoan);
-        }
-
-        // GET: Admin/TaiKhoan/Delete/5
-        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            TaiKhoan taiKhoan = db.TaiKhoans.Find(id);
-            if (taiKhoan == null)
-            {
-                return HttpNotFound();
-            }
             return View(taiKhoan);
         }
 
