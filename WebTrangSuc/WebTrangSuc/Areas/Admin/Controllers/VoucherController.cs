@@ -68,34 +68,31 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Lấy loại sản phẩm từ DB theo ID để cập nhật
                 var existingvouCher = db.Vouchers.Find(vouCher.ID);
                 if (existingvouCher == null)
                 {
                     return HttpNotFound();
                 }
 
-                // Cập nhật các thuộc tính của loại sản phẩm
-                existingvouCher.TenVoucher = vouCher.TenVoucher;
+                // Log giá trị trước khi cập nhật
+                System.Diagnostics.Debug.WriteLine($"Before Update - TenVoucher: {existingvouCher.TenVoucher}, MoTa: {existingvouCher.Mota}, SoLuong: {existingvouCher.SoLuongSuDung}");
 
-                // Đánh dấu đối tượng là đã sửa đổi
+                existingvouCher.TenVoucher = vouCher.TenVoucher;
+                existingvouCher.Mota = vouCher.Mota;
+                existingvouCher.NgayBatDau = vouCher.NgayBatDau;
+                existingvouCher.NgayKetThuc = vouCher.NgayKetThuc;
+                existingvouCher.GiaTri = vouCher.GiaTri;
+                existingvouCher.SoLuongSuDung = vouCher.SoLuongSuDung;
+
                 db.Entry(existingvouCher).State = EntityState.Modified;
                 db.SaveChanges();
 
-                return RedirectToAction("Index"); // Chuyển hướng về danh sách sản phẩm
+                // Log giá trị sau khi cập nhật
+                System.Diagnostics.Debug.WriteLine($"After Update - TenVoucher: {existingvouCher.TenVoucher}, MoTa: {existingvouCher.Mota}, SoLuong: {existingvouCher.SoLuongSuDung}");
+
+                return RedirectToAction("Index");
             }
 
-            return View(vouCher); // Trả về view nếu có lỗi
-        }
-        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
-        public ActionResult Delete(int id)
-        {
-            // Lấy loại sản phẩm theo ID để hiển thị trong form Edit
-            var vouCher = db.Vouchers.Find(id);
-            if (vouCher == null)
-            {
-                return HttpNotFound();
-            }
             return View(vouCher);
         }
 

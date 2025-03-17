@@ -31,7 +31,7 @@ namespace WebTrangSuc.Controllers
             _context = context;
         }
 
-        
+
 
         [HttpPost]
         [Route("api/taikhoan/dangky")]
@@ -59,20 +59,25 @@ namespace WebTrangSuc.Controllers
                 return BadRequest("Mật khẩu và xác nhận mật khẩu không khớp.");
             }
 
-            // Kiểm tra trùng UserName hoặc Email
-            if (_context.TaiKhoans.Any(x => x.UserName == model.UserName || x.Email == model.Email))
+            // Kiểm tra trùng UserName 
+            if (_context.TaiKhoans.Any(x => x.UserName == model.UserName))
             {
-                return BadRequest("Tên đăng nhập hoặc Email đã tồn tại.");
+                return BadRequest("Tên đăng nhập đã tồn tại.");
+            }
+
+            if (_context.TaiKhoans.Any(x => x.Email == model.Email))
+            {
+                return BadRequest("Email đã tồn tại.");
             }
 
             string hashPassword = Crypto.HashPassword(model.Matkhau);
-            
+
 
             var taiKhoan = new TaiKhoan
             {
                 HoVaTen = model.HoVaTen,
                 GioiTinh = model.GioiTinh,
-                NamSinh = model.NamSinh,
+                NamSinh = (DateTime)model.NamSinh,
                 SDT = model.SDT,
                 Email = model.Email,
                 UserName = model.UserName,
@@ -96,7 +101,7 @@ namespace WebTrangSuc.Controllers
             try
             {
                 return Regex.IsMatch(email,
-                      @"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$",
+                      @"^[a-zA-Z0-9.!#$%&'*+/?^_`~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$",
                       RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250));
             }
             catch (RegexMatchTimeoutException)
@@ -205,18 +210,24 @@ namespace WebTrangSuc.Controllers
                 return NotFound();
             }
 
+            //Kiểm tra mật khẩu cũ
+            if (string.IsNullOrEmpty(model.Matkhau) || !Crypto.VerifyHashedPassword(taiKhoan.Matkhau, model.Matkhau))
+            {
+                return BadRequest("Mật khẩu cũ không đúng.");
+            }
+
             // Cập nhật thông tin cơ bản
             taiKhoan.HoVaTen = model.HoVaTen;
             taiKhoan.GioiTinh = model.GioiTinh;
-            taiKhoan.NamSinh = model.NamSinh;
+            taiKhoan.NamSinh = (DateTime)model.NamSinh;
             taiKhoan.SDT = model.SDT;
             taiKhoan.Email = model.Email;
             taiKhoan.UserName = model.UserName;
 
             // Kiểm tra nếu mật khẩu mới được gửi
-            if (!string.IsNullOrEmpty(model.Matkhau))
+            if (!string.IsNullOrEmpty(model.XacNhanMatKhau))
             {
-                taiKhoan.Matkhau = Crypto.HashPassword(model.Matkhau); // Mã hóa mật khẩu trước khi lưu
+                taiKhoan.Matkhau = Crypto.HashPassword(model.XacNhanMatKhau); // Mã hóa mật khẩu trước khi lưu
             }
 
             _context.Entry(taiKhoan).State = EntityState.Modified;

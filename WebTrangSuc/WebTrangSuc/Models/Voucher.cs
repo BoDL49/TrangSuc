@@ -30,5 +30,8 @@ namespace WebTrangSuc.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DonHang> DonHangs { get; set; }
+        public object Mota { get; internal set; }
+        public object GiaTri { get; internal set; }
+        public object SoLuong { get; internal set; }
     }
 }

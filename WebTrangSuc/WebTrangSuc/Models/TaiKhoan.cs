@@ -25,7 +25,7 @@ namespace WebTrangSuc.Models
         public int ID { get; set; }
         public string HoVaTen { get; set; }
         public string GioiTinh { get; set; }
-        public Nullable<System.DateTime> NamSinh { get; set; }
+        public DateTime NamSinh { get; set; }
         public string SDT { get; set; }
         public string Email { get; set; }
         public string UserName { get; set; }

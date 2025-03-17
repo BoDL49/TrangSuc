@@ -107,7 +107,7 @@
         });
 
         const messageDiv = document.getElementById("error-message");
-        const successDiv = document.getElementById("success-message"); 
+        const successDiv = document.getElementById("success-message");
 
         fetch('/api/taikhoan/dangky', {
             method: 'POST',
@@ -116,32 +116,45 @@
                 'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
             },
             body: JSON.stringify(data)
-
         })
             .then(response => {
-                messageDiv.classList.add("hidden"); 
+                messageDiv.classList.add("hidden");
                 successDiv.classList.add("hidden");
 
                 if (!response.ok) {
                     return response.json().then(errorData => {
-                        messageDiv.textContent = errorData.Message || "Đăng ký thất bại. Vui lòng thử lại.";
+                        // Xử lý trích xuất thông báo lỗi từ ModelState
+                        let errorMessage = "Đăng ký thất bại. Vui lòng thử lại.";
+                        if (errorData.ModelState) {
+                            // Gom tất cả lỗi từ ModelState thành một chuỗi
+                            const errors = [];
+                            for (const key in errorData.ModelState) {
+                                errors.push(...errorData.ModelState[key]);
+                            }
+                            errorMessage = errors.join(' ');
+                        } else if (errorData.Message) {
+                            errorMessage = errorData.Message;
+                        }
+
+                        messageDiv.textContent = errorMessage;
                         messageDiv.classList.remove("hidden");
-                        messageDiv.classList.remove("text-green-500"); 
-                        messageDiv.classList.add("text-red-500");    
-                        throw new Error(errorData.Message || "Đăng ký thất bại.");
+                        messageDiv.classList.remove("text-green-500");
+                        messageDiv.classList.add("text-red-500");
+                        throw new Error(errorMessage);
                     });
                 }
                 return response.json();
             })
             .then(result => {
-                successDiv.textContent = result.message || "Đăng ký thành công!"; 
-                successDiv.classList.remove("hidden"); 
+                successDiv.textContent = result.message || "Đăng ký thành công!";
+                successDiv.classList.remove("hidden");
                 successDiv.classList.remove("text-red-500");
-                successDiv.classList.add("text-green-500"); 
+                successDiv.classList.add("text-green-500");
                 this.reset();
-                messageDiv.classList.add("hidden"); 
+                messageDiv.classList.add("hidden");
             })
-    }); 
+            .catch(error => console.error("Error:", error));
+    });
 
 
     document.getElementById("loginForm").addEventListener("submit", function (event) {

@@ -27,27 +27,23 @@ namespace WebTrangSuc.Models
         [StringLength(10, ErrorMessage = "Số điện thoại không hợp lệ.", MinimumLength = 10)]
         public string SDT { get; set; }
 
-        [Required(ErrorMessage = "Vui lòng nhập địa chỉ email.")]
-        [EmailAddress(ErrorMessage = "Địa chỉ email không hợp lệ.")]
+        //[Required(ErrorMessage = "Vui lòng nhập địa chỉ email.")]
+        //[EmailAddress(ErrorMessage = "Địa chỉ email không hợp lệ.")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Vui lòng nhập tên đăng nhập.")]
-        [StringLength(100, ErrorMessage = "Tên đăng nhập tối đa 100 ký tự.", MinimumLength = 3)]
+        [StringLength(100, ErrorMessage = "Tên đăng nhập tối đa 100 ký tự và tối thiểu là 3.", MinimumLength = 3)]
         [Display(Name = "Tên đăng nhập")]
         public string UserName { get; set; }
 
-        [StringLength(255, ErrorMessage = "Mật khẩu tối đa 255 ký tự.", MinimumLength = 6)]
-        [DataType(DataType.Password)]
-        [Display(Name = "Mật khẩu")]
         public string Matkhau { get; set; }
 
         public string Avatar { get; set; }
 
-        public int IDRole { get; set; } 
+        public int IDRole { get; set; }
 
         public virtual Role Role { get; set; }
 
-        [Compare("Matkhau", ErrorMessage = "Mật khẩu và xác nhận mật khẩu không khớp.")]
         [NotMapped]
         public string XacNhanMatKhau { get; set; }
 
