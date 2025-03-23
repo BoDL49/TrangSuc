@@ -1,81 +1,51 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Lịch sử đơn hàng";
     Layout = "~/Views/Shared/_MasterLayout.cshtml";
 }
 
+<div class="min-h-screen p-6 pt-72">
+    <!-- Error Banner -->
+    <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6 hidden" role="alert">
+        <p class="font-bold">Error</p>
+        <p>Unable to fetch order data. Please try again later.</p>
+    </div>
 
-<div class="">
-    <div class="min-h-screen p-6 pt-72 ">
-        <!-- Error Banner -->
-        <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6 hidden" role="alert">
-            <p class="font-bold">Error</p>
-            <p>Unable to fetch order data. Please try again later.</p>
+    <!-- Dashboard Header -->
+    <div class="mb-6">
+        <h1 class="text-2xl font-bold text-gray-800">Lịch sử đơn hàng</h1>
+    </div>
+
+    <!-- Table Container -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Order ID</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tên khách hàng</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ngày</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tổng tiền</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Trạng thái</th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Hành động</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <!-- Orders will be dynamically added here -->
+                </tbody>
+            </table>
         </div>
 
-        <!-- Dashboard Header -->
-        <div class="mb-6">
-            <h1 class="text-2xl font-bold text-gray-800">Lịch sử đơn hàng</h1>
-        </div>
-
-        <!-- Table Container -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
-            <div class="overflow-x-auto">
-                <table class="min-w-full divide-y divide-gray-200">
-                    <thead class="bg-gray-50">
-                        <tr>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Order ID</th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tên khách hàng</th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ngày</th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tổng tiền</th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Trạng thái</th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Hành động</th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-white divide-y divide-gray-200">
-                        <!-- Order Row 1 -->
-                        <tr class="hover:bg-gray-50 transition-colors">
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#ORD-001</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">John Doe</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2024-01-15</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$299.99</td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Delivered</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
-                                <button class="text-indigo-600 hover:text-indigo-900">Xem</button>
-                            </td>
-                        </tr>
-                        <!-- Order Row 2 -->
-                        <tr class="hover:bg-gray-50 transition-colors">
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#ORD-002</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Jane Smith</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2024-01-14</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">$149.99</td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Pending</span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
-                                <button class="text-indigo-600 hover:text-indigo-900">Xem</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Pagination -->
-            <div id="pagination" class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
-                <button id="prevPage" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
-                    Previous
-                </button>
-                <span class="text-sm text-gray-700">
-                    Page <span id="currentPage" class="font-medium">1</span> of <span id="totalPages" class="font-medium">1</span>
-                </span>
-                <button id="nextPage" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
-                    Next
-                </button>
-            </div>
-
+        <!-- Pagination -->
+        <div id="pagination" class="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
+            <button id="prevPage" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                Previous
+            </button>
+            <span class="text-sm text-gray-700">
+                Page <span id="currentPage" class="font-medium">1</span> of <span id="totalPages" class="font-medium">1</span>
+            </span>
+            <button id="nextPage" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                Next
+            </button>
         </div>
     </div>
 </div>
@@ -116,45 +86,92 @@
 
             if (!orders || orders.length === 0) {
                 tbody.innerHTML = `
-        <tr>
-            <td colspan="6" class="text-center py-4 text-gray-500">Không có đơn hàng nào.</td>
-        </tr>
-        `;
+                    <tr>
+                        <td colspan="6" class="text-center py-4 text-gray-500">Không có đơn hàng nào.</td>
+                    </tr>
+                `;
                 return;
             }
 
-            // Sắp xếp orders theo OrderId từ lớn đến bé
             orders.sort((a, b) => b.OrderId - a.OrderId);
 
             orders.forEach(order => {
-                const statusClass = order.DeliveryStatus === 0
-                    ? "bg-yellow-100 text-yellow-800"
-                    : "bg-green-100 text-green-800";
+                let statusText = "";
+                let statusClass = "";
+                switch (order.Status) {
+                    case 0:
+                        statusText = "Mới";
+                        statusClass = "bg-blue-100 text-blue-800";
+                        break;
+                    case 1:
+                        statusText = "Đang xử lý";
+                        statusClass = "bg-yellow-100 text-yellow-800";
+                        break;
+                    case 2:
+                        statusText = "Đã giao";
+                        statusClass = "bg-green-100 text-green-800";
+                        break;
+                    case 3:
+                        statusText = "Hủy";
+                        statusClass = "bg-red-100 text-red-800";
+                        break;
+                    default:
+                        statusText = "Không xác định";
+                        statusClass = "bg-gray-100 text-gray-800";
+                }
 
-                const deliveryStatusText = order.DeliveryStatus === 0
-                    ? "Chưa giao"
-                    : "Đã giao";
+                const cancelButton = (order.Status === 0 || order.Status === 1)
+                    ? `<button class="text-red-600 hover:text-red-900" onclick="cancelOrder(${order.OrderId})">Hủy</button>`
+                    : "";
 
                 const rowHTML = `
-        <tr class="hover:bg-gray-50 transition-colors">
-            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#ORD-${order.OrderId}</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${order.TenKhachHang || "Người dùng"}</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${new Date(order.OrderDate).toLocaleDateString()}</td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${order.TotalAmount.toLocaleString()} ₫</td>
-            <td class="px-6 py-4 whitespace-nowrap">
-                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${statusClass}">
-                    ${deliveryStatusText}
-                </span>
-            </td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
-                <button class="text-indigo-600 hover:text-indigo-900" onclick="viewOrder(${order.OrderId})">Xem</button>
-            </td>
-        </tr>
-        `;
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#ORD-${order.OrderId}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${order.TenKhachHang || "Người dùng"}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${new Date(order.OrderDate).toLocaleDateString()}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${order.TotalAmount.toLocaleString()} ₫</td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${statusClass}">
+                                ${statusText}
+                            </span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
+                            <button class="text-indigo-600 hover:text-indigo-900" onclick="viewOrder(${order.OrderId})">Xem</button>
+                            ${cancelButton}
+                        </td>
+                    </tr>
+                `;
                 tbody.insertAdjacentHTML("beforeend", rowHTML);
             });
         }
 
+        async function cancelOrder(orderId) {
+            if (!confirm("Bạn có chắc chắn muốn hủy đơn hàng này không?")) return;
+
+            try {
+                const response = await fetch(`/api/donhang/cancel/${orderId}`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    console.error("Lỗi khi hủy đơn hàng:", errorData);
+                    showError("Không thể hủy đơn hàng. Vui lòng thử lại.");
+                    return;
+                }
+
+                const result = await response.json();
+                alert(result.Message);
+                // Tải lại danh sách đơn hàng sau khi hủy
+                loadOrders(userId, currentPage, pageSize);
+            } catch (error) {
+                console.error("Lỗi khi hủy đơn hàng:", error);
+                showError("Đã xảy ra lỗi. Vui lòng thử lại.");
+            }
+        }
 
         function updatePagination(current, pageSize, totalPages) {
             document.getElementById("currentPage").innerText = current;
@@ -187,6 +204,4 @@
             window.location.href = `/donhang/Detail`;
         };
     });
-
 </script>
-

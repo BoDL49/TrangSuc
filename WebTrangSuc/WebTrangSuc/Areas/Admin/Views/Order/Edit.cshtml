@@ -1,5 +1,4 @@
 ﻿@model WebTrangSuc.Models.DonHang
-
 @{
     ViewBag.Title = "Edit";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
@@ -11,12 +10,19 @@
             <h3 class="card-title">Chi tiết đơn hàng: @Model.ID</h3>
         </div>
         <div class="card-body">
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger">@TempData["Error"]</div>
+            }
+            @if (TempData["Success"] != null)
+            {
+                <div class="alert alert-success">@TempData["Success"]</div>
+            }
+
             <h3>Thông tin khách hàng</h3>
-            <p><strong>Tên khách hàng:</strong> @Model.TaiKhoan.HoVaTen </p>
+            <p><strong>Tên khách hàng:</strong> @Model.TaiKhoan.HoVaTen</p>
             <p>
-                <strong>Địa chỉ:</strong>@(Model.TaiKhoan?.DiaChis?.FirstOrDefault()?.Diachi != null
-                ? Model.TaiKhoan.DiaChis.FirstOrDefault().Diachi
-                : "Không rõ")
+                <strong>Địa chỉ:</strong>@(Model.TaiKhoan?.DiaChis?.FirstOrDefault()?.Diachi ?? "Không rõ")
             </p>
             <p><strong>Phương thức thanh toán:</strong>@Model.PhuongThucThanhToan</p>
             <p><strong>Ngày tạo hóa đơn:</strong> @Model.NgayTaoHoaDon</p>
@@ -25,29 +31,32 @@
             <p><strong>Tổng tiền:</strong> @String.Format("{0:0,0} VND", Model.TongTien)</p>
             <p>
                 <strong>Trạng thái đơn hàng:</strong>
-                @using (Html.BeginForm("UpdateDonHang", "Order", FormMethod.Post, new { id = "updateOrderForm" }))
+                @using (Html.BeginForm("Edit", "Order", FormMethod.Post, new { id = "updateOrderForm" }))
                 {
                     @Html.HiddenFor(model => model.ID)
                     @Html.DropDownListFor(model => model.TrangThaiDonHang, new SelectList(new[] {
-                        new { Value = 0, Text = "Chưa xác nhận" },
-                        new { Value = 1, Text = "Đã xác nhận" },
-                        new { Value = 2, Text = "Đang xử lý" }
-                    }, "Value", "Text", Model.TrangThaiDonHang), "Chọn trạng thái", new { @class = "form-control" })
-                    <button type="submit" class="btn btn-primary">Cập nhật trạng thái</button>
+                        new { Value = "0", Text = "Mới" },
+                        new { Value = "1", Text = "Đang xử lý" },
+                        new { Value = "2", Text = "Đã giao" },
+                        new { Value = "3", Text = "Hủy" }
+                    }, "Value", "Text", Model.TrangThaiDonHang), "Chọn trạng thái đơn hàng", new { @class = "form-control" })
+                    <button type="submit" class="btn btn-primary mt-2">Cập nhật trạng thái</button>
                 }
             </p>
             <p>
                 <strong>Trạng thái giao hàng:</strong>
-                @using (Html.BeginForm("UpdateDelivery", "Order", FormMethod.Post, new { id = "updateDeliveryForm" }))
+                @using (Html.BeginForm("Edit", "Order", FormMethod.Post, new { id = "updateDeliveryForm" }))
                 {
                     @Html.HiddenFor(model => model.ID)
                     @Html.DropDownListFor(model => model.TrangThaiGiaoHang, new SelectList(new[] {
-                        new { Value = 0, Text = "Chưa giao" },
-                        new { Value = 1, Text = "Đã giao" }
+                        new { Value = "0", Text = "Chưa giao" },
+                        new { Value = "1", Text = "Đã giao" }
                     }, "Value", "Text", Model.TrangThaiGiaoHang), "Chọn trạng thái giao hàng", new { @class = "form-control" })
-                    <button type="submit" class="btn btn-primary">Cập nhật giao hàng</button>
+                    <button type="submit" class="btn btn-primary mt-2">Cập nhật giao hàng</button>
                 }
             </p>
+
+
 
             <h5>Chi tiết sản phẩm</h5>
             <table class="table table-bordered">
@@ -62,12 +71,12 @@
                 </thead>
                 <tbody>
                     @{
-                        decimal tongThanhTien = 0; // Khởi tạo biến tổng thành tiền
+                        decimal tongThanhTien = 0;
                     }
                     @foreach (var item in Model.DonHangChiTiets)
                     {
-                        var thanhTien = item.SoLuongSanPham * item.GiaSanPham; // Tính thành tiền của từng dòng
-                        tongThanhTien += (decimal)thanhTien; // Cộng vào tổng
+                        var thanhTien = item.SoLuongSanPham * item.GiaSanPham;
+                        tongThanhTien += (decimal)thanhTien;
                         <tr>
                             <td>@item.SanPham.ID</td>
                             <td>@item.SanPham.TenSanPham</td>
@@ -89,4 +98,3 @@
         </div>
     </div>
 </div>
-

@@ -13,9 +13,7 @@
             <h3>Thông tin khách hàng</h3>
             <p><strong>Tên khách hàng:</strong> @Model.TaiKhoan.HoVaTen</p>
             <p>
-                <strong>Địa chỉ:</strong>@(Model.TaiKhoan?.DiaChis?.FirstOrDefault()?.Diachi != null
-? Model.TaiKhoan.DiaChis.FirstOrDefault().Diachi
-: "Không rõ")
+                <strong>Địa chỉ:</strong>@(Model.TaiKhoan?.DiaChis?.FirstOrDefault()?.Diachi ?? "Không rõ")
             </p>
             <p><strong>Phương thức thanh toán:</strong>@Model.PhuongThucThanhToan</p>
             <p><strong>Ngày tạo hóa đơn:</strong> @Model.NgayTaoHoaDon</p>
@@ -24,25 +22,18 @@
             <p><strong>Tổng tiền:</strong> @String.Format("{0:0,0} VND", Model.TongTien)</p>
             <p>
                 <strong>Trạng thái đơn hàng:</strong>
-                @if (Model.TrangThaiDonHang == 1)
-                {
-                    <span class="badge badge-success">Đã xác nhận</span>
-                }
-                else
-                {
-                    <span class="badge badge-warning">Chưa xác nhận</span>
-                }
+                <span class="badge @(Model.GetCurrentStatus() == "Đã giao" ? "badge-success" :
+                                 Model.GetCurrentStatus() == "Hủy" ? "badge-danger" :
+                                 Model.GetCurrentStatus() == "Đang xử lý" ? "badge-warning" :
+                                 "badge-info")">
+                    @Model.GetCurrentStatus()
+                </span>
             </p>
             <p>
                 <strong>Trạng thái giao hàng:</strong>
-                @if (Model.TrangThaiGiaoHang == 1)
-                {
-                    <span class="badge badge-primary">Đã giao</span>
-                }
-                else
-                {
-                    <span class="badge badge-secondary">Chưa giao</span>
-                }
+                <span class="badge @(Model.TrangThaiGiaoHang == 1 ? "badge-success" : "badge-warning")">
+                                    @(Model.TrangThaiGiaoHang == 1 ? "Đã giao" : "Chưa giao")
+                </span>
             </p>
             <p>
                 <strong>Voucher:</strong>
@@ -62,12 +53,12 @@
                 </thead>
                 <tbody>
                     @{
-                        decimal tongThanhTien = 0; // Khởi tạo biến tổng thành tiền
+                        decimal tongThanhTien = 0;
                     }
                     @foreach (var item in Model.DonHangChiTiets)
                     {
-                        var thanhTien = item.SoLuongSanPham * item.GiaSanPham; // Tính thành tiền của từng dòng
-                        tongThanhTien += (decimal)thanhTien; // Cộng vào tổng
+                        var thanhTien = item.SoLuongSanPham * item.GiaSanPham;
+                        tongThanhTien += (decimal)thanhTien;
                         <tr>
                             <td>@item.SanPham.ID</td>
                             <td>@item.SanPham.TenSanPham</td>
@@ -85,7 +76,7 @@
                 </tfoot>
             </table>
             <a href="/admin/order" class="btn btn-primary">Quay lại</a>
-            <a href="@Url.Action("Delete", "Order", new { id = Model.ID })" class="btn btn-danger " onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</a>
+            <a href="@Url.Action("Delete", "Order", new { id = Model.ID })" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa?')">Xóa</a>
         </div>
     </div>
 </div>

@@ -263,15 +263,15 @@
     <Compile Include="Controllers\BoSuuTapController.cs" />
     <Compile Include="Controllers\ChiTietHoaDonController.cs" />
     <Compile Include="Controllers\ChiTietSanPhamController.cs" />
-    <Compile Include="Controllers\DangKyController.cs" />
+    <Compile Include="Controllers\API\DangKyController.cs" />
     <Compile Include="Controllers\DanhMucSanPhamController.cs" />
-    <Compile Include="Controllers\DonHangAPIController.cs" />
+    <Compile Include="Controllers\API\DonHangAPIController.cs" />
     <Compile Include="Controllers\DonHangController.cs" />
-    <Compile Include="Controllers\GioHangAPIController.cs" />
+    <Compile Include="Controllers\API\GioHangAPIController.cs" />
     <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HighJewlryController.cs" />
-    <Compile Include="Controllers\PaymentController.cs" />
-    <Compile Include="Controllers\SanPhamController.cs" />
+    <Compile Include="Controllers\API\PaymentController.cs" />
+    <Compile Include="Controllers\API\SanPhamController.cs" />
     <Compile Include="Controllers\ThanhToanThanhCongController.cs" />
     <Compile Include="Controllers\ThongTinTaiKhoanController.cs" />
     <Compile Include="Controllers\TrangChuController.cs" />
@@ -309,6 +309,11 @@
     <Compile Include="Models\MauSac.cs">
       <DependentUpon>ShopTrangSuc.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Order\CancelledOrderState.cs" />
+    <Compile Include="Models\Order\DeliveredOrderState.cs" />
+    <Compile Include="Models\Order\IOrderState.cs" />
+    <Compile Include="Models\Order\NewOrderState.cs" />
+    <Compile Include="Models\Order\ProcessingOrderState.cs" />
     <Compile Include="Models\Role.cs">
       <DependentUpon>ShopTrangSuc.tt</DependentUpon>
     </Compile>

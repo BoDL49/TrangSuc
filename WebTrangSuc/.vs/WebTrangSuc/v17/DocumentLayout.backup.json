@@ -3,20 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\adminstator\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\views\\thongtintaikhoan\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\views\\thongtintaikhoan\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\adminstator\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\xulydonhang\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\xulydonhang\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\adminstator\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\views\\auth\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\views\\auth\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\adminstator\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\xulydonhang\\views\\order\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\xulydonhang\\views\\order\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\adminstator\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\models\\taikhoanmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\models\\taikhoanmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\adminstator\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\xulydonhang\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\xulydonhang\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\adminstator\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\controllers\\dangkycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\controllers\\dangkycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\adminstator\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\quanly\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\quanly\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\adminstator\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\quanly\\views\\order\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\quanly\\views\\order\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\adminstator\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\quanly\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\quanly\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\adminstator\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\adminstator\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\order\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\order\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\adminstator\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\adminstator\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\admin\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\admin\\views\\order\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\adminstator\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\xulydonhang\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\xulydonhang\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|c:\\users\\adminstator\\desktop\\doan\\doan\\cnpm n\u00E2ng cao\\trangsuc\\webtrangsuc\\webtrangsuc\\areas\\quanly\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0432649D-AD97-4761-A478-D7F55C4F181C}|WebTrangSuc\\WebTrangSuc.csproj|solutionrelative:webtrangsuc\\areas\\quanly\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,52 +64,156 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\ThongTinTaiKhoan\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebTrangSuc\\Views\\ThongTinTaiKhoan\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\ThongTinTaiKhoan\\Index.cshtml",
-              "RelativeToolTip": "WebTrangSuc\\Views\\ThongTinTaiKhoan\\Index.cshtml",
-              "ViewState": "AgIAAJMBAAAAAAAAAAAAAMABAAAJAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\XuLyDonHang\\Views\\Order\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\XuLyDonHang\\Views\\Order\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\XuLyDonHang\\Views\\Order\\Index.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\XuLyDonHang\\Views\\Order\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-17T06:53:44.63Z",
+              "WhenOpened": "2025-03-23T08:07:17.568Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\Auth\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebTrangSuc\\Views\\Auth\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Views\\Auth\\Index.cshtml",
-              "RelativeToolTip": "WebTrangSuc\\Views\\Auth\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\XuLyDonHang\\Views\\Order\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\XuLyDonHang\\Views\\Order\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\XuLyDonHang\\Views\\Order\\Edit.cshtml*",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\XuLyDonHang\\Views\\Order\\Edit.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-17T06:53:36.725Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DangKyController.cs",
-              "DocumentMoniker": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Controllers\\DangKyController.cs",
-              "RelativeDocumentMoniker": "WebTrangSuc\\Controllers\\DangKyController.cs",
-              "ToolTip": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Controllers\\DangKyController.cs",
-              "RelativeToolTip": "WebTrangSuc\\Controllers\\DangKyController.cs",
-              "ViewState": "AgIAAJkBAAAAAAAAAAAkwMUBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T06:53:22.059Z",
+              "WhenOpened": "2025-03-23T08:07:16.906Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TaiKhoanModel.cs",
-              "DocumentMoniker": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Models\\TaiKhoanModel.cs",
-              "RelativeDocumentMoniker": "WebTrangSuc\\Models\\TaiKhoanModel.cs",
-              "ToolTip": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Models\\TaiKhoanModel.cs",
-              "RelativeToolTip": "WebTrangSuc\\Models\\TaiKhoanModel.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAkwDQAAAABAAAAAAAAAA==",
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\XuLyDonHang\\Views\\Order\\Details.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\XuLyDonHang\\Views\\Order\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\XuLyDonHang\\Views\\Order\\Details.cshtml*",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\XuLyDonHang\\Views\\Order\\Details.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-23T08:07:16.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\XuLyDonHang\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\XuLyDonHang\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\XuLyDonHang\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\XuLyDonHang\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAOEAAAAAAAAAAAAkwAQBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T06:53:19.788Z",
+              "WhenOpened": "2025-03-23T08:07:05.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\QuanLy\\Views\\Order\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\QuanLy\\Views\\Order\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\QuanLy\\Views\\Order\\Index.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\QuanLy\\Views\\Order\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-23T08:06:23.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\QuanLy\\Views\\Order\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\QuanLy\\Views\\Order\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\QuanLy\\Views\\Order\\Edit.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\QuanLy\\Views\\Order\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-23T08:06:23.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\QuanLy\\Views\\Order\\Details.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\QuanLy\\Views\\Order\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\QuanLy\\Views\\Order\\Details.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\QuanLy\\Views\\Order\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-23T08:06:22.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\QuanLy\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\QuanLy\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\QuanLy\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\QuanLy\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQBAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T08:05:06.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAHsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-23T08:05:04.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Order\\Edit.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\Order\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Order\\Edit.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\Order\\Edit.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAGMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-23T08:05:03.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Order\\Details.cshtml",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Views\\Order\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Views\\Order\\Details.cshtml",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Views\\Order\\Details.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAFEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-23T08:05:00.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "WebTrangSuc\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\Adminstator\\Desktop\\DoAn\\DoAn\\cnpm n\u00E2ng cao\\TrangSuc\\WebTrangSuc\\WebTrangSuc\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "WebTrangSuc\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T08:04:50.863Z",
               "EditorCaption": ""
             }
           ]
