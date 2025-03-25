@@ -20,7 +20,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         public TaiKhoanController()
         {
             db = new shoptrangsucEntities1();
-            db.Configuration.LazyLoadingEnabled = false; // Tắt lazy loading
+            db.Configuration.LazyLoadingEnabled = false; 
         }
 
 
@@ -193,7 +193,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
             }
             // Sửa: Load roles và tạo SelectList với giá trị selected
             ViewBag.IDRole = new SelectList(db.Roles.ToList(), "ID", "TenRole", taiKhoan.IDRole);
-            return View(taiKhoan);
+                return View(taiKhoan);
         }
 
         // POST: Admin/TaiKhoan/Delete/5
