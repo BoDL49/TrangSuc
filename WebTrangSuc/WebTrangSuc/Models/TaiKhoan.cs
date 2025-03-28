@@ -11,7 +11,7 @@ namespace WebTrangSuc.Models
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class TaiKhoan
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,18 +21,18 @@ namespace WebTrangSuc.Models
             this.DonHangs = new HashSet<DonHang>();
             this.SanPhamGioHangs = new HashSet<SanPhamGioHang>();
         }
-    
+
         public int ID { get; set; }
         public string HoVaTen { get; set; }
         public string GioiTinh { get; set; }
-        public DateTime NamSinh { get; set; }
+        public DateTime? NamSinh { get; set; }
         public string SDT { get; set; }
         public string Email { get; set; }
         public string UserName { get; set; }
         public string Matkhau { get; set; }
         public string Avatar { get; set; }
-        public Nullable<int> IDRole { get; set; }
-    
+        public int IDRole { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DiaChi> DiaChis { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -40,5 +40,6 @@ namespace WebTrangSuc.Models
         public virtual Role Role { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SanPhamGioHang> SanPhamGioHangs { get; set; }
+
     }
 }

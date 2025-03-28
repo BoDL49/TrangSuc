@@ -20,7 +20,7 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         public TaiKhoanController()
         {
             db = new shoptrangsucEntities1();
-            db.Configuration.LazyLoadingEnabled = false; 
+            db.Configuration.LazyLoadingEnabled = false; // Tắt lazy loading
         }
 
 
@@ -60,7 +60,6 @@ namespace WebTrangSuc.Areas.Admin.Controllers
         [RoleAuthorization(1, 2, 3)]
         public ActionResult Create()
         {
-            // Sửa: Thêm ToList() để load dữ liệu ngay lập tức
             ViewBag.IDRole = new SelectList(db.Roles.ToList(), "ID", "TenRole");
             return View();
         }
@@ -75,7 +74,6 @@ namespace WebTrangSuc.Areas.Admin.Controllers
             {
                 if (Avatar != null && Avatar.ContentLength > 0)
                 {
-                    // Sửa: Thêm kiểm tra file hợp lệ
                     string fileName = Path.GetFileName(Avatar.FileName);
                     string path = Path.Combine(Server.MapPath("~/img"), fileName);
                     Avatar.SaveAs(path);
@@ -87,7 +85,6 @@ namespace WebTrangSuc.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
 
-            // Sửa: Load lại dữ liệu Roles
             ViewBag.IDRole = new SelectList(db.Roles.ToList(), "ID", "TenRole", taiKhoan.IDRole);
             return View(taiKhoan);
         }
@@ -108,7 +105,6 @@ namespace WebTrangSuc.Areas.Admin.Controllers
                         return HttpNotFound();
                     }
 
-                    // Sửa: Tách logic cập nhật thành phương thức riêng
                     UpdateTaiKhoan(existingTaiKhoan, taiKhoan, Avatar);
 
                     db.Entry(existingTaiKhoan).State = EntityState.Modified;
@@ -117,7 +113,6 @@ namespace WebTrangSuc.Areas.Admin.Controllers
                 }
                 catch (DbEntityValidationException ex)
                 {
-                    // Sửa: Ghi log lỗi thay vì xử lý trong debug
                     LogValidationErrors(ex);
                     ModelState.AddModelError("", "Lỗi validation. Vui lòng kiểm tra lại dữ liệu.");
                 }
@@ -186,14 +181,30 @@ namespace WebTrangSuc.Areas.Admin.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            TaiKhoan taiKhoan = db.TaiKhoans.Find(id);
+
+            TaiKhoan taiKhoan = db.TaiKhoans
+                .Include(t => t.Role)
+                .FirstOrDefault(t => t.ID == id);
+
             if (taiKhoan == null)
             {
                 return HttpNotFound();
             }
-            // Sửa: Load roles và tạo SelectList với giá trị selected
-            ViewBag.IDRole = new SelectList(db.Roles.ToList(), "ID", "TenRole", taiKhoan.IDRole);
-                return View(taiKhoan);
+
+            var roles = db.Roles.ToList();
+            foreach (var role in roles)
+            {
+                System.Diagnostics.Debug.WriteLine($"Role ID: {role.ID}, Name: {role.TenRole}");
+            }
+
+            ViewBag.IDRole = new SelectList(
+                roles,
+                "ID",
+                "TenRole",
+                taiKhoan.IDRole
+            );
+
+            return View(taiKhoan);
         }
 
         // POST: Admin/TaiKhoan/Delete/5

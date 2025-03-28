@@ -5,11 +5,14 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
+
+
 <h2>Chỉnh sửa tài khoản</h2>
 
 @using (Html.BeginForm("Edit", "TaiKhoan", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.ID)
 
     <div class="form-horizontal">
         <!-- Họ và tên -->
@@ -44,18 +47,15 @@
         <div class="form-group">
             @Html.LabelFor(model => model.NamSinh, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(
-                    model => model.NamSinh,
-                    new
-                         {
-                        htmlAttributes = new
-                             {
-                            @class = "form-control",
-                            @type = "date",
-                            @value = Model.NamSinh.ToString("yyyy-MM-dd")
-                        }
+                @Html.EditorFor(model => model.NamSinh, new
+                {
+                    htmlAttributes = new
+                    {
+                        @class = "form-control",
+                        @type = "date",
+                        @Value = Model.NamSinh.HasValue ? Model.NamSinh.Value.ToString("yyyy-MM-dd") : ""
                     }
-                )
+                })
                 @Html.ValidationMessageFor(model => model.NamSinh, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -102,14 +102,13 @@
             </div>
         </div>
 
-        <!-- Quyền (Role) -->
         <div class="form-group">
             @Html.LabelFor(model => model.IDRole, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownListFor(
                     model => model.IDRole,
                     (SelectList)ViewBag.IDRole,
-                    "Chọn quyền",
+                    "-- Chọn quyền --",
                     new { @class = "form-control" }
                 )
                 @Html.ValidationMessageFor(model => model.IDRole, "", new { @class = "text-danger" })
@@ -124,6 +123,14 @@
             </div>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var currentRoleId = @Model.IDRole;
+            $("#IDRole").val(currentRoleId);
+        });
+    </script>
 }
 
 

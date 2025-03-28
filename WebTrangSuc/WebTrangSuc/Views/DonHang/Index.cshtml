@@ -51,15 +51,15 @@
 </div>
 
 <script>
+    let currentPage = 1;
+    const pageSize = 10;
+
     document.addEventListener("DOMContentLoaded", function () {
         const userId = localStorage.getItem("userId");
         if (!userId) {
             alert("Bạn cần đăng nhập để xem lịch sử đơn hàng.");
             return;
         }
-
-        let currentPage = 1;
-        const pageSize = 10;
 
         loadOrders(userId, currentPage, pageSize);
 
@@ -86,10 +86,10 @@
 
             if (!orders || orders.length === 0) {
                 tbody.innerHTML = `
-                    <tr>
-                        <td colspan="6" class="text-center py-4 text-gray-500">Không có đơn hàng nào.</td>
-                    </tr>
-                `;
+                <tr>
+                    <td colspan="6" class="text-center py-4 text-gray-500">Không có đơn hàng nào.</td>
+                </tr>
+            `;
                 return;
             }
 
@@ -121,56 +121,28 @@
                 }
 
                 const cancelButton = (order.Status === 0 || order.Status === 1)
-                    ? `<button class="text-red-600 hover:text-red-900" onclick="cancelOrder(${order.OrderId})">Hủy</button>`
+                    ? `<button class="text-red-600 hover:text-red-900" id="huydonhang" onclick="window.cancelOrder(${order.OrderId})">Hủy</button>`
                     : "";
 
                 const rowHTML = `
-                    <tr class="hover:bg-gray-50 transition-colors">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#ORD-${order.OrderId}</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${order.TenKhachHang || "Người dùng"}</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${new Date(order.OrderDate).toLocaleDateString()}</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${order.TotalAmount.toLocaleString()} ₫</td>
-                        <td class="px-6 py-4 whitespace-nowrap">
-                            <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${statusClass}">
-                                ${statusText}
-                            </span>
-                        </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
-                            <button class="text-indigo-600 hover:text-indigo-900" onclick="viewOrder(${order.OrderId})">Xem</button>
-                            ${cancelButton}
-                        </td>
-                    </tr>
-                `;
+                <tr class="hover:bg-gray-50 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">#ORD-${order.OrderId}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${order.TenKhachHang || "Người dùng"}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${new Date(order.OrderDate).toLocaleDateString()}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${order.TotalAmount.toLocaleString()} ₫</td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${statusClass}">
+                            ${statusText}
+                        </span>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
+                        <button class="text-indigo-600 hover:text-indigo-900" onclick="window.viewOrder(${order.OrderId})">Xem</button>
+                        ${cancelButton}
+                    </td>
+                </tr>
+            `;
                 tbody.insertAdjacentHTML("beforeend", rowHTML);
             });
-        }
-
-        async function cancelOrder(orderId) {
-            if (!confirm("Bạn có chắc chắn muốn hủy đơn hàng này không?")) return;
-
-            try {
-                const response = await fetch(`/api/donhang/cancel/${orderId}`, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    }
-                });
-
-                if (!response.ok) {
-                    const errorData = await response.json();
-                    console.error("Lỗi khi hủy đơn hàng:", errorData);
-                    showError("Không thể hủy đơn hàng. Vui lòng thử lại.");
-                    return;
-                }
-
-                const result = await response.json();
-                alert(result.Message);
-                // Tải lại danh sách đơn hàng sau khi hủy
-                loadOrders(userId, currentPage, pageSize);
-            } catch (error) {
-                console.error("Lỗi khi hủy đơn hàng:", error);
-                showError("Đã xảy ra lỗi. Vui lòng thử lại.");
-            }
         }
 
         function updatePagination(current, pageSize, totalPages) {
@@ -202,6 +174,35 @@
         window.viewOrder = function (orderId) {
             localStorage.setItem("orderId", orderId);
             window.location.href = `/donhang/Detail`;
+        };
+
+        // Define cancelOrder globally
+        window.cancelOrder = async function (orderId) {
+            if (!confirm("Bạn có chắc chắn muốn hủy đơn hàng này không?")) return;
+
+            try {
+                const response = await fetch(`/api/donhang/cancel/${orderId}`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    console.error("Lỗi khi hủy đơn hàng:", errorData);
+                    showError("Không thể hủy đơn hàng. Vui lòng thử lại.");
+                    return;
+                }
+
+                const result = await response.json();
+                alert(result.Message);
+                // Reload orders after cancellation
+                loadOrders(userId, currentPage, pageSize);
+            } catch (error) {
+                console.error("Lỗi khi hủy đơn hàng:", error);
+                showError("Đã xảy ra lỗi. Vui lòng thử lại.");
+            }
         };
     });
 </script>

@@ -17,27 +17,147 @@ namespace WebTrangSuc.Areas.QuanLy.Controllers
     {
         private shoptrangsucEntities1 db = new shoptrangsucEntities1();
 
+        public TaiKhoanController()
+        {
+            db = new shoptrangsucEntities1();
+            db.Configuration.LazyLoadingEnabled = false; // Tắt lazy loading
+        }
+
+
         // GET: Admin/TaiKhoan
-        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
+        // GET: Admin/TaiKhoan
+        [RoleAuthorization(1, 2, 3)]
         public ActionResult Index(int? page, string SearchString = "")
         {
             int pageSize = 5;
             int pageNum = (page ?? 1);
 
-            var taiKhoans = db.TaiKhoans.Include(t => t.Role).AsQueryable();    
+            // Khởi tạo query base
+            var query = db.TaiKhoans
+                .Include(t => t.Role)
+                .Include(t => t.DiaChis)
+                .Include(t => t.DonHangs)
+                .AsNoTracking()
+                .AsQueryable(); // Chuyển sang IQueryable
 
-
-            // Tìm kiếm chính xác theo tên người dùng hoặc tên role
+            // Áp dụng điều kiện tìm kiếm
             if (!string.IsNullOrEmpty(SearchString))
             {
-                taiKhoans = taiKhoans.Where(s => s.UserName.Contains(SearchString) ||
-                                 s.Role.TenRole.Contains(SearchString)
-                                 || s.HoVaTen.Contains(SearchString));
+                var searchLower = SearchString.ToLower();
+                query = query.Where(s =>
+                    s.UserName.ToLower().Contains(searchLower) ||
+                    s.Role.TenRole.ToLower().Contains(searchLower)
+                );
             }
 
-            return View(taiKhoans.OrderBy(s => s.ID).ToPagedList(pageNum, pageSize));
+            // Sắp xếp sau cùng
+            var orderedQuery = query.OrderBy(s => s.ID);
+
+            return View(orderedQuery.ToPagedList(pageNum, pageSize));
         }
 
+        // GET: Admin/TaiKhoan/Create
+        [RoleAuthorization(1, 2, 3)]
+        public ActionResult Create()
+        {
+            ViewBag.IDRole = new SelectList(db.Roles.ToList(), "ID", "TenRole");
+            return View();
+        }
+
+        // POST: Admin/TaiKhoan/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [RoleAuthorization(1, 2, 3)]
+        public ActionResult Create([Bind(Include = "HoVaTen,GioiTinh,NamSinh,SDT,Email,UserName,Matkhau,Avatar,IDRole")] TaiKhoan taiKhoan, HttpPostedFileBase Avatar)
+        {
+            if (ModelState.IsValid)
+            {
+                if (Avatar != null && Avatar.ContentLength > 0)
+                {
+                    string fileName = Path.GetFileName(Avatar.FileName);
+                    string path = Path.Combine(Server.MapPath("~/img"), fileName);
+                    Avatar.SaveAs(path);
+                    taiKhoan.Avatar = "/img/" + fileName;
+                }
+
+                db.TaiKhoans.Add(taiKhoan);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.IDRole = new SelectList(db.Roles.ToList(), "ID", "TenRole", taiKhoan.IDRole);
+            return View(taiKhoan);
+        }
+
+        // POST: Admin/TaiKhoan/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [RoleAuthorization(1, 2, 3)]
+        public ActionResult Edit([Bind(Include = "ID,HoVaTen,GioiTinh,NamSinh,SDT,Email,UserName,Matkhau,Avatar,IDRole")] TaiKhoan taiKhoan, HttpPostedFileBase Avatar)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var existingTaiKhoan = db.TaiKhoans.Find(taiKhoan.ID);
+                    if (existingTaiKhoan == null)
+                    {
+                        return HttpNotFound();
+                    }
+
+                    UpdateTaiKhoan(existingTaiKhoan, taiKhoan, Avatar);
+
+                    db.Entry(existingTaiKhoan).State = EntityState.Modified;
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                catch (DbEntityValidationException ex)
+                {
+                    LogValidationErrors(ex);
+                    ModelState.AddModelError("", "Lỗi validation. Vui lòng kiểm tra lại dữ liệu.");
+                }
+            }
+
+            ViewBag.IDRole = new SelectList(db.Roles.ToList(), "ID", "TenRole", taiKhoan.IDRole);
+            return View(taiKhoan);
+        }
+
+        private void UpdateTaiKhoan(TaiKhoan existing, TaiKhoan source, HttpPostedFileBase Avatar)
+        {
+            existing.HoVaTen = source.HoVaTen;
+            existing.GioiTinh = source.GioiTinh;
+            existing.NamSinh = source.NamSinh;
+            existing.SDT = source.SDT;
+            existing.Email = source.Email;
+            existing.UserName = source.UserName;
+            existing.IDRole = source.IDRole;
+
+            if (!string.IsNullOrEmpty(source.Matkhau))
+            {
+                existing.Matkhau = source.Matkhau;
+            }
+
+            if (Avatar != null && Avatar.ContentLength > 0)
+            {
+                string fileName = Path.GetFileName(Avatar.FileName);
+                string path = Path.Combine(Server.MapPath("~/img"), fileName);
+                Avatar.SaveAs(path);
+                existing.Avatar = "/img/" + fileName;
+            }
+        }
+
+        private void LogValidationErrors(DbEntityValidationException ex)
+        {
+            var errorMessages = ex.EntityValidationErrors
+                                .SelectMany(x => x.ValidationErrors)
+                                .Select(x => $"{x.PropertyName}: {x.ErrorMessage}");
+
+            System.Diagnostics.Debug.WriteLine("Validation errors:");
+            foreach (var error in errorMessages)
+            {
+                System.Diagnostics.Debug.WriteLine(error);
+            }
+        }
         // GET: Admin/TaiKhoan/Details/5
         [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
         public ActionResult Details(int? id)
@@ -54,42 +174,6 @@ namespace WebTrangSuc.Areas.QuanLy.Controllers
             return View(taiKhoan);
         }
 
-        // GET: Admin/TaiKhoan/Create
-        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
-        public ActionResult Create()
-        {
-            // Lấy danh sách Role từ cơ sở dữ liệu và truyền vào ViewBag
-            ViewBag.IDRole = new SelectList(db.Roles, "ID", "TenRole");
-            return View();
-        }
-
-        // POST: Admin/TaiKhoan/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [RoleAuthorization(1, 2, 3)] // Chỉ cho phép role 1, 2, 3
-        public ActionResult Create([Bind(Include = "HoVaTen,GioiTinh,NamSinh,SDT,Email,UserName,Matkhau,Avatar,IDRole")] TaiKhoan taiKhoan, HttpPostedFileBase Avatar)
-        {
-            if (ModelState.IsValid)
-            {
-                // Xử lý upload avatar (nếu có)
-                if (Avatar != null)
-                {
-                    string fileName = System.IO.Path.GetFileName(Avatar.FileName);
-                    string path = Server.MapPath("~/img/" + fileName);
-                    Avatar.SaveAs(path);
-                    taiKhoan.Avatar = "/img/" + fileName;
-                }
-
-                db.TaiKhoans.Add(taiKhoan);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            ViewBag.IDRole = new SelectList(db.Roles, "ID", "TenRole", taiKhoan.IDRole);
-            return View(taiKhoan);
-        }
-
-        // GET: Admin/TaiKhoan/Edit/5
         [RoleAuthorization(1, 2, 3)]
         public ActionResult Edit(int? id)
         {
@@ -97,74 +181,29 @@ namespace WebTrangSuc.Areas.QuanLy.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            TaiKhoan taiKhoan = db.TaiKhoans.Find(id);
+
+            TaiKhoan taiKhoan = db.TaiKhoans
+                .Include(t => t.Role)
+                .FirstOrDefault(t => t.ID == id);
+
             if (taiKhoan == null)
             {
                 return HttpNotFound();
             }
 
-            // Khởi tạo ViewBag.IDRole với danh sách Roles từ cơ sở dữ liệu
-            ViewBag.IDRole = new SelectList(db.Roles, "ID", "TenRole", taiKhoan.IDRole);
-            return View(taiKhoan);
-        }
-
-        // POST: Admin/TaiKhoan/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        [RoleAuthorization(1, 2, 3)]
-        public ActionResult Edit([Bind(Include = "ID,HoVaTen,GioiTinh,NamSinh,SDT,Email,UserName,Matkhau,Avatar,IDRole")] TaiKhoan taiKhoan, HttpPostedFileBase Avatar)
-        {
-            if (ModelState.IsValid)
+            var roles = db.Roles.ToList();
+            foreach (var role in roles)
             {
-                try
-                {
-                    // Lấy entity hiện có từ database
-                    var existingTaiKhoan = db.TaiKhoans.Find(taiKhoan.ID);
-                    if (existingTaiKhoan == null)
-                    {
-                        return HttpNotFound();
-                    }
-
-                    // Cập nhật các trường thông tin
-                    existingTaiKhoan.HoVaTen = taiKhoan.HoVaTen;
-                    existingTaiKhoan.GioiTinh = taiKhoan.GioiTinh;
-                    existingTaiKhoan.NamSinh = taiKhoan.NamSinh;
-                    existingTaiKhoan.SDT = taiKhoan.SDT;
-                    existingTaiKhoan.Email = taiKhoan.Email;
-                    existingTaiKhoan.UserName = taiKhoan.UserName;
-                    existingTaiKhoan.IDRole = taiKhoan.IDRole;
-
-                    // Chỉ cập nhật mật khẩu nếu có nhập
-                    if (!string.IsNullOrEmpty(taiKhoan.Matkhau))
-                    {
-                        existingTaiKhoan.Matkhau = taiKhoan.Matkhau;
-                    }
-
-                    // Xử lý avatar
-                    if (Avatar != null)
-                    {
-                        string fileName = Path.GetFileName(Avatar.FileName);
-                        string path = Server.MapPath("~/img/" + fileName);
-                        Avatar.SaveAs(path);
-                        existingTaiKhoan.Avatar = "/img/" + fileName;
-                    }
-
-                    db.Entry(existingTaiKhoan).State = EntityState.Modified;
-                    db.SaveChanges();
-                    return RedirectToAction("Index");
-                }
-                catch (DbEntityValidationException ex)
-                {
-                    // Xử lý hiển thị lỗi validation
-                    var errorMessages = ex.EntityValidationErrors
-                                        .SelectMany(x => x.ValidationErrors)
-                                        .Select(x => x.ErrorMessage);
-                    var fullErrorMessage = string.Join("; ", errorMessages);
-                    ModelState.AddModelError("", "Lỗi validation: " + fullErrorMessage);
-                }
+                System.Diagnostics.Debug.WriteLine($"Role ID: {role.ID}, Name: {role.TenRole}");
             }
 
-            ViewBag.IDRole = new SelectList(db.Roles, "ID", "TenRole", taiKhoan.IDRole);
+            ViewBag.IDRole = new SelectList(
+                roles,
+                "ID",
+                "TenRole",
+                taiKhoan.IDRole
+            );
+
             return View(taiKhoan);
         }
 
