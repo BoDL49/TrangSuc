@@ -164,7 +164,7 @@
         </div>
         <div class="text-wrapper-64">Our Best Sellers</div>
     </div>
-   
+
     @*<div class="list-product-best">
             <div class="overlap-4">
                 <div class="text-wrapper-39">PANDORA</div>
@@ -400,34 +400,43 @@
             const overlapClass = overlapClasses[index % overlapClasses.length];
 
             const productHTML = `
-                <div class="${overlapClass}" style="cursor: pointer;" onclick="redirectToProduct(${product.ID})">
-                    <div class="text-wrapper-39">${product.TenThuongHieu}</div>
-                    <div class="text-wrapper-40">${product.TenChatLieu}</div>
-                    <p class="text-wrapper-41">${product.TenSanPham}</p>
-                    <div class="group-8">
-                        <div class="text-wrapper-42">Màu sắc: ${product.TenMau}</div>
-                    </div>
-                    <div class="group-9">
-                        <div class="favorite-border"></div>
-                        <div class="div-wrapper-2">
-                            <div class="text-wrapper-43">${product.Gia.toLocaleString('vi-VN')}₫</div>
-                        </div>
-                    </div>
-                    <div class="VNG" style="background-image: url('${product.HinhSanPham || '/img/default-image.svg'}');">
-                        <div class="frame-2">
-                            <div class="text-wrapper-44">${product.TenLoaiSanPham}</div>
-                        </div>
-                    </div>
-                </div>
-            `;
+    <div class="${overlapClass}" style="cursor: pointer;" onclick="redirectToProduct(${product.ID}, '${product.TenSanPham}')">
+        <div class="text-wrapper-39">${product.TenThuongHieu}</div>
+        <div class="text-wrapper-40">${product.TenChatLieu}</div>
+        <p class="text-wrapper-41">${product.TenSanPham}</p>
+        <div class="group-8">
+            <div class="text-wrapper-42">Màu sắc: ${product.TenMau}</div>
+        </div>
+        <div class="group-9">
+            <div class="favorite-border"></div>
+            <div class="div-wrapper-2">
+                <div class="text-wrapper-43">${product.Gia.toLocaleString('vi-VN')}₫</div>
+            </div>
+        </div>
+        <div class="VNG" style="background-image: url('${product.HinhSanPham || '/img/default-image.svg'}');">
+            <div class="frame-2">
+                <div class="text-wrapper-44">${product.TenLoaiSanPham}</div>
+            </div>
+        </div>
+    </div>
+`;
             productList.insertAdjacentHTML('beforeend', productHTML);
         });
     }
 
-    function redirectToProduct(productId) {
-        localStorage.setItem('selectedProductId', productId);
+    function redirectToProduct(productId, productName) {
+        const slug = productName
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/Đ/g, "D")
+            .replace(/đ/g, "d")
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .replace(/[^\w\-]+/g, "")
+            .replace(/\-\-+/g, "-");
 
-        window.location.href = `/chitietsanpham/`;
+        localStorage.setItem('selectedProductId', productId);
+        window.location.href = `/chitietsanpham/${slug}`;
     }
 
     getProducts();

@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Chi tiết sản phẩm";
     Layout = "~/Views/Shared/_MasterLayout.cshtml";
 }
@@ -7,6 +6,7 @@
 <link href="~/Content/Css/globals.css" rel="stylesheet" />
 <link href="~/Content/Css/styleguild.css" rel="stylesheet" />
 <link href="~/Content/Css/ChiTietSanPhamCss.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
 <div class="chi-tit-sn-phm pt-60">
     <div class="div">
@@ -15,158 +15,311 @@
             <img class="arrow-forward-ios" src="~/img/arrow-forward-ios-1.svg" />
             <div class="div-wrapper"><div class="text-wrapper-14">Chi tiết sản phẩm</div></div>
             <div class="group-2">
-
             </div>
-            @*<div class="group-2">
-        <img class="img" src="img/rectangle-35.svg" />
-            <img class="image" src="img/image-14.svg" />
-            <img class="image-2" src="img/image-15.png" />
-            <img class="image-3" src="img/image-16.png" />
-            <div class="text-wrapper-15">Dây chuyền Pearl Lock</div>
-            <div class="text-wrapper-16">màu Bạc, 9-10mm</div>
-            <p class="m-t-chi-ti-t">Mô tả &amp; Chi tiết</p>
-            <p class="text-wrapper-17">
-                Tiffany HardWear là biểu hiện của sức mạnh biến đổi của tình yêu. Lấy cảm hứng từ chiếc vòng tay tinh túy
-                từ năm 1962 được tìm thấy trong kho lưu trữ của Ngôi nhà, HardWear thể hiện khả năng phục hồi bền bỉ và
-                tinh thần không bị ngăn cản. Sự kết hợp bất ngờ giữa các mắt xích bạc và ngọc trai tạo nên phong cách nổi
-                bật. Cho dù kết hợp với một chiếc áo phông đơn giản hay một chiếc áo sơ mi cài cúc kiểu dáng đẹp, chiếc
-                vòng cổ quấn này sẽ tăng thêm nét thanh lịch cho mọi trang phục.
-            </p>
-            <div class="group-3">
-                <div class="ellipse"></div>
-                <div class="ng-nhp"><p class="ng-nh-p">Bạc sterling với ngọc trai nuôi nước ngọt dài 32&#34;</p></div>
-            </div>
-            <div class="group-4">
-                <div class="ellipse-2"></div>
-                <div class="ng-nhp"><p class="ng-nh-p">Ngọc trai, mỗi viên 9-10 mm</p></div>
-            </div>
-            <div class="group-5">
-                <div class="ellipse"></div>
-                <div class="ng-nhp"><p class="ng-nh-p">Được thiết kế để thoải mái và dễ mặc</p></div>
-            </div>
-            <div class="detail">
-                <div class="text-wrapper-18">101,434,000₫</div>
-                <div class="text-wrapper-19">Thêm vào giỏ</div>
-            </div>*@
-        </div>
-
         </div>
     </div>
+</div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const productId = localStorage.getItem('selectedProductId');
-
-            if (!productId) {
-                window.location.href = '/danhmucsanpham';
-            }
-
-            async function getProductDetail() {
-                try {
-                    const response = await fetch(`/api/sanpham/${productId}`);
-                    const data = await response.json();
-
-
-                    const product = data.sanpham;
-                    const images = data.HinhSanpham;
-
-                    const image1 = images[0]?.HinhSP || '/img/rectangle-35.svg';
-                    const image2 = images[1]?.HinhSP || '/img/image-14.svg';
-                    const image3 = images[2]?.HinhSP || '/img/image-15.png';
-                    const image4 = images[3]?.HinhSP || '/img/image-16.png';
-
-                    const productInfo = document.querySelector('.group-2');
-                    if (!productInfo) {
-                        console.error('Không tìm thấy phần tử .group-2');
-                        return;
-                    }
-
-                    // Tạo nội dung HTML để hiển thị chi tiết sản phẩm
-                    const productHTML = `
-            <div class="product-details">
-                <img class="img" src="${image1}" />
-                <img class="image" src="${image2}" />
-                <img class="image-2" src="${image3}" />
-                <img class="image-3" src="${image4}" />
-                <div class="text-wrapper-15" style="width: auto;">${product.TenSanPham}</div>
-                <div class="text-wrapper-16" style="padding-top: 40px;">Màu: ${product.TenMau}</div>
-                <p class="m-t-chi-ti-t">Mô tả &amp; Chi tiết</p>
-                <p class="text-wrapper-17">${product.MoTaSanPham}</p>
-                <div class="group-3">
-                    <div class="ellipse"></div>
-                    <div class="ng-nhp"><p class="ng-nh-p">Chất liệu: ${product.TenChatLieu}</p></div>
-                </div>
-                <div class="group-4">
-                    <div class="ellipse-2"></div>
-                    <div class="ng-nhp"><p class="ng-nh-p" style="width: 200px">Thương hiệu: ${product.TenThuongHieu}</p></div>
-                </div>
-                <div class="group-5">
-                    <div class="ellipse"></div>
-                    <div class="ng-nhp"><p class="ng-nh-p">Được thiết kế để thoải mái và dễ mặc</p></div>
-                </div>
-                <div class="detail" style="width: 580px;">
-                    <div class="text-wrapper-18">${product.Gia.toLocaleString('vi-VN')}₫</div>
-                    <div class="text-wrapper-19 btn-add-to-cart" style="cursor: pointer;">Thêm vào giỏ</div>
-                </div>
+<div id="imageModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-images">
+            <img id="mainImage" class="main-image" src="" alt="Ảnh lớn">
+            <div class="thumbnail-list">
             </div>
-        `;
+        </div>
+    </div>
+</div>
 
-                    productInfo.innerHTML = productHTML;
+<script>
+    function shareOnFacebook(url, title) {
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`, '_blank');
+    }
 
-                    // Gắn sự kiện vào nút "Thêm vào giỏ"
-                    document.querySelector('.btn-add-to-cart').addEventListener('click', () => {
-                        themVaoGioHang(product.ID);
-                    });
-                } catch (error) {
-                    console.error('Lỗi khi gọi API hoặc hiển thị sản phẩm:', error);
+    function shareOnInstagram(url, title) {
+        alert('Instagram không hỗ trợ chia sẻ trực tiếp qua web. Bạn có thể dán link này vào Instagram: ' + url);
+        copyProductLink(url);
+    }
+
+    function shareOnTwitter(url, title) {
+        window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`, '_blank');
+    }
+
+    function shareOnYouTube(url, title) {
+        alert('YouTube không hỗ trợ chia sẻ trực tiếp qua web. Bạn có thể dán link này vào video hoặc mô tả: ' + url);
+        copyProductLink(url);
+    }
+
+    function copyProductLink(url) {
+        navigator.clipboard.writeText(url).then(() => {
+            alert('Link sản phẩm đã được sao chép: ' + url);
+        }).catch(err => {
+            console.error('Lỗi khi sao chép link:', err);
+            alert('Không thể sao chép link. Vui lòng sao chép thủ công: ' + url);
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const pathSegments = window.location.pathname.split('/');
+        const slug = pathSegments[pathSegments.length - 1];
+        const productUrl = window.location.href;
+
+        if (!slug) {
+            window.location.href = '/danhmucsanpham';
+            return;
+        }
+
+        async function getProductDetail() {
+            try {
+                const response = await fetch(`/api/sanpham/byname/${slug}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
                 }
-            }
+                const data = await response.json();
 
+                const product = data.sanpham;
+                const images = data.HinhSanpham;
 
-            async function themVaoGioHang(productId) {
-                const userId = localStorage.getItem('userId');
-                if (!userId || isNaN(userId) || parseInt(userId, 10) <= 0) {
-                    alert('Vui lòng đăng nhập để thêm sản phẩm vào giỏ hàng.');
+                const image1 = images[0]?.HinhSP || '/img/rectangle-35.svg';
+                const image2 = images[1]?.HinhSP || '/img/image-14.svg';
+                const image3 = images[2]?.HinhSP || '/img/image-15.png';
+                const image4 = images[3]?.HinhSP || '/img/image-16.png';
+
+                const productInfo = document.querySelector('.group-2');
+                if (!productInfo) {
+                    console.error('Không tìm thấy phần tử .group-2');
                     return;
                 }
 
-                try {
-                    const response = await fetch(`/api/cart/add`, {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json",
-                        },
-                        body: JSON.stringify({
-                            IDUser: parseInt(userId, 10),
-                            IDSanPham: parseInt(productId, 10),
-                            SoLuongSanPham: 1, // Thêm 1 sản phẩm vào giỏ
-                        }),
+                document.title = `${product.TenSanPham} - ${product.TenThuongHieu}`;
+                addMetaTag('description', `${product.MoTaSanPham.substring(0, 150)}...`);
+                addMetaTag('og:title', `${product.TenSanPham} - ${product.TenThuongHieu}`);
+                addMetaTag('og:description', `${product.MoTaSanPham.substring(0, 150)}...`);
+                addMetaTag('og:image', window.location.origin + image1);
+                addMetaTag('og:url', productUrl);
+                addMetaTag('og:type', 'product');
+                addMetaTag('twitter:card', 'summary_large_image');
+                addMetaTag('twitter:title', `${product.TenSanPham} - ${product.TenThuongHieu}`);
+                addMetaTag('twitter:description', `${product.MoTaSanPham.substring(0, 150)}...`);
+                addMetaTag('twitter:image', window.location.origin + image1);
+
+                const productHTML = `
+                    <div class="product-details">
+                        <img class="img product-image" src="${image1}" data-images='${JSON.stringify(images.map(img => img.HinhSP))}' />
+                        <img class="image product-image" src="${image2}" data-images='${JSON.stringify(images.map(img => img.HinhSP))}' />
+                        <img class="image-2 product-image" src="${image3}" data-images='${JSON.stringify(images.map(img => img.HinhSP))}' />
+                        <img class="image-3 product-image" src="${image4}" data-images='${JSON.stringify(images.map(img => img.HinhSP))}' />
+                        <div class="text-wrapper-15" style="width: auto;">${product.TenSanPham}</div>
+                        <div class="text-wrapper-16" style="padding-top: 40px;">Màu: ${product.TenMau}</div>
+                        <p class="m-t-chi-ti-t">Mô tả & Chi tiết</p>
+                        <p class="text-wrapper-17">${product.MoTaSanPham}</p>
+                        <div class="group-3">
+                            <div class="ellipse"></div>
+                            <div class="ng-nhp"><p class="ng-nh-p">Chất liệu: ${product.TenChatLieu}</p></div>
+                        </div>
+                        <div class="group-4">
+                            <div class="ellipse-2"></div>
+                            <div class="ng-nhp"><p class="ng-nh-p" style="width: 200px">Thương hiệu: ${product.TenThuongHieu}</p></div>
+                        </div>
+                        <div class="group-5">
+                            <div class="ellipse"></div>
+                            <div class="ng-nhp"><p class="ng-nh-p">Được thiết kế để thoải mái và dễ mặc</p></div>
+                        </div>
+                        <div class="detail" style="width: 580px;">
+                            <div class="text-wrapper-18">${product.Gia.toLocaleString('vi-VN')}₫</div>
+                            <div class="text-wrapper-19 btn-add-to-cart" style="cursor: pointer;">Thêm vào giỏ</div>
+                        </div>
+                        <div class="social-share" style="margin-top: 750px;">
+                            <p style="font-weight: bold;">Chia sẻ sản phẩm:</p>
+                            <button class="share-btn facebook-btn"><i class="fab fa-facebook-f"></i> Facebook</button>
+                            <button class="share-btn instagram-btn"><i class="fab fa-instagram"></i> Instagram</button>
+                            <button class="share-btn twitter-btn"><i class="fab fa-twitter"></i> Twitter</button>
+                            <button class="share-btn youtube-btn"><i class="fab fa-youtube"></i> YouTube</button>
+                            <button class="share-btn copy-link-btn"><i class="fas fa-link"></i> Copy Link</button>
+                        </div>
+                    </div>
+                `;
+
+                productInfo.innerHTML = productHTML;
+
+                document.querySelector('.btn-add-to-cart').addEventListener('click', () => themVaoGioHang(product.ID));
+                document.querySelector('.facebook-btn').addEventListener('click', () => shareOnFacebook(productUrl, product.TenSanPham));
+                document.querySelector('.instagram-btn').addEventListener('click', () => shareOnInstagram(productUrl, product.TenSanPham));
+                document.querySelector('.twitter-btn').addEventListener('click', () => shareOnTwitter(productUrl, product.TenSanPham));
+                document.querySelector('.youtube-btn').addEventListener('click', () => shareOnYouTube(productUrl, product.TenSanPham));
+                document.querySelector('.copy-link-btn').addEventListener('click', () => copyProductLink(productUrl));
+
+                const productImages = document.querySelectorAll('.product-image');
+                const modal = document.getElementById('imageModal');
+                const mainImage = document.getElementById('mainImage');
+                const thumbnailList = document.querySelector('.thumbnail-list');
+                const closeBtn = document.querySelector('.close');
+
+                productImages.forEach(image => {
+                    image.addEventListener('click', function () {
+                        const imageList = JSON.parse(this.getAttribute('data-images'));
+                        mainImage.src = this.src;
+                        thumbnailList.innerHTML = '';
+
+                        imageList.forEach((imgSrc, index) => {
+                            const thumb = document.createElement('img');
+                            thumb.src = imgSrc;
+                            thumb.classList.add('thumbnail');
+                            thumb.addEventListener('click', () => {
+                                mainImage.src = imgSrc;
+                            });
+                            thumbnailList.appendChild(thumb);
+                        });
+
+                        modal.style.display = 'block';
                     });
-
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-
-
-                    const result = await response.json();
-                    alert('Sản phẩm đã được thêm vào giỏ hàng.');
-                } catch (error) {
-                    console.error('Lỗi khi thêm sản phẩm vào giỏ hàng:', error);
-                    alert('Không thể thêm sản phẩm vào giỏ hàng. Vui lòng thử lại.');
-                }
-            }
-
-
-            const categoryLink = document.querySelector('.text-wrapper-13');
-            if (categoryLink) {
-                categoryLink.addEventListener('click', function () {
-                    window.location.href = '/danhmucsanpham';
                 });
+
+                closeBtn.addEventListener('click', () => {
+                    modal.style.display = 'none';
+                });
+
+                window.addEventListener('click', (event) => {
+                    if (event.target === modal) {
+                        modal.style.display = 'none';
+                    }
+                });
+            } catch (error) {
+                console.error('Lỗi khi gọi API hoặc hiển thị sản phẩm:', error);
+            }
+        }
+
+        function addMetaTag(name, content) {
+            let meta = document.querySelector(`meta[name="${name}"]`) || document.createElement('meta');
+            meta.name = name;
+            meta.content = content;
+            if (!document.querySelector(`meta[name="${name}"]`)) {
+                document.head.appendChild(meta);
+            }
+        }
+
+        async function themVaoGioHang(productId) {
+            const userId = localStorage.getItem('userId');
+            if (!userId || isNaN(userId) || parseInt(userId, 10) <= 0) {
+                alert('Vui lòng đăng nhập để thêm sản phẩm vào giỏ hàng.');
+                return;
             }
 
-            // Gọi API để lấy chi tiết sản phẩm
-            getProductDetail();
-        });
+            try {
+                const response = await fetch(`/api/cart/add`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        IDUser: parseInt(userId, 10),
+                        IDSanPham: parseInt(productId, 10),
+                        SoLuongSanPham: 1,
+                    }),
+                });
 
-    </script>
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
 
+                const result = await response.json();
+                alert('Sản phẩm đã được thêm vào giỏ hàng.');
+            } catch (error) {
+                console.error('Lỗi khi thêm sản phẩm vào giỏ hàng:', error);
+                alert('Không thể thêm sản phẩm vào giỏ hàng. Vui lòng thử lại.');
+            }
+        }
+
+        const categoryLink = document.querySelector('.text-wrapper-13');
+        if (categoryLink) {
+            categoryLink.addEventListener('click', function () {
+                window.location.href = '/danhmucsanpham';
+            });
+        }
+
+        getProductDetail();
+    });
+</script>
+
+<style>
+    .share-btn {
+        margin: 5px;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        font-size: 14px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+        .share-btn i {
+            margin-right: 5px;
+        }
+
+        .share-btn:hover {
+            background-color: #ddd;
+        }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.8);
+    }
+
+    .modal-content {
+        margin: 50px auto;
+        padding: 20px;
+        width: 80%;
+        max-width: 800px;
+        background-color: #fff;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .main-image {
+        width: 100%;
+        max-height: 500px;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+
+    .thumbnail-list {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .thumbnail {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        cursor: pointer;
+        border: 2px solid transparent;
+    }
+
+        .thumbnail:hover {
+            border: 2px solid #007bff;
+        }
+
+    .product-image {
+        cursor: pointer;
+    }
+</style>

@@ -82,9 +82,14 @@ CREATE TABLE HinhSanPham (
 
 CREATE TABLE DanhGia (
     ID INT IDENTITY(1,1) PRIMARY KEY,
-    IDSanPham INT,
-    Rate INT,
-    CONSTRAINT FK_DanhGia_SanPham FOREIGN KEY (IDSanPham) REFERENCES SanPham(ID)
+    IDSanPham INT NOT NULL,
+    IDUser INT NOT NULL,
+    Rate INT CHECK (Rate BETWEEN 1 AND 5), -- Số sao từ 1 đến 5
+    TenNguoiDanhGia NVARCHAR(255), -- Tên người đánh giá
+    NgayDanhGia DATETIME DEFAULT GETDATE(), -- Ngày giờ đánh giá
+    NoiDung NVARCHAR(MAX), -- Nội dung đánh giá
+    CONSTRAINT FK_DanhGia_SanPham FOREIGN KEY (IDSanPham) REFERENCES SanPham(ID),
+    CONSTRAINT FK_DanhGia_TaiKhoan FOREIGN KEY (IDUser) REFERENCES TaiKhoan(ID)
 );
 
 CREATE TABLE Voucher (
@@ -203,13 +208,12 @@ INSERT INTO HinhSanPham (IDSP, HinhSP) VALUES
 (4, 'diamond_earrings.jpg'),
 (5, 'copper_watch.jpg');
 
--- Insert data into DanhGia
-INSERT INTO DanhGia (IDSanPham, Rate) VALUES
-(1, 5),
-(2, 4),
-(3, 5),
-(4, 3),
-(5, 4);
+INSERT INTO DanhGia (IDSanPham, IDUser, Rate, TenNguoiDanhGia, NgayDanhGia, NoiDung) VALUES
+(1, 1, 5, N'Nguyen Van A', '2024-01-15 10:30:00', N'Sản phẩm rất đẹp, đáng tiền!'),
+(2, 2, 4, N'Le Thi B', '2024-02-20 14:15:00', N'Chất lượng tốt nhưng giao hàng hơi chậm.'),
+(3, 3, 5, N'Tran Van C', '2024-03-25 09:45:00', N'Tuyệt vời, sẽ mua lại!'),
+(4, 4, 3, N'Pham Thi D', '2024-04-30 16:00:00', N'Bình thường, không quá đặc biệt.'),
+(5, 5, 4, N'Hoang Van E', '2024-05-05 11:20:00', N'Đẹp, nhưng giá hơi cao.');
 
 -- Insert data into Voucher
 INSERT INTO Voucher (TenVoucher, ThongTinVoucher, GiaVoucher, NgayBatDau, NgayKetThuc, SoLuongSuDung) VALUES

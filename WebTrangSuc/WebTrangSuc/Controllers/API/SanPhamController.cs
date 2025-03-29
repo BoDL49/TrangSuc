@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web.Http;
 using WebTrangSuc.Models;
@@ -86,7 +88,7 @@ namespace WebTrangSuc.Controllers
                 TenLoaiSanPham = sp.TenLoaiSanPham
             }).ToList();
 
-            if(danhmuc == null)
+            if (danhmuc == null)
             {
                 return NotFound();
             }
@@ -137,6 +139,68 @@ namespace WebTrangSuc.Controllers
                 }).ToList();
 
             return Ok(products);
+        }
+
+
+        [HttpGet]
+        [Route("api/sanpham/byname/{slug}")]
+        public async Task<IHttpActionResult> LaySanPhamTheoTen(string slug)
+        {
+            try
+            {
+                // Hàm chuẩn hóa tên sản phẩm để loại bỏ dấu nhưng giữ nguyên "Đ" hoặc chuyển đổi phù hợp
+                string NormalizeSlug(string text)
+                {
+                    if (string.IsNullOrEmpty(text)) return text;
+                    string normalizedString = text.Normalize(System.Text.NormalizationForm.FormD);
+                    // Chỉ loại bỏ các dấu phụ, giữ nguyên ký tự gốc như "Đ"
+                    string result = Regex.Replace(normalizedString, @"[\u0300-\u036f]", "")
+                                         .Replace("Đ", "D") // Chuyển "Đ" thành "D"
+                                         .Replace("đ", "d") // Chuyển "đ" thành "d"
+                                         .ToLower()
+                                         .Replace(" ", "-")
+                                         .Replace("--", "-"); // Xử lý nhiều dấu gạch liên tiếp
+                    return result;
+                }
+
+                // Lấy tất cả sản phẩm và lọc sau khi lấy ra khỏi cơ sở dữ liệu
+                var allSanPhams = await _context.SanPhams.ToListAsync();
+                var sanpham = allSanPhams
+                    .FirstOrDefault(sp => NormalizeSlug(sp.TenSanPham) == slug.ToLower());
+
+                if (sanpham == null)
+                {
+                    return NotFound();
+                }
+
+                // Lấy danh sách hình ảnh sản phẩm
+                var hinhSanpham = await _context.HinhSanPhams
+                    .Where(hsp => hsp.IDSP == sanpham.ID)
+                    .Select(hsp => new HinhSanPhamModel
+                    {
+                        ID = hsp.ID,
+                        IDSP = (int)hsp.IDSP,
+                        HinhSP = hsp.HinhSP
+                    })
+                    .ToListAsync();
+
+                var sanPhamModel = new SanPhamModel
+                {
+                    ID = sanpham.ID,
+                    TenSanPham = sanpham.TenSanPham,
+                    Gia = (int)sanpham.Gia,
+                    MoTaSanPham = sanpham.MoTaSanPham,
+                    TenChatLieu = sanpham.ChatLieu.TenChatLieu,
+                    TenMau = sanpham.MauSac.TenMau,
+                    TenThuongHieu = sanpham.ThuongHieu.TenThuongHieu
+                };
+
+                return Ok(new { sanpham = sanPhamModel, HinhSanpham = hinhSanpham });
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
         }
 
 

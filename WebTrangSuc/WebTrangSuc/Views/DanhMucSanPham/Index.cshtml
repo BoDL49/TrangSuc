@@ -832,24 +832,24 @@
                 const overlapClass = overlapClasses[index % overlapClasses.length];
 
                 const productHTML = `
-                    <div class="${overlapClass}" data-id="${product.ID}">
-                        <div class="overlap-group-5">
-                            <div class="overlap-6">
-                                <div class="text-wrapper-29">${product.Gia.toLocaleString('vi-VN')}₫</div>
-                                <div class="overlap-group-6">
-                                    <div class="text-wrapper-30" style="padding-left: 7px; cursor: pointer;" onclick="redirectToProduct(${product.ID})">${product.TenSanPham}</div>
-                                    <img class="rectangle-14" src="${product.HinhSanPham || 'img/rectangle-34-7.png'}" />
-                                </div>
-                            </div>
-                            <div class="group-17">
-                                <div class="ng-nhp">
-                                    <div class="ng-nh-p">Thêm vào giỏ hàng</div>
-                                </div>
-                                <img class="east" src="~/img/east-10.svg" />
-                            </div>
-                        </div>
-                    </div>
-                `;
+    <div class="${overlapClass}" data-id="${product.ID}">
+        <div class="overlap-group-5">
+            <div class="overlap-6">
+                <div class="text-wrapper-29">${product.Gia.toLocaleString('vi-VN')}₫</div>
+                <div class="overlap-group-6">
+                    <div class="text-wrapper-30" style="padding-left: 7px; cursor: pointer;" onclick="redirectToProduct(${product.ID}, '${product.TenSanPham}')">${product.TenSanPham}</div>
+                    <img class="rectangle-14" src="${product.HinhSanPham || 'img/rectangle-34-7.png'}" />
+                </div>
+            </div>
+            <div class="group-17">
+                <div class="ng-nhp">
+                    <div class="ng-nh-p">Thêm vào giỏ hàng</div>
+                </div>
+                <img class="east" src="~/img/east-10.svg" />
+            </div>
+        </div>
+    </div>
+`;
                 productList.insertAdjacentHTML('beforeend', productHTML);
             });
 
@@ -860,9 +860,19 @@
         }
     }
 
-    function redirectToProduct(productId) {
+    function redirectToProduct(productId, productName) {
+        const slug = productName
+            .normalize("NFD") 
+            .replace(/[\u0300-\u036f]/g, "") 
+            .replace(/Đ/g, "D") 
+            .replace(/đ/g, "d") 
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .replace(/[^\w\-]+/g, "") 
+            .replace(/\-\-+/g, "-");
+
         localStorage.setItem('selectedProductId', productId);
-        window.location.href = `/chitietsanpham/`;
+        window.location.href = `/chitietsanpham/${slug}`;
     }
 
     async function LayDanhMuc() {
@@ -942,24 +952,24 @@
                 const overlapClass = overlapClasses[index % overlapClasses.length];
 
                 const productHTML = `
-                    <div class="${overlapClass}" data-id="${product.ID}">
-                        <div class="overlap-group-5">
-                            <div class="overlap-6">
-                                <div class="text-wrapper-29">${product.Gia.toLocaleString('vi-VN')}₫</div>
-                                <div class="overlap-group-6">
-                                    <div class="text-wrapper-30" style="padding-left: 10px; cursor: pointer;" onclick="redirectToProduct(${product.ID})">${product.TenSanPham}</div>
-                                    <img class="rectangle-14" src="${product.HinhSanPham || 'img/rectangle-34-7.png'}" />
-                                </div>
-                            </div>
-                            <div class="group-17">
-                                <div class="ng-nhp" stlye="cursor: pointer;">
-                                    <div class="ng-nh-p" style="cursor: pointer;" >Thêm vào giỏ hàng</div>
-                                </div>
-                                <img class="east" src="~/img/east-10.svg" />
-                            </div>
-                        </div>
-                    </div>
-                `;
+    <div class="${overlapClass}" data-id="${product.ID}">
+        <div class="overlap-group-5">
+            <div class="overlap-6">
+                <div class="text-wrapper-29">${product.Gia.toLocaleString('vi-VN')}₫</div>
+                <div class="overlap-group-6">
+                    <div class="text-wrapper-30" style="padding-left: 10px; cursor: pointer;"onclick="redirectToProduct(${product.ID}, '${product.TenSanPham}')">${product.TenSanPham}</div>
+                    <img class="rectangle-14" src="${product.HinhSanPham || 'img/rectangle-34-7.png'}" />
+                </div>
+            </div>
+            <div class="group-17">
+                <div class="ng-nhp" style="cursor: pointer;">
+                    <div class="ng-nh-p" style="cursor: pointer;">Thêm vào giỏ hàng</div>
+                </div>
+                <img class="east" src="~/img/east-10.svg" />
+            </div>
+        </div>
+    </div>
+`;
 
                 
 
@@ -1075,7 +1085,7 @@
                             <div class="overlap-6">
                                 <div class="text-wrapper-29">${product.Gia.toLocaleString('vi-VN')}₫</div>
                                 <div class="overlap-group-6">
-                                    <div class="text-wrapper-30" style="padding-left: 10px; cursor: pointer;" onclick="redirectToProduct(${product.ID})">${product.TenSanPham}</div>
+                                    <div class="text-wrapper-30" style="padding-left: 10px; cursor: pointer;" onclick="redirectToProduct(${product.ID}, '${product.TenSanPham})">${product.TenSanPham}</div>
                                     <img class="rectangle-14" src="${product.HinhSanPham || 'img/rectangle-34-7.png'}" />
                                 </div>
                             </div>
