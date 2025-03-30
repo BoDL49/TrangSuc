@@ -11,13 +11,17 @@ namespace WebTrangSuc.Models
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class DanhGia
     {
         public int ID { get; set; }
         public Nullable<int> IDSanPham { get; set; }
+        public int IDUser { get; set; }
         public Nullable<int> Rate { get; set; }
-    
+        public string NoiDung { get; set; }
+        public string TenNguoiDanhGia { get; set; }
+        public System.DateTime NgayDanhGia { get; set; }
         public virtual SanPham SanPham { get; set; }
+        public virtual TaiKhoan TaiKhoan { get; set; }
     }
 }

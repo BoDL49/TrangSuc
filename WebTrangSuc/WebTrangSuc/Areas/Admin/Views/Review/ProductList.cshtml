@@ -1,9 +1,9 @@
 ﻿@*@model List<WebTrangSuc.Models.SanPham>*@
 @using WebTrangSuc.Models
 @using PagedList.Mvc;
-@model PagedList.PagedList<SanPham>
+@model PagedList.PagedList<WebTrangSuc.Models.SanPham>
 @{
-    ViewBag.Title = "ProductList";
+    ViewBag.Title = "Product List";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -20,8 +20,7 @@
             margin: 0 5px;
         }
 
-            .pagination li a,
-            .pagination li span {
+            .pagination li a, .pagination li span {
                 padding: 8px 12px;
                 text-decoration: none;
                 color: #007bff;
@@ -30,8 +29,7 @@
                 transition: background-color 0.3s ease;
             }
 
-                .pagination li a:hover,
-                .pagination li span:hover {
+                .pagination li a:hover, .pagination li span:hover {
                     background-color: #007bff;
                     color: white;
                 }
@@ -49,6 +47,7 @@
                 border-color: #ddd;
             }
 </style>
+
 <h2>Danh sách sản phẩm</h2>
 
 <table class="table table-bordered">
@@ -74,8 +73,7 @@
         }
     </tbody>
 </table>
+
 <div>
-    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+    @Html.PagedListPager(Model, page => Url.Action("ProductList", new { page = page }))
 </div>
-
-

@@ -29,6 +29,12 @@ namespace WebTrangSuc.Areas.Admin.Controllers
                 InitializeOrderState(order);
             }
 
+            ViewBag.TotalOrders = db.DonHangs.Count();
+            ViewBag.DeliveredOrders = db.DonHangs.Count(o => o.TrangThaiDonHang == 2);
+            ViewBag.NewOrders = db.DonHangs.Count(o => o.TrangThaiDonHang == 0); 
+            ViewBag.CancelledOrders = db.DonHangs.Count(o => o.TrangThaiDonHang == 3); 
+
+
             Response.Cache.SetCacheability(HttpCacheability.NoCache);
             return View(orders);
         }

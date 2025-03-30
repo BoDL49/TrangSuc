@@ -1,9 +1,10 @@
-﻿@*@model List<WebTrangSuc.Models.DanhGia>*@
-@using WebTrangSuc.Models
+﻿@using WebTrangSuc.Models 
 @using PagedList.Mvc;
-@model PagedList.PagedList<DanhGia>
+@using PagedList; 
+
+@model IPagedList<WebTrangSuc.Controllers.API.ReviewDto>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Đánh giá sản phẩm"; 
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -20,8 +21,7 @@
             margin: 0 5px;
         }
 
-            .pagination li a,
-            .pagination li span {
+            .pagination li a, .pagination li span {
                 padding: 8px 12px;
                 text-decoration: none;
                 color: #007bff;
@@ -30,8 +30,7 @@
                 transition: background-color 0.3s ease;
             }
 
-                .pagination li a:hover,
-                .pagination li span:hover {
+                .pagination li a:hover, .pagination li span:hover {
                     background-color: #007bff;
                     color: white;
                 }
@@ -52,47 +51,55 @@
 
 <h2>Đánh giá cho sản phẩm: @ViewBag.ProductName</h2>
 
-<a href="@Url.Action("Create", "Review", new { productId = ViewBag.ProductId })" class="btn btn-primary">
-    Thêm đánh giá mới
-</a>
-
-@if (Model.Count == 0)
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
 {
-    <p>Chưa có đánh giá nào cho sản phẩm này.</p>
+    <div class="alert alert-danger">
+        @ViewBag.ErrorMessage
+    </div>
+}
+
+
+@if (Model == null || !Model.Any())
+{
+    if (string.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        <p>Chưa có đánh giá nào cho sản phẩm này.</p>
+    }
 }
 else
 {
-    <table class="table table-hover">
+    <table class="table table-hover table-bordered table-striped">
         <thead>
             <tr>
-                <th>ID</th>
+                <th>Tên khách hàng</th>
                 <th>Xếp hạng</th>
-                <th></th>
+                <th>Nội dung</th>
+                <th>Ngày đánh giá</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var review in Model)
             {
                 <tr>
-                    <td>@review.IDSanPham</td>
-                    <td>@review.Rate</td>
-                    <td>
-                        <a href="@Url.Action("Edit", "Review", new { id = review.ID })" class="btn btn-warning">
-                            Sửa
-                        </a>
-                        <a href="@Url.Action("Delete", "Review", new { id = review.ID })" class="btn btn-danger"
-                           onclick="return confirm('Bạn có chắc chắn muốn xóa đánh giá này?');">
-                            Xóa
-                        </a>
-                    </td>
+                    <td>@Html.DisplayFor(modelItem => review.TenNguoiDanhGia)</td>
+                    <td>@Html.DisplayFor(modelItem => review.Rate)</td>
+                    <td>@Html.DisplayFor(modelItem => review.NoiDung)</td>
+                    <td>@Html.DisplayFor(modelItem => review.NgayDanhGia)</td> 
                 </tr>
             }
         </tbody>
     </table>
+
+    <hr />
+
+    <div class="text-center">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page, productId = ViewBag.ProductId }), PagedListRenderOptions.ClassicPlusFirstAndLast)
+    </div>
+
 }
 
-<a href="@Url.Action("ProductList", "Review")" class="btn btn-secondary">Quay lại danh sách sản phẩm</a>
-
-<div>
-    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+<div style="margin-top: 20px;">
+    <a href="@Url.Action("ProductList", "Review")" class="btn btn-secondary">
+        <i class="fas fa-arrow-left"></i> Quay lại danh sách sản phẩm 
+    </a>
 </div>

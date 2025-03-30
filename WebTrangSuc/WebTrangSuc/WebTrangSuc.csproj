@@ -259,6 +259,7 @@
     <Compile Include="Areas\XuLyDonHang\Controllers\OrderController.cs" />
     <Compile Include="Areas\XuLyDonHang\Controllers\ReviewController.cs" />
     <Compile Include="Areas\XuLyDonHang\XuLyDonHangAreaRegistration.cs" />
+    <Compile Include="Controllers\API\DanhGiaAPIController.cs" />
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\BoSuuTapController.cs" />
     <Compile Include="Controllers\ChiTietHoaDonController.cs" />
@@ -1141,7 +1142,6 @@
     <Content Include="Areas\Admin\Views\Voucher\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Order\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Order\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Review\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Review\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Review\ProductList.cshtml" />
     <Content Include="Areas\Admin\Views\ThuongHieu\Index.cshtml" />
@@ -1150,7 +1150,6 @@
     <Content Include="Areas\Admin\Views\TaiKhoan\Create.cshtml" />
     <Content Include="Areas\Admin\Views\TaiKhoan\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\TaiKhoan\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\Review\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\ChatLieu\Index.cshtml" />
     <Content Include="Areas\Admin\Views\ChatLieu\Create.cshtml" />
     <Content Include="Areas\Admin\Views\ChatLieu\Edit.cshtml" />
@@ -1179,8 +1178,6 @@
     <Content Include="Areas\QuanLy\Views\Order\Edit.cshtml" />
     <Content Include="Areas\QuanLy\Views\Review\ProductList.cshtml" />
     <Content Include="Areas\QuanLy\Views\Review\Index.cshtml" />
-    <Content Include="Areas\QuanLy\Views\Review\Create.cshtml" />
-    <Content Include="Areas\QuanLy\Views\Review\Edit.cshtml" />
     <Content Include="Areas\QuanLy\Views\SanPham\Index.cshtml" />
     <Content Include="Areas\QuanLy\Views\SanPham\Create.cshtml" />
     <Content Include="Areas\QuanLy\Views\SanPham\Edit.cshtml" />

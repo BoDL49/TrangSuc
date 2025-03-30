@@ -20,8 +20,8 @@
     <Controller_SelectedScaffolderCategoryPath>root/Common/MVC/Controller</Controller_SelectedScaffolderCategoryPath>
     <WebStackScaffolding_ControllerDialogWidth>600</WebStackScaffolding_ControllerDialogWidth>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
-    <_SelectedScaffolderID>MvcAreaScaffolder</_SelectedScaffolderID>
-    <_SelectedScaffolderCategoryPath>root/Common/MVC/Area</_SelectedScaffolderCategoryPath>
+    <_SelectedScaffolderID>ApiControllerEmptyScaffolder</_SelectedScaffolderID>
+    <_SelectedScaffolderCategoryPath>root/Common/Web API</_SelectedScaffolderCategoryPath>
     <WebStackScaffolding_AreaDialogWidth>600</WebStackScaffolding_AreaDialogWidth>
     <WebStackScaffolding_DbContextTypeFullName>WebTrangSuc.Models.shoptrangsucEntities1</WebStackScaffolding_DbContextTypeFullName>
     <NameOfLastUsedPublishProfile>C:\Users\tuant\Desktop\DoAn\DoAn\cnpm nâng cao\TrangSuc\WebTrangSuc\WebTrangSuc\Properties\PublishProfiles\leanhtuan-001-site1 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>

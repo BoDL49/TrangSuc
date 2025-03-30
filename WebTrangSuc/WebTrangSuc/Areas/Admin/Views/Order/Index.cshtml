@@ -61,6 +61,42 @@
             {
                 <div class="alert alert-success">@TempData["Success"]</div>
             }
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card bg-info text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Tổng số đơn hàng</h5>
+                            <p class="card-text">@ViewBag.TotalOrders</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-success text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Đơn hàng đã giao</h5>
+                            <p class="card-text">@ViewBag.DeliveredOrders</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-warning text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Đơn hàng mới</h5>
+                            <p class="card-text">@ViewBag.NewOrders</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-danger text-white">
+                        <div class="card-body">
+                            <h5 class="card-title">Đơn hàng hủy</h5>
+                            <p class="card-text">@ViewBag.CancelledOrders</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <table class="table table-hover">
                 <thead>
                     <tr>

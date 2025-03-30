@@ -15,6 +15,31 @@
             <img class="arrow-forward-ios" src="~/img/arrow-forward-ios-1.svg" />
             <div class="div-wrapper"><div class="text-wrapper-14">Chi tiết sản phẩm</div></div>
             <div class="group-2">
+                <div class="reviews-section" style="margin-top: 800px;">
+                    <h3>Đánh giá sản phẩm</h3>
+
+                    <!-- Form đánh giá -->
+                    <div id="reviewForm" class="review-form" style="display: none;">
+                        <div class="rating-stars">
+                            <span class="star" data-value="1">☆</span>
+                            <span class="star" data-value="2">☆</span>
+                            <span class="star" data-value="3">☆</span>
+                            <span class="star" data-value="4">☆</span>
+                            <span class="star" data-value="5">☆</span>
+                        </div>
+                        <textarea id="reviewContent" placeholder="Nhập đánh giá của bạn..." style="width: 100%; height: 100px; margin: 10px 0;"></textarea>
+                        <button id="submitReview" style="padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Gửi đánh giá</button>
+                    </div>
+
+                    <!-- Thông báo -->
+                    <div id="reviewNotice" class="review-notice" style="padding: 10px; margin: 10px 0; border-radius: 5px;"></div>
+
+                    <!-- Điểm trung bình -->
+                    <div id="averageRating" style="font-size: 20px; margin-bottom: 20px;"></div>
+
+                    <!-- Danh sách đánh giá -->
+                    <div id="reviewsList" class="reviews-list"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -137,8 +162,35 @@
                             <button class="share-btn youtube-btn"><i class="fab fa-youtube"></i> YouTube</button>
                             <button class="share-btn copy-link-btn"><i class="fas fa-link"></i> Copy Link</button>
                         </div>
+
+                            <div class="reviews-section" style="margin-top: 40px;">
+        <h3>Đánh giá sản phẩm</h3>
+
+        <!-- Form đánh giá -->
+        <div id="reviewForm" class="review-form" style="display: none;">
+            <div class="rating-stars">
+                <span class="star" data-value="1">☆</span>
+                <span class="star" data-value="2">☆</span>
+                <span class="star" data-value="3">☆</span>
+                <span class="star" data-value="4">☆</span>
+                <span class="star" data-value="5">☆</span>
+            </div>
+            <textarea id="reviewContent" placeholder="Nhập đánh giá của bạn..." style="width: 100%; height: 100px; margin: 10px 0;"></textarea>
+            <button id="submitReview" style="padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Gửi đánh giá</button>
+        </div>
+
+        <!-- Thông báo -->
+        <div id="reviewNotice" class="review-notice" style="padding: 10px; margin: 10px 0; border-radius: 5px;"></div>
+
+        <!-- Điểm trung bình -->
+        <div id="averageRating" style="font-size: 20px; margin-bottom: 20px;"></div>
+
+        <!-- Danh sách đánh giá -->
+        <div id="reviewsList" class="reviews-list"></div>
+    </div>
+</div>
                     </div>
-                `;
+                        `;
 
                 productInfo.innerHTML = productHTML;
 
@@ -184,6 +236,8 @@
                         modal.style.display = 'none';
                     }
                 });
+                loadReviews(product.ID);
+                checkReviewPermission(product.ID);
             } catch (error) {
                 console.error('Lỗi khi gọi API hoặc hiển thị sản phẩm:', error);
             }
@@ -239,6 +293,124 @@
 
         getProductDetail();
     });
+
+    async function loadReviews(productId) {
+        try {
+            const response = await fetch(`/api/danhgia/danhsach/${productId}`);
+            const reviews = await response.json();
+
+            const reviewsList = document.getElementById('reviewsList');
+            reviewsList.innerHTML = reviews.map(review => `
+    <div class="review-item">
+        <div class="user-info">
+
+            <div style="padding: 5px; display: flex;">
+             <img src="${review.Avatar || '/img/default-avatar.png'}"
+      class="user-avatar" style="width: 20px; height: 20px; align-items: center;">
+                <h4 style="padding-left: 5px;">${review.TenNguoiDanhGia}</h4>
+                <div class="review-date" style="padding-left:5px;">${review.NgayDanhGia}</div>
+            </div>
+        </div>
+        <div class="rating">Rating: ${'★'.repeat(review.Rate)}${'☆'.repeat(5 - review.Rate)}</div>
+        <div style="display: flex;">
+        <p>Nội dung:</p>
+<p class="review-content" style="padding-left: 5px;">${review.NoiDung}</p>
+        </div>
+    </div>
+`).join('');
+
+            // Calculate and show average rating
+            const avgResponse = await fetch(`/api/danhgia/diemtrungbinh/${productId}`);
+            const avgData = await avgResponse.json();
+            document.getElementById('averageRating').innerHTML =
+                `Đánh giá trung bình: ${avgData.averageRating}/5 ★`;
+
+        } catch (error) {
+            console.error('Lỗi tải đánh giá:', error);
+        }
+    }
+
+    async function checkReviewPermission(productId) {
+        const userId = localStorage.getItem('userId');
+
+        if (!userId) {
+            document.getElementById('reviewNotice').innerHTML = '<p style="color: #dc3545;">Vui lòng đăng nhập để đánh giá</p>';
+            return;
+        }
+
+        const response = await fetch(`/api/danhgia/kiemtraquyen/${productId}`, {
+            headers: {
+                'Content-Type': 'application/json',
+                'userId': userId
+            }
+        });
+
+        const result = await response.json();
+        if (result.hasPermission) {
+            document.getElementById('reviewForm').style.display = 'block';
+            initStarRating(productId);
+        } else {
+            document.getElementById('reviewNotice').innerHTML = '<p style="color: #ffc107;">Bạn cần mua sản phẩm trước khi đánh giá</p>';
+        }
+    }
+
+    function initStarRating(productId) {
+        const stars = document.querySelectorAll('.star');
+        let selectedRating = 0;
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                selectedRating = parseInt(star.dataset.value);
+                stars.forEach(s => {
+                    s.style.color = parseInt(s.dataset.value) <= selectedRating ? 'gold' : '#ddd';
+                });
+            });
+        });
+
+        document.getElementById('submitReview').addEventListener('click', async () => {
+            const content = document.getElementById('reviewContent').value;
+            const userId = localStorage.getItem('userId');
+
+            if (!userId) {
+                alert('Vui lòng đăng nhập để đánh giá');
+                return;
+            }
+
+            if (!selectedRating) {
+                alert('Vui lòng chọn số sao');
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/danhgia/danhgia', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'userId': userId
+                    },
+                    body: JSON.stringify({
+                        IDSanPham: productId,
+                        Rate: selectedRating,
+                        NoiDung: content
+                    })
+                });
+
+                if (response.ok) {
+                    alert('Đánh giá thành công!');
+                    loadReviews(productId); // Reload reviews
+                    document.getElementById('reviewContent').value = ''; // Clear the review text area
+                    stars.forEach(s => s.style.color = '#ddd'); // Reset the stars
+                } else {
+                    const error = await response.json();
+                    alert(error.Message || 'Lỗi khi gửi đánh giá');
+                }
+            } catch (error) {
+                console.error('Lỗi:', error);
+                alert('Có lỗi xảy ra, vui lòng thử lại');
+            }
+        });
+    }
+
 </script>
 
 <style>
@@ -321,5 +493,59 @@
 
     .product-image {
         cursor: pointer;
+    }
+
+    .review-form {
+        background: #f8f9fa;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .rating-stars {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+        .rating-stars .star {
+            cursor: pointer;
+            color: #ddd;
+            transition: all 0.2s;
+        }
+
+            .rating-stars .star:hover,
+            .rating-stars .star.active {
+                color: gold;
+            }
+
+    #reviewContent {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-bottom: 15px;
+    }
+
+    #submitReview {
+        background: #28a745;
+        padding: 10px 25px;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+        #submitReview:hover {
+            background: #218838;
+        }
+
+    .review-item {
+        background: white;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
 </style>
